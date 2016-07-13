@@ -1,0 +1,13 @@
+@charset"utf-8";
+*{font-size:14px;color:black;}/*这是一个全局选择器：选择所有元素*/
+.red{color:red;}/*这是一个类别选择器：选择class属性为red的所有元素*/
+#green{color:green;}/*这是一个ID选择器：选择ID属性为green的元素*/
+ol,ul{margin: 20px;}/*这是选择所有<ol>元素以及<ul>元素*/
+div span{color:blue;}/*这是一个后代选择器*/
+li>a{text-decoration: none;color:yellow;}/*这是一个子代选择器*/
+p+p{color:purple;}/*这是兄弟选择器*/
+[style]{color:#00BFFF;}/*这是一个属性选择器：选择所有包含属性title的元素*/
+[title=hi]{color:#8B0000;}/*这是选择title属性值为hi的元素*/
+[title~=hello]{color:#D2691E;}/*这是选择title属性值包含hello的元素*/
+[lang|=en]{color:#FF1493;}/*这是选择lang属性值包含en的元素：中间用连字符分隔*/
+ul~p{color:#00FF00;}/*这是选择前面有ul元素的所有p元素*/

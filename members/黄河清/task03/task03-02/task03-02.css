@@ -1,0 +1,26 @@
+*{	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.container{
+	border: 1px solid #ddd;
+	text-align: center;
+}
+
+.main{
+	display: inline-block;
+}
+
+.main:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.main span{
+	float: left;
+	line-height: 30px;
+	border: 1px solid blue;
+
+}

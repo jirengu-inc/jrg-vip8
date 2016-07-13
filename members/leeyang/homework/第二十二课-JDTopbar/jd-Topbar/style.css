@@ -1,0 +1,143 @@
+/*reset*/
+*{margin:0;padding: 0;}
+h1,h2,h3,h4,h5,h6{font-weight: normal;}
+ul,ol{list-style: none;}
+a{text-decoration: none; color: inherit;}
+body{
+	background: #fff;
+	font-size: 12px;
+	color: #666;
+	font: 12px/1.5 Arial,Verdana,"\5b8b\4f53",serif;
+	font-smoothing: antialiased;
+}
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.local-wrapper{
+	line-height: 30px;
+	background: #f1f1f1;
+	display: inline-block;
+	height: 30px;
+	position: relative;
+	cursor: default;
+}
+
+.location{
+	padding: 0 10px;
+	border-left: 1px solid transparent;
+	border-right:1px solid transparent;
+	display: inline-block;
+}
+
+.local-wrapper:hover .location{
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	background: white;
+}
+
+.local-wrapper:hover .i-arrow{
+	transform: rotate(180deg);
+	transition: transform 0.1s;
+}
+
+.i-arrow{
+	display: inline-block; /*解决hover上时i-arrow不旋转的问题*/
+}
+
+.locationPicker > ol{
+	width: 300px;
+	background: white;
+	border: 1px solid #DDDDDD;
+	padding: 10px 0;
+	display: none;
+}
+
+.local-wrapper:hover .locationPicker > ol{
+	display: block;
+}
+
+/*解决local-wrapper:hover时底部出现locationPicker的border的问题*/
+.local-wrapper:hover:after{
+	content: '';
+	display: block;
+	position: absolute;
+	height: 0;
+	border-top: 1px solid white;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+	width: 100%;
+	box-sizing: border-box;
+	margin-top: -2px;
+}
+
+.locationPicker {
+	position: absolute;
+	left: 0;
+	top: 100%;
+	line-height: 24px;
+}
+
+.locationPicker > ol > li{
+	float: left;
+	padding: 0 8px;
+	height: 24px;
+	margin: 2px 8px;
+}
+
+.locationPicker > ol > li.selected{
+	background: #C81623;
+	color: white;
+}
+
+.locationPicker > ol > li:hover{
+	background: #f4f4f4;
+	color: #C81623;
+	cursor: pointer;
+}
+
+
+/*links*/
+.links{
+	float: right;
+}
+
+.siteTopbar{
+	background: #f1f1f1;
+	height: 30px;
+	line-height: 30px;
+}
+
+.siteTopbar > .links > .split{
+	height: 15px;
+	width: 1px;
+	background: #ddd;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 1px;
+}
+
+.siteTopbar > .links > a{
+	padding: 0 8px;
+}
+
+.siteTopbar > .links > a:hover{
+	color: #C81623;
+}
+
+.siteTopbar{
+	height: 30px;
+	line-height: 30px;
+	width: 1210px;
+	margin:0 auto;
+}
+
+.siteTopbar-wrapper{
+	background: #f1f1f1;
+}
+
+.links > a:hover + .i-arrow{
+	transform: rotate(180deg);
+}

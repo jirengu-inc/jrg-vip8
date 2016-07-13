@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>京东轮播测试</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<!--<link rel="stylesheet" href="http://at.alicdn.com/t/font_1464242776_7382727.css">-->
+<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src='jquery.slides.min.js'></script>
+</head>
+
+<style type="text/css">
+*{margin:0;padding:0;}
+
+a{text-decoration:none;}
+
+ul ,li{list-style:none;}
+.clearfix:after{
+	content:'';
+	display: block;
+	clear:both;
+}
+
+.carousel-wapper{
+	width: 730px;;
+    height: 454px;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel{
+	position: absolute;
+    width: 4119px;
+    left:0px;
+}
+
+.carousel li{
+	float:left;
+}
+
+.carousel li img{
+	width: 730px;
+	height: 454px;
+}
+
+
+/*插件改样式*/
+.carousel-wapper .slidesjs-container{
+	height: 454px !important;
+}
+
+.carousel-wapper .slidesjs-control{
+	height: 454px !important;
+}
+
+.carousel-wapper .slidesjs-pagination{
+	position: absolute;
+    z-index: 30;
+    bottom: 25px;
+    margin: 0 293px;
+}
+
+.carousel-wapper .slidesjs-pagination li{
+    z-index: 30;
+    margin: 0 2px;
+    text-align: center;
+    background-color: #3E3E3E;
+    border-radius: 50%;
+}
+
+.carousel-wapper .slidesjs-pagination li>a{
+	border-radius: 50%;
+	color: #fff;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+}
+
+.carousel-wapper .slidesjs-pagination li> a.active{
+	background-color: #b61b1f;
+	color: white;
+}
+
+.carousel-wapper .slidesjs-previous{
+	color: white;
+	position: absolute;
+    top: 50%;
+    z-index: 1000;
+    display: inline-block;
+    padding: 20px 10px;
+    margin-top: -50px;
+    background: rgba(0,0,0,.2);
+}
+
+.carousel-wapper .slidesjs-next{
+	color: white;
+	position: absolute;
+    top: 50%;
+    z-index: 1000;
+    left: 701px;
+    display: inline-block;
+    padding: 20px 10px;
+    margin-top: -50px;
+    background: rgba(0,0,0,.2);
+}
+.slidesjs-previous.active{display: block !important;}
+.slidesjs-next.active{display: block !important;}
+
+.slidesjs-previous.unactive{display: none !important;}
+.slidesjs-next.unactive{display: none !important;}
+/*.arrow{
+	position: absolute;
+    font-size: 30px;
+    display: inline-block;
+    width: 28px;
+    height: 62px;
+    line-height: 62px;
+    top: 50%;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: -62px;
+    background-color:rgba(0,0,0,.2);
+}
+
+.pre{
+	position: absolute;
+	left: 3px;
+	z-index: 3;
+	opacity: 0.5;
+	color: white;
+}
+
+.next{
+	color: white;
+    position: absolute;
+    left: 699px;
+    z-index: 3;
+    opacity: 0.5;
+}
+
+.carousel-wapper .bullet{
+	position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden; 
+}
+
+.bullet li{
+	float: left;
+    border-radius:50%;
+    width: 22px;
+    line-height: 22px;
+    height: 22px;
+    margin: 0 5px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #3e3e3e;
+    color: #fff;
+}
+
+.bullet li:hover{
+	background-color: #b61b1f;
+	color: #fff;
+}*/
+
+</style>
+
+<body>
+  	<div class="carousel-wapper"><!--窗口-->
+		<div class="carousel" style="left:0px"><!--墙板-->
+			<li><img src="http://img20.360buyimg.com/da/jfs/t2779/5/1816984171/99996/dc4897/574c19f3N0e1a1709.jpg" alt=""></li>
+			<li><img src="http://img30.360buyimg.com/da/jfs/t2686/115/1323623144/89794/ca1d1568/573c1da3Ndc0b88fc.jpg" alt=""></li>
+			<li><img src="http://img14.360buyimg.com/da/jfs/t2710/92/1571268148/196509/3591de15/5742b411Naa0bfa06.jpg" alt=""></li>
+			<li><img src="http://img30.360buyimg.com/da/jfs/t2611/259/1667997491/93047/b4ffe117/57458ee7N78e0111f.jpg" alt=""></li>
+			<li><img src="http://img12.360buyimg.com/da/jfs/t2584/279/1663700006/157962/9292c212/57454c5aN1e3816ab.jpg" alt=""></li>
+			<li><img src="http://img14.360buyimg.com/da/jfs/t2662/302/1661945267/190291/7aa7495e/5745489eNbbf18082.jpg" alt=""></li>
+		</div>
+		<!--<a class="pre arrow jd i-zj"  href="#"></a>
+		<a class="next arrow jd i-yj" href="#"></a>
+		<ul class="bullet">
+			<li class="active">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+		</ul>-->
+	</div><!--轮播-->
+<script>
+
+	$(function(){
+      $(".carousel").slidesjs({
+        width: 730,
+        height: 454,
+
+        navigation: {
+			      active: true,
+			        // [boolean] Generates next and previous buttons.
+			        // You can set to false and use your own buttons.
+			        // User defined buttons must have the following:
+			        // previous button: class="slidesjs-previous slidesjs-navigation"
+			        // next button: class="slidesjs-next slidesjs-navigation"
+			      effect: "fade"
+			        // [string] Can be either "slide" or "fade".
+			       },
+	    play: {
+		      active: true,
+		        // [boolean] Generate the play and stop buttons.
+		        // You cannot use your own buttons. Sorry.
+		      effect: "fade",
+		        // [string] Can be either "slide" or "fade".
+		      interval: 4000,
+		        // [number] Time spent on each slide in milliseconds.
+		      auto: true,
+		        // [boolean] Start playing the slideshow on load.
+		      swap: true,
+		        // [boolean] show/hide stop and play buttons
+		      pauseOnHover: true,
+		        // [boolean] pause a playing slideshow on hover
+		      restartDelay: 2500
+		        // [number] restart delay on inactive slideshow
+		    }
+
+      	});
+
+    /*插件一共有4个按钮，play，stop，next，pre，play和stop有插件默认的disline：block、none切换，所以不要换这两个*/
+
+	   $('.slidesjs-previous').text("<");//插件pre按钮
+	   $('.slidesjs-next').text(">");//插件next按钮
+	   $('.carousel').on('mouseenter',function(){
+	   		$('.slidesjs-next,.slidesjs-previous').removeClass('unactive').siblings('.active').addClass('active')//鼠标移出去不显示display：block
+	   })
+	   $('.carousel').on('mouseleave',function(){
+	   		$('.slidesjs-next,.slidesjs-previous').addClass('unactive')//鼠标移出去不显示display：none
+	   })
+    });
+
+
+</script>	
+
+
+<!--<script src="jd-carousel.js"></script>-->
+
+<!--<script>
+	$(function(){
+	var $hb = $('.carousel');//hb就是墙板
+		$items = $hb.children(),
+		$pre = $('.pre'),
+		$next = $('.next'),
+		$bullet = $('.bullet'),
+		imgWidth = $items.width(),
+		imgcount = $items.size();
+	var curIdx=0;
+	var clock;
+		console.log($hb[0])
+		console.dir($hb)
+		console.log($items)
+		$hb.prepend($items.last().clone());/*将最后的一个图片克隆放最前*/
+		$hb.append($items.first().clone());/*将最前的那张图片克隆放最后*/
+
+		imgRealcount = $hb.children().size(); 
+		console.log(imgRealcount)
+
+		$hb.css({left:0-imgWidth, width:imgRealcount*imgWidth});
+
+		$next.on('click',function(e){
+			step(-730)
+			//console.log(e.target)
+			//console.log(e.currentTarget)
+		});
+
+		$pre.on('click',function(){
+			step(730)
+		});
+
+		function autoPlay(){//自动轮播
+			clock=setInterval(function(){
+				step(-730)
+			},2000);
+		};
+		autoPlay()
+
+		function stopAuto(){//停止轮播
+			clearInterval(clock);
+		};
+		//stopAuto()
+
+
+		$hb.mouseover(function(){//鼠标移入停止播放
+			stopAuto()
+		});
+
+		$hb.mouseout(function(){//鼠标移出自动播放
+			autoPlay()
+		});
+
+		var hb = $hb[0];//把js变回DOM
+		//console.log(hb.style.left)
+
+		function step(offset){
+		  	var newLeft = parseInt(hb.style.left) + offset; //style是DOM的API,jq实例化是 对象.css("left")
+		  	
+		  	hb.style.left = newLeft + 'px'
+
+			if(newLeft < -4380){
+				hb.style.left = -730 + 'px'
+			}
+			if(newLeft > -730){
+				hb.style.left = -4380 + 'px'
+			}
+		}
+
+	})
+</script>-->
+</body>
+</html>

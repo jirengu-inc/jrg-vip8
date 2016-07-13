@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="解决nav移动时stickup错位问题" />
+<script src="../scripts/jquery-1.11.2.js"></script>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+    *{margin: 0; padding: 0;}
+.layout{
+  margin: auto;
+  width: 900px;
+  text-align: center;
+  font-size: 24px;
+}
+.header,.nav,.footer{
+  margin-bottom: 10px;
+  padding: 10px;
+  background: pink;
+  height: 40px;
+  line-height: 40px;  
+}
+.nav{
+  background: paleturquoise;
+}
+.content{
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.aside{
+  width: 200px;
+  height: 800px;
+  background: #ddd;  
+}
+.main{
+  width: 690px;
+  height: 800px;
+  margin-left: 10px;
+  background: cornflowerblue;
+}
+.aside,.main{
+  float: left;
+}
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <div class="header">header</div>
+    <div class="nav">nav1</div>
+    <div class="content">
+      <div class="aside">aside</div>
+      <div class="main">main</div>
+    </div>
+    <div class="footer">footer</div>
+  </div>
+  <div class="layout">
+    <div class="header">header</div>
+    <div class="nav">nav2</div>
+    <div class="content">
+      <div class="aside">aside</div>
+      <div class="main">main</div>
+    </div>
+    <div class="footer">footer</div>
+  </div>
+  <div class="layout">
+    <div class="header">header</div>
+    <div class="nav">nav3</div>
+    <div class="content">
+      <div class="aside">aside</div>
+      <div class="main">main</div>
+    </div>
+    <div class="footer">footer</div>
+  </div>
+  <div class="layout">
+    <div class="header">header</div>
+    <div class="nav">nav4</div>
+    <div class="content">
+      <div class="aside">aside</div>
+      <div class="main">main</div>
+    </div>
+    <div class="footer">footer</div>
+  </div>
+
+<script>
+  $.fn.stickup = function(){
+    var $currentNav = $(this)
+    var offsetTop = $currentNav.offset().top
+
+    /* 把目标元素克隆一个用于占位，否则目标元素 Position 变为 fix后脱离文档流，导致页面跳动 */
+    var $navClone = $currentNav.clone().css({'visibility': 'hidden','display': 'none'}).insertBefore($currentNav)
+
+    $(window).on('scroll',function(){     
+      var scrollTop = $(this).scrollTop();
+      if(scrollTop >= offsetTop){
+        if(!isFixed($currentNav)){
+          setFixed();
+        }
+      }else{
+          unsetFixed($currentNav,$navClone)
+      }
+    })
+
+    $(window).on('resize',function(){
+      if(isFixed($currentNav)){
+        resizeFixed($currentNav,$navClone)
+      }
+    })
+
+    function isFixed(nav){
+      return !!nav.data('data-fixed');
+    }
+
+    function setFixed(){
+      $navClone.show()
+      $currentNav.data('data-fixed',true)  
+      resizeFixed()
+      
+    }
+    function resizeFixed(){
+    // var navHeight = $navClone.height()
+    // var navWidth = $navClone.width()
+    // var offsetLeft = $navClone.offset().left
+      $currentNav.css({
+            'position': 'fixed',
+            'top': 0,
+             'left': $navClone.offset().left,
+            'width': $navClone.width(),
+            'height': $navClone.height(),
+            'margin': 0,
+            'z-index': 9999
+         });
+    }
+
+    function unsetFixed(){
+      $currentNav.data('data-fixed',false).removeAttr('style')
+      $navClone.hide()
+    }
+}
+
+
+  $('.nav').each(function() {
+      $(this).stickup();
+    });
+
+</script>
+</body>
+</html>

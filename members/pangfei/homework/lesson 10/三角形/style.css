@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-04-26 10:22:42
+ * @version $Id$
+ */
+
+*{
+	margin:0;
+	padding: 0;
+}
+
+.triangle{
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	margin: 20px;
+}
+
+.triangle1{
+	border-width: 10px;
+	border-color: red green blue yellow;
+}
+
+.triangle2{
+	border-width: 10px;
+	border-color: transparent transparent blue transparent;
+}
+
+.triangle3{
+	border-width:10px 18px 10px 10px;
+	border-color: transparent transparent blue transparent;
+}
+
+.triangle4{
+	border-width:20px 11.4px;
+	border-color: transparent transparent blue transparent;
+}
+
+.trapezoid{
+	margin:20px;
+	width: 10px;
+	height: 10px;
+	border-style: solid;
+	border-width: 10px;
+	border-color: red green blue yellow;
+}
+
+.trapezoid1{
+	margin:20px;
+	width: 10px;
+	height: 10px;
+	border-style: solid;
+	border-width: 10px;
+	border-color: transparent transparent blue transparent;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML5用户注册页面</title>
+        <style>
+            fieldset {
+                width: 50%;
+                margin: 0 auto;
+            }
+
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <legend>用户注册页面</legend>
+            <form>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>用户名：</td>
+                            <td><input calss="user" type="text"></td>
+                            <!-- 验证错误 -->
+                            <td><span class="user-tip"></span></td>
+                        </tr>
+                        <tr>
+                            <td>密码：</td>
+                            <td><input class="pwd" type="password"></td>
+                            <td><span class="pwd-tip"></span></td>
+                        </tr>
+                        <tr>
+                            <td>确认密码：</td>
+                            <td><input class="repwd" type="password"></td>
+                            <td><span class="repwd-tip"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Email：</td>
+                            <td><input class="email" type="email"></td>
+                            <td><span class="email-tip"></span></td>
+                        </tr>
+                        <tr>
+                            <td>年龄：</td>
+                            <td><input class="age" type="number" min="1" max="100"></td>
+                            <td><span class="age-tip"></span></td>
+                        </tr>
+                        <tr>
+                            <td>手机号：</td>
+                            <td><input class="phone" type="tel"></td>
+                            <td><span class="phont-tip"></span></td>
+                        </tr>
+                        <tr>
+                            <td>出生日期：</td>
+                            <td><input class="born" type="date"></td>
+                            <td><span class="born-tip"></span></td>
+                        </tr>
+                        <tr>
+                            <td>个人主页</td>
+                            <td><input class="page" type="url"></td>
+                            <td><span class="page-tip"></span></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit" value="注册"></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </fieldset>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+*{
+	margin:0;
+	padding: 0;
+}
+.container{
+	height: 20px;
+	border: 1px solid blue;
+	text-align: center;
+}
+.wrapper{
+	display: inline-block;
+}
+span{
+	float: left;
+	border: 1px solid red;
+
+}
+.clearfix:after{
+	content: " ";
+	display: block;
+	clear:both;
+
+}

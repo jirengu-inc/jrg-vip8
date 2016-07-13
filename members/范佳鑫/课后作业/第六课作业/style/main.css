@@ -1,0 +1,13 @@
+*{margin:0;padding:0;}/**通配符选择器**/
+#containning-box{background:#fff;border:1px black solid;}/**ID选择器**/
+.box{background:blue;width:960px;height:100px;}/**Class选择器**/
+.box ul li{display:inline-block;list-style:none;}/**后代选择器**/
+h1 > em{color:purple;}/**子代选择器**/
+h1,p{text-align:center;}/**选择器分组**/
+.box ul li+li+li+li{color:red;}/**兄弟选择器**/
+p{font-size:30px;}/**元素选择器**/
+img[alt]{background:pink;width:100px;height:100px;}/**属性选择器**/
+p[title="测试段落"]:hover{font-weight: bold;color:lightblue;}/**具体属性选择器**/
+div[class~="first"]{color:yellow;}/**部分属性值选择器**/
+*[lang|="cn"]{font-family:cursive;}/**特定属性选择器**/
+ul li~li{font-size: 30px;}/**~选择器(这个感觉有点难)**/

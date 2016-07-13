@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="theme theme-white">
+<head>
+<meta charset="utf-8">
+<title>浮动、定位</title>
+<link href="https://www.zybuluo.com/static/assets/template-theme-white.css" rel="stylesheet" media="screen">
+</head>
+<body class="theme theme-white">
+<div id="wmd-preview" class="wmd-preview wmd-preview-full-reader"><div class="md-section-divider"></div><div class="md-section-divider"></div><h1 data-anchor-id="985t" id="浮动定位">浮动、定位</h1><p data-anchor-id="ev03"><code>前端</code></p><hr><div class="md-section-divider"></div><h3 data-anchor-id="67cv" id="1文档流的概念指什么有哪种方式可以让元素脱离文档流">1.文档流的概念指什么？有哪种方式可以让元素脱离文档流?</h3><p data-anchor-id="4thg">文档流，网页中的内容按照从上到下、从左到右的模式进行排列。 <br>
+标准化的语言是：文档流是浏览器按照 HTML 的内容按顺序解析并呈现，遇到行内元素就往行内放，遇到块级元素就空一行放置，一次排列。</p><blockquote data-anchor-id="bfq4" class="white-blockquote">
+  <p>脱离文档流的方式： <br>
+  1. 浮动(fixed,absolute) <br>
+  2. 定位</p>
+</blockquote><div class="md-section-divider"></div><h3 data-anchor-id="xtga" id="2有几种定位方式分别是如何实现定位的使用场景如何">2.有几种定位方式，分别是如何实现定位的，使用场景如何？</h3><blockquote data-anchor-id="nabz" class="white-blockquote">
+  <p>定位： <br>
+  1. 绝对定位：absolute,fixed <br>
+  2. 相对定位：relative <br>
+  3. 静态定位：static</p>
+  
+  <p>static是静止，不进行定位，元素还是处于正常的文档流中，忽略上下左右的偏移和z-index声明，是默认值。</p>
+  
+  <p>fixed是把元素固定住，是相对于浏览器来定位的，会脱离文档流，可以使用left、right、top、bottom来改变固定的位置；一般用于广告、一些固定提示栏等你想要固定持续显示的内容。</p>
+  
+  <p>absolute是相对于上一个使用定位（static除外）的祖先元素进行定位的，如果没有使用定位的祖先元素，就相对于html文档页面进行定位，会脱离文档流，同样使用left、right、top、bottom来设定偏移的位置；一般用于使用相对位置的场景，在父元素上加个relative，在给子元素设定absolute进行相对偏移。</p>
+  
+  <p>relative是相对于元素自身在文档流中的位置进行偏移的，注意它并不会脱离文档流，使用left、right、top、bottom来设定相对偏移的位置，一般用于微调整元素自身位置。</p>
+</blockquote><div class="md-section-divider"></div><h3 data-anchor-id="m3lk" id="3absolute-relative-fixed-偏移的参考点分别是什么">3.absolute, relative, fixed 偏移的参考点分别是什么</h3><blockquote data-anchor-id="eiqt" class="white-blockquote">
+  <p>absolute根据上一个使用定位（非 static）的祖先元素进行定位，如果没有，则根据 HTML 根标签进行定位</p>
+  
+  <p>relative根据自身原来的位置进行便宜</p>
+  
+  <p>fixed 根据浏览器窗口进行定位</p>
+</blockquote><div class="md-section-divider"></div><h3 data-anchor-id="0vcw" id="4z-index-有什么作用-如何使用">4.z-index 有什么作用? 如何使用?</h3><p data-anchor-id="x684">可以设定元素的层叠顺序，值越高，则优先显示在上方</p><div class="md-section-divider"></div><h3 data-anchor-id="pudg" id="5positionrelative和负margin都可以使元素位置发生偏移二者有什么区别">5.position:relative和负margin都可以使元素位置发生偏移?二者有什么区别</h3><blockquote data-anchor-id="bzdh" class="white-blockquote">
+  <p>position:relative是单单把作用到的元素进行一个位置偏移，而其他的元素不会因此发生位置的改变 <br>
+  而负margin是调整外边距，这样会影响到它周围元素布局和位置。</p>
+</blockquote><div class="md-section-divider"></div><h3 data-anchor-id="tmc8" id="6如何让一个固定宽高的元素在页面上垂直水平居中">6.如何让一个固定宽高的元素在页面上垂直水平居中?</h3><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="dl7l"><ol class="linenums"><li class="L0"><code><span class="pln">position</span><span class="pun">:</span><span class="pln">absolute</span></code></li><li class="L1"><code><span class="pln">top</span><span class="pun">:</span><span class="lit">50</span><span class="pun">%</span></code></li><li class="L2"><code><span class="pln">left</span><span class="pun">:</span><span class="lit">50</span><span class="pun">%</span></code></li><li class="L3"><code><span class="com">/*此时该元素的左上角这个点就垂直水平居中了*/</span></code></li><li class="L4"><code><span class="pln">margin</span><span class="pun">-</span><span class="pln">left</span><span class="pun">:-宽度的</span><span class="lit">50</span><span class="pun">%</span></code></li><li class="L5"><code><span class="pln">margin</span><span class="pun">-</span><span class="pln">top</span><span class="pun">:-高度的</span><span class="lit">50</span><span class="pun">%</span></code></li><li class="L6"><code></code></li><li class="L7"><code><span class="pun">*{</span><span class="pln">margin</span><span class="pun">:</span><span class="lit">0</span><span class="pun">;</span><span class="pln">padding</span><span class="pun">:</span><span class="lit">0</span><span class="pun">;}</span></code></li><li class="L8"><code><span class="pln">div</span><span class="pun">{</span></code></li><li class="L9"><code><span class="pln">  width</span><span class="pun">:</span><span class="lit">200px</span><span class="pun">;</span></code></li><li class="L0"><code><span class="pln">  height</span><span class="pun">:</span><span class="lit">200px</span><span class="pun">;</span></code></li><li class="L1"><code><span class="pln">  background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:#</span><span class="pln">ccc</span><span class="pun">;</span></code></li><li class="L2"><code><span class="pln">  position</span><span class="pun">:</span><span class="pln">absolute</span><span class="pun">;</span></code></li><li class="L3"><code><span class="pln">  top</span><span class="pun">:</span><span class="lit">50</span><span class="pun">%;</span></code></li><li class="L4"><code><span class="pln">  left</span><span class="pun">:</span><span class="lit">50</span><span class="pun">%;</span></code></li><li class="L5"><code><span class="pln">  margin</span><span class="pun">-</span><span class="pln">left</span><span class="pun">:-</span><span class="lit">100px</span><span class="pun">;</span></code></li><li class="L6"><code><span class="pln">  margin</span><span class="pun">-</span><span class="pln">top</span><span class="pun">:-</span><span class="lit">100px</span><span class="pun">;</span></code></li><li class="L7"><code><span class="pun">}</span></code></li></ol></pre><div class="md-section-divider"></div><h3 data-anchor-id="462w" id="7浮动元素有什么特征对其他浮动元素普通元素文字分别有什么影响">7.浮动元素有什么特征？对其他浮动元素、普通元素、文字分别有什么影响?</h3><blockquote data-anchor-id="6fdk" class="white-blockquote">
+  <p>特征： <br>
+  1. 浮动元素会脱离标准文档流，不占据文档流中的空间，所以后面的元素会占据原本元素的空间，就是说后面的元素会被遮挡 <br>
+  2. 浮动后的元素会处于同一层，并且一次排列 <br>
+  3. 文字遇到浮动元素边框会避开另起一行有环绕效果。 <br>
+  4. 如果有其他元素有清除浮动，同一层的浮动元素则会另起一行放置</p>
+</blockquote><div class="md-section-divider"></div><h3 data-anchor-id="usda" id="8清除浮动指什么-如何清除浮动">8.清除浮动指什么? 如何清除浮动?</h3><blockquote data-anchor-id="c0qr" class="white-blockquote">
+  <p>清除浮动指的是用clear属性来设置是否允许它自身周围存在浮动元素，这样可以让浮动元素因被排斥或排斥其他浮动元素而再往下占据一行，从而消除对其他元素的影响 <br>
+  可以设置clear：left、right、both来选择不允许哪一边存在浮动元素。</p>
+</blockquote></div>
+</body>
+</html>

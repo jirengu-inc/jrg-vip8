@@ -1,0 +1,91 @@
+* {	padding: 0;
+	margin: 0;
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+.title{
+	height: 40px;
+	background-color: #F9F9F9;
+}
+
+.title ul li{
+	list-style: none;
+	float: left;
+	line-height: 40px;
+}
+
+.title ul li a{
+	text-decoration: none;
+	color: #76C31A;
+	margin-left: 20px;
+}
+
+.title ul li a:hover{
+	color: #FF3C33;
+}
+
+
+.content{
+	background-color: #F0F0F0;
+	padding: 10px;
+}
+
+.main,.left,.right{
+	float: left;
+}
+
+.clearfix:after{  /*清楚浮动*/
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.main{
+	width: 100%;
+	height: 400px;
+	background-color: #DADCDE;
+	overflow: hidden; /*当页面宽度达到最小的时候，防止内容的溢出*/
+}
+
+.left{
+	width: 160px;
+	height: 400px;
+	background-color: #2E8478;
+	margin-left: -100%;
+}
+
+.right{
+	width: 160px;
+	height: 400px;
+	background-color: #272727;
+	margin-left: -160px;
+}
+
+.text{
+	padding:10px 170px;
+	text-indent: 2em;
+	line-height: 1.5;
+}
+
+.text h3{
+	text-align: center;
+}
+
+.footer{
+	height: 40px;
+	background-color: #4B4F4F;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

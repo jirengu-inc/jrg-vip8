@@ -1,0 +1,22 @@
+
+#header{background:#444444;width:100%;height:90px;margin-top:-20px;}
+.nav{margin-left:-20px;}
+.nav li{display:inline-block;margin-right:40px;font-size:25px;line-height:90px;}
+.nav li a{color:green;text-decoration:none;}
+#content h1.title{text-align:center;color:green;margin-top:30px;}
+#content .desc{margin-left:28px;color:#888888;}
+#content .long_p{margin-left:35px;}
+#content ul.tree li.open-has-child{list-style:none;}
+#content ul.tree li.open-has-child a{text-decoration:none;color:green;margin-left:-3px;}
+#content ul.tree ul li{color:#888888;list-style:none;margin-top:5px;}
+#content ul.tree li.open-has-child ul{margin-left:-18px;}
+#content ul.tree li.has-child{list-style:none;margin-top:5px;}
+#content ul.tree li.has-child+li{list-style:none;margin-top:5px;}
+#content ul.tree li.has-child+li+li{list-style:none;margin-top:5px;}
+#content ul.tree li.has-child a{color:green;text-decoration:none;margin-left:-7px;}
+#content ul.tree li.has-child+li a{color:green;text-decoration:none;margin-left:-22px;}
+#content ul.tree li.has-child+li+li a{color:green;text-decoration:none;margin-left:-1px;}
+#content ul.tree li.open-has-child span{margin-left:-5px;}
+#content ul.tree li.has-child span{margin-left:-5px;padding-right:5px;}
+#content ul.tree li.has-child+li span{margin-left:-5px;padding-right:28px;}
+#content ul.tree li.has-child+li+li span{margin-left:-5px;padding-right:7px;}

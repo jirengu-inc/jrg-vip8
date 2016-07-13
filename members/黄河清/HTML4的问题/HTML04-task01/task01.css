@@ -1,0 +1,58 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+.title ul{
+	border: 1px solid #ccc;
+}
+
+.title ul li{
+	float: left;
+	margin-left: 30px;
+	list-style: none;
+	line-height: 2.0;
+}
+
+.123{
+	border: 1px solid red;
+}
+
+.title ul li a{
+	font-size: 18px;
+	text-decoration: none;
+	color: #444;
+}
+
+.title ul li a:hover{
+	color: red;
+}
+
+/* 这是第二种方法，使用 display 方法
+*{
+	padding: 0;
+	margin: 0;
+}
+
+.title ul{
+	border: 1px solid #ccc;
+}
+
+.title ul li{
+	margin: auto 25px;
+	display: inline-block;
+	list-style: none;
+	line-height: 2.0;
+}
+
+.title ul li a{
+	font-size: 18px;
+	text-decoration: none;
+	color: #444;
+}
+
+.title ul li a:hover{
+	color: red;
+}
+
+*/

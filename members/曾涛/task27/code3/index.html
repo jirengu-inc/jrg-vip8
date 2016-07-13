@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input class="r" type="range" min="0" max="255" value="0">
+    <input class="g" type="range" min="0" max="255" value="0">
+    <input class="b" type="range" min="0" max="255" value="0">
+    <input class="color" type="color">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script> 
+    <script>
+        var r,
+            g,
+            b;
+        $('input').on('mousemove', function(){
+                r = $('r').val(),
+                g = $('g').val(),
+                b = $('b').val();
+                $('.color').val('#' + r + g + b);
+        });
+    </script>
+</body>
+</html>

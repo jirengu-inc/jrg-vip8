@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+body,
+ul,
+li {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+.items > li {
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+
+.btn {
+	position: fixed;
+	right: 5px;
+	bottom: 5px;
+	display: none;
+	width: 100px;
+	height: 50px;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	background: #000;
+	background: rgba(0, 0, 0, .4);
+	color: #fff;
+	font: bold 15px/50px "sens-Arial";
+	outline: none;
+}

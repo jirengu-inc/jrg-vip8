@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>slides</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="style.css" rel="stylesheet">
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="jquery.slides.min.js"></script>
+</head>
+<body>
+    <div id="art-list">
+    	<a href="javascript:;"><img src="http://img13.360buyimg.com/da/jfs/t2689/332/1524902196/101307/db2d4319/57428b9dNcee05373.jpg" alt=""></a>
+    	<a href="javascript:;"><img src="http://img11.360buyimg.com/da/jfs/t2899/326/1395695429/94279/f1f8d6c4/573e6790Ne69dbec4.jpg" alt=""></a>
+    	<a href="javascript:;"><img src="http://img14.360buyimg.com/da/jfs/t2584/121/1575958765/140286/18809406/5742d4a6N13657f1e.jpg" alt=""></a>
+    	<a href="javascript:;"><img src="http://img10.360buyimg.com/da/jfs/t2785/130/1568386950/96730/345ff5d9/5742785fNb8d4bffa.jpg" alt=""></a>
+    	<a href="javascript:;"><img src="http://img10.360buyimg.com/da/jfs/t2656/175/1416084414/131664/6a6e7830/573eb9e5N2e282092.jpg" alt=""></a>
+    	<a href="javascript:;"><img src="http://img13.360buyimg.com/da/jfs/t2590/301/1427790959/273373/59f10554/573ea2adN16eac5d1.jpg" alt=""></a>
+        <a class="slidesjs-previous slidesjs-navigation slides-arrow-left slides-arrow" href="#" title="Previous"><</a>
+		<a class="slidesjs-next slidesjs-navigation slides-arrow-right slides-arrow" href="#" title="Next">></a>
+	</div>
+    <script>
+      $(function(){
+	      $("#art-list").slidesjs({
+	        width: 730,
+	        height: 454,
+	        navigation: {
+			      active: false,
+			        // [boolean] Generates next and previous buttons.
+			        // You can set to false and use your own buttons.
+			        // User defined buttons must have the following:
+			        // previous button: class="slidesjs-previous slidesjs-navigation"
+			        // next button: class="slidesjs-next slidesjs-navigation"
+			      effect: "fade"
+			        // [string] Can be either "slide" or "fade".
+			},
+	        play: {
+		      active: true,
+		        // [boolean] Generate the play and stop buttons.
+		        // You cannot use your own buttons. Sorry.
+		      effect: "fade",
+		        // [string] Can be either "slide" or "fade".
+		      interval: 3000,
+		        // [number] Time spent on each slide in milliseconds.
+		      auto: true,
+		        // [boolean] Start playing the slideshow on load.
+		      swap: true,
+		        // [boolean] show/hide stop and play buttons
+		      pauseOnHover: true,
+		        // [boolean] pause a playing slideshow on hover
+		      restartDelay: 2500
+		        // [number] restart delay on inactive slideshow
+		    }
+          });
+       });
+    </script>
+</body>
+</html>

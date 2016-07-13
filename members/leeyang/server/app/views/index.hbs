@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body style="background:grey;">
+<div>
+	<form action="/" method="post">
+		<label>用户名<input type="text" name='username'></label>
+		<label>密码<input type="password" name='password'></label>
+		<input type="submit" value="提交">
+	</form>
+</div>
+
+<script src="http://7xrxd2.com1.z0.glb.clouddn.com/jquery/jquery-1.12.3.min.js"></script>
+<script>
+	$('form').on('submit',function(e){
+		e.preventDefault()		//禁止默认动作，用户点击不会提交
+		var form = this
+		var $form = $(this)
+		var data = $form.serialize()    //序列化的取出formdata
+		$.post('/', data, function(response){
+			console.log(response)
+		})
+	})
+</script>
+
+
+</body>
+</html>

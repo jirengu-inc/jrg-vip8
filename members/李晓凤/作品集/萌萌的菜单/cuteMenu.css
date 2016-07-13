@@ -1,0 +1,132 @@
+@charset"utf-8";
+*{margin: 0;padding: 0;}
+body{font-size: 18px;font-family: "微软雅黑"}
+ul,ol,li{list-style: none;}
+.cuteMenu{
+	width: 1162px;
+	height: 80px;
+	margin:auto;
+	border:1px solid #E5E9EF;
+	border-radius: 3px;
+	margin-top: 100px;
+}
+.clearfix:after{content: "";display: block;clear: both;}
+.float{float: left;}
+.clearfix{
+	content: "";
+	display: block;
+	clear:both;
+}
+.cuteMenu .share{
+	width: 116px;
+	padding:0 20px 0 10px;
+}
+.cuteMenu .collect{
+	width:116px;
+	padding:0 20px 0 20px;
+}
+.cuteMenu .usePhone{
+	width: 152px;
+	padding:0 20px 0 20px;
+}
+.cuteMenu .coin{
+	width: 116px;
+	padding:0 20px 0 20px;
+}
+.cuteMenu i{
+	display: block;
+	width: 80px;
+	height: 80px;
+	float: left;
+}
+.menu{
+	width: 36px;
+	float: left;
+	padding:22px 0;
+	text-align: center;
+}
+.menu_app{
+	width: 72px;
+	float: left;
+	padding:22px 0;
+}
+.menu>p>span,.app{
+  font-size:12px;
+  color: rgb(109, 117, 122);
+}
+.cuteMenu>.share:hover，
+.cuteMenu>.collect:hover，
+.cuteMenu>.usePhone:hover，
+.cuteMenu>.coin:hover{
+
+}
+
+@keyframes share {
+    0% {        background-position:0;    }
+    100% {      background-position: -1360px 0;    }
+}
+@-webkit-keyframes share{
+	0% {background-position: 0px 0px; }
+	100% {background-position: -1360px 0px;}
+}
+@keyframes collect {
+    0% {        background-position:5px;    }
+    100% {      background-position: -1120px 5px;    }
+}
+@-webkit-keyframes collect{
+	0% {background-position: 0px 5px; }
+	100% {background-position: -1120px 5px;}
+}
+@keyframes app {
+    0% {        background-position:0;    }
+    100% {      background-position: -1280px 0;    }
+}
+@-webkit-keyframes app{
+	0% {background-position: 0px 0px; }
+	100% {background-position: -1280px 0px;}
+}
+@-webkit-keyframes app_c{
+	0% {background-position: -720px 0px; }
+	100% {background-position: -1280px 0px;}
+}
+@keyframes coin {
+    0% {        background-position:0px -5px;    }
+    100% {      background-position: -640px -5px;    }
+}
+@-webkit-keyframes coin{
+	0% {background-position: 0px -15px; }
+	100% {background-position: -640px -15px;}
+}
+.share_bg{
+	background:url(img/anim-share.png) no-repeat;
+	background-size: 1360px;
+	background-position: 0 0;
+}
+.cuteMenu>.share:hover .share_bg{
+	-webkit-animation:share 1.8s steps(17) 1;}
+
+.collect_bg{
+	background:url(img/anim-fav.png) no-repeat;
+	background-size: 1120px;
+	background-position: 0 5px;
+}
+.cuteMenu>.collect:hover .collect_bg{
+	-webkit-animation:collect 1.5s steps(14) infinite;}
+
+.usePhone_bg{
+	background:url(img/anim-app.png) no-repeat;
+	background-size: 1280px;
+	background-position: 0 0;
+}
+.cuteMenu>.usePhone:hover .usePhone_bg{
+	-webkit-animation:app 1.8s steps(16) 1;
+}
+
+.coin_bg{
+	background:url(img/anim-coin.png) no-repeat;
+	background-size: 640x;
+	background-position: 0px -15px;
+}
+.cuteMenu>.coin:hover .coin_bg{
+	-webkit-animation:coin 0.65s steps(8) infinite;}
+

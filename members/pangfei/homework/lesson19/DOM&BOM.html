@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DOM&BOM</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+    
+<div>
+   <span id="s1"></span>
+   <span id="s2"></span>
+   <span id="s3"></span>
+</div>
+
+<script>
+ function get(idName){
+	   var a=document.getElementById(idName);
+	   console.log(a);
+	   return a;
+}
+
+function next(node){
+     var result=node.nextSibling.nextSibling;
+     console.log(result);
+     return result;
+}
+
+ var s1 = get("s1");
+ var s2 = get("s2");
+ var s3 = get("s3");
+
+var a=next(s1) === s2;
+var b=next(s2) === s3;
+var c=next(s3) === null;
+
+console.log(a);
+console.log(b);
+console.log(c);
+
+</script>
+</body>
+</html>

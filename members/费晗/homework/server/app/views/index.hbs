@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body style="background:grey;">
+<div>
+    <form action="/" method=post>
+        <label>电话：<input type="text" name=username></label>
+        <label>密码：<input type="password" name="password"></label>
+        <input type="submit" value="提交">
+    </form>
+</div>
+
+<script src="http://style.c.aliimg.com/fdevlib/js/gallery/jquery/jquery-latest.js"></script>
+    <script>
+
+        $('form').on('submit',function(e){
+            e.preventDefault()
+            var $form = $(this)
+            var data = $form.serialize()
+            $.post('/',data,function(responce){
+                console.log(responce)
+                alert('success')
+            })
+        })
+
+    </script>
+
+</body>
+</html>

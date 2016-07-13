@@ -1,0 +1,7 @@
+fieldset{width:800px;}
+legend{margin-left:270px;}
+#man,#woman,#trend_man,#trend_woman{margin-left:-3px;}
+.radio{padding-right:10px;}
+#dota,#trip,#pet{margin-left:-3px;}
+.checkbox{padding-right:10px;}
+#textarea{display:inline-block;margin-left:8px;}

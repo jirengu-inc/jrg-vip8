@@ -1,0 +1,87 @@
+*{
+	padding: 0px;
+	margin:0px;
+	color: black;
+	font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.clearfix:after{
+	content: "";
+	display: block;
+	clear: both;
+
+}
+.title{
+	background-color: #E0E0E0;
+	text-align: center;   /*内部元素居中*/
+}
+.title ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: inline;/*内部元素转化为内联块状元素，父元素可以使其居中*/
+}
+.title>ul>li{
+	float: left;
+	margin-left: 20px;
+	position: relative;
+}
+ul>li a{
+	text-decoration: none;
+}
+ul>li a:hover{
+	background-color:#2c3e50;
+	color:#ffffff;
+}
+
+.child{
+	list-style: none; /*设置好后，先让其隐藏起来，后面根据条件显示*/
+	position: absolute;
+	top: 100%;
+	border: 1px solid #ccc;
+	text-align: left;
+	display: none;
+}
+
+ul>li:hover{ /*选中菜单时，背景颜色和字体颜色，注意，这个是选中后再选择下拉时显现的*/
+	background-color:#2c3e50;
+	color:#ffffff;
+}
+
+ul>li:hover .child{  /*选中菜单时，隐藏的下拉栏显示出来*/
+	display: block;
+}
+
+
+.child>li:hover{ /*下拉菜单的字体颜色与背景颜色*/
+	background-color:#2c3e50;
+	color:#ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

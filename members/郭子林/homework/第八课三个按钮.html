@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三个按钮居中显示</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style8.css">
+</head>
+<body>
+<div class="page">
+    <div class="items">
+        <h3>写法一</h3>
+        <p>将三个input并排写，中间不添加任何换行符。换行符会使inline-block在浏览器中出现几像素的间隙。</p>
+        <div class="threesub">
+            <input type="submit" value="提交"><input type="reset" value="重置"><input type="button" value="按钮">
+        </div>
+    </div>
+
+    <div class="items">
+        <h3>写法二</h3>
+        <p>利用font-size:0;这一属性清除行内元素换行符产生的间隙。</p>
+        <div class="threespan">
+            <span>提交</span>
+            <span>重置</span>
+            <span>按钮</span>
+        </div>
+    </div>
+
+    <div class="items">
+        <h3>写法三</h3>
+        <p>利用块级元素的display:inline-block实现三个按钮居中。</p>
+        <div class="threespan">
+            <ul>
+                <li>提交</li>
+                <li>重置</li>
+                <li>按钮</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="items">
+        <h3>写法四</h3>
+        <p>利用块级元素float:left属性与定宽后margin:0 auto;实现三个按钮居中。</p>
+        <div class="threeli">
+            <ul class="clearfix">
+                <li>提交</li>
+                <li>重置</li>
+                <li>按钮</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

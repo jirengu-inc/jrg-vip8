@@ -1,0 +1,13 @@
+*{padding: 10px}
+.main{ font-size: 50px;}
+#day {color:red;}
+li{font-size: 50px;}
+h2,h1{font-family: serif;}
+div p{color: red; }
+div>p{line-height:100%;}
+ul+p{font-size: 50px;}
+a[target]{background-color: black;}
+a[href="http://www.baidu.com"]{background: orange;}
+[title~="smile"]{border:5px solid black;}
+[language|=en]{background: blue;}
+p~ul{background:#ff0000;}

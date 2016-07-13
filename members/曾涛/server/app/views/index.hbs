@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        label {
+            display: block;
+            width: 100px;
+            margin: 10px;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>
+        $(function(){
+            $('form').on('submit', function(e){
+                e.preventDefault();
+                var $form = $(this);
+                    data = $form.serialize();
+                $.post('/', data, function(response){
+                    console.log(response);
+                }, 'json');
+            });
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <label>
+            用户名：
+            <input type="text" name="username">
+        </label>
+        <label>
+            密码：
+            <input type="password" name="password">
+        </label>
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>

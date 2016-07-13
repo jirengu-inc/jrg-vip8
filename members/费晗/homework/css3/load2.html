@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>loading</title>
+<style>
+*{margin: 0; padding: 0;}
+body{
+	background: rgb(13, 206, 203);
+}
+@keyframes scaleLoad{
+	0%,
+	50%,
+	100% {
+		transform: scaleY(1);
+	}
+	25%,
+	75% {
+		transform: scaleY(0.5);
+	}
+}
+
+@keyframes scaleLoadx{
+	0%,
+	50%,
+	100% {
+		transform: scaleX(1);
+	}
+	25%,
+	75% {
+		transform: scaleX(0.5);
+	}
+}
+
+@keyframes hidden{
+	0%,
+	100% {
+		height: 50px;
+		background-color: #0dcecb;
+		box-shadow: 0 0 #0dcecb;
+	}
+	25%{
+		height: 60px;
+		background-color: #fff;
+		box-shadow: 0 -20px #fff;
+	}
+}
+
+.box,
+.box2,
+.box3{
+	text-align: center;
+	margin-top: 40px;
+}
+.load1,
+.load2,
+.load3{
+	background: #fff;
+	width: 10px;
+	height: 50px;
+	/*text-indent: -9999px;*/
+	display: inline-block;
+/*	animation-delay: 0.2s;*/
+}
+.box>.load1:nth-child(1){
+	animation: scaleLoad 2s ease-in-out infinite;
+}
+.box>.load1:nth-child(2){
+	animation: scaleLoad 2s ease-in-out infinite;
+	animation-delay: 0.1s; 
+}
+.box>.load1:nth-child(3){
+	animation: scaleLoad 2s ease-in-out infinite;
+	animation-delay: 0.2s; 
+}
+.box>.load1:nth-child(4){
+	animation: scaleLoad 2s ease-in-out infinite;
+	animation-delay: 0.3s; 
+}
+
+.box2>.load2:nth-child(1){
+	animation: scaleLoadx 1s ease-in-out infinite;
+}
+.box2>.load2:nth-child(2){
+	animation: scaleLoadx 1s ease-in-out infinite;
+	animation-delay: 0.1s; 
+}
+.box2>.load2:nth-child(3){
+	animation: scaleLoadx 1s ease-in-out infinite;
+	animation-delay: 0.2s; 
+}
+.box2>.load2:nth-child(4){
+	animation: scaleLoadx 1s ease-in-out infinite;
+	animation-delay: 0.3s; 
+}
+
+.box3>.load3:nth-child(1){
+	animation: hidden 1s ease-in-out infinite;
+}
+.box3>.load3:nth-child(2){
+	animation: hidden 1s ease-in-out infinite;
+	animation-delay: 0.1s; 
+}
+.box3>.load3:nth-child(3){
+	animation: hidden 1s ease-in-out infinite;
+	animation-delay: 0.2s; 
+}
+.box3>.load3:nth-child(4){
+	animation: hidden 1s ease-in-out infinite;
+	animation-delay: 0.3s; 
+}
+
+</style>
+</head>
+<body>
+<div class="box">
+	<div class="load1"></div>
+	<div class="load1"></div>
+	<div class="load1"></div>
+	<div class="load1"></div>
+</div>
+<div class="box2">
+	<span class="load2"></span>
+	<span class="load2"></span>
+	<span class="load2"></span>
+	<span class="load2"></span>	
+</div>
+<div class="box3">
+	<span class="load3"></span>
+	<span class="load3"></span>
+	<span class="load3"></span>
+	<span class="load3"></span>	
+</div>
+
+
+</body>
+</html>

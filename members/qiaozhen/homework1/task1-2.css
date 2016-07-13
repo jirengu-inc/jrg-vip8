@@ -1,0 +1,194 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    color: #000;
+    font-size: 14px;
+    background-color: rgb(214,214,214);
+    font-family: "Microsoft YaHei UI", sans-serif;
+}
+
+.clearfloat:after{
+    display: block;
+    content: '';
+    height: 0;
+    clear: both;
+    zoom:1;
+}
+
+/*article*/
+
+.nav{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(38,38,38);
+    color: #fff;
+    overflow: hidden;
+}
+
+.nav h1{
+    float: left;
+    width: 40%;
+    line-height: 60px;
+    padding-left: 20px;
+}
+
+.nav ul{
+    float: right;
+    width: 50%;
+    padding-top: 0px;
+}
+
+.nav ul li{
+    float: left;
+    list-style: none;
+    padding: 0 10px;
+    width: 20%;
+}
+
+.nav ul li a{
+    line-height: 60px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav ul li a:hover{
+    color: rgb(214,214,214);
+}
+
+/*article*/
+
+.container{
+    /* border-right:2px solid grey;加入实现右侧阴影效果*/
+    margin: 20px auto;
+    width: 98%;
+    background-color: white;
+}/*应该再加一层wrap设置padding*/
+
+
+.header{
+    margin:0 auto;
+    width: 98%;
+}
+
+.container h1,h2,p,img,ul{
+    padding-top: 10px;
+}
+
+.content{
+    margin:0 auto;
+    width: 98%;
+    padding-bottom: 20px;
+}
+
+.content p {
+    font-size: 1em;
+    line-height: 2em;
+    text-indent: 2em;
+    word-spacing: 2em;  /*word-spacing对中文无效？？*/  
+}
+
+.content ul li{
+    list-style: none;
+}
+
+/*imagines*/
+
+.wrapper{
+    padding: 20px 20px;
+}
+
+.pic{
+    padding-top: 10px;
+}
+
+/*table*/
+
+ol {
+    padding-left: 20px;  
+}
+
+table{
+    width: 100%;
+    background-color: grey;
+}
+
+thead{
+    background-color: black;
+    color:white;
+}
+
+tbody{
+    background-color: white;
+}
+
+/*侧栏*/
+
+.before:before{
+    float: left;
+    width: 4px;
+    height: 45px;
+    content: '';
+    background-color: grey;
+}
+
+#last>h1{
+    line-height: 45px;
+    padding-top: 0;
+    padding-left: 20px;
+}
+
+form{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+form label{
+      width: 40%;
+      text-align: right;
+      display: inline-block;
+      margin:0 0;
+}
+
+.form{
+    padding-bottom: 20px;
+}
+
+.form input,select,textarea{
+    margin-left: 10px;
+}
+
+#intro{
+    vertical-align: top;
+}
+
+.form textarea{
+    height: 80px;
+    width: 40%;
+}
+
+.submit{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(36, 55, 201);
+    color: #FFF;
+    font-size: 18px;
+    border: none;
+}
+
+.footer{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    vertical-align: middle;
+    color: #FFF;
+    text-align: center;
+    background-color: rgb(38,38,38);
+}
+
+
+
+

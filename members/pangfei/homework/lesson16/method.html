@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>array method</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+
+  <script>
+     // join() 方法将数组中的所有元素连接成一个字符串。
+     var a0=['no','shortcuts','to','any','place'];
+     var myChar1=a0.join();
+     var myChar2=a0.join(' ');
+     console.log(myChar1);
+     console.log(myChar2);
+     console.log(a0);
+
+     // splice() 方法用新元素替换旧元素，以此修改数组的内容。
+     var a1=['Helen','Julie','Grace','Alex','Andy'];
+     var modifyA1=a1.splice(2,2);
+     console.log(modifyA1);
+     console.log(a1);
+
+     var a2=['Helen','Julie','Grace','Alex','Andy'];
+     var a3=['Helen','Julie','Grace','Alex','Andy'];
+     var modifyA3=a3.splice(2,2,'Apple','Peach');
+     console.log(modifyA3);
+     console.log(a3);
+     console.log(a2);
+
+     // concat()将传入的数组或非数组值与原数组合并,组成一个新的数组并返回.
+     var b=[1,2,3];
+     var c=['a','b','c'];
+     var bc12=b.concat(c,1,2);
+     console.log(bc12);
+     console.log(b);
+     console.log(c);
+
+     // indexOf()方法返回给定元素能找在数组中找到的第一个索引值，否则返回-1。
+     var s=['a','d','f','e','g','a','b','e'];
+     var s1=s.indexOf('e');
+     var s2=s.indexOf('e',1);
+     console.log(s1);
+     console.log(s2);
+     console.log(s);
+
+     // reverse() 方法颠倒数组中元素的位置。第一个元素会成为最后一个，最后一个会成为第一个。
+     var num=[1,2,3,4];
+     console.log(num.reverse());
+  </script>
+</body>
+</html>

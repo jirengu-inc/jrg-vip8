@@ -1,0 +1,27 @@
+@charset"utf-8";
+*{margin:0;padding:0;}
+.triangle{
+    width: 0;
+    height: 0;
+	border-top: 100px solid blue;
+	border-left: 100px solid transparent;
+	border-right: 100px solid transparent;
+	border-bottom:100px solid transparent;
+}
+.a{
+	width: 0;
+	height: 0;
+	border-top: 100px solid transparent;
+	border-left: 100px solid transparent;
+	border-right: 100px solid transparent;
+	border-bottom:100px solid blue;
+}
+.b{
+	width: 0;
+	height:0;
+	border-top: 100px solid transparent;
+	border-left: 100px solid transparent;
+	border-right: 100px solid transparent;
+	border-bottom:100px solid white;
+	margin-top:-190px;
+}

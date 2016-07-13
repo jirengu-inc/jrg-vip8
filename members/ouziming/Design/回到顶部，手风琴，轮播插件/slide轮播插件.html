@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>轮播插件</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<style>
+	*{margin:0;padding: 0}
+	a{text-decoration:none;}
+	ul li{list-style: none;}
+	body {font: 12px/150% Arial,Verdana,"\5b8b\4f53";}
+	body{background-color: #ddd}
+	.slide{
+		display: table;
+		overflow: hidden;
+		margin:0 auto;
+		border:2px solid #928084;
+		/*box-shadow: 2px 2px 15px #f9dfdf;*/
+		-moz-box-shadow:0 0 3px #AAAAAA;
+		-webkit-box-shadow:0 0 3px #AAAAAA;
+		box-shadow:0 0 3px #AAAAAA;
+	}
+	img{
+		width: 700px;
+		height: 450px;
+		vertical-align: top;
+	}
+	.art .photo{
+		width: 700px;
+		height: 450px;
+		float: left;
+	}
+	.art{
+		position: relative;
+		overflow: hidden;
+	}
+	.art .arrow{
+	    cursor: pointer;
+	    text-align: center;
+	    position: absolute;
+	    font-family:simsun;
+	    left: 50%;
+	    top: 50%;
+	    width: 30px;
+	    height: 60px;
+	    line-height: 60px;
+	    background-color: #FFF;
+	    box-shadow: 0 0 2px #999;
+	    opacity: 0.4;
+	    display: none;
+	}
+
+	.art .arrow.onhover{display: block;}
+	.art .arrow.unhover{display: none;}
+
+	.art .next{
+		position: absolute;
+	    left: 670px;
+	    top: 190px;
+	}
+	.art .prev{
+		position: absolute;
+	    left: 0px;
+	    top: 190px
+	}
+
+	.setbullet{
+		text-align: center;
+	    width: 400px;
+	    position: absolute;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    overflow: hidden;
+	    bottom: 20px;
+	    margin: 0px auto;
+	}
+
+	.bullet{
+		display: inline-block;
+    	border-radius: 50%;
+    	width: 20px;
+    	height: 20px;
+    	line-height: 20px;
+    	text-align: center;
+    	margin:0 5px;
+    	background-color: #ddd;
+	}
+
+	.bullet.active{
+		display: inline-block;
+		background-color: #b61b1f;
+		color: #fff;
+	}
+</style>
+
+<body>
+	<div class="slide">
+		<div class="art">
+			<div class="photo"><img src="image/11.jpg"></div>
+			<div class="photo"><img src="image/33.jpg"></div>
+			<div class="photo"><img src="image/44.jpg"></div>
+			<div class="photo"><img src="image/55.jpg"></div>
+			<div class="photo"><img src="image/66.jpg"></div>
+			<div class="photo"><img src="image/77.jpg"></div>
+		</div>
+	</div>
+<script>
+	//插件定义
+	$.fn.slides = function(options){
+		//console.log(this)---jq(list)
+		var $arts = this;//这里this是一个对象包含两个同名的元素
+		$arts.each(function(){
+			//console.log(this)----DON(list)
+			var $art = $(this)//this是遍历后的各自两个不同的对象，然后就可在各自对象里查找、操作
+			var current = 0//把current默认为-1为了按钮第一个高亮，current第一次打出0，但后面发现效果不好
+
+			//给图片添加一个父容器包裹层，设置样式并且执行链式调用
+			$photos = $art.children().wrapAll('<div class="list"></div>')// $art.children()的list作为了墙板
+			$photos.css({float:"left"})
+			$list = $art.children().wrapAll('<div class="viewspiont"></div>')// $art.children()的viewspiont作为了窗口
+			$list.css({
+				width:($photos.length)*(options.width),
+				overflow:"hidden",
+				position:"absolute",
+				left:0
+			})
+
+			var $viewspiont = $('.viewspiont')
+			$viewspiont.css({
+				width:options.width,
+				height:options.height,
+				overflow:"hidden",
+				position:"relative"
+			})
+
+			var $prev = $('<a class="prev arrow"><</a>').appendTo($art)
+			var $next = $('<a class="next arrow">></a>').appendTo($art)
+			console.log($prev)
+
+			/*prew,next函数,封装move函数
+			var movenext = function(){
+				var index = current + 1;
+				var left = index*('-800')
+				$list.animate({
+					left:left
+				},function(){
+					current = index
+				})
+			}
+			$next.on('click',function(){
+					movenext(current + 1)
+			})
+
+			var moveprow = function(){
+				var index = current -1;
+				var left = index*('-800')
+				$list.animate({
+					left:left
+				},function(){
+					current = index
+				})
+			}
+			$prew.on('click',function(){
+				moverprew(current - 1)
+			})*/
+
+
+			var hover = false;
+			var go = function(index){
+				if (index>$photos.length-1) {
+					index = 0
+					$list.css({left:0})
+					}
+				if (index<0) {
+					index = $photos.length-1
+					}
+				if(timer){//鼠标移上去有计数器(即自动播放)的话，就先清除计时器
+					window.clearInterval(timer);
+				}
+
+				var left = index*('-700')
+				$list.stop(true,true).animate({
+					left:left
+				})
+					current = index
+					console.log(current)
+				if(!hover){
+					autoPlay()
+				}
+				showBullet()	
+			}
+
+			//命名上注意驼峰规则——先小后大
+			var moveNext = function(){
+				go(current+1)
+			}
+			$next.on('click',function(){
+					moveNext()
+			})
+
+			var movePrev = function(){
+				go(current-1)
+			}
+			$prev.on('click',function(){
+				movePrev()
+			})
+
+
+			//自动播放功能,js不存在if块作用域
+			var timer;
+			function autoPlay(){
+				timer = setInterval(function(){
+					moveNext()
+				},3000)
+			}
+
+			if(options.auto === true){
+				autoPlay()
+			}
+
+			if(options.stopAuto === true){
+				function stop(){
+					clearInterval(timer)
+				}
+				stop()
+			}
+
+			//鼠标移出移入事件监听
+			$arts.on('mouseenter',function(){//把监听范围扩大，试过$photos,$viewspiont都不行，改用大范围$arts
+				window.clearInterval(timer);
+				hover = true
+				$next.addClass('onhover').removeClass('unhover')
+				$prev.addClass('onhover').removeClass('unhover')
+			})
+
+			$arts.on('mouseleave',function(){
+				autoPlay()
+				hover = false
+				$next.removeClass('onhover').addClass('unhover')
+				$prev.removeClass('onhover').addClass('unhover')
+			})
+
+
+			//按钮切换图片
+			var $bullet = $('<a href="#" class="bullet active">1</a><a href="#" class="bullet">2</a><a href="#" class="bullet">3</a><a href="#" class="bullet">4</a><a href="#" class="bullet">5</a><a href="#" class="bullet">6</a>').appendTo($arts)
+			$bullet.wrapAll('<div class="setbullet"></div>')
+			//console.log($bullet)
+			
+			var $setbullet = $('.setbullet')
+			$setbullet.find('a').on('click',function(){
+				//console.log($(this))
+				var $this = $(this)//不是$('this')
+				var idx = $this.index()
+				go(idx)
+			})
+
+			//按钮高亮
+			function showBullet(){
+				$setbullet.children().eq(current).addClass('active').siblings('.active').removeClass('active')
+			}
+
+		})
+	}
+
+		//插件使用者
+		$('.art').slides({
+			width:700,
+			height:450,
+			auto:true,
+			//stopAuto:true
+		})
+</script>
+</body>
+</html>

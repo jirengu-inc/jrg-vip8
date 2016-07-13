@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html class="theme theme-white">
+<head>
+<meta charset="utf-8">
+<title>BFC问题</title>
+<link href="https://www.zybuluo.com/static/assets/template-theme-white.css" rel="stylesheet" media="screen">
+</head>
+<body class="theme theme-white">
+<div id="wmd-preview" class="wmd-preview wmd-preview-full-reader"><div class="md-section-divider"></div><div class="md-section-divider"></div><h1 data-anchor-id="v875" id="bfc问题">BFC问题</h1><p data-anchor-id="9lvq"><code class="">前端</code></p><hr><p data-anchor-id="ie66"><div class="toc"><div class="toc">
+<ul>
+<li><a href="#bfc问题">BFC问题</a><ul>
+<li><ul>
+<li><a href="#1在什么场景下会出现外边距合并如何合并如何不让相邻元素外边距合并">1.在什么场景下会出现外边距合并？如何合并？如何不让相邻元素外边距合并？</a></li>
+<li><a href="#2去除inline-block内缝隙有哪几种常见方法">2.去除inline-block内缝隙有哪几种常见方法?</a></li>
+<li><a href="#3父容器使用overflow-auto-hidden撑开高度的原理是什么">3.父容器使用overflow: auto| hidden撑开高度的原理是什么？</a></li>
+<li><a href="#4bfc是什么如何形成bfc有什么作用">4.BFC是什么？如何形成BFC，有什么作用?</a></li>
+<li><a href="#5浮动导致的父容器高度塌陷指什么为什么会产生有几种解决方法">5.浮动导致的父容器高度塌陷指什么？为什么会产生？有几种解决方法</a></li>
+<li><a href="#6以下代码每一行的作用是什么-为什么会产生作用-和bfc撑开空间有什么区别">6.以下代码每一行的作用是什么？ 为什么会产生作用？ 和BFC撑开空间有什么区别？</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</p><div class="md-section-divider"></div><h3 data-anchor-id="kqxa" id="1在什么场景下会出现外边距合并如何合并如何不让相邻元素外边距合并">1.在什么场景下会出现外边距合并？如何合并？如何不让相邻元素外边距合并？</h3><blockquote data-anchor-id="jskl" class="white-blockquote">
+  <p>首先，只有在普通文档流中，会出现外边距合并，也就是说脱离了文档流的不会出现外边框合并。 <br>
+  具体是：当两个垂直的外边距（一定要处于同一个 BFC 中）相遇时，它们的外边距会合并，有三种合并的方法： <br>
+  1. 正数的情况下，合并为最大的外边距 <br>
+  2. 负数的情况下，合并为绝对值最大的外边距 <br>
+  3. 一正一负的情况下，直接相加</p>
+  
+  <p>处在不同 BFC（使用浮动或者绝对定位） 的元素不会外边距合并，如果是父子关系，父元素只要有 padding 或者边框也可以阻止父子外边距合并。</p>
+</blockquote><div class="md-section-divider"></div><h3 data-anchor-id="mfm3" id="2去除inline-block内缝隙有哪几种常见方法">2.去除inline-block内缝隙有哪几种常见方法?</h3><blockquote data-anchor-id="n8wm" class="white-blockquote">
+  <p>标准文档流中，在使用了inline-block后，元素会像内联元素一样从左到右依次排列，但是中间会有一个空格的空隙。 <br>
+  去掉空格的方法： <br>
+  1. HTML 的代码前后不要有空格或者换行 <br>
+  2. 使用浮动，注意浮动后可能父元素高度坍塌 <br>
+  3. 使用负 margin <br>
+  4. 设置父元素的字号为0，再给要去除间隙的元素设置正常的字号</p>
+</blockquote><div class="md-section-divider"></div><h3 data-anchor-id="fjd1" id="3父容器使用overflow-auto-hidden撑开高度的原理是什么">3.父容器使用overflow: auto| hidden撑开高度的原理是什么？</h3><p data-anchor-id="uq7t">针对的原则是BFC高度计算原则，即<strong>计算一个BFC的高度时，浮动元素也参与计算</strong>，因此使用overflow:auto/hidden触发了BFC的生成，将浮动元素的高度也包含进去，高度就被撑开了。</p><div class="md-section-divider"></div><h3 data-anchor-id="vjy2" id="4bfc是什么如何形成bfc有什么作用">4.BFC是什么？如何形成BFC，有什么作用?</h3><blockquote data-anchor-id="s9ha" class="white-blockquote">
+  <p>BFC：“Box Formating Context”指得是“块级格式化上下文”，它是一个独立的<strong>块级渲染区域</strong>，这个区域拥有自己的规则来约束块级盒子的布局，并且<strong>这种布局与区域外部无关</strong></p>
+  
+  <p>形成 BFC 的条件： <br>
+  1. 浮动，float的值不为none <br>
+  2. position的值为absolute或fixed <br>
+  3. overflow 的属性值不为 visible <br>
+  4. display的值为inline-block、table-cell、table-caption</p>
+  
+  <p>BFC 的作用： <br>
+  1. 防止外边距合并 <br>
+  2. 防止文字环绕 <br>
+  3. 清除浮动造成的父元素高度塌陷 <br>
+  4. 用于页面的多列布局</p>
+</blockquote><div class="md-section-divider"></div><h3 data-anchor-id="4atz" id="5浮动导致的父容器高度塌陷指什么为什么会产生有几种解决方法">5.浮动导致的父容器高度塌陷指什么？为什么会产生？有几种解决方法</h3><blockquote data-anchor-id="j4i7" class="white-blockquote">
+  <p>首先，当父元素没有设定高度的时候，父元素的高度是由其内容决定的，当它的内容脱离了标准文档流的时候（比如浮动和定位），父元素的本身就没有了高度，就会塌陷。</p>
+  
+  <p>解决方法： <br>
+  1. 在<strong>父元素</strong>设置 BFC，让子元素在 BFC 内部渲染，方法有display：inline-block和overflow:hidden <br>
+  2. 给父元素设定固定的高度 <br>
+  3. 清除浮动。父容器的最后一个子元素后边添加一个空的div，并且为该div设置clear:both <br>
+  4. 清除浮动。伪类after，利用 clearfix 来清除</p>
+</blockquote><div class="md-section-divider"></div><h3 data-anchor-id="mwr9" id="6以下代码每一行的作用是什么-为什么会产生作用-和bfc撑开空间有什么区别">6.以下代码每一行的作用是什么？ 为什么会产生作用？ 和BFC撑开空间有什么区别？</h3><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="nwu0"><ol class="linenums"><li class="L0"><code class="language-css"><span class="pun">.</span><span class="pln">clearfix</span><span class="pun">:</span><span class="pln">after</span><span class="pun">{</span></code></li><li class="L1"><code class="language-css"><span class="pln">    content</span><span class="pun">:</span><span class="pln"> </span><span class="str">''</span><span class="pun">;</span></code></li><li class="L2"><code class="language-css"><span class="pln">    display</span><span class="pun">:</span><span class="pln"> block</span><span class="pun">;</span></code></li><li class="L3"><code class="language-css"><span class="pln">    clear</span><span class="pun">:</span><span class="pln"> both</span><span class="pun">;</span></code></li><li class="L4"><code class="language-css"><span class="pun">}</span></code></li><li class="L5"><code class="language-css"><span class="pun">.</span><span class="pln">clearfix</span><span class="pun">{</span></code></li><li class="L6"><code class="language-css"><span class="pln">    </span><span class="pun">*</span><span class="pln">zoom</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span></code></li><li class="L7"><code class="language-css"><span class="pun">}</span></code></li></ol></pre><blockquote data-anchor-id="eg3k" class="white-blockquote">
+  <p>这一段代码的主要作用是清楚浮动： <br>
+  1. 利用伪类：after <br>
+  2. 在后面添加了新的内容 <br>
+  3. 这个内容以块级元素显示 <br>
+  4. 清楚两边的浮动 <br>
+  5. *zoom: 1;指的是兼容 IE8以下的版本</p>
+</blockquote></div>
+</body>
+</html>

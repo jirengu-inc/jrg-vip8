@@ -1,0 +1,276 @@
+*{margin: 0; padding: 0;}
+figure{
+	position: relative;
+	width: 33.33%;
+	overflow: hidden;
+	height: 350px;
+	float: left;
+}
+figcaption{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	color: #fff;
+	font-family: 微软雅黑;
+}
+
+/*响应式代码*/
+figure img{opacity: 0.8; transition: all 0.35s;}
+figure figcaption p,h2,span,div {transition: all 0.35s;}
+@media screen and (max-width: 600px){
+	figure{width: 100%;}
+}
+@media screen and (min-width: 601px) and (max-width: 1000px){
+	figure{width: 50%;}
+}
+@media screen and (min-width: 1001px){
+	figure{width: 33.33%}
+}
+
+
+/*平移动画*/
+.test1{
+	background: #2f0000;
+}
+
+/*鼠标未放置时，隐藏-120px，hover时回归原位*/
+.test1 figcaption p {
+	background: #fff; 
+	color: #333; 
+	margin: 5px; 
+	text-align: center;
+	transform: translate(-120px,0);
+}
+.test1:hover figcaption p{
+	transform: translate(0,0);
+}
+
+/*给figcaption下的同级的p元素添加延时属性*/
+.test1 figcaption p:nth-of-type(1){transition-delay: 0.05s}
+.test1 figcaption p:nth-of-type(2){transition-delay: 0.10s}
+.test1 figcaption p:nth-of-type(3){transition-delay: 0.15s}
+
+.test1 figcaption{
+	padding: 20px;
+}
+/*鼠标经过时挪动背景图并添加0.5的透明度*/
+.test1:hover img{
+	transform: translate(-50px,0px);
+	opacity: 0.5;
+}
+
+
+/*旋转动画*/
+.test2{
+	background: #87CEFA;
+}
+/*为父容器定义宽高，否则div显示为一条直线，div不知去继承谁的高度*/
+.test2 figcaption{
+	width: 100%;
+	height: 100%;
+}
+/*使用百分比去定位，防止图片大小变化时产生影响*/
+.test2 figcaption h2{
+	margin-top: 15%;
+	margin-left: 15%;
+}
+.test2 figcaption p{
+	margin-left: 15%;
+	transform: translate(0px,50px);
+	opacity: 0;
+}
+.test2:hover figcaption p{
+	transform: translate(0px,0px);
+	opacity: 1;
+}
+.test2 figcaption div{
+	border: 2px solid #fff;
+	width: 80%;
+	height: 80%;
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	transform: translate(0px,-350px) rotate(0deg);/*图片初始位置*/
+}
+.test2:hover figcaption div{
+	transform: translate(0px,0px) rotate(360deg);
+}
+.test2:hover img{
+	opacity: 0.5;/*hover时更改透明度，用以显示背景色*/
+}
+
+
+
+/*扭曲动画*/
+.test3{
+	background: #A9A9A9;
+}
+.test3 figcaption{
+	top: 30%;
+	left: 15%;
+}
+.test3 figcaption h2{
+	transform: skew(90deg);
+}
+.test3 figcaption p{
+	transform: skew(90deg);
+	transition-delay: 0.1s;
+}
+.test3:hover img{
+	opacity: 0.5;
+}
+.test3:hover figcaption h2{
+	transform: skew(0deg);
+}
+.test3:hover figcaption p{
+	transform: skew(0deg);
+}
+
+
+/*缩放动画*/
+.test4{
+	background: #87CEFA;
+}
+.test4 figcaption h2{
+	margin-top: 15%;
+	margin-left: 15%;
+	transform: scale(1.2,1.2);
+	opacity: 0;
+}
+.test4 figcaption p{
+	margin-top: 5px;
+	margin-left: 15%;
+	transform: scale(1.2,1.2);
+	opacity: 0;
+}
+.test4:hover h2{
+	transform: scale(1,1);
+	opacity: 1;
+}
+.test4:hover p{
+	transform: scale(1,1);
+	opacity: 1;
+}
+.test4 figcaption {
+	width: 100%;
+	height: 100%;
+}
+.test4 figcaption div{
+	border: 2px solid #fff;
+	width: 80%;
+	height: 80%;
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	transform: scale(1.2,1.2);
+	opacity: 0;
+}
+.test4:hover figcaption div{
+	transform: scale(1,1);
+	opacity: 1;
+}
+/*通过改变图片透明度以及放大，来实现视觉差异*/
+.test4:hover img{
+	opacity: 0.5;
+	transform: scale(1.2,1.2);
+}
+
+
+
+/*井格缩放*/
+.test5{
+	background: #FDF5E6;
+}
+.test5 figcaption{
+	width: 100%;
+	height: 100%;
+}
+.test5 figcaption h2{
+	margin-top: 25%;
+	margin-left: 25%;
+	transform: scale(1.1,1.1);
+	opacity: 0;
+}
+.test5:hover figcaption h2{
+	transform: scale(1,1);
+	opacity: 1;
+}
+.test5 figcaption p{
+	margin-left: 25%;
+	margin-top: 10px;
+	transform: scale(1.1,1.1);
+	opacity: 0;
+}
+.test5:hover figcaption p{
+	transform: scale(1,1);
+	opacity: 1;
+}
+.test5 .j1{
+	border-width: 2px 0px 2px 0px;
+	border-color: #fff;
+	border-style: solid;
+	width: 0%;
+	height: 80%;
+	transition: width 0.8s;
+	position: absolute;
+	top: 10%;
+	left: 10%;
+}
+.test5:hover .j1{
+	width: 80%;
+}
+.test5 .j2{
+	border-width: 0px 2px 0px 2px;
+	border-color: #fff;
+	border-style: solid;
+	width: 70%;
+	height: 0%;
+	transition: height 0.8s;
+	position: absolute;
+	top: 5%;
+	left: 15%;
+}
+.test5:hover .j2{
+	height:90%;
+}
+.test5:hover img{
+	transform: scale(1.2,1.2);
+	opacity: 0.5;
+}
+
+
+
+/*旋转卡片*/
+.test6{
+	background: #2E8B57;
+}
+.test6-about {
+	color: black;
+	position: absolute;
+	top: 37%;
+	left:40%;
+	z-index: 1;
+	word-spacing: 35px;
+	font-size: 22px;
+	transform: scale(1,1);
+	opacity: 0;
+}
+.test6:hover .test6-about{
+	transform: scale(1.1,1.1);
+	opacity: 1;
+}
+.test6 .card{
+	background: white;
+	width: 640px;
+	height: 400px;
+	margin-top: 55%;
+}
+.test6:hover .card{
+	transform: rotate(-25deg);
+	transform-origin: 0 0%;
+	opacity: 0.7;
+}
+.test6:hover img{
+	opacity: 0.5;
+	transform: scale(1.2,1.2);
+}

@@ -1,0 +1,80 @@
+@charset"utf-8";
+*{margin: 0;padding:0;list-style: none;}
+.wrapped{
+    float: left;
+    position: relative;
+    left: 50%;
+}
+li{
+    opacity:0.9;
+    float: left;
+    position: relative;
+    right: 50%;
+}
+li:hover{opacity:1;}
+
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-apple_nav_01 {
+    width: 106px;
+    height: 38px;
+    background-position: -5px -5px;
+}
+
+.sprite-apple_nav_02 {
+    width: 105px;
+    height: 38px;
+    background-position: -5px -53px;
+}
+
+.sprite-apple_nav_03 {
+    width: 105px;
+    height: 38px;
+    background-position: -5px -101px;
+}
+
+.sprite-apple_nav_04 {
+    width: 105px;
+    height: 38px;
+    background-position: -5px -149px;
+}
+
+.sprite-apple_nav_05 {
+    width: 105px;
+    height: 38px;
+    background-position: -121px -5px;
+}
+
+.sprite-apple_nav_06 {
+    width: 104px;
+    height: 38px;
+    background-position: -120px -53px;
+}
+
+.sprite-apple_nav_07 {
+    width: 104px;
+    height: 38px;
+    background-position: -120px -101px;
+}
+
+.sprite-apple_nav_08 {
+    width: 104px;
+    height: 38px;
+    background-position: -120px -149px;
+}
+
+.sprite-apple_nav_09 {
+    width: 136px;
+    height: 38px;
+    background-position: -5px -197px;
+}
+
+#main{
+    clear: both;
+    width: 1000px;
+    margin:0 auto;
+}

@@ -1,0 +1,64 @@
+*{margin:0;padding:0;}
+ul,ol{list-style: none;}
+a,p,h1,h2,h3,h4,h5,h6{text-decoration:none;color:inherit;}
+fy-icon{color:inherit;}
+body{font: 12px/150% Arial,Verdana,"\5b8b\4f53";color: #666;background: #fff;-webkit-font-smoothing: antialiased;}
+.clearfix:after{content:" ";display:block;clear:both;}
+.Topbar-wrapper{height:30px;background:#F1F1F1;line-height: 30px;}
+.Topbar{width:1210px;height:30px;margin:0 auto; cursor: default; }
+.Topbar .location{width:95px;height:30px;float:left;position: relative; display:inline-block;vertical-align: middle;line-height:30px;}
+.Topbar .location .beijing .i-down{position:absolute;top:0;right:4px;display: inline-block;}
+.Topbar .location:hover .beijing .i-down{-webkit-transform: rotate(180deg);-ms-transform: rotate(180deg);transform: rotate(180deg);-webkit-transition:-webkit-transform 0.1s;transition:-webkit-transform 0.1s;transition:transform 0.1s; }
+.location:hover:after{content:'';display: block;position: absolute;height:0;top:90%;left:1px;border-top: 10px solid white;border-left: 1px solid transparent;border-right: 1px solid transparent;-webkit-box-sizing: border-box;box-sizing: border-box;width:100%;z-index:1;}
+.Topbar .location .beijing{padding:0 25px 0 10px;width:60px;height:30px;line-height:30px;display: inline-block;}
+.Topbar .location:hover .beijing{ background:white;border-left:1px solid #DDDDDD;border-right:1px solid #DDDDDD;}
+.Topbar .location .locationPicker{line-height:24px;top:100%;left:0;position:absolute;display: inline-block;z-index: 1;}
+.Topbar .location .locationPicker >ul{width:300px;border:1px solid #DDDDDD;padding:10px 0 10px 10px;background: white;display: none;}
+.Topbar .location:hover .locationPicker >ul{display: block;}
+.Topbar .location .locationPicker >ul>li {height:24px;float:left;padding:0 8px;margin:2px 8px;text-align: center;}
+.Topbar .location .locationPicker >ul>li:hover{background: #F4F4F4;color: #C81623;cursor: pointer;}
+.Topbar .location .locationPicker .selected{background:#C81623;color: white;}
+.Topbar .links{float:right;height:30px;line-height:30px;display:inline-block;width:780px;}
+.Topbar .links>ul{display: inline-block;line-height: 30px;width:100%;}
+.Topbar .links>ul .split{width:1px;height:15px;background: #ddd;display: inline-block;line-height:30px;vertical-align: middle;margin: 8px 1px;border:none;}
+.Topbar .links>ul>li{float:left;line-height:30px;display:inline-block;position:relative;}
+.Topbar .links>ul>li>a{padding:0 8px;line-height:30px;display:inline-block;vertical-align: top;}
+.Topbar .links>ul>li.other>span{padding:0 8px;line-height:30px;display:inline-block;vertical-align: top;}
+.Topbar .links>ul>li .i-down {top:0;right:0;line-height: 30px;display:inline-block;vertical-align: top;}
+.Topbar .links>ul>li .i-shouji{font-size:14px;line-height: 30px;display:inline-block;vertical-align: top;}
+.Topbar .links>ul>li:hover>a{color: #C81623;}
+.Topbar .links>ul>li:hover>a .i-down{color:#666;-webkit-transform: rotate(180deg);-ms-transform: rotate(180deg);transform: rotate(180deg);-webkit-transition:-webkit-transform 0.1s;transition:-webkit-transform 0.1s;transition:transform 0.1s;}
+.Topbar .links>ul>li:hover .my{display: block;}
+.Topbar .links>ul>li:hover>span .i-down{color:#666;-webkit-transform: rotate(180deg);-ms-transform: rotate(180deg);transform: rotate(180deg);-webkit-transition:-webkit-transform 0.1s;transition:-webkit-transform 0.1s;transition:transform 0.1s;}
+.Topbar .links>ul>li.other{position:relative;line-height:30px;height:30px;border-left:1px solid transparent;border-right:1px solid transparent;}
+.Topbar .links>ul>li.other:hover{background: white;border-left:1px solid #DDDDDD;border-right:1px solid #DDDDDD;}
+.Topbar .links>ul>li.other:hover:after{content:'';display: block;position: absolute;height:0;top:95%;left:0;border-top: 3px solid white;border-left: 1px solid transparent;border-right: 1px solid transparent;box-sizing:border-box;z-index:1;width:100%;}
+.Topbar .links>ul>li .my{width:250px;border:1px solid #DDDDDD;position:absolute;padding:15px;top:100%;left:-1px;display:none;background: white;}
+.Topbar .links>ul>li.other .my>a{line-height: 60px;display: inline-block;float:left;margin-right:10px;}
+.Topbar .links>ul>li.other .my>a>img{width: 60px;height:60px;line-height:60px;vertical-align: top;border-radius: 50%;}
+.Topbar .links>ul>li.other .my>div{float:left;height:20px;line-height:20px;width:180px;
+  padding:5px 0;}
+.Topbar .links>ul>li.other .my>div:hover>a{color:#C81623;}
+.Topbar .links>ul>li.other .my>ul{width:250px;line-height:25px;margin-top:80px;}
+.Topbar .links>ul>li.other .my>ul>li{display: inline-block;width:120px;}
+.Topbar .links>ul>li.other .my>ul>li:hover{color:#C81623;}
+.Topbar .links>ul>li.other .shouji{width:230px;border:1px solid #DDDDDD;position:absolute;top:100%;left:-1px;height:196px;display:none;background: white;}
+.Topbar .links>ul>li.other:hover .shouji{display:block;}
+.Topbar .links>ul>li.other .guanzhu{width:80px;border:1px solid #DDDDDD;position:absolute;top:100%;left:-1px;height:104px;display:none;background: white;}
+.Topbar .links>ul>li.other:hover .guanzhu{display:block;}
+.Topbar .links>ul>li.other .kehu{width:170px;border:1px solid #DDDDDD;position:absolute;top:100%;left:-1px;display:none;background: white;}
+.Topbar .links>ul>li.other:hover .kehu{display:block;}
+.Topbar .links>ul>li.other .kehu>div{line-height: 25px;padding:5px 0 5px  10px;border-bottom: 1px solid  #DDDDDD;}
+.Topbar .links>ul>li.other .kehu>div.last{border:none;}
+.Topbar .links>ul>li.other .kehu>div>ul{line-height: 25px;margin-bottom:3px;}
+.Topbar .links>ul>li.other .kehu>div>ul>li{display: inline-block;width:78px;}
+.Topbar .links>ul>li.other .kehu>div>ul>li:hover{color:#C81623;}
+.Topbar .links>ul>li.other .wangzhan{border:1px solid #DDDDDD;position:absolute;top:100%;right:-1px;display:none;padding:20px 0 16px 0;width:1210px;background: white;}
+.Topbar .links>ul>li.other:hover .wangzhan{display:block;}
+.Topbar .links>ul>li.other .wangzhan>div{display: inline-block;float:left;line-height: 24px;text-align: left;}
+.Topbar .links>ul>li.other .wangzhan>div>ul>li{float:left;line-height: 24px;height:24px;width:85px;}
+.Topbar .links>ul>li.other .wangzhan>div>ul>li:hover{color:#C81623;}
+.Topbar .links>ul>li.other .wangzhan>div>ul{margin:5px 0 5px 0;}
+.Topbar .links>ul>li.other .wangzhan>div.theme{width:347px;padding-left:20px;}
+.Topbar .links>ul>li.other .wangzhan>div.secondly{width:259px;padding-left:20px;border-left:1px solid  #DDDDDD;}
+

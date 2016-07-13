@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>第六课作业</title>
+    <style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .name {
+        color: saddlebrown;
+    }
+    
+    #name {
+        color: aqua;
+    }
+    
+    p {
+        font-size: 20px;
+    }
+    
+    h3,
+    span {
+        color: red;
+    }
+    
+    div p {
+        color: blue;
+    }
+    
+    div > p {
+        font-size: 30px;
+    }
+    
+    li+p {
+        text-align: center;
+    }
+    
+    p~ul {
+        color: violet
+    }
+    
+    li[tab=value] {
+        color: red;
+    }
+    
+    li[tab~=contain] {
+        background: blue;
+    }
+    
+    li[tab|=tab] {
+        color: green;
+    }
+    </style>
+</head>
+
+<body>
+    <h1 class="name">田馥甄</h1>
+    <h2 id="name">中国 台湾省新竹县 1983年3月30日</h2>
+    <p>田馥甄（Hebe），1983年3月30日出生于台湾省新竹县，华语流行乐女歌手、演员，华语流行演唱组合S.H.E的成员之一[1] 。</p>
+    <p>2000年，田馥甄参加“宇宙2000实力美少女选拔大赛”获得殿军，赛后与参赛成员任家萱、陈嘉桦共同签约华研国际音乐，组成S.H.E组合而踏入演艺圈[2] 。2005年，主演电视剧《真命天女》。2007年，主演电视剧《斗牛，要不要》。
+    </p>
+    <p>2010年9月，以其本名发布首张个人专辑《To Hebe》，入围了第22届台湾金曲奖“最佳国语专辑”等四个奖项。2011年9月2日，发行第二张个人专辑《My Love》，获得了第23届台湾金曲奖“最佳国语专辑”、“最佳国语女歌手”等七项提名。2013年11月29日，发行第三张个人专辑《渺小》[3] ，入围第25届台湾金曲奖“最佳专辑包装”[4] 。</p>
+    <p>2014年12月，举行“田馥甄‘如果IF’巡回演唱会”[5] 。2015年7月，为电影《我的少女时代》献唱歌曲《小幸运》并于10月入围“第52届台湾电影金马奖“最佳原创电影歌曲”[6] 。2016年3月，宣布举行“田馥甄‘如果IF’巡回演唱会PLUS”[7] 。</p>
+    <h3>明星关系</h3>
+    <span>队友任家萱</span>
+    <span>队友陈嘉桦</span>
+    <div>
+        <p>2000年，19岁的任家萱报名参加了“宇宙2000实力美少女选拔赛”获得第一名，她与 Selina Selina (15张) 参赛成员田馥甄、陈嘉桦共同签约华研国际音乐，组成S.H.E组合，华研公司为任家萱起名Selina为艺名[8] 。
+        </p>
+    </div>
+    <ul>
+        <li tab=value>[attribute=value]
+            <p>用于选取带有指定属性和值的元素</p>
+        </li>
+        <li tab=contain value>[attribute~=value]
+            <p>用于选取含有指定词汇的元素</p>
+        </li>
+        <li tab=tabdiv>[attribute|=value]
+            <p>用于选取带有指定值开头的属性值，该值必须是整个单词</p>
+        </li>
+    </ul>
+</body>
+
+</html>

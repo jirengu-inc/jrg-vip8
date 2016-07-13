@@ -1,0 +1,20 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+#table-list{
+	width: 825px;
+	text-align: center;
+	border-collapse: collapse;/*border-collapse设置表格边框是否被合并为一个单一边框，collapse时合并*/
+}
+
+#table-list th,td{
+	height: 40px;
+	border: 1px solid #ccc
+}
+
+#table-list tr th{
+	background-color: #1A9C9B;
+}
+

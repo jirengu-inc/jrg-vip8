@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://js.jirengu.com
+
+Copyright (c) 2016 by fei-han (http://js.jirengu.com/joqu/5/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<meta name="description" content="京东——导航栏CC" />
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_1463638460_777778.css">
+<style id="jsbin-css">
+*{margin: 0;padding:0;}
+ body{
+  background: white;
+  color: #666;
+  font:12px/1.5 Arial,Verdana,"\5b8b\4f53",serif;
+  -webkit-font-smoothing: antialiased;
+} 
+ul,li{
+  list-style: none;
+}
+.clearfix:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.siteTobar-wrapper{
+  background: #f1f1f1;
+}
+.siteTopbar{
+  margin: 0 auto;
+  width: 1210px;
+  height: 30px;
+  line-height: 30px;
+}
+.location-wrapper{
+  float: left;
+  position: relative;
+  z-index: 10;
+}
+.location-wrapper>.location{
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 25px 0 10px;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+.i-arrow,
+.i-shouji{
+  height: 24px;
+  line-height: 24px;
+  display: inline-block;
+}
+.i-shouji{
+  position: relative;
+  top: 2px;
+}
+.location-wrapper:hover .i-arrow,
+.siteTopbar-links>ul>li.dropdown:hover .i-arrow{
+  transform: rotate(180deg);
+  transition: transform 0.2s;
+  position: relative;
+  top: 8px;
+  
+}
+.location-wrapper:hover .location{
+  background: #fff;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+.location-wrapper:hover:after{
+  content: '';
+  display: block;
+  position: absolute;
+  height: 0;
+  border-top: 1px solid #fff;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  box-sizing: border-box;
+  width: 100%;
+}
+.location-wrapper>.locationPicker{
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+.location-wrapper>.locationPicker>ul.city{
+  display: none;
+  width: 300px;
+  padding: 10px 0 10px 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+.location-wrapper>.locationPicker>ul.city>li{
+  float: left;
+  width: 60px;
+  line-height: 24px;
+  height: 24px;
+  margin: 2px 0
+}
+.location-wrapper>.locationPicker>ul.city>li>a{
+  /* display: inline-block; */
+  float: left;
+  padding: 0 7px;
+}
+.location-wrapper>.locationPicker>ul.city a:hover{
+  background: #F4F4F4;
+  color: #C81623;
+  cursor: pointer;
+}
+.location-wrapper:hover .locationPicker>ul.city{
+  display: block;
+}
+.location-wrapper>.locationPicker>ul.city>li .active{
+  background: #C81623;
+  color: #fff;
+}
+/*location*/
+
+.siteTopbar .siteTopbar-links{
+  float: right;
+}
+.siteTopbar .siteTopbar-links>ul>li{
+  float: left;
+}
+.siteTopbar .siteTopbar-links>ul>li.dropdown{
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+.siteTopbar .siteTopbar-links>ul>li.dropdown:hover{
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  background: #fff;
+}
+
+.siteTopbar .siteTopbar-links>ul>li a{
+  padding: 0 7px;
+}
+.siteTopbar .siteTopbar-links>ul>li:hover{
+  color: #C81623;
+}
+.split{
+  width: 1px;
+  height: 13px;
+  background: #ddd;
+  float: left;
+  position: relative;
+  top: 9px;
+  margin: 0 2px;
+}
+.siteTopbar-links .link-register{
+  color: #C81623;
+}
+/*siteTopbar-links*/
+
+
+</style>
+</head>
+<body>
+<div class="siteTobar-wrapper">
+  <div class="siteTopbar clearfix">
+    <div class="location-wrapper">
+      <span class="location">
+        送至：北京
+        <span class ="jd-iconfont i-arrow"></span></span>
+      <div class="locationPicker">
+      <ul class="city clearfix">
+          <li><a  class="active" href="#">北京</a></li>
+          <li><a href="#">上海</a></li>
+          <li><a href="#">天津</a></li>
+          <li><a href="#">重庆</a></li>
+          <li><a href="#">黑龙江</a></li>
+          <li><a href="#">河北</a></li>
+          <li><a href="#">山西</a></li>
+          <li><a href="#">河南</a></li>
+          <li><a href="#">辽宁</a></li>
+          <li><a href="#">吉林</a></li>
+          <li><a href="#">内蒙古</a></li>
+          <li><a href="#">江苏</a></li>
+          <li><a href="#">山东</a></li>
+          <li><a href="#">安徽</a></li>
+          <li><a href="#">浙江</a></li>
+          <li><a href="#">福建</a></li>
+          <li><a href="#">湖北</a></li>
+          <li><a href="#">湖南</a></li>
+          <li><a href="#">广东</a></li>
+          <li><a href="#">广西</a></li>
+          <li><a href="#">江西</a></li>
+          <li><a href="#">四川</a></li>
+          <li><a href="#">海南</a></li>
+          <li><a href="#">贵州</a></li>
+          <li><a href="#">云南</a></li>
+          <li><a href="#">西藏</a></li>
+          <li><a href="#">陕西</a></li>
+          <li><a href="#">甘肃</a></li>
+          <li><a href="#">青海</a></li>
+          <li><a href="#">宁夏</a></li>
+          <li><a href="#">新疆</a></li>
+          <li><a href="#">台湾</a></li>
+          <li><a href="#">香港</a></li>
+          <li><a href="#">澳门</a></li>
+          <li><a href="#">钓鱼岛</a></li>
+          <li><a href="#">海外</a></li>
+        </ul>
+      </div>
+    </div><!--  location -->
+    <div class="siteTopbar-links">
+      <ul class="clearfix">
+        <li><a href="">你好，请登录</a><a class="link-register" href="">免费注册</a></li>
+        <li class="split"></li>
+        <li><a href="">我的订单</a></li>
+        <li class="split"></li>
+        <li class="dropdown">
+              <a href="">我的京东
+              <span class="jd-iconfont i-arrow"></span>
+              </a>
+        </li>
+        <li class="split"></li>
+        <li><a href="">京东会员</a></li>
+        <li class="split"></li>
+        <li><a href="">企业采购</a></li>
+        <li class="split"></li>
+        <li class="dropdown">
+              <a href="">
+                <span class="jd-iconfont i-shouji"></span>
+                手机京东
+                <span class="jd-iconfont i-arrow"></span>
+              </a>
+        </li>
+        <li class="split"></li>
+        <li class="dropdown">
+              <a href="">
+                关注京东
+                <span class="jd-iconfont i-arrow">
+              </a>
+        </li>
+        <li class="split"></li>
+        <li class="dropdown">
+              <a href="">
+                客户服务
+                <span class="jd-iconfont i-arrow">
+              </a>
+        </li>
+        <li class="split"></li>
+        <li class="dropdown">
+          <a href="">网站导航
+              <span class="jd-iconfont i-arrow">
+          </a>
+       </li>
+        <li class="split"></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body style="background:grey;">
+<div>
+表单校验
+<hr>
+<span style="color:red;">{{message}}</span>
+    <form action="/" method=post>
+        <label for="">
+            手机
+            <input type="text" name=phone>
+        </label>
+        <br>
+        
+        <label for="">
+            密码
+            <input type="password" name="password">
+
+        </label>
+        <br>
+        <label for="">
+            手机
+            <input type="text" name=phone2>
+        </label>
+        <br>
+        <label for="">
+            密码
+            <input type="password" name="password2">
+
+        </label>
+        <br>
+        <label for="">
+            手机
+            <input type="text" name=phone3>
+        </label>
+        <br>
+        <label for="">
+            密码
+            <input type="password" name="password3">
+
+        </label>
+        <br>
+        <label for="">
+            手机
+            <input type="text" name=phone>
+        </label>
+        <br>
+        <label for="">
+            密码
+            <input type="password" name="password">
+
+        </label>
+        <br>
+        <label for="">
+            手机
+            <input type="text" name=phone>
+        </label>
+        <br>
+        <label for="">
+            密码
+            <input type="password" name="password">
+
+        </label>
+        <br>
+        <input type="submit" value="提交">
+    </form>
+</div>
+
+<script src="http://7xrxd2.com1.z0.glb.clouddn.com/jquery/jquery-1.12.3.min.js"></script>
+<script>
+$('form').on('submit',function(e){
+    e.preventDefault()
+    var $form = $(e.currentTarget)
+
+
+    var data = {}
+    $form.find('input[name]').each(function(index, dom){
+        var name = $(dom).attr('name')
+        var value = $(dom).val()
+        data[name] = value
+    })
+
+    var rules = {
+        phone: function(value){
+            return /^1\d{10}$/.test(value)
+        },
+        email: function(value){
+            return /^.+@.{2,}$/.test(value)
+        }
+    }
+
+    var map = {
+        phone: 'phone',
+        phone2: 'phone',
+        phone3: 'phone',
+        email: 'email',
+        email2: 'email'
+    }
+
+    var allValid = true
+
+    for( var key in data){
+        var value = data[key]
+        var validatorName = map[key]
+        var validator = rules[validatorName]
+        var valid = validator(value)
+        if(valid === false){
+            allValid = false
+        }
+    }
+
+
+    if(valid && valid2){
+        $.post...
+    }
+
+
+    if(valid){
+        function s1(response){
+            // success
+            if(response.errorCode === 0){
+                alert('提交成功')
+            }else{
+                alert(response.message || '服务器忙，请稍后再试')
+            }
+        }
+        $form.find('[name=phone]').css('border','none')
+        $.ajax({
+            url: '/',
+            type: 'POST',
+            data: {
+                phone: phone,
+                password: password
+            }
+        }).then(s1).then(s2)
+    }else{
+        $form.find('[name=phone]').css('border','1px solid red')
+    }
+
+
+})
+
+</script>
+
+
+</body>
+</html>

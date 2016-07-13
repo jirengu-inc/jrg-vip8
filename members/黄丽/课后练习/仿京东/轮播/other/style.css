@@ -1,0 +1,13 @@
+*{margin:0;padding:0;}
+ul,ol{list-style: none;}
+a,p,h1,h2,h3,h4,h5,h6{text-decoration:none;color:inherit;}
+fy-icon{color:inherit;}
+body{font: 12px/150% Arial,Verdana,"\5b8b\4f53";color: #666;background: #fff;-webkit-font-smoothing: antialiased;}
+.clearfix:after{content:" ";display:block;clear:both;}
+ .Carousel{width:730px;height:454px;position:relative;padding:12px 10px 0 10px;float:left;}
+.Carousel>img{width:730px;line-height: 454px;display: inline-block;vertical-align: top;}
+.Carousel .slidesjs-pagination{position:absolute;bottom:10px;left:10px;width:730px;z-index:10;text-align:center;}
+.Carousel .slidesjs-navigation{display:none!important;}
+.Carousel .slidesjs-pagination>li{display:inline-block;color: white;margin: 0 0.2em;}
+.Carousel .slidesjs-pagination > li > a{width: 20px;height: 20px;line-height: 20px;display: block;background: #3E3E3E;border-radius: 50%;}
+.Carousel .slidesjs-pagination > li > a.active{background: red;}

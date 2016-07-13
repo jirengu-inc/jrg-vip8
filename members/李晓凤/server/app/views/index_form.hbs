@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>index_form</title>
+</head>
+<body>
+<form action="/" method="post">
+	<label>用户名<input type="text" name="username" placeholder="输入用户名或者邮箱"></label>
+	<label>手机号<input type="text" name="phone" placeholder="用于登录和找回密码"></label>
+	<label>密码<input type="password" name="password" placeholder="密码"></label>
+	<input type="submit" value="注册">
+</form>
+<script src="http://7xv43g.com1.z0.glb.clouddn.com/jQuery/jquery-1.12.4.min.js"></script>
+<script>
+    $('form').on('submit',function(e){
+        e.preventDefault()
+    	var form=this
+	    var $form=$(this)
+	    var date=$form.serialize()
+	    $.post('/',date,function(response){
+	    	alert(response)
+	    	console.log(response)
+        })
+	})
+</script>
+</body>
+</html>

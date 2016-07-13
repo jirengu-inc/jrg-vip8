@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://js.jirengu.com
+
+Copyright (c) 2016 by fei-han (http://js.jirengu.com/vov/15/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<meta name="description" content="search-logo" />
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_1463889714_6587682.css">
+<style id="jsbin-css">
+*{margin: 0;padding:0;}
+ body{
+  background: white;
+  color: #666;
+  font:12px/1.5 Arial,Verdana,"\5b8b\4f53",serif;
+  -webkit-font-smoothing: antialiased;
+} 
+ul,li{
+  list-style: none;
+}
+.clearfix:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+input:focus,
+button:focus{
+  outline: none;
+} 
+/*site-logo-search-cart*/
+
+.site-logo-search-cart{
+  width: 1210px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.site-logo-search-cart .logo,
+.site-logo-search-cart .search,
+.site-logo-search-cart .cart{
+  float: left;
+
+}
+
+.site-logo-search-cart .logo>img{
+  width: 270px;
+  height: 60px;
+  vertical-align: top;
+}
+
+/**search button recommendWords**/
+
+.site-logo-search-cart .search{
+   margin-left: 100px;
+   margin-top: 4px;
+ } 
+.site-logo-search-cart .search>.siteSearch{
+  font-size: 16px;
+}
+.site-logo-search-cart .search>.siteSearch input{
+  width: 456px;
+  height: 34px;
+  padding: 0 3px;
+  font: inherit;
+  border: 2px solid #B61D1D;
+  box-sizing: border-box;
+}
+.site-logo-search-cart .search>.siteSearch>button{
+  height: 34px;
+  width: 82px;
+  color: #fff;
+  font: inherit;
+  background: #B61D1D;
+  border: none;
+}
+.site-logo-search-cart .search>.recommendWords{
+  margin-top: 4px;
+}
+.site-logo-search-cart .search>.recommendWords>a{
+  /* display: inline-block; */
+  padding-right: 0.6em;
+}
+.site-logo-search-cart .search>.recommendWords>a.hot{
+  color: #C81623;
+}
+.site-logo-search-cart .search>.recommendWords>a:hover{
+  color: #C81623;
+}
+.site-logo-search-cart .cart{
+  margin-top: 4px;
+  margin-left: 100px; 
+}
+
+
+/*shopping-cart button collect*/
+
+.site-logo-search-cart .cart>.siteCartButton{
+  box-sizing:border-box;
+  line-height: 32px;
+  padding: 0 36px;
+  font-size: 12px;
+  color: #666;
+  background: #F9F9F9;
+  border: 1px solid #ddd;
+  position: relative;
+}
+.site-logo-search-cart .cart>.siteCartButton>i{
+  position: absolute;
+  vertical-align: middle;
+}
+.site-logo-search-cart .cart>.siteCartButton>i.prefix{
+  color: #C81623;
+  left: 14px;
+}
+.site-logo-search-cart .cart>.siteCartButton>i.addon{
+  right: 5px;
+}
+.site-logo-search-cart .cart>.siteCartButton>i.count{
+  width: 12px;
+  height: 12px;
+  border-radius: 7px 7px 7px 0px;
+  background: #C81623;
+  color: #fff;
+  line-height: 12px;
+  padding: 1px 2px;
+  text-align: center;
+  font-style: normal;
+  top: -4px;
+  right: 18px;
+}
+
+.site-logo-search-cart .cart{
+  position: relative;
+}
+.site-logo-search-cart .cart>.collect{
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 3;
+}
+
+.site-logo-search-cart .cart>.collect>ul{
+  display: none;
+  width: 300px;
+  padding: 0 10px 10px 10px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.25);
+  background: #fff;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+ .site-logo-search-cart .cart:hover .collect>ul{
+  display: block;
+} 
+.site-logo-search-cart .cart>.collect>ul>p.collectTitle{
+  font: inherit;
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+}
+.site-logo-search-cart .cart>.collect>ul>li{
+  background: #bffab1;
+  padding: 3px 5px;
+  margin: 2px 0;
+}
+.site-logo-search-cart .cart:hover .siteCartButton{
+  background: #fff;
+  box-shadow: 0 0 3px rgba(0,0,0,0.25);
+
+}
+.site-logo-search-cart .cart:hover:after{
+  content: '';
+  display: block;
+  position: absolute;
+  height: 4px;
+  background: #fff;
+  left: 1px;
+  right: 1px;
+  bottom: -2px;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+
+</style>
+</head>
+<body>
+<nav class="site-logo-search-cart clearfix">
+  <div class="logo">
+    <img src="http://misc.360buyimg.com/lib/img/e/logo-201305.png" alt="JD">
+  </div>
+  <div class="search">
+    <p class="siteSearch"><input type="text" placeholder=""><button>搜索</button></p>
+  <p class="recommendWords">
+    <a class="hot" href="#">初夏必备</a>
+    <a href="#">领免息券</a>
+    <a href="#">花卉绿植</a>
+    <a href="#">5.2抢机票</a>
+    <a href="#">每50减20</a>
+    <a href="#">跑步鞋</a>
+    <a href="#">休闲裤男</a>
+    <a href="#">免费试用</a>
+    <a href="#">车蜡</a>
+  </p>
+  </div>
+  <div class="cart">
+    <button class="siteCartButton">
+      <i class="prefix jd-iconfont i-car"></i>我的购物车<i class="jd-iconfont"></i><i class="count">2</i><i class=" addon jd-iconfont i-right"></i>
+    </button>
+    <div class="collect">
+      <ul class="clearfix">
+        <p class="collectTitle">最新加入的商品</p>
+        <li>商品1</li>
+        <li>商品2</li>
+        <li>商品3</li>
+        <li>商品4</li>
+        <li>商品5</li>
+        <li>商品6</li>
+
+      </ul>
+    </div>
+  </div>
+  
+</nav>
+</body>
+</html>

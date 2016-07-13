@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>事件冒泡和时间捕获</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<style type="text/css">
+	body{
+		background-color:#FFFFFF;
+	}
+
+	h1, h2{
+		margin-top: 20px;
+		padding: 25px 0px;
+	}
+
+	p,span{
+		padding:15px 0 0 0;
+		font-size: 20px;
+		font-family: "宋体"；
+	}
+
+	#main{
+		width: 1000px;
+		margin:0 auto;
+	}
+
+	.img{
+		text-decoration: center;
+	}
+
+</style>
+<body>
+    <div id="main">
+    	<h1>事件冒泡和捕获</h1>
+    	
+    	<p><b>事件冒泡</b>：即事件由子元素向祖先元素传播的，具体元素先收到事件命令并执行了，然后再一层一层地往上逐个询问父元素，看父元素是否要触发执行。此过程（例子：气泡从水底向水面上浮一样）</p>
+
+    	<p><b>事件捕获</b>：捕获阶段是一个和冒泡阶段完全相反的过程，即事件由祖先元素向子元素传播，祖先元素收到事件命令，往下传达到具体元素，具体元素收到才执行。此过程（例子：一个石头从水面向水底下沉一样）</p>
+
+		<p><b>事件传播</b>：事件捕获和冒泡的过程</p>
+    	<p><b>事件流</b>包括三个阶段</p>
+  		<span>1.捕获阶段：从文档的根节点流向目标对象</span></br>
+  		<span>2.目标阶段：然后再目标对象上触发</span></br>
+  		<span>3.冒泡阶段：之后再回溯到文档的根节点</span></br>
+  		<p>流程如下：</p>
+  		<div class="img"><img src="image/事件冒泡和捕获.jpg"></div>
+
+  		<h2>浏览器支持方式</h2>
+  		<p>IE6/7/8支持冒泡阶段，不支持捕获阶段</p>
+  		<p>目前标准浏览器一般支持冒泡阶段</p>
+  		<p>W3C支持同时捕获和冒泡阶段</p>
+
+    	<h2>事件捕获和冒泡的过程统称为事件的传播</h2>
+    	<p>(1)传播是可以阻止的</p>
+    	<p>(2)在W3c中，使用event.stopPropagation（）方法</p>
+        <p>(3)在捕获过程中使用stopPropagation()方法，则后面的冒泡过程也不会发生了；也可以在冒泡阶段中使用stopPropagation（）停止事件向上层元素冒泡。而在IE中则使用cancelBubble（IE中只有冒泡，没有捕获）</p>
+        <span>(4)从各浏览器提供的注册事件监听的方法中可见一斑，例如适用于ie,opera的attachEvent，有两个参数，
+        attachEvent(“on”+type,fn)，而适用于所谓标准浏览器的addEventListener则有三个参数,
+        addEventListener(type,fn,boolean）,前面两个参数不用解释，
+        第三个参数boolean，就是决定注册事件发生在捕获阶段还是冒泡阶段。第三个参数为true执行捕获阶段，为false执行冒泡阶段</span>
+
+		<p><a href="http://blog.jobbole.com/52430/">参考链接</a></p>
+    </div>
+</body>
+</html>

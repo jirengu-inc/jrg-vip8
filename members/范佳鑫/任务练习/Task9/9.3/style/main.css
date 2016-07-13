@@ -1,0 +1,8 @@
+div{margin-top:20px;}
+.triangles1{border-style:solid;border-color:blue yellow green red;height:0;width:0;border-width:50px;}
+.triangles2{border-style:solid;border-color:blue transparent transparent transparent;height:0;width:0;border-width:50px;}
+.triangles3{border-style:solid;border-color:transparent transparent transparent red;height:0;width:0;border-width:50px;}
+.triangles4{border-style:solid;border-color:transparent yellow transparent transparent;height:0;width:0;border-width:50px;}
+.triangles5{border-style:solid;border-color:transparent transparent green transparent;height:0;width:0;border-width:50px;}
+.triangles6{border-style:solid;border-color:transparent transparent red red;height:0;width:0;border-width:50px;}
+.triangles7{border-style:solid;border-color:transparent green green transparent;height:0;width:0;border-width:50px;}

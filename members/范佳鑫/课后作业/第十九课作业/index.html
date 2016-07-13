@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第十九课作业</title>
+</head>
+<body>
+   <div>
+  <span id="s1"></span>
+  <span id="s2"></span>
+  <span id="s3"></span>
+</div>
+
+<script>
+function get(id){
+// 这里的内容需要你来完成
+return document.getElementById("id")
+}
+function next(node){
+// 这里的内容需要你来完成
+  if(node.nodeType === 1){
+	if(node.nextSilbling.nodeType === 1){
+       return node.nextSilbling()
+	}
+	else{
+		return console.log("他的下一个兄弟不是节点元素类型~")
+	}
+}
+  else{
+	return console.log("传入的参数不是一个节点元素类型")
+}
+}
+
+var s1 = get('s1')
+var s2 = get('s2')
+var s3 = get('s3')
+
+next(s1) === s2
+next(s2) === s3
+next(s3) === null
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+a {
+	color: #666;
+}
+
+.fr {
+	float: right;
+}
+
+.fl {
+	float: left;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}

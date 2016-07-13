@@ -1,0 +1,35 @@
+@charset"utf-8";
+*{margin: 0;padding:0;}
+body{min-width:700px;}
+.header,.footer{
+	border:1px solid black;
+	background:#bbb;
+	text-align:center;
+}
+.center,.left,.right{
+	float:left;
+	min-height:130px;
+}
+.container:after{
+    content: " ";display: block;clear: both;
+}
+.left{
+	width:200px;
+	margin-left:-100%;
+	background:red;
+}
+.right{
+	margin-left:-220px;
+	width:220px;
+	background:green;
+}
+.center{
+	width:100%;
+}
+.center_inner{
+	margin-left:200px;
+	margin-right:220px;
+	min-height:130px;
+	background:blue;
+}
+

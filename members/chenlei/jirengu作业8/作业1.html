@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>.clearfix:after原理解释</title>
+	</head>
+	<body>
+		.clerafix主要应用于解决浮动，clearfix是用户自己定义的，现在大多数用来定义解决浮动的样式，.clearfix:after自身是一个伪类，
+		固定样式为.clearfix:after{
+			content:"";写内容会有显示，没有内容为空就相当于空的标签
+			display: block; 伪类定义内容默认是内联样式，所以需要转换成块，clear只能对块元素清除浮动
+  			clear: both;清除浮动
+}
+		将.clearfix:after放在浮动元素的父元素上可以让内部子集元素不脱离文档流。
+	</body>
+</html>

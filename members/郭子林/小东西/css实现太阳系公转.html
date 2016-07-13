@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://js.jirengu.com
+
+Copyright (c) 2016 by guozilin (http://js.jirengu.com/gebi/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CSS动画实现太阳系公转</title>
+<style id="jsbin-css">
+div{padding: 0;margin: 0;color:#fff}
+body{background: #000;}
+div.wrapper{
+  position: relative;
+  width: 1200px;
+  height:1200px;
+  margin: 50px auto;
+}
+div[class$=track]{
+  border:1px solid #555;
+  border-radius:50%;
+  position: absolute;
+}
+@keyframes myAnimate{
+  from{transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
+}
+.taiyang{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: url(http://o8197y60e.bkt.clouddn.com/%E5%A4%AA%E9%98%B3.png) no-repeat 0 0;
+  top:550px;
+  left:550px;
+  border-radius:50%;
+}
+.shuixing-track{
+  width: 150px;
+  height:150px;
+  top:525px;
+  left:525px
+}
+.shuixing{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: url(http://o8197y60e.bkt.clouddn.com/1.png) no-repeat 0 0;
+  top:575px;
+  left:500px;
+  animation:myAnimate 2.4s linear infinite;
+  transform-origin:100px 25px;  
+}
+.jinxing-track{
+  width: 250px;
+  height: 250px;
+  top:475px;
+  left:475px
+}
+.jinxing{
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  background: url(http://o8197y60e.bkt.clouddn.com/2.png) no-repeat 0 0;
+  top:570px;
+  left:445px;
+  animation:myAnimate 6.2s linear infinite;
+  transform-origin:155px 30px;
+}
+.diqiu-track{
+  width: 350px;
+  height: 350px;
+  top:425px;
+  left:425px;
+}
+.diqiu{
+  background: url(http://o8197y60e.bkt.clouddn.com/3.png) no-repeat 0 0;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top:570px;
+  left:395px;
+  animation:myAnimate 10s linear infinite;
+  transform-origin:205px 30px;
+}
+.huoxing-track{
+  width: 450px;
+  height: 450px;
+  top:375px;
+  left:375px;
+}
+.huoxing{
+  width: 50px;
+  height: 50px;
+  background: url(http://o8197y60e.bkt.clouddn.com/4.png) no-repeat 0 0;
+  position: absolute;
+  top:575px;
+  left:350px;
+  animation:myAnimate 18.8s linear infinite;
+  transform-origin:250px 25px;
+}
+.muxing-track{
+  width: 600px;
+  height: 600px;
+  top:300px;
+  left: 300px;
+}
+.muxing{
+  position: absolute;
+  background: url(http://o8197y60e.bkt.clouddn.com/5.png) no-repeat 0 0;
+  width: 80px;
+  height: 80px;
+  top:560px;
+  left:260px;
+  animation:myAnimate 118.6s linear infinite;
+  transform-origin:340px 40px;
+}
+.tuxing-track{
+  width: 800px;
+  height: 800px;
+  top:200px;
+  left: 200px;
+}
+.tuxing{
+  width: 120px;
+  height: 120px;
+  background: url(http://o8197y60e.bkt.clouddn.com/6.png) no-repeat 0 20px;
+  position: absolute;
+  top:540px;
+  left:140px;
+  animation:myAnimate 294.6s linear infinite;
+  transform-origin:460px 60px;
+}
+.tianwang-track{
+  height: 1000px;
+  width: 1000px;
+  top:100px;
+  left: 100px;
+}
+.tianwang{
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: url(http://o8197y60e.bkt.clouddn.com/7.png) no-repeat 0 0;
+  top:560px;
+  left:60px;
+  animation: myAnimate 840s linear infinite;
+  transform-origin:540px 40px;
+}
+.haiwang-track{
+  height: 1200px;
+  width: 1200px;
+  top:0px;
+  left: 0px;
+}
+.haiwang{
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top:565px;
+  left:-35px;
+  background: url(http://o8197y60e.bkt.clouddn.com/9.png) no-repeat 0 0;
+  animation: myAnimate 1650s linear infinite;
+  transform-origin:635px 35px;
+}
+</style>
+</head>
+<body>
+<div class=wrapper>
+  <div class="haiwang-track"></div>
+  <div class="haiwang"></div>
+  <div class="tianwang-track"></div>
+  <div class="tianwang"></div>
+  <div class="tuxing-track"></div>
+  <div class="tuxing"></div>
+  <div class="muxing-track"></div>
+  <div class="muxing"></div>
+  <div class="huoxing-track"></div>
+  <div class="huoxing"></div>
+  <div class="diqiu-track"></div>
+  <div class="diqiu"></div>
+  <div class="jinxing-track"></div>
+  <div class="jinxing"></div>
+  <div class="shuixing-track"></div>
+  <div class="shuixing"></div>
+  <div class="taiyang"></div>
+</div>
+</body>
+</html>

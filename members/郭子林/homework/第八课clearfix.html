@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clearfix的理解</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style8.css">
+</head>
+<body>
+    <div class="page">
+        <div class="items">
+            <h3>clearfix的理解</h3>
+            <p>clearfix通常用来清除浮动。由于float属性通常会引起浮动元素的父元素出现“高度塌陷”的现象
+                （即浮动元素的父元素不会自动伸高来包裹住浮动元素，也就表现出高度为0）。在实际布局中，
+                往往这并不是我们所希望的，所以需要清除浮动元素，使其父元素表现出正常的高度。</p>
+            <h4>清除浮动元素：添加空白标签</h4>
+            <p>在浮动元素末尾添加一个空的标签例如&ltdiv style=”clear:both”&gt&lt/div&gt。</p>
+            <p>缺点：此方法，会添加很多无意义的空标签，在后期维护中将是噩梦。</p>
+            <h4>清除浮动元素：父元素设置 overflow：hidden</h4>
+            <p>设置父元素overflow值设置为hidden</p>
+            <p>缺点：内容增多时候容易造成不会自动换行,导致内容被隐藏掉，无法显示需要溢出的元素。</p>
+            <h4>在浮动元素后增加一个伪类</h4>
+            <p>缺点：这样的方法需要在每一个浮动元素后都增加一个伪类，代码不精简。</p>
+            <h4>定义一个伪类，需要清除浮动时，直接给该元素增加clearfix的类即可</h4>
+            <p>.clear:after{
+                content:"";
+                display:block;
+                clear:both;
+                }</p>
+            <h4>小结</h4>
+            <p>清除浮动其一就是在浮动元素的末尾添加一个空元素，设置 clear：both属性，after伪元素其实也是通过 content 在元素的后面生成了内容为空的块级元素</p>
+            <p> 其二，通过设置父元素 overflow：hidden 属性来清除浮动，该方法会触发父元素的BFC。</p>
+        </div>
+
+    </div>
+</body>
+</html>

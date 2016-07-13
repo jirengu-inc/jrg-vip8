@@ -1,0 +1,40 @@
+<!doctype>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body style="background:grey;">
+<div>
+    <form action="/a" method=post>
+        <input type="text" name=username>
+        <input type="password" name="password">
+        <input type="submit" value="提交">
+    </form>
+</div>
+
+<script src="http://7xrxd2.com1.z0.glb.clouddn.com/jquery/jquery-1.12.3.min.js"></script>
+<script>
+$('form').on('submit',function(e){
+   e.preventDefault();
+   var form = this;
+   var $form = $(this);
+   function ajaxPost(){
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange =  function(){
+         if (xhttp.readyState == 4 && xhttp.status == 200){
+	  console.log(xhttp.responseText);
+	  var object = JSON.parse(xhttp.responseText);
+	  console.log(object);
+	 }
+      }
+      xhttp.open("POST","/a",true);
+      xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+      xhttp.send("username=feiye&password=123");
+   }
+   ajaxPost();
+})
+
+</script>
+</body>
+<i/html>

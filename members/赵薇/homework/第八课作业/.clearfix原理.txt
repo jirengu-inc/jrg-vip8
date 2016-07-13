@@ -1,0 +1,14 @@
+﻿.clearfix可以自动清除它的子浮动元素
+支持IE7以上时，可用以下代码：
+.clearfix:after{
+  content:" ";
+  display:block;
+  clear:both;
+  height:0; 
+               }
+如果不用.clearfix,可以用这个来替代
+<div>
+  <div style="float:left";>ffff</div>
+  <div style="clear:both";></div>
+</div>
+.clearfix是一种改良，用起来更方便

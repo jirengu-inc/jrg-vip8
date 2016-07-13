@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+    .center{
+        display: table-cell;/*元素会作为一个表格单元格显示*/ block;/*元素显示为快级元素，元素前后会带有换行符*/ inline;/*默认，元素会显示为内联元素，前后没有换行符*/ inline-block;/*行内块元素*/ none;/*此元素不会被显示*/
+        width: 200px;/*宽度为200像素*/
+        height: 200px;/*高度为200像素*/
+        vertical-align: middle;/*vertical-align设置元素垂直对齐方式，middle时把此元素放置在父元素的中部*/
+        text-align: center;/*文本对齐方式为居中*/
+                background-color: #ccc;/*背景颜色为#ccc*/
+    }
+    .test{
+    	width: 800px;
+    	height: 800px;
+    	background: red;
+    }
+	</style>
+</head>
+
+<body>
+<div class="test">
+	<div class="center">欢迎来到饥人谷学习</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>第六课作业</title>
+	<style>
+		body{font:16px '微软雅黑';}
+		*{padding:0;margin: 0;}/* *选择器可以选中页面所有元素*/
+		li,dd,dt{height: 28px;line-height: 28px;text-indent: 2em;}/*逗号分开，表示这几类或标签，都使用这个样式*/
+		p{text-indent: 2em;line-height: 35px;}/*标签选择器，可以选中页面所有P元素*/
+		ol>li{color:#f00;}/*父元素为ol的li元素*/
+		p+p{color:#6f3;}/* 选中上一个兄弟元素是p标签的p标签*/
+		dt~dt{color: #A52A2A;}/*dt元素后所有的dt元素（仅限于兄弟元素）*/
+		a[target]{background: #b2e}/* 含有target属性的a标签*/
+		a[href|="http"]{background: yellow;}/* 含有"-",且以http开头的a标签*/
+		dd[title="why"]{color:blue;}/* 属性title属性值为why的dd标签*/
+		dd[title~="not"]{background: orange;}/* 属性title属性值包含空格且含有not的dd标签*/
+		li[foo*="bar"]{color:#0f0;}/* css3属性foo包含bar字符串的*/
+		li[foo$="ba1"],li[foo^="ba1"]{color:#f00;}/*属性foo以ba1字符串开头/结尾的*/
+	</style>
+</head>
+<body>
+	<h1 align="center">第六课选择器的使用</h1>
+	<h2><a href="#" target="_self">个人描述</a></h2>
+	<p>在朋友眼里是个逗逼，天天嘻嘻哈哈的；在同事眼里就是靠得住；</p>
+	<p>在家人眼里算不上一个好孩子（关键是没挣到钱）；目标自始至终都很明确——挣钱。</p>
+	<p>给自己定了一个目标，16年工资要达到10k(目标要远大)。快乐的生活好、快乐的工作，生活已如此不易——上海房价又涨了，</p>
+	<p>再不给自己找点乐子，那岂不是90后的年龄长着一张60后的脸，多可怕。</p><br>
+	<p><strong>Never give up ; Never give in</strong></p>
+	<p><strong>Never give up ; Never give in</strong></p>
+	<h2><a href="http-oms">学习经历</a></h2>
+	<ol>
+		<li>没上过幼儿园好可惜，小学竟然毕业了</li>
+		<li>中学没谈过恋爱，好忧伤，稀里糊涂考上了大学</li>
+		<li>大学忙着打篮球，恋爱荒废了，有点小后悔</li>
+		<li>在饥人谷学习前端开发，希望成为一个合格且优秀的前端攻城狮</li>
+	</ol>
+	<h2><a href="http://www.sina.com">工作经历</a></h2>
+	<ul>
+		<li foo="testba1">实习期在宁波一家空调厂，大宗物料采购员，可惜被同事坑了，灰溜溜的走了</li>
+		<li foo="barte">毕业后，在南京，被忽悠进一个“创业团队”，卖命的干了半年，<strong>公司倒了</strong></li>
+		<li foo="ba1test">14年底来到了魔都，毅然投身于自己喜欢的<em>农产品贸易行业</em>，本身的采购工作被老板替换成别的工作</li>
+		<li foo="testbartest">15年底决定学习前端，网上搜培训机构，无意间看到若愚老湿的帖子了解了饥人谷，年后加入饥人谷培训</li>
+	</ul>
+	<h2><a href="#" target="_blank">为什么学习前端</a></h2>
+	<dl>
+		<dt>钱景&前景</dt>
+		<dd title="why">想挣钱，前端工资比我现在工资涨幅快；前端学好，web与移动端均可使用，后端开发细分多</dd>
+		<dt>入门难度</dt>
+		<dd title="why not">前端入门门槛低，对于零基础的我，学习前端还是比较容易上手的</dd>
+		<dt>好玩</dt>
+		<dd title="what not">前端开发做的效果时时可以看得到，后端做的再多也看不到，做出来的是给用户用的或者看的</dd>
+	</dl>
+</body>
+</html>

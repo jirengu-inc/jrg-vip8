@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://js.jirengu.com
+
+Copyright (c) 2016 by fei-han (http://js.jirengu.com/turo/3/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <script src="http://7xuf0e.com1.z0.glb.clouddn.com/jquery%2Fjquery.min.js"></script>
+<meta name="description" content="news-service" />
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_1464014291_0360897.css">
+<style id="jsbin-css">
+*{margin: 0;padding:0;}
+ body{
+  background: white;
+  color: #666;
+  font:12px/1.5 Arial,Verdana,"\5b8b\4f53",serif;
+  -webkit-font-smoothing: antialiased;
+} 
+ul,li{
+  list-style: none;
+}
+.clearfix:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.list-slides-news-service{
+  margin: 0 auto;
+  width: 1210px;
+}
+.list-slides-news-service aside{
+  float: left;
+  margin-left: 10px;
+  margin-top: 15px;
+}
+.list-slides-news-service aside>.news{
+  border: 1px solid #ddd;
+  width: 248px;
+}
+.list-slides-news-service aside>.news>.newTilte{
+  height: 32px;
+  line-height: 32px;
+  padding: 0 15px;
+  border-bottom: 1px  dotted #E8E8E7;
+}
+.list-slides-news-service aside>.news>.newTilte>h4{
+  font-family: "microsoft yahei";
+  font-weight: 400;
+  font-size: 16px;
+  float: left;
+}
+.list-slides-news-service aside>.news>.newTilte>.more{
+  float: right;
+}
+.list-slides-news-service aside>.news>.newTilte>.more>a>i{
+  font-size: 12px;
+  padding-left: 2px;
+}
+.list-slides-news-service aside>.news>.newTilte>.more>a:hover{
+  color: #C81623;
+}
+.list-slides-news-service aside>.news>ul.notice{
+  padding: 5px 15px;
+}
+.list-slides-news-service aside>.news>ul.notice>li{
+  height: 24px;
+  line-height: 24px;
+}
+.list-slides-news-service aside>.news>ul.notice>li.hot{
+  color: #C81623;
+  font-weight: bold;
+}
+.list-slides-news-service aside>.service{
+  width: 249px;
+  overflow: hidden;
+  border-right: 1px solid #E8E8E7;
+}
+.list-slides-news-service aside>.service>ul.tabs{
+  width: 260px;
+  overflow: hidden;
+  position: relative;
+  border-left: 1px solid #E8E8E7;
+  
+} 
+.list-slides-news-service aside>.service>.tabs>li.tab-button{
+  width: 62px;
+  float: left;
+  border-right: 1px solid #E8E8E7;
+  border-bottom: 1px solid #E8E8E7;
+}
+.list-slides-news-service aside>.service>.tabs>li.tab-button>i{
+  height: 25px;
+  line-height: 25px;
+  width: 25px;
+  color: #C81623;
+  font-size: 25px;
+  padding: 15px 19px 4px 19px;
+  display: inline-block;
+}
+.list-slides-news-service aside>.service>.tabs>li.tab-button>p{
+  padding: 5px 0 3px 0;
+  text-align: center;
+  color: #666;
+}
+.list-slides-news-service aside>section img{
+  padding-top: 5px;
+  vertical-align: top;
+}
+</style>
+</head>
+<body>
+<div class="list-slides-news-service">
+ <aside>
+   <section class="news clearfix">
+     <div class="newTilte clearfix">
+       <h4>京东快报</h4>
+       <div class="more">
+         <a href="#">更多<i class="jd-iconfont i-right"></i></a>
+      </div>
+    </div>
+     <ul class="notice">
+       <li class="hot"><a href="#"><strong>[618]</strong> 预定享超值 低价购品质</a></li>
+       <li><a href="#"><strong>[公告]</strong> 华东浦东大件运营中心正式运营</a></li>
+       <li><a href="#"><strong>[特惠]</strong> 好奇，炫裤热销惊夏聚省</a></li>
+       <li><a href="#"><strong>[公告]</strong> 京东618品质狂欢节火爆来袭</a></li>
+       <li><a href="#"><strong>[特惠]</strong> 美的冰箱超级优惠 超值好礼</a></li>
+     </ul>
+   </section>
+   <section class="service">
+     <ul class="tabs clearfix">
+       <li class="tab-button">
+         <i class="jd-iconfont i-huafeichongzhi"></i>
+         <p>话费</p>
+       </li>
+       <li class="tab-button"><i class="jd-iconfont i-iconfontfeiji0"></i><p>机票</p></li>
+       <li class="tab-button"><i class="jd-iconfont i-dianyingpiaoiocn"></i><p>电影票</p></li>
+       <li class="tab-button"><i class="jd-iconfont i-iconyouxi"></i><p>游戏</p></li>
+       <li class="tab-button"><i class="jd-iconfont i-caixin"></i><p>彩票</p></li>
+       <li class="tab-button"><i class="jd-iconfont i-6"></i><p>团购</p></li>
+       <li class="tab-button"><i class="jd-iconfont i-jiudian"></i><p>酒店</p></li>
+       <li class="tab-button"><i class="jd-iconfont i-train"></i><p>火车票</p></li>
+       <li class="tab-button"><i class="jd-iconfont i-zhongchou-copy-copy"></i><p>众筹</p></li>
+       <li class="tab-button"><i class="jd-iconfont i-licai"></i><p>理财</p></li>
+       <li class="tab-button"><i class="jd-iconfont i-shaixuantubiaogaozhuanqu11"></i><p>礼品卡</p></li>
+       <li class="tab-button"><i class="jd-iconfont i-baitiao"></i><p>白条</p></li>
+     </ul>
+   </section>
+   <section>
+     <a href="#"><img src="http://img30.360buyimg.com/da/jfs/t2893/306/930256312/26242/4d571b6a/572c3596N04810685.jpg" alt=""></a>
+   </section>
+ </aside>
+</div>
+
+</body>
+</html>

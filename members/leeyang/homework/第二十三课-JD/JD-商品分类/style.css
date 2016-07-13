@@ -1,0 +1,183 @@
+*{margin: 0;padding: 0;}
+ul,ol{list-style: none;}
+a{text-decoration: none; color: inherit;}
+
+body{
+	/*padding-top: 10px;*/
+	background: white;
+	color: #666;
+	font:12px/1.5 Arial,Verdana,"\5b8b\4f53",serif;
+  	-webkit-font-smoothing: antialiased;
+}
+
+.clearfix{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.productCategory > ul{
+	width: 200px;
+	background: #C81632;
+	color: white;
+}
+
+.productCategory > ul.menu > li{
+	height: 34px;
+	line-height: 34px;
+	font-size: 14px;
+	padding-left: 9px;
+	position: relative;
+	border:1px solid transparent;
+}
+
+.productCategory > ul.menu >li:after{
+	content: '\e603';
+	font-family: 'iconfont';
+	position: absolute;
+	right: 5px;
+	font-size: 8px;
+}
+
+.productCategory > ul.menu > li:hover{
+	color: #C81632;
+	background: #f7f7f7;
+}
+
+.productCategory > ul.menu > li.lastCategory:hover:after{
+	content: '';
+	display: block;
+	height: 1px;
+	width: 200px;
+	background: red;
+	top: 34px;
+	right: -1px;
+}
+
+.productCategory > ul.menu > li:hover:after{
+	display: none;
+}
+
+.productCategory > .submenu > li{
+	display: none;
+}
+
+.productCategory>.submenu > li.active{
+  display: block;
+}
+
+.productCategory{
+	position: relative;
+}
+
+.productCategory .submenu{
+	position: absolute;
+	left: 200px;
+	top: 0;
+}
+
+.productCategory .submenu > li{
+	background: #f7f7f7;
+	border: 1px solid red;
+	border-top: transparent;
+	border-left: transparent;
+	width: 1010px;
+	height: 539px;
+	color: black;
+	position: relative;
+}
+
+.submenu  .appliances{
+	width: 970px;
+	height: 499px;
+	/*border: 1px solid blue;*/
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+.appliancesZone > a{
+	font-family: inherit;
+	display: inline-block;
+	height: 18px;
+	background: #7c7171;
+	padding: 3px 4px;
+	vertical-align: middle;
+	color: white;
+	
+}
+
+.appliancesZone > span {
+	display: inline-block;
+	height: 24px;
+	width: 20px;
+	background: #5c5251;
+	vertical-align: middle;
+	color: white;
+	margin-right: 8px;
+}
+
+.appliancesZone > a:hover{
+	background: #C81632;
+}
+
+.appliancesZone > a:hover + span{
+	background: #b1191a;
+}
+
+.appliancesType {
+	/*border: 1px solid green;*/
+	margin-top: 15px;
+	height: 40px;
+	width: 700px;
+	position: relative;
+}
+
+.bigGoods{
+	/*border: 1px solid red;*/
+	height: 40px;
+	width: 80px;
+	display: inline-block;
+	text-align: center;
+	color: #7c7171;
+	font-weight: bold;
+}
+
+.bigGoods > a:hover{
+	color: #C81632;
+}
+
+.bigGoods > a:hover +span{
+	color: #C81632;
+}
+
+.specificbigGoods{
+	/*border: 1px solid black;*/
+	width: 650px;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	color: #7c7171;
+}
+
+.specificbigGoods > a:hover{
+	color: #C81632;
+}
+
+
+.specificbigGoods2{
+	/*border: 1px solid yellow;*/
+	width: 650px;
+	display: inline-block;
+	position: absolute;
+	top: 20px;
+	color: #7c7171;
+}
+
+.specificbigGoods2 > a:hover{
+	color: #C81632;
+}
+
+.splitted{
+	margin: 0 5px;
+}

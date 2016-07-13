@@ -1,0 +1,207 @@
+@charset"utf-8";
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #D2D5D6;
+}
+a{
+	text-decoration: none;
+	color: #455569;
+}
+.clearfix{
+	content: "";
+	display: block;
+	clear: both;
+}
+.playerwrapper{
+	width: 440px;
+	height: 500px;
+	position: fixed;
+	top: 50px;
+	left: 35%;
+	border:1px solid #ddd;
+	box-shadow: 0 0 30px #ddd;
+	border-radius:10px;
+	box-sizing:border-box;
+	background: white;
+}
+.bg{
+	width: 438px;
+	height: 230px;
+	border-radius:10px 10px 0 0;
+	overflow: hidden;
+	box-shadow: 0 0 30px #ddd;
+}
+.bg1{
+	width: 440px;
+	height: 230px;
+	background: url(img/work_from_home.jpg);
+}
+.bg2{
+	width: 440px;
+	height: 230px;
+	background: url(img/Cake_By_The_Ocean.jpg);
+}
+.bg3{
+	width: 440px;
+	height: 230px;
+	background: url(img/Hush_Hush.jpg);
+}
+.show_bg{
+	display: block;
+}
+.hide_bg{
+	display: none;
+}
+.mus_message{
+    margin-top: 25px;
+    height: 110px;
+	padding:0 20px;
+	font-family: 微软雅黑, sans-serif;
+	color: #455569;
+}
+.songs_message{
+	width: 280px;
+	float: left;
+}
+.songs_message>p{
+	margin:0;
+}
+.songs_name{
+	font-weight: bold;
+	font-size: 26px;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+	overflow: hidden;
+}
+.singer{
+	font-weight: bold;
+	font-size: 18px;
+	text-overflow:ellipsis;
+	overflow: hidden;
+}
+.songs_share{
+	width: 118px;
+	height: 80px;
+	float: left;
+	font-family: "icon-play";
+	font-size: 16px;
+	padding:10px 0 0 47px;
+	box-sizing:border-box;
+}
+.songs_share>.share>a:after{
+	content:  "\e600";
+	font-size: 18px;
+}
+
+.songs_share>.collect>a:after{
+	content: "\e602";
+	font-size: 20px;
+}
+.songs_share>.like>a:after{
+	content: "\e601";
+}
+.songs_share>.share>a:hover:after,
+.songs_share>.collect>a:hover:after,
+.songs_share>.like>a:hover:after
+{
+	color: #FF4400;
+}
+
+.progress{
+	width: 400px;
+	margin:3px 18px 10px 18px;
+	height: 4px;
+	background:#414141;
+	border-radius: 2px;
+}
+.progress:hover{
+	cursor: pointer;
+}
+.progressbar{
+	height: 4px;
+	background:#CED3D7;
+	border-radius: 2px;
+}
+.timestamps{
+	margin:3px 18px 0 18px;
+	height: 20px;
+	box-sizing:border-box;
+	font-size: 12px;
+	color: #aaa;
+}
+.time-now{
+	float: left;
+}
+.time-finish{
+	float: right;
+}
+.playerwrapper>.control{
+	height: 50px;
+	padding:20px 20px;
+	font-family: "icon-play";
+	line-height: 50px;
+}
+.play_control{
+	float: left;
+	height: 50px;
+}
+.play_control>.btn1{
+	display: inline-block;
+	height: 38px;
+	width: 38px;
+	padding:0 0 3px 2px;
+	box-sizing:border-box;
+	border-radius:50%;
+	background:#414141;
+	color: #d9d9d9;
+	font-size: 22px;
+	text-align: center;
+	line-height: 38px;
+}
+.mus_play:after{
+	content: "\e604";
+}
+.mus_pause:after{
+	content: "\e603";
+}
+.play_control>.btn2,.play_control>.btn3{
+	display: inline-block;
+	height: 28px;
+	width: 28px;
+	box-sizing:border-box;
+	border-radius:50%;
+	background:#414141;
+	color: #d9d9d9;
+	font-size: 14px;
+	text-align: center;
+	line-height: 28px;
+}
+.play_control>.btn2:after{
+	content: "\e605";
+}
+.play_control>.btn3:after{
+	content: "\e606";
+}
+.play_control>.btn1:hover,.play_control>.btn2:hover,.play_control>.btn3:hover{
+	background: #00131E;
+	cursor:pointer;
+	color:white;
+}
+.songs_text{
+	height: 50px;
+	float: right;
+	color: #aaa;
+}
+.songs_text>.loop:after{
+	content: "\e607";
+	font-size: 24px;
+}
+.songs_text>.songsText:after{
+	content: "\e608";
+}
+.songs_text>.loop:hover:after,.songs_text>.songsText:hover:after{
+	color: #455569;
+}

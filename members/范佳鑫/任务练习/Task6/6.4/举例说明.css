@@ -1,0 +1,9 @@
+ .center
+{
+display: table-cell;/**设置让元素以表格单元格的形式呈现**/ 
+width: 200px;/**设置这个元素的宽度**/
+height: 200px;/**设置这个元素的宽度**/
+vertical-align: middle;/**对于单元格内的元素的中点垂直与父元素基线对齐**/
+text-align: center;/**单元格内的元素水平居中显示**/
+background-color: #ccc;/**设置这个表格的背景色**/
+ }

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<title>导航栏</title>
+	<link rel="stylesheet" href="task01.css">
+</head>
+<body>
+	<div class="title">
+		<ul class="over-flow">
+			<li><a href="#">主页</a></li>
+			<li><a href="#">课程</a></li>
+			<li><a href="#">视频</a></li>
+			<li><a href="#">关于</a></li>
+			<!--这个 div 本来就没有高度，它只是…………因为块级元素另起了一行，加上它按照前面的不浮动来定位，所以实际上的高度还是之前的几个 div 的高度-->
+			<div class="123" style="clear: left;"></div>
+		</ul>
+	</div>
+</body>
+</html>

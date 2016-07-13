@@ -1,0 +1,563 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-05-10 11:10:39
+ * @version $Id$
+ */
+
+/*第一部分：背景图和导航栏*/
+/*1. 图片都需要压缩。 2. 页面背景图比较复杂，也比较大，
+如果作为一张大图直接作为背景的话体积太大了。可以把图片分为三层 
+1)带石头的透明背景层 2）透明一个小方格左右上下repeat 3）蓝色背景色*/
+
+body{
+	background:url(images/正方形01.png);
+	/*background-repeat:no-repeat;
+	background-color: #041428;*/
+	/*background-repeat: no-repeat;*/
+	background-position:center;
+	/*width: 1366px;不要给宽度*/
+	height: 2844px;
+}
+
+#bg{
+	width: 1366px;
+    background: url(images/beijingtu.png);
+    background-size: 1357px 2886px;
+    margin: 0 auto;
+}
+
+#header{
+	margin: 0 auto;
+    width: 1366px;
+}
+
+.nav{
+	width:850px;
+	text-align: center; 
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.nav li{
+	float: left;
+	padding: 25px 30px;
+}
+
+.logo{
+	margin-left: 10px;
+	margin-right: 10px;
+}/*中间“饥人谷”logo位置调整*/
+
+.nav li a{
+	line-height: 30px;
+}
+
+
+
+/*第二部分：标题，轮播图和小恶魔*/
+#content{
+	width: 1366px;
+	height: 660px;
+	margin:0 auto;
+	overflow: hidden;
+}
+
+.title-nav{
+	position: relative;
+	text-align: center;
+	padding:10px 0;
+}
+
+.title-nav h1{
+	margin: 0 auto;
+    width: 1366px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 60px;
+	font-weight: lighter;
+	font-family: "宋体";
+	color:#00a0e9;
+	display: inline-block;
+}
+
+.stone{
+	display: inline-block;
+    float: right;
+    padding-top: 40px;
+    position: absolute;
+    right: 136px;
+}/*用定位来调整石头位置*/
+
+.veido{
+	margin-top: 60px;
+    margin-left: 172px;
+    width: 430px;
+    height: 500px;
+     float: left;
+    /* border: 1px solid red; */
+    float: left;
+}/*左边内容*/
+
+/*-------------以下为轮播样式---------*/
+.curousel-nav{
+	background: url(images/轮播框.png);
+	width: 410px;
+	height: 330px;
+}/*轮播框*/
+
+.carousel {
+    left: 24px;
+    top: 105px;
+    position: relative;
+    width: 372px;
+    height: 207px;
+    overflow: hidden;
+}
+
+.carousel .img-ct{position: absolute;}
+
+.carousel .img-ct img{
+	width: 375px; 
+	height: 206px;
+}
+
+.carousel .img-ct:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.carousel .img-ct li{float: left;}
+
+.arrow{
+	position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #FFFFFF;
+    color: #101010;
+    border-radius: 18px;
+    box-shadow: 0 0 2px #000000;
+    opacity: 0.4;
+}
+
+.arrow:hover{opacity:1}
+
+.pre{left:1px;}
+
+.next{right:2px;}
+
+.bullet{
+	position: absolute;	
+	bottom:10px;
+	left: 50%;
+	transform: 	translateX(-50%);
+}
+
+.bullet li{
+	width: 16px;
+	height: 4px;
+	border-radius: 2px;
+	background:#fff;
+	display: inline-block;
+	cursor:pointer;
+}
+
+ul .bullet li .active{background:#666;}
+
+/*----------以上为轮播样式----------*/
+
+
+.new-link{
+	margin: 20px 0 20px 95px;
+}
+
+.new-link span{
+	font-size:18px;
+	color:#95aab0;
+}
+
+.new-link a{
+	font-size:16px;
+	color:#95aab0;
+}
+
+.guide{
+	width:260px; 
+	height:100px;
+	background:url(images/shop1_11.png);
+	background-repeat: no-repeat;
+	margin-left: 150px;
+}/*黄色文字框公共部分*/
+
+.guide1 span{
+	position: relative;
+	top:24px;
+	left: 38px;
+}
+.guide2 span{
+	margin-top: 25px;
+	position: relative;
+	top:24px;
+	left: 70px;
+}
+
+.guide span{
+	line-height: 32px;
+	color: black;
+	font-size: 25px;
+	font-family: 'SimSun';
+	font-weight: bold;
+}
+
+.line{
+	position: absolute;
+    z-index: 2;
+    display: inline-block;
+    margin-top: 375px;
+    margin-left: -30px;
+}/*中间的横线**/
+
+.toy-logo{
+	width: 480px;
+    height: 500px;
+    float: left;
+    margin-left: 65px;
+    margin-top: 75px;
+    position: relative;
+    /*border: 1px solid red;*/
+}/*右边内容*/
+
+.devil{
+	position: absolute;
+    left: -20px;
+}
+
+.toy-logo h3{
+	margin-left: 30px;
+    font-size: 35px;
+    font-weight: lighter;
+    font-family: "宋体";
+    margin-bottom: 50px;
+}
+
+.exert-stone{
+	margin-left: 100px;
+	display: inline-block;
+}/*大石头*/
+
+
+/*第三部分：讲师简介，个人资料,团队人员*/
+#main{
+	margin: 0 auto;
+    width: 1366px;
+}
+
+#main>h1{
+    top: -10px;
+    position: relative;
+    text-align: center;
+}
+
+#main .main-EN p{
+	padding-top: 7px;
+    text-align: center;
+    margin-bottom: 20px;
+    color:#00a0e9;
+}
+
+.main-nav{
+	width: 1000px;
+	margin:0 auto;
+}
+
+.main-nav1{
+	width: 300px;
+	height: 395px;
+	float: left;
+	/*border: 1px solid red;*/
+}/*简介第一部分*/
+
+.sir{
+	display: inline-block;
+    float: left;
+    margin-left: 40px;
+    margin-top: -15px;
+}
+
+.main-nav2{
+	margin-left: 100px;
+	width: 588px;
+    height: 400px;
+	float:left;
+	/*border: 1px solid red;*/
+}/*简介第二部分*/
+
+.officer{
+	display: inline-block;
+    margin-top: 41px;
+    margin-bottom: 19px;
+    width: 140px;
+    height: 57px;
+    background: url(images/partner1.png);
+    background-repeat: no-repeat;
+}
+
+.officer span{
+	text-align: center;
+	line-height: 51px;
+	position: relative;
+    top: 1px;
+    left: 2px;
+    display: inline-block;
+    width: 135px;
+    font-size: 30px;
+    color:#00a0e9;
+    background-color: rgba(88,238,248,0.1);
+}
+
+.Introduction{
+	position: relative;
+    width: 575px;
+    height: 260px;
+    background-color: rgba(0,160,233,0.1);
+ }
+
+.Introduction span{
+	font-family: "黑体";
+    padding: 45px 70px;
+    font-size: 18px;
+    color: #fff;
+    line-height: 44px;
+    position: absolute;
+}
+
+/*讲师团队介绍（轮播效果）*/
+.team{
+    width: 100%;
+    margin: 0 auto;
+}
+.team h2{
+	text-align: center;
+    font-size: 28px;
+    font-family: '微软雅黑';
+    padding: 40px 0;
+}
+/*多图轮播样式如下*/
+#team-worker:after{
+	content:'';
+	display: block;
+	clear:both;
+	}
+
+#team-carousel{
+	overflow: hidden;
+	position: relative;
+	}
+
+#team-contain{
+	margin: 0 auto;
+	width: 948px;
+	height: 290px;
+	position: relative;
+	overflow: hidden;
+	}
+
+#team-worker{
+	position: absolute;
+	z-index: 1;
+	width: 2400px;
+	/*left:-190px;图片的起始位置*/
+	}
+
+#team-worker .wapped{
+	text-align: center;
+	width: 190px;
+	float: left;
+	}
+
+#team-worker .wapped h4{
+	text-align: center;
+	}
+
+#team-worker .wapped p{
+	text-align: center;
+	padding: 20px 15px;
+	}
+
+#left-arrow{
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	width: 100px;
+	/*height: 100px;*/
+	position: relative;
+	top: -240px;
+	left: 112px;
+	z-index: 2;
+	}
+
+#right-arrow{
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	width: 100px;
+	/*height: 100px;*/
+	position: relative;
+	top: -240px;
+	left: 1045px;
+	z-index: 2;
+	}
+/*多图轮播样式如上*/
+
+/*广告和课程优惠*/
+
+#footer{
+	margin: 0 auto;
+    width: 1366px;
+	height: 825px;
+	overflow: hidden;
+}
+
+.service{
+	width:100%;
+	margin:0 auto;
+	overflow: hidden;
+}
+
+.service1{/*课程广告左边*/
+	width: 590px;
+    height: 530px;
+    float: left;
+    /*border: 1px solid red;*/
+}
+
+.course-pionts{
+	margin-left: 150px;
+    width: 430px;
+    height: 200px;
+    background: hsla(175, 100%, 58%, 0.6);
+    /*opacity: 0.7;*不建议用，影响副元素/
+    /*background:linear-gradient(to bottom right,rgba(78, 184, 255, 0.65),rgba(0, 255, 196, 0.65));/*颜色linear-gradient(CSS3)线性渐变*/
+}
+
+.course-pionts>h1{
+	display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 50px;
+    margin-top: 40px;
+    font-size: 50px;
+    font-family: "宋体";
+}
+
+.course-pionts p{
+	float: left;
+    display: inline-block;
+    font-size: 40px;
+    font-family: "宋体";
+    padding: 10px 0 0 50px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.joinus{
+	float: left;
+    display: inline-block;
+    background: url(images/指标.png);
+    background-repeat: no-repeat;
+    width: 130px;
+    height: 56px;
+    text-align: center;
+    line-height: 56px;
+    overflow: hidden;
+    position: relative;
+    margin: 10px 10px;
+}
+
+.joinus span{
+	margin-left: -29px;
+    font-size: 30px;
+    z-index: 2;
+    color: black;
+    text-align: center;
+    display: inline-block;
+}
+
+.service1 .toy{padding: 20px 165px;}
+
+.service2{/*课程广告右边*/
+	width: 600px;
+	margin-left: 100px;
+    float: left;
+    overflow: hidden;
+    /*border: 1px solid red;*/
+}
+
+.service2 ul{overflow: hidden;}
+
+.course-list{float: left}
+
+.course{margin-bottom: 20px;}
+
+.course span{
+	display: block;
+	float: left;
+	margin: 20px 40px;
+    float: left;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/*.course2 span{
+	display: block;
+	float: left;
+	margin: 23px 40px;
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.course3 span{
+	display: block;
+	float: left;
+	margin: 23px 40px;
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+}*//*公用部分可简化*/
+
+/*页尾信息*/
+
+.footer-nav{
+	padding-top: 175px;;
+	margin:0 auto;
+}
+
+.footer-list{
+	width:340px;
+	margin:0 auto;
+}
+
+.footer-list li{
+	padding: 10px 20px;
+	float: left;
+}
+
+.footer-list li span{
+	font-size: 15px;
+	color: black;
+	font-family:"黑体";
+}
+
+.footer-nav p{
+	padding-bottom: 60px;
+	text-align: center;
+	color: black;
+	font-family:"黑体";
+}

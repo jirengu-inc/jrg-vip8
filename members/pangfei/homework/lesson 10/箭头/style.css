@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-04-26 10:59:19
+ * @version $Id$
+ */
+
+.arrow:before{
+	content:'';
+	display: block;
+	width:0;
+	height:0;
+	border-width: 20px;
+	border-style: solid;
+	border-color: transparent transparent pink transparent;
+}
+
+.arrow:after{
+	content:'';
+	display: block;
+	width:0;
+	height:0;
+	border-width: 20px;
+	border-style: solid;
+	border-color: transparent transparent #fff transparent;
+	position: relative;
+	top: -37px;
+}

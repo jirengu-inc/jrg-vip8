@@ -1,0 +1,6 @@
+.btn:hover{background:#c14d21;}
+.btn:active{background:#e25f31;}
+.btn{border-radius:5px;color:white;background:#e25f31;font-size:30px;padding:5px 5px;}
+div.btn{display:inline-block;}
+a.btn{text-decoration:none;}
+button.btn{border-radius:6px;border-style:none;}

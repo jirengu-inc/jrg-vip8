@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>漂亮的登陆框</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="image/iconfont.css">
+</head>
+<style type="text/css">
+	*{margin:0;padding:0;}
+	
+	a{text-decoration: none;}
+
+	li{list-style: none;}
+
+	#warp{
+		width: 500px;
+	    height: 520px;
+	    overflow: hidden;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    bottom: 0;
+	    right: 0;
+	    margin:auto;
+		/*border: 1px solid red;*/
+	}
+
+	#title{
+		text-align: center;
+	    position: relative;
+	    top: 50px;
+	}
+
+	#title .title-1{
+		font-family: "黑体"sans-serif;
+    	font-weight: lighter;
+	}
+
+	#title .title-2{
+		font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+		font-style: italic;
+	}
+	
+	body{
+		font-size: 20px;
+	    font-family: '黑体';
+	    font-weight: normal;
+	    background-color: rgb(222,215,209);
+	}
+	
+	#main-nav{
+		width: 320px;
+		height:345px;
+		overflow: hidden;
+		margin:0 auto;
+		margin-top: 80px;
+		/*-webkit-box-shadow:0px -1px 10px #CCC6C2;
+		-moz-box-shadow:0px -1px 10px #CCC6C2;*/
+	}
+
+	.main{
+		border-radius:0.1em;
+		padding: 30px;
+		border: 1px solid #FEFDFD;
+		background-color: #E4E0DC;
+		box-shadow: -1px 1px 9px #9A9896;
+	}
+	
+	.usename{
+		width: 252px;
+		height: 40px;
+		border:1px solid #C1C0C0;
+		background-color: #E1DCD8;
+		border-radius:0.2em;
+		margin: 0px 0 30px 0;
+		-webkit-box-shadow: inset 0px 1px 3px #CCC6C2;
+		-moz-box-shadow:inset 0px 1px 3px #CCC6C2;
+	}
+	
+	.usename input{
+		font-size: 13px;
+	    font-family: "黑体"sans-serif;
+	    font-weight: bold;
+	    border: none;/*把input标签默认边框去掉*/
+	    position: relative;
+	    color: #988E97;
+	    background-color: #E1DCD8;
+	}
+
+	.usename input:focus{
+		outline: none;
+	}/*输入框焦去色*/
+
+	.usename:hover{
+		text-shadow: 1px 1px 3px #C1C1C1;
+	    -webkit-box-shadow: inset 2px 2px 9px #CAC7C6;
+	    -moz-box-shadow: inset 2px 2px 9px #CAC7C6;
+	    background-color: #F5F2EF;
+	}/*鼠标移动上去变米白色*/
+
+	.usename:hover span{
+		color: #625E5B;
+	}
+
+	.usename:hover input{
+		color: #625E5B;/*浅灰色*/
+		background-color: #F5F2EF;/*米白色*/
+	}
+
+	.usename .icon-zhanghu{
+		color: #988E97; 
+		display: inline-block;
+		line-height: 40px;
+		padding: 0 10px;
+	}/*图标1*/
+
+	.password{
+		width: 252px;
+		height: 40px;
+		border:1px solid #C1C0C0;
+		background-color: #E1DCD8;
+		border-radius:0.2em;
+		margin:20px 0 30px 0;
+		-webkit-box-shadow: inset 0px 1px 3px #CCC6C2;
+		-moz-box-shadow:inset 0px 1px 3px #CCC6C2;
+	}
+
+	.password input{
+		font-size: 12px;
+	    font-family: "黑体"sans-serif;
+	    font-weight: bold;
+	    border: none;/*把input标签默认边框去掉*/
+	    position: relative;
+	    top: 1px;
+	    color: #988E97;/*未点击时的颜色*/
+	    background-color: #E1DCD8;
+	}
+
+	.password:hover{
+		text-shadow: 1px 1px 3px #C1C1C1;
+	    -webkit-box-shadow: inset 2px 2px 9px #CAC7C6;
+	    -moz-box-shadow: inset 2px 2px 9px #CAC7C6;
+	    background-color: #F5F2EF;
+	}
+
+	.password input:focus{
+		outline: none;
+	}
+
+	.password:hover span{
+		color: #625E5B;
+	}
+
+	.password:hover input{
+		color: #625E5B;/*浅灰色*/
+		background-color: #F5F2EF;/*米白色*/
+	}
+
+	.password .icon-suo{
+		color: #988E97;
+		display: inline-block;
+		line-height: 40px;
+		padding: 0 10px;
+	}/*图标2*/
+
+	.choose{		
+		width: 252px;
+		height: 40px;
+		/*border:1px solid #C1C0C0;*/
+		margin:20px 0 0 0;
+		position: relative;
+	}
+
+	.choose .text{
+		letter-spacing: 0.8px;/*即字符间距*/
+		word-spacing: -6px;/*即单词之间的间隔*/
+	    position: relative;
+	    font-size: 18px;
+	    font-weight: bold;
+	    color: #6A6663;
+	    display: inline-block;
+	    margin-left: 40px;
+	}
+
+	.icon-gouxuan{
+		position: absolute;
+	    font-size: 18px;
+	    color: #9C9B9A;
+	    font-weight: bold;
+	    line-height: 25px;
+	    display: inline-block;
+	    border: 1px solid #F5F2EF;
+	    box-shadow: 1px 1px 1px #CAC7C6;
+	    border-radius: 0.3em;
+	    width: 25px;
+	    height: 25px;
+	    background-color: #F5F2EF;
+	}/*图标3*/
+	
+	.icon-gouxuan:hover{
+ 		color: #74884A;
+	}
+
+	.frame p{
+		word-spacing: -6px;/*即单词之间的间隔*/
+	    display: inline-block;
+	    width: 252px;
+	    height: 40px;
+	    color: #79746E;
+	    margin: 0 0 5px 0;
+	    font-size: 16px;
+	    text-shadow: 1px -1px 30px #DED7D1;
+	}
+
+	button{
+		width: 254px;
+		height: 42px;
+		border:1px solid #C1C0C0;
+		background-color: #6A803C;
+		outline: none;
+		border-radius: 0.3em;
+		-webkit-box-shadow: inset 0px 1px 1px #EAEAEA;
+		-moz-box-shadow: inset 0px 1px 1px #EAEAEA;
+		background: -webkit-gradient( linear, left top, left bottom, from(#91A760), color-stop(0.50, #799149), to(#6B823D));
+	}
+
+	button:hover{
+		background: -webkit-gradient( linear, left top, left bottom, from(#B1CE74), color-stop(0.50, #99B562), to(#819E46));
+	}
+	
+	button>span{
+		text-shadow: 1px -1px 1px #C1C1C1;
+	}
+
+	button a{
+		font-weight: lighter;
+		cursor: pointer;
+	    font-size: 17px;
+	    color: white;
+	    line-height: 42px;
+	}
+
+	#footer{
+		width: 480px;
+		height: 100px;
+		margin:25px auto;
+		overflow: hidden;
+		text-align: center;
+	}
+
+	#footer .foot-nav{
+		display: inline-block;
+	    overflow: hidden;
+	    text-align: center;
+	}
+
+	#footer span{
+		color: #74706D;
+		font-size: 13px;
+	}
+
+	#footer .item, .split {
+		float: left;
+	}
+
+	#footer a{
+		font-size: 14px;
+		color: #988E87;
+		text-decoration:underline;/*a标签加回下划线*/
+	}
+
+	#footer .split {
+		position: relative;
+	    top: 8px;
+	    height: 12px;
+	    line-height: 12px;
+	    border-left: 1px solid #988E87;
+	    color: #988E87;
+	    margin: 0px 5px;
+	}
+
+
+</style>
+<body>
+	<div id="warp">
+	    <div id="title">
+	    	<span class="title-1">Login to</span> 
+	    	<span class="title-2"><b>Love.ly</b></span>
+	    </div>
+	    <div id="main-nav">
+			<div class="main">
+		    	<div class="frame">
+					<div class="usename">
+						<span class="iconfont icon-zhanghu"></span>
+						<input type="text" placeholder="IconDeposit"></input><!--input的Html5新属性placeholder-->
+					</div>
+					<div class="password">
+						<span class="iconfont icon-suo"></span>
+						<input type="password" placeholder="••••••••••••••"></input>    	
+					</div> 
+					<div class="choose">
+						<span class="iconfont icon-gouxuan"></span>
+						<span class="text">Remember Me</span>
+					</div> 	
+
+					<p>Forget username or passord?</p>
+					<button><span><a href="#">Login</a></span></button>
+				</div>
+			</div>
+	    </div>
+	    <div id="footer">
+	    	<p><span>Love.ly Personal Blog .PSD Template</span> <a href="javascript:;">Copyriht©2012 Malt Gentile</a></p>
+	    	<ul class="foot-nav">
+	        	<li class="item"><a href="javascript:;">Love.ly Home</a></li>
+	        	<li class="split"></li>
+	        	<li class="item"><a href="javascript:;">Blog</a></li>
+	        	<li class="split"></li>
+	        	<li class="item"><a href="javascript:;">Work</a></li>
+	        	<li class="split"></li>
+	        	<li class="item"><a href="javascript:;">Terms of Use</a></li>
+	        	<li class="split"></li>
+	        	<li class="item"><a href="javascript:;">Contact Me</a></li>
+        	</ul>
+	    </div>
+	 </div>
+</body>
+</html>

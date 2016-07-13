@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html class="theme theme-white">
+<head>
+<meta charset="utf-8">
+<title>一些问题02</title>
+<link href="https://www.zybuluo.com/static/assets/template-theme-white.css" rel="stylesheet" media="screen">
+</head>
+<body class="theme theme-white">
+<div id="wmd-preview" class="wmd-preview wmd-preview-full-reader"><div class="md-section-divider"></div><div class="md-section-divider"></div><h1 data-anchor-id="uqe7" id="一些问题02">一些问题02</h1><p data-anchor-id="smpn"><code>前端</code></p><hr><p data-anchor-id="0gzc"><div class="toc"><div class="toc">
+<ul>
+<li><a href="#一些问题02">一些问题02</a><ul>
+<li><ul>
+<li><ul>
+<li><a href="#1样式有几种引入方式-link-和-import有什么区别">1.样式有几种引入方式? link 和 @import有什么区别</a></li>
+<li><a href="#2文件路径maincss-maincssmaincss有什么区别">2.文件路径../main.css 、./main.css、main.css有什么区别</a></li>
+<li><a href="#3consolelog是做什么用的">3.console.log是做什么用的</a></li>
+<li><a href="#4text-align-justify是什么">4.text-align: justify是什么</a></li>
+<li><a href="#5pxemrem分别是什么有什么区别如何使用">5.px、em、rem分别是什么？有什么区别？如何使用</a></li>
+<li><a href="#6对chrome-审查元素的功能做个简单的截图介绍">6.对chrome 审查元素的功能做个简单的截图介绍</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</p><div class="md-section-divider"></div><h4 data-anchor-id="2uwc" id="1样式有几种引入方式-link-和-import有什么区别">1.样式有几种引入方式? link 和 @import有什么区别</h4><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="0g3w"><ol class="linenums"><li class="L0"><code class="language-html"><span class="pln">1. 内部引用:在</span><span class="tag">&lt;head&gt;&lt;/head&gt;</span><span class="pln">之间定义CSS样式，具体写法为</span><span class="tag">&lt;style</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">“text/css”</span><span class="tag">&gt;</span><span class="pun">“</span><span class="pln">CSS </span><span class="pun">的代码”</span><span class="tag">&lt;/style&gt;</span></code></li><li class="L1"><code class="language-html"><span class="pln">2. 内联引用:在标签内部直接定义CSS样式</span></code></li><li class="L2"><code class="language-html"><span class="pln">3. link外部引用css：</span><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="atv">"stylesheet"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"地址"</span><span class="tag">&gt;</span><span class="pln">，注意文件的地址是与当前HTML同级目录的 CSS 文件</span></code></li><li class="L3"><code class="language-html"><span class="pln">4. @import外部引用：@import url('地址');</span></code></li></ol></pre><blockquote data-anchor-id="s1wq" class="white-blockquote">
+  <p>link 和 @import区别： <br>
+  1. link属于XHTML标签，而@import完全是CSS提供的一种方式。 <br>
+  2. link引用的CSS会同时被加载，而@import引用的CSS 会等到页面全部被下载完再被加载。 <br>
+  3. 兼容性的差别。由于@import是CSS2.1提出的，所以老的浏览器不支持，@import只有在IE5以上的才能识别，而link标签无此问题。 <br>
+  4. 使用dom控制样式时的差别。当使用javascript控制dom去改变样式的时候，只能使用link标签，因为@import不是dom可以控制的。</p>
+</blockquote><div class="md-section-divider"></div><h4 data-anchor-id="r665" id="2文件路径maincss-maincssmaincss有什么区别">2.文件路径../main.css 、./main.css、main.css有什么区别</h4><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="6vl3"><ol class="linenums"><li class="L0"><code class="language-html"><span class="pln">../表示访问当前目录的上一级目录里的main.css文件</span></code></li><li class="L1"><code class="language-html"><span class="pln">./main.css和main.css表示访问当前目录里面的main.css文件。</span></code></li></ol></pre><div class="md-section-divider"></div><h4 data-anchor-id="ikob" id="3consolelog是做什么用的">3.console.log是做什么用的</h4><blockquote data-anchor-id="3lpz" class="white-blockquote">
+  <p>JavaScript中调试使用，可以在控制台看到它输出的内容，相对于 alert 更加高效，因为不会打断页面的操作，并且 console.log可支持多个参数</p>
+</blockquote><div class="md-section-divider"></div><h4 data-anchor-id="x9kl" id="4text-align-justify是什么">4.text-align: justify是什么</h4><blockquote data-anchor-id="egsn" class="white-blockquote">
+  <p>实现两端对齐文本效果,在两端对齐文本中，文本行的左右两端都放在父元素的内边界上。然后，调整单词和字母间的间隔，使各行的长度恰好相等。</p>
+</blockquote><div class="md-section-divider"></div><h4 data-anchor-id="nc5k" id="5pxemrem分别是什么有什么区别如何使用">5.px、em、rem分别是什么？有什么区别？如何使用</h4><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="6wfa"><ol class="linenums"><li class="L0"><code class="language-html"><span class="pln">px表示像素，用PX设置字体大小时，比较稳定和精确。但是这种方法存在一个问题，当用户在浏览器中浏览我们制作的Web页面时，他改变了浏览器的字体大小（虽然一般人不会去改变浏览器字体大小），这时会使用我们的Web页面布局被打破，这时就提出了使用“em”来定义Web页面的字体。</span></code></li><li class="L1"><code class="language-html"></code></li><li class="L2"><code class="language-html"><span class="pln">em是根据基准来缩放字体的大小，是一个相对值，而非具体的数值。一般都是以</span><span class="tag">&lt;body&gt;</span><span class="pln">的“font-size”为基准。</span></code></li><li class="L3"><code class="language-html"></code></li><li class="L4"><code class="language-html"><span class="pln">注意：在网页设计中我们经常看见body{font-size: 62.5%;}这样的设置，为什么偏偏是62.5%呢？这主要是为了方便em与px相互转换，em的初始值为1em=16px，显然这样的话，如1.2em则=19.2px，可是我们在设置的时候很少看见19.2px这样表示的大小，也就是在用px表示大小时数值是不带小数位的。当设置了body{font-size: 62.5%;}时，1em则=16px*62.5%=10px,1.2em则=12px</span></code></li><li class="L5"><code class="language-html"></code></li><li class="L6"><code class="language-html"><span class="pln">所以我们在写CSS的时候：</span></code></li><li class="L7"><code class="language-html"><span class="pln">1. body选择器中声明Font-size=62.5%；</span></code></li><li class="L8"><code class="language-html"><span class="pln">2. 将你的原来的px数值除以10，然后换上em作为单位；</span></code></li><li class="L9"><code class="language-html"><span class="pln">3. 重新计算那些被放大的字体的em数值。避免字体大小的重复声明。</span></code></li><li class="L0"><code class="language-html"></code></li><li class="L1"><code class="language-html"></code></li><li class="L2"><code class="language-html"><span class="pln">rem是CSS3新增的一个相对单位（root em，根em），这个单位引起了广泛关注。这个单位与em有什么区别呢？区别在于使用rem为元素设定字体大小时，仍然是相对大小，但相对的只是HTML根元素。这个单位可谓集相对大小和绝对大小的优点于一身，通过它既可以做到只修改根元素就成比例地调整所有字体大小，又可以避免字体大小逐层复合的连锁反应。目前，除了IE8及更早版本外，所有浏览器均已支持rem。对于不支持它的浏览器，应对方法也很简单，就是多写一个绝对单位的声明。这些浏览器会忽略用rem设定的字体大小</span></code></li><li class="L3"><code class="language-html"></code></li><li class="L4"><code class="language-html"><span class="pln">使用时只要设定 HTML 的文字大小为html｛font-size: 62.5%;｝，那么其他的字体就是将你要的值除以10得到的值（rem 结尾）</span></code></li><li class="L5"><code class="language-html"></code></li><li class="L6"><code class="language-html"><span class="pln">注意：</span></code></li><li class="L7"><code class="language-html"><span class="pln">1、IE9/IE10在用于伪元素时或者使用字体简写声明时不支持rem；</span></code></li><li class="L8"><code class="language-html"><span class="pln">2、IOS Safari5.0-5.1虽然支持rem，但是在使用媒体查询时不支持rem。</span></code></li></ol></pre><div class="md-section-divider"></div><h4 data-anchor-id="gtz6" id="6对chrome-审查元素的功能做个简单的截图介绍">6.对chrome 审查元素的功能做个简单的截图介绍</h4><p data-anchor-id="hz6l"><img src="http://static.zybuluo.com/cocoon/12ynpiwyu3m7ujmrhn4w27nx/chrome%20%E5%AE%A1%E6%9F%A5%E5%85%83%E7%B4%A0.jpg" alt="chrome 审查元素.jpg-139.2kB" title=""></p></div>
+</body>
+</html>

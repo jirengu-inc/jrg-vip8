@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="未封装-无缝slides" />
+<script src="../scripts/jquery-1.11.2.js"></script>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+*{margin: 0; padding: 0;}
+
+/* .arts{
+  width: 200px;
+  height: 150px;
+}
+.arts .list:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.arts .list{
+  position: relative;
+  width: 1000px;
+  height:150px;
+}
+.arts .viewpoint{
+  width: 200px;
+  height: 150px;
+  overflow: hidden;
+  border: 1px solid;
+}
+.arts .pic{
+  float: left;
+} */
+</style>
+</head>
+<body>
+  <div class="arts1">
+          <div class="pic" style="width: 200px;height: 150px;background: red;"></div>
+          <div class="pic" style="width:200px;height: 150px;background: blue;"></div>
+          <div class="pic" style="width:200px;height: 150px;background: green;"></div>
+          <div class="pic" style="width:200px;height: 150px;background: yellow;"></div>
+          <div class="pic" style="width:200px;height: 150px;background: pink;"></div>
+    
+  </div>
+    
+<script id="jsbin-javascript">
+$.fn.slides = function(options){
+  var $arts = this
+  $arts.each(function(){
+    var $arts = $(this)
+     var $pics = $arts.children().wrapAll('<div class=list></div>')
+  var $list = $arts.children()
+  $list.wrapAll('<div class=viewpoint></div>')
+  var $viewpoint = $list.parent()
+  if(options.nav){
+    var $prev = $('<button class=next>prev</button>')
+    var $next = $('<button class=next>next</button>')
+    $prev.appendTo($arts)
+    $next.appendTo($arts)
+  }
+  
+  var width = options.width
+  var height = options.height
+  var current = 1
+  var hover = false
+  var number = $pics.length+2
+
+  var timer 
+  console.log($viewpoint)
+  $arts.css({
+    width: width,
+    height: height
+  })
+  $viewpoint.css({
+    width: width,
+    height: height,
+    overflow: 'hidden',
+    position: 'relative'
+  })
+  $list.css({
+    width: width*number,
+    height: height,
+    position: 'relative',
+    left: -width
+  })
+  $pics.css({float: 'left'})
+  
+  var $first = $pics.first()
+  var $last = $pics.last()
+  $first.clone().appendTo($list)
+  $last.clone().prependTo($list)
+  //blindEvents
+ //go函数
+  var go = function(index){
+    var left = index*(-width)
+    if(timer){
+        window.clearInterval(timer)
+      }
+    if(!hover&&options.auto){
+          autoPlay()
+        }
+    if(index!=0&&index!=number-1){
+    $list.stop(true,true).animate({
+        left: left 
+      },500,function(){
+        current = index        
+    })      
+    }else    
+      if(index == 0){
+        $list.stop(true,true).animate({left:0},500,function(){
+          $list.css({left:(-number+2)*width})
+          current = number-2
+        })        
+      }else
+      if(index == number-1){
+        $list.stop(true,true).animate({left:-(number-1)*width},500,function(){
+          $list.css({left:-width})
+          current = 1
+        })
+      }
+  }
+  var prev = function(){
+    go(current-1)
+  }
+  var next = function(){
+    go(current+1)
+  }
+  $prev.on('click',function(){
+    prev()
+  })
+  $next.on('click',function(){
+    next()
+  })
+  $pics.on('mouseenter',function(){
+    window.clearInterval(timer)
+    hover = true
+  }).on('mouseleave',function(){
+    autoPlay()
+    hover = false
+  })
+  var autoPlay = function(){
+    timer = setInterval(function(){
+      next()
+    },2000)
+  }
+  if(options.auto){
+    autoPlay()
+  }
+  
+  })
+ 
+}
+$('.arts1').slides({
+  width: 200,
+  height: 150,
+  auto: false,
+  nav: true
+})
+
+</script>
+</body>
+</html>

@@ -1,0 +1,354 @@
+@charset"utf-8";
+*{margin: 0;padding:0;}
+body{
+	width: 100%;
+	background: #041428 url(imges/bg.png)  repeat;
+	color: white;
+	font-family: "微软雅黑";
+}
+li{list-style: none;}
+a{text-decoration: none;color: white;}
+.contain{
+	width:1263px;
+	margin:auto;
+}
+.nav{
+	height: 60px;
+	background: url(imges/logo.png) no-repeat 50%;
+	line-height: 100px;
+	font-size: 16px;
+	margin:20px 20px;
+	transition:background 0.4s;
+}
+.nav_box{
+	height: 60px;
+}
+.nav:hover{
+	background: rgba(255,255,255,0.3) url(imges/logo.png) no-repeat 50%;
+}
+.nav:after{
+	content: " ";display: block;clear: both;
+}
+.nav_left{
+	height: 60px;
+    display: inline-block;
+    line-height: 60px;
+	padding-left: 220px;
+}
+.nav_left li{
+	display: block;
+	float: left;
+	height: 60px;
+	padding:0 30px;
+}
+.nav_left a{
+	display: block;	
+
+}
+.nav_left a:hover,.nav_right a:hover{
+	color: #041428;
+}
+
+.nav_right{
+	display: inline-block;
+	line-height: 60px;
+	padding-left:253px;
+}
+.nav_right li{
+	float: right;
+}
+.nav_right a{
+	display: block;
+	height: 60px;
+	padding:0 16px;
+}
+
+.main{
+	margin-top:10px;
+	margin-bottom:132px;
+}
+.carousel{
+	margin-bottom: 15px;
+}
+.title{
+	height: 135px;
+	margin-bottom: 15px;
+	line-height: 135px;
+	font-size: 55px;
+	color:#00A0E9;
+	text-align: center;
+	font-family: "宋体";
+}
+.carousel_contain{
+	height: 686px;
+	padding-top: 15px;
+	padding-left: 139px;
+	padding-right: 155px;
+}
+.carousel_contain:after{
+	content: " ";
+	display: block;
+	clear: both;
+}
+.carousel_b{
+	width: 409px;
+	height: 600px;
+	float: left;
+}
+.b_a{
+	padding-right: 20px;
+}
+
+.carousel_b p,.carousel_b a{
+	line-height: 50px;
+	font-size: 18px;
+	color: #95AAB0;
+	text-align: right;
+}
+.carousel_b a{
+	font-family: "Regular";
+}
+.botton{
+	float: right;
+}
+.botton a{
+	display: block;
+	width:245px;
+	height: 60px;
+	margin-bottom:40px;
+	background: #F3C544 url(imges/arrow.png) right center no-repeat;
+	border-radius: 6px;
+	color: #171C20;
+	font-size: 26px;
+	text-align: center;
+	line-height: 60px;
+	font-weight: bold;
+    transition:background 0.4s;
+}
+.botton a:hover{
+	background: rgba(243,180,4,0.7) url(imges/arrow.png) right center no-repeat;
+}
+.c_left{
+	width: 560px;
+	height: 686px;
+	float: right;
+	background: url(imges/bg-carousel.png) -18px 68px no-repeat;
+}
+.c_left>p{
+	font-size: 35px;
+	font-family: "宋体";
+	text-align: center;
+}
+.lect_title{
+	padding:10px 0 36px 0;
+	text-align: center;
+}
+
+.lect_title p:first-child{
+	font-size: 2.5em;
+	line-height: 1.65em;
+}
+.lect_title p:last-child{
+	font-size: 0.875em;
+	color: #00C3FC;
+}
+.person{
+	height: 372px;
+	padding:0 86px 35px 170px;
+}
+.p_img{
+	float: left;
+	width: 242px;
+	height: 372px;
+	background: url(imges/lec_bg.png) center top no-repeat;
+}
+.p_intro{
+	float: right;
+	margin-left: 75px;
+	width: 690px;
+	padding-top: 41px;
+}
+.p_intro:after{
+	content: " ";display: block;clear: both;
+}
+.p_intro div:first-child{
+	width: 138px;
+	height: 58px;
+	background: url(imges/name_bg.png) no-repeat;
+	font-size: 30px;
+	text-align: center;
+	line-height: 58px;
+	color: #00A0E9;
+	margin-bottom:25px;
+}
+.p_intro div:last-child{
+	width: 690px;
+	height: 217px;
+	background: rgba(143,255,255,0.1);
+	font-size: 24px;
+	line-height: 47px;
+	margin-bottom:25px;
+	font-family: "宋体";
+	padding:33px 56px 0 56px;
+}
+
+.p_list>p{
+	text-align: center;
+	font-size: 28px;
+	line-height: 1em;
+	padding:46px 0 42px 0;
+}
+.p_roll{
+	height: 350px;
+}
+.p_roll:after{
+	content: " ";display: block;clear: both;
+}
+.left_arrow{
+	float: left;
+	width: 40px;
+	height: 350px;
+	padding-right: 49px;
+	background: url(imges/left-arrow.png) 0 80px no-repeat;
+}
+.right_arrow{
+	float: right;
+	width: 40px;
+	height: 350px;
+	padding-left: 49px;
+	background: url(imges/right-arrow.png) 40px 80px no-repeat;
+}
+.per_list li{
+	float: left;
+	display: block;
+	height: 350px;
+	width: 217px;
+	text-align: center;
+}
+.per_list li a{
+	font-size: 1.25em;
+	color: #00C3FC;
+	line-height: 41px;
+}
+.per_list li p{
+	font-size: 0.875em;
+	line-height: 25px;
+}
+.per_list li div{
+	width: 153px;
+	padding:5px 31px 0 31px;
+}
+.cost{
+	height: 340px;
+	padding-left: 139px;
+}
+.cost:after{
+	content: " ";display: block;clear: both;
+}
+.grab_seat{
+	width: 336px;
+	margin-right: 42px;
+	padding:22px 18px 30px 40px;
+	background: url(imges/seat_bg.png) no-repeat;
+	float: left;
+}
+.grab_seat:after{
+	content: " ";display: block;clear: both;
+}
+.grab_left{
+	float: left;
+}
+.grab_left p:first-child{
+	font-size: 52px;
+	letter-spacing:6px;
+	font-family: "宋体";
+	line-height: 80px;
+}
+.grab_left p:last-child{
+	font-size: 39px;
+	letter-spacing: 4px;
+	font-family: "宋体";
+}
+.grab_button{
+	float: left;
+	margin-left: 5px;
+}
+.grab_button a{
+	display: block;
+	height: 59px;
+	width: 113px;
+	margin-top:69px;
+	padding-right:18px;
+	font-size: 26px;
+	background: #F3C544 url(imges/arrow.png) right center no-repeat;
+	border-radius: 6px;
+	color: #171C20;
+	text-align: center;
+	line-height: 59px;
+    transition:background 0.4s;
+}
+.grab_button a:hover{
+	background: rgba(243,180,4,0.7) url(imges/arrow.png) right center no-repeat;
+}
+
+.seat_cost{
+	float: left;
+    margin-left: 50px;
+    max-width:560px;
+}
+.seat_cost p{
+	display: block;
+	height: 100px;
+	padding-left: 100px;
+	line-height: 100px;
+	font-size: 35px;
+	background: url(imges/num_2.png) 0 center no-repeat;
+}
+.seat_cost p:first-child{
+	background: url(imges/num_1.png) 0 center no-repeat;
+}
+.seat_cost p:last-child{
+	background: url(imges/num_3.png) 0 center no-repeat;
+}
+
+.last_footer{
+	height: 825px;
+	margin-top:10px;
+	background: url(imges/footer_bg.png) no-repeat;
+}
+.footer{
+	height: 69px;
+	padding:104px;
+	margin-top: 211px;
+	text-align: center;
+	font-size: 14px;
+	color: black;
+}
+.about_us{
+	float: left;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	margin:17px 0 14px 0;
+}
+.about_us ul{
+	clear: left;
+	float: left;
+	position: relative;
+	left: 50%;
+	text-align: center;
+}
+.about_us li{
+	display: block;
+	float: left;
+	position: relative;
+	right: 50%;
+	padding:0 17.5px;
+}
+.about_us a{
+	display: block;
+	color: black;
+}
+.about_us a:hover{
+	color: #0761C4;
+}

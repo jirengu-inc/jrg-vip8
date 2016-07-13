@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+div,a,p,span,h1,h2,h3,h4,h5,h6,li,ul,ol,img{
+    padding: 0;margin: 0;
+}
+i{font-style: normal;}
+a{text-decoration: none;color:inherit}
+.clearfix::after{
+    content:"";
+    display: block;
+    clear: both;
+}
+body{
+    background: #D2D5D6;
+    font-family: 微软雅黑;
+    font-size:12px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-user-select:none;
+}
+/* 布局 */
+.wrapper{
+    width: 330px;
+    height: 380px;
+    background: #E9EDEE;
+    margin: 80px auto;
+    box-shadow:0 2px 3px #999;
+    border-radius: 15px 15px 15px 15px;
+}
+/* 头部头像 */
+.singer-pic{
+    border-radius: 15px 15px 0 0;
+    height: 145px;
+    overflow: hidden;
+}
+.singer-pic img{
+    width: 330px;
+    vertical-align: top;
+}
+/* 歌手-歌名-类型-分享-收藏-喜欢 */
+.song-info{
+    width: 280px;
+    padding:30px 30px 20px 30px;
+}
+.song-info .song{
+    float: left;
+}
+.song-info .for-more{
+    float: right;
+}
+.song{
+    width: 155px;
+}
+.song h3{
+    font-size: 20px;
+    font-weight: 600;
+    height: 26px;
+    line-height: 26px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    -webkit-user-select:text;
+}
+.song p{
+    height: 20px;
+    line-height: 20px;
+    -webkit-user-select:text;
+}
+.song p.singer-info{
+    color:#444;
+    font-weight: 500;
+    font-size: 16px;
+}
+.song p.song-type{
+    font-size:14px;
+}
+/*分享 收藏 我喜欢*/
+.for-more{
+    padding-left:25px;
+    float: right;
+    width: 90px;
+    height: 26px;
+    line-height:26px;
+}
+.for-more > a,.for-more > span{
+    float: left;
+    display: block;
+    color:#CDD2D7;
+    margin-left: 10px;
+    font-size:18px;
+}
+.for-more > a > i{
+    display: block;
+}
+.for-more span:hover{
+    cursor:pointer;
+    text-shadow:1px 0 1px #888;
+}
+.for-more span.shoucanged{
+    color:yellow;
+}
+.for-more span.loved{
+    color:red;
+}
+/* 进度条 */
+.progress-bar{
+    padding:10px 30px;
+}
+.whole-time{
+    height: 8px;
+    width: 230px;
+    background:#424242;
+    border:none;
+    border-radius:4px;
+    position: relative;
+    float: left;
+    cursor:pointer;
+
+}
+.spent-time{
+    background: #CDD2D7;
+    height: 8px;
+    width: 0;
+    border-radius:4px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/*时间*/
+.time{
+    float: right;
+    width: 30px;
+    font-size: 8px;
+    line-height: 8px;
+    color:#919191;
+}
+/*控制区域*/
+.footer{
+    padding:20px 30px;
+}
+.control{
+    float: left;
+    height: 42px;
+    line-height: 42px;
+}
+.control span{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius:50%;
+    background:#424242;
+    vertical-align: middle;
+    box-shadow:0 0 1px #424242;
+    color:#E3E6E8;
+    text-align: center;
+    line-height: 30px;
+    cursor:pointer;
+}
+.control span i{
+    display: block;
+}
+.control span i.iconfont{
+    font-size:12px;
+}
+.control span.pause{
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+    line-height: 40px;
+    text-align: center;
+}
+.control span.pause i.m-pause{
+    font-size:20px;
+}
+.control span i.m-start{
+    font-size:20px;
+}
+/*播放模式 */
+.play-mode{
+    float: right;
+    height: 42px;
+    line-height: 42px;
+    font-weight: 600;
+    font-size: 26px;
+}
+.play-mode i{
+    margin-left: 10px;
+    color:#CDD2D7;
+    cursor: pointer;
+}
+.play-mode i.actived{
+    color:#424242;
+}

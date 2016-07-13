@@ -1,0 +1,18 @@
+@charset"utf-8";
+*{
+	margin:0;
+	padding:0;
+	font-family: Helvetica;
+}
+.title1{color:#008080;}
+#title2{color:#00FF00;}
+li{background-color:#87CEFA;}
+ol,li{color: 	#DA70D6;}
+div span{color: #6B8E23;}
+p>strong{font-size: 20;color:#4169E1;}
+p+p{font-size: 30;color:#6B8E23;}
+[style]{color:red;}
+[title=作品1]{font-size: 30px;color: red}
+[title~=作品2]{font-size: 32px;color: green}
+[title|=作品集3]{font-size: 40px;background-color: 	#F08080;}
+dd~dt{line-height: 25px}

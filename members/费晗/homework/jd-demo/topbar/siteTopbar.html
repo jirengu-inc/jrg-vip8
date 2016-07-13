@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://js.jirengu.com
+
+Copyright (c) 2016 by fei-han (http://js.jirengu.com/ruwo/6/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<meta name="description" content="京东——导航链接" />
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_1463889714_6587682.css">
+<style id="jsbin-css">
+*{margin: 0;padding: 0;}
+body{
+  background: #fff;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #666;
+}
+.clearfix:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+a{
+  text-decoration: none;
+  color:inherit;
+}
+.item .i-arrow,
+.item .i-shouji{
+  display: inline-block;
+  vertical-align: top;
+}  
+.siteLinks>.item-nav:hover .i-arrow{
+  transform: rotate(180deg);
+} 
+
+.wrapper{
+  height: 30px;
+  line-height: 30px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+.siteLinks{
+  position: relative;
+  float: right;
+}
+.siteLinks>.item{
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 3px;
+  position: relative;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+/* .siteLinks .item>a{
+  padding: 0 2px;
+} */
+.siteLinks .item>a:hover{
+  color: #C81623;
+}
+.siteLinks .item-nav:hover{
+  background: #fff;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  
+}
+.siteLinks>.split{
+  position: relative;
+  top: 9px;
+  float: left;
+  width: 1px;
+  height: 12px;
+  /* background: #ddd; */
+  border-left: 1px solid #ddd;
+  margin: 0 2px;
+  overflow: hidden;
+}
+</style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="siteLinks clearfix">
+      <div class="item">
+        <a href="#">你好，请登录</a>
+        <a href="#" style=color:#C81623>免费注册</a>
+      </div>
+      <div class="split"></div>
+      
+      <div class="item">
+        <a href="#">我的订单</a>
+     </div>
+      <div class="split"></div> 
+      
+    <div class="item item-nav">
+        <a href="#">我的京东</a>
+        <span class ="jd-iconfont i-arrow"></span>
+    </div>
+    <div class="split"></div>
+      
+    <div class="item">
+        <a href="#">免费注册</a>
+        <span class="split"></span>
+    </div>
+      <div class="split"></div> 
+      
+    <div class="item">
+        <a href="#">京东会员</a>
+    </div>
+      <div class="split"></div> 
+    <div class="item">
+        <a href="#">企业采购</a>
+    </div>
+      <div class="split"></div> 
+      
+    <div class="item item-nav">
+        <a href="#"><span class ="jd-iconfont i-shouji"></span>手机京东</a>
+        <span class ="jd-iconfont i-arrow"></span>
+    </div>
+      <div class="split"></div> 
+      <div class="item item-nav">
+        <a href="#">关注京东</a>
+        <span class ="jd-iconfont i-arrow"></span>
+    </div>
+      <div class="split"></div> 
+      
+    <div class="item item-nav">
+        <a href="#">客户服务</a>
+        <span class ="jd-iconfont i-arrow icons"></span>
+    </div> 
+      <div class="split"></div> 
+      
+    <div class="item item-nav">
+        <a href="#">网站导航</a>
+        <span class ="jd-iconfont i-arrow icons"></span>
+    </div>
+      <div class="split"></div> 
+    </div>
+  </div>
+</body>
+</html>

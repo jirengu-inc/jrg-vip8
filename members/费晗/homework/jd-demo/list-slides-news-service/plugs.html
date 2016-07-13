@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://js.jirengu.com
+
+Copyright (c) 2016 by fei-han (http://js.jirengu.com/giju/6/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<script src="http://7xrxd2.com1.z0.glb.clouddn.com/jquery/jquery-1.12.3.min.js"></script>
+<script src="http://7xuf0e.com1.z0.glb.clouddn.com/plugs%2Fjquery.slides.min.js"></script>
+<meta name="description" content="plug" />
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_1463889714_6587682.css">
+<style id="jsbin-css">
+*{margin: 0;padding:0;}
+ body{
+  background: white;
+  color: #000;
+  font:12px/1.5 Arial,Verdana,"\5b8b\4f53",serif;
+  -webkit-font-smoothing: antialiased;
+} 
+ul,li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+.clearfix:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+.list-slides-news-service{
+  margin: 0 auto;
+  width: 1210px;
+}
+
+.artSlides{
+  float: left;
+  margin-left: 12px;
+  margin-top: 10px;
+  width: 730px;
+  height: 454px;
+  position: relative;
+}
+.artSlides .slidesjs-pagination{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 10px;
+  z-index: 10;
+  text-align: center;
+}
+.artSlides .slidesjs-pagination>li{
+  display: inline-block;
+  margin: 0 0.3em;
+  text-align: center; 
+}
+.artSlides .slidesjs-pagination>li>a{
+  display: block;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  border-radius: 50%;
+  color: #fff;
+  background: #3E3E3E;
+  text-align: center;
+}
+.artSlides .slidesjs-pagination>li>a.active{
+  background: #b61b1f;
+}
+</style>
+</head>
+<body>
+ <div class="artSlides">
+     <img src="http://img12.360buyimg.com/da/jfs/t2857/256/1452752818/101291/afca65c1/573ee1ebN06312488.jpg" alt="" width="730" height="454">
+     <img src="http://img20.360buyimg.com/da/jfs/t2854/97/1132509358/155045/6244031f/5735959eN11f82ea5.jpg" alt="" width="730" height="454">
+     <img src="http://img12.360buyimg.com/da/jfs/t2605/45/1390918490/101426/a6d4c333/573e86e4N1a5c9424.jpg" alt="" width="730" height="454">
+     <img src="http://img10.360buyimg.com/da/jfs/t2584/110/1391193267/93128/24d6eeb8/573e6a48N9b32769c.jpg" alt="" width="730" height="454">
+     <img src="http://img20.360buyimg.com/da/jfs/t2665/177/1455254342/56503/5b5a6f40/573ee1a4N13947f29.jpg" alt="" width="730" height="454">
+     <img src="http://img12.360buyimg.com/da/jfs/t2704/157/1435833264/136894/59293934/573ea901Ndb3ca841.jpg" alt="" width="730" height="454">
+
+</div>
+
+<script id="jsbin-javascript">
+ $(function(){
+      $(".artSlides").slidesjs({
+        width: 730,
+        height: 454,
+        navigation: false,
+         play: {
+      active: true,
+        // [boolean] Generate the play and stop buttons.
+        // You cannot use your own buttons. Sorry.
+      effect: "slide",
+        // [string] Can be either "slide" or "fade".
+      interval: 3000,
+        // [number] Time spent on each slide in milliseconds.
+      auto: true,
+        // [boolean] Start playing the slideshow on load.
+      swap: true,
+        // [boolean] show/hide stop and play buttons
+      pauseOnHover: true,
+        // [boolean] pause a playing slideshow on hover
+      restartDelay: 2500
+        // [number] restart delay on inactive slideshow
+    }
+      });
+    });
+</script>
+</body>
+</html>

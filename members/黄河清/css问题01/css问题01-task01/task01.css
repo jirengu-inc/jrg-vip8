@@ -1,0 +1,33 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+ul li{
+	float: left;
+	margin-left: 10px;
+	list-style: none; /*去除无序列表的前方黑点*/
+}
+
+.btn{
+	display: inline-block;/*转为内联块状元素*/
+	width: 40px;
+	height: 25px;
+	line-height: 25px; /*行内元素垂直居中*/
+	text-align: center; /*行内元素水平居中*/
+	border-radius: 3px;/*边框圆角*/
+	border: none; /*去掉默认边框*/
+	text-decoration: none;/*去掉默认下划线*/
+	font-family:"NSimSun","Microsoft YaHei";
+	font-size: 14px;
+	color: #FFFFFF;
+	background-color: #e25f31;
+}
+
+.btn:hover{
+	color: #c14d21;
+}
+
+.btn:active{
+	background-color: #e25f31;
+}

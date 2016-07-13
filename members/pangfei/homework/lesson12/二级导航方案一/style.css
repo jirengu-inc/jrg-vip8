@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-04-20 10:02:53
+ * @version $Id$
+ */
+
+*{
+	margin:0;
+	padding:0;
+}
+
+ul{
+	list-style: none;
+}
+
+.wrapper{
+	margin-top: 10px;
+	text-align: center;
+}
+
+.siteNavigation{
+	display: inline-block;
+	background: #057BDD;
+	vertical-align: top;   /*解决与外包含块高度不一样的情况*/
+}
+
+.siteNavigation a{
+	display: block;
+	text-decoration: none;
+	color: #fff;
+}
+
+.siteNavigation>li{
+	font-family:'微软雅黑';
+    width: 150px;
+    height: 40px;
+    float: left;
+    line-height: 40px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px 1px 1px 0;
+    border-color: #ddd;
+}
+
+.siteNavigation>li:nth-child(1){
+    border-left: 1px solid #ddd;
+}
+
+.siteNavigation>li>ul{
+	display: none;
+}
+
+.siteNavigation>li:hover>ul{
+	display: block;
+	background:#52A0F9;
+	width: 100%;               /*使下拉框的宽度跟父容器的宽度一样*/
+	border:1px solid #ddd;
+	position: relative;
+	margin-right: -1px;	
+}
+
+.siteNavigation>li>ul>li:hover{
+	background: #057BDD;
+	border-bottom:1px solid #ddd;
+	border-top:1px solid #ddd;
+}

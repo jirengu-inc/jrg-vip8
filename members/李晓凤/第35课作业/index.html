@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 新标签</title>
+    <style>
+        body{
+            padding-left:50px;
+            font-family: 微软雅黑;
+        }
+        hr{
+            width:1220px;
+            margin:10px;
+            border:1px solid #EEEEEE;
+        }
+        table{
+            border-collapse:collapse;
+            width:1200px;
+        }
+        table,th,tr{
+            border:1px solid  #CCCCCC;
+        }
+        th,td{
+            padding-left:10px;
+            text-align:left;
+        }
+        tr{
+            height:40px;
+            line-height:40px;
+        }
+        tr>td:first-child{
+            width:200px;
+        }
+        tr>th:first-child,tr>td:first-child{
+            border-right:none;
+        }
+        tr>th:last-child,tr>td:last-child{
+            border-left:none;
+        }
+        ul{
+            line-height:25px;
+            font-size:14px;
+        }
+    </style>
+</head>
+<body style="">
+<h2>HTML5中的新元素</h2>
+<p>下面是新的HTML5元素的列表，以及它们的用途的描述。</p>
+<hr>
+<h2>新的语义/结构元素</h2>
+<p>为了使文档结构更好,HTML5提供了新的元素：</p>
+<table  border="1" >
+    <tr>
+       <th>Tag(标签)</th>
+       <th>Description（描述）</th>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< article ></td>
+        <td>定义文档中的一篇文章</td>
+    </tr>
+    <tr>
+        <td>< aside ></td>
+        <td>定义除了页面内容以外的内容</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< bdi ></td>
+        <td>定义隔离可能以不同方向进行格式化的外部文本</td>
+    </tr>
+    <tr>
+        <td>< details ></td>
+        <td>用于描述文档或文档某个部分的细节，用户可以查看或隐藏。</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< dialog ></td>
+        <td>定义对话框或窗口</td>
+    </tr>
+    <tr>
+        <td>< figcaption ></td>
+        <td>定义与其相关联的< figure >的说明/标题</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< figure ></td>
+        <td>定义独立的内容，如插图，图表，照片，代码清单等……</td>
+    </tr>
+    <tr>
+        <td>< footer ></td>
+        <td>定义文档的页脚或者章节</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< header ></td>
+        <td>定义文档的页眉或者章节（可能包含标题元素，也可以包含其他元素，像logo、分节头部、搜索表单等。）</td>
+    </tr>
+    <tr>
+        <td>< main ></td>
+        <td>定义文档的主要内容</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< mark ></td>
+        <td>定义标注或者突出显示的文本</td>
+    </tr>
+    <tr>
+        <td>< menuitem ></td>
+        <td>定义了用户可以从一个弹出式菜单调用命令/菜单项</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< meter ></td>
+        <td>定义已知范围或分数值内的标量测量（尺度）</td>
+    </tr>
+    <tr>
+        <td>< nav ></td>
+        <td>定义文档中的导航链接</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< progress ></td>
+        <td>定义任务的进度</td>
+    </tr>
+    <tr>
+        <td>< rp ></td>
+        <td>定义在不支持Ruby注释的浏览器中显示</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< rt ></td>
+        <td>定义字符的解释/发音（东亚版式）</td>
+    </tr>
+    <tr>
+        <td>< ruby ></td>
+        <td>定义Ruby注释（东亚版式）]</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< section ></td>
+        <td>定义定义文档中的节（section、区段）。比如章节、页眉、页脚或文档中的其他部分。</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< summary ></td>
+        <td>为< details >元素定义一个可见标题</td>
+    </tr>
+    <tr>
+        <td>< time ></td>
+        <td>定义日期/时间</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< wbr ></td>
+        <td>规定在文本中的何处适合添加换行符。</td>
+    </tr>
+</table>
+<p>了解更多关于<a href="http://www.w3schools.com/html/html5_semantic_elements.asp"> HTML5语义。</a></p>
+<hr>
+<h2>新的表单元素</h2>
+<table border="1">
+    <tr>
+        <th>Tag（标签）</th>
+        <th>Description（描述）</th>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< datalist ></td>
+        <td>为输入控件预先定义的选项</td>
+    </tr>
+    <tr>
+        <td>< keygen ></td>
+        <td>规定用于表单的密钥对生成器字段。</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< output ></td>
+        <td>定义输出计算或用户操作的结果。</td>
+    </tr>
+</table>
+<p>阅读所有关于新老表单元素<a href="http://www.w3schools.com/html/html_form_elements.asp">HTML表单元素。</a></p>
+<hr>
+<h2>新的输入类型</h2>
+<table border="1">
+    <tr>
+        <th style="width:600px;">New Input Types(新的输入类型)</th>
+        <th>New Input Attributes(新输入属性)</th>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>
+            <ul>
+                <li>color</li>
+                <li>date</li>
+                <li>datetime</li>
+                <li>datetime-local</li>
+                <li>email</li>
+                <li>month</li>
+                <li>number</li>
+                <li>range</li>
+                <li>search</li>
+                <li>tel</li>
+                <li>time</li>
+                <li>url</li>
+                <li>week</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>autocomplete</li>
+                <li>autofocus</li>
+                <li>form</li>
+                <li>formaction</li>
+                <li>formenctype</li>
+                <li>formmethod</li>
+                <li>formnovalidate</li>
+                <li>formtarget</li>
+                <li>height and width</li>
+                <li>list</li>
+                <li>min and max</li>
+                <li>multiple</li>
+                <li>pattern (regexp)</li>
+                <li>placeholder</li>
+                <li>required</li>
+                <li>step</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+<p>要详细了解新旧输入类型的<a href="http://www.w3schools.com/html/html_form_input_types.asp">HTML输入类型。</a></p>
+<p>了解所有关于<a href="http://www.w3schools.com/html/html_form_attributes.asp">HTML输入属性。</a></p>
+<hr>
+<h2>HTML5-新的属性语法</h2>
+<p>HTML5允许四种不同的语法属性:</p>
+<p>这个例子演示了在< input >标签的不同语法形式：</p>
+<table border="1">
+    <tr>
+        <th>Tag(标签)</th>
+        <th>Example(例子)</th>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>Empty</td>
+        <td>< input type="text" value="John" disabled ></td>
+    </tr>
+    <tr>
+        <td>Unquoted</td>
+        <td>< input type="text" value="John" ></td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>Double-quoted</td>
+        <td>< input type="text" value="John Doe" ></td>
+    </tr>
+    <tr>
+        <td>Single-quoted</td>
+        <td>< input type="text" value='John Doe' ></td>
+    </tr>
+</table>
+<p>在HTML5，所有四个语法可以使用，这取决于什么是属性的需要。</p>
+<hr>
+<h2>HTML5图形标签</h2>
+<table border="1">
+    <tr>
+        <th>Tag(标签)</th>
+        <th>Description(描述)</th>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< canvas ></td>
+        <td>定义使用JavaScript图形绘制</td>
+    </tr>
+    <tr>
+        <td>< svg ></td>
+        <td>定义了使用SVG图形绘制</td>
+    </tr>
+</table>
+<p>阅读更多关于<a href="http://www.w3schools.com/html/html5_canvas.asp">HTML5画布。</a></p>
+<p>阅读更多关于<a href="http://www.w3schools.com/html/html5_svg.asp">HTML5 SVG。</a></p>
+<hr>
+<h2>新媒体元素</h2>
+<table border="1">
+    <tr>
+        <th>Tag(标签)</th>
+        <th>Description(描述)</th>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< audio ></td>
+        <td>定义声音或音乐内容</td>
+    </tr>
+    <tr>
+        <td>< embed ></td>
+        <td>定义容器外部的应用程序（如插件）</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< source ></td>
+        <td>为媒介元素（比如 <  video> 和 < audio >）定义媒介资源</td>
+    </tr>
+    <tr>
+        <td>< track ></td>
+        <td>用于规定字幕文件或其他包含文本的文件，当媒介播放时，这些文件是可见的。</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< video ></td>
+        <td>定义视频或电影内容</td>
+    </tr>
+</table>
+<p>阅读更多关于<a href="http://www.w3schools.com/html/html5_video.asp">HTML5视频。</a></p>
+<p>阅读更多关于<a href="http://www.w3schools.com/html/html5_audio.asp">HTML5音频。</a></p>
+<hr>
+</body>
+</html>

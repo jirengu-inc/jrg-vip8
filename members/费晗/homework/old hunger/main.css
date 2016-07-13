@@ -1,0 +1,236 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors  ()
+ * @date    2016-04-29
+ * @version $Id$
+ */
+ body,html,ul,li,span,h2,h3,h4,h5,h6,p{
+ 	padding: 0;
+ 	margin: 0;
+ }
+ body,html{
+ 	font: 16px/1.2 "微软雅黑","Helvetica Neue",Arial,sans-serif;
+    color: #fff;
+    background: url(./imgs/bg.png) repeat;
+
+/*    width: 100%;
+    height: 100%;*/
+
+ }
+ a{
+ 	text-decoration: none;
+ }
+ul,li{
+ 	list-style: none;
+ }
+ .wrapper{
+ 	margin: 0 auto;
+ 	width: 1170px;
+ }
+ .clearfix:after{
+ 	content: "";
+ 	display: block;
+ 	clear: both;
+ }
+ .clearfix{
+ 	*zoom: 1;
+ }
+/* #top > .wrapper{
+ 	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+ 	background: url(./imgs/big_bg.png) center center no-repeat scroll;
+ }*/
+ #top{
+ 	position: fixed;
+ 	top: 0;
+ 	left: 0;
+ 	right: 0;
+ 	height: 60px;
+ 	line-height: 60px;
+ 	text-align: center;
+ 	z-index: 10;
+ }
+#top .wrapper{
+	margin-top: 10px;
+	text-align: center;
+}
+
+#top ul.nav li{
+	display: inline-block;
+ 	margin-left: 40px;
+ }
+ #top ul.nav li:first-of-type{
+ 	margin-left: 0;
+ }
+#top ul.nav li img{
+ 	margin: 0 70px; 
+ 	vertical-align: top;
+ }
+#top ul.nav li a{
+ 	color: #fff;
+ }
+ #header{
+ 	position: relative;
+ 	background: url(./imgs/big_bg.png) center center no-repeat scroll;
+ }
+ #header h2{
+ 	font-size: 60px;
+ 	font-family: "宋体";
+ /*	letter-spacing: 3px;*/
+ 	color: #00a0e9;
+ 	font-weight: normal;
+ 	padding-top: 80px; 
+ 	padding-bottom: 50px;
+ 	text-align: center;
+ }
+ #header .course .view-left{
+ 	float: left;
+ 	width: 414px;
+ }
+#header .course .view-left .desp{
+	float: right;
+	text-align: right;
+}
+#header .course .view-left .view-img img{
+	width: 414px;
+	height: 330px;
+}
+#header .course .view-left .desp p{
+	font-size: 18px;
+	padding: 5px;
+	color: #8ba0a7;
+	margin-bottom: 4px;
+}
+#header .course .view-left .desp p a{
+	font-size: 18px;
+	color: #8ba0a7;
+}
+#header .course .icon{
+  font-size: 18px;
+  color:#000;
+  padding: 0 10px 0 5px;
+  -webkit-transition: font-size 0.25s ease-out 0s;
+  -moz-transition: font-size 0.25s ease-out 0s;
+  transition: font-size 0.25s ease-out 0s;
+
+}
+#header .course .view-left .desp .btn a{
+	color: #333;
+}
+.btn{
+	display: block;
+	/*width: 180px;*/
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+	font-family: "宋体";
+	color: #000;
+/*	font-weight: bold;*/
+	background-color: #f4c444;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-bottom: 25px;
+	margin-left: 50px;
+	margin-right: 10px;
+}
+.split{
+	width: 0;
+	height: 16px;
+	border-left: 1px solid #857032;
+	margin: 0 8px 0 4px;
+}
+#header .course .view-right{
+	float: left;
+	width: 656px;
+	margin-left: -13px;
+}
+
+#header .course .view-right h3{
+    font-size: 30px;
+    font-family: "宋体";
+    text-align: center;
+    font-weight: normal;
+    padding-bottom: 43px;
+    margin-top: -3px;
+}
+#heaser .course .view-right img{
+	width: 590px;
+	width: 550px;
+	vertical-align: middle;
+	text-align: center;
+
+
+}
+
+/*{
+	width: 100%; 
+	height: 100%; 
+	visibility: inherit; 
+	opacity: 1; 
+	background-image: url("http://7xnk1s.com2.z0.glb.qiniucdn.com/jrg-bg6.png");
+	background-color: rgba(0, 0, 0, 0); 
+	background-size: cover; 
+	background-position: 50% 0%; 
+	background-repeat: no-repeat;
+}*/
+#techer-des .wrapper{
+	margin-top: 100px;
+}
+#techer-des h4{
+	font-size: 28px;
+	font-family: "微软雅黑";
+	font-weight: normal;
+	margin-bottom: 10px;
+	text-align: center;
+
+}
+#techer-des p{
+	font-size: 16px;
+	font-family: "黑体";
+	color: #01ace0;
+	text-align: center;
+	text-transform: uppercase;
+
+}
+#techer-des ul li{
+	display: inline-block;
+	*display: inline;
+}
+#techer-des ul>li:nth-child(1){
+	margin-left: 50px;
+}
+#techer-des ul li p{
+	width: 450px;
+}
+#support h5{
+	font-size: 22px;
+	font-family: "微软雅黑";
+	font-weight: normal;
+	margin-top: 100px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+#support ul{
+  
+}
+#support ul li{
+	display: inline-block;
+	*display: inline;
+	width: 200px;
+	margin-left: 5px;
+}
+/*#support ul li:nth-child(1),#support ul li:nth-child(7){
+	width: 50px;
+	height:200px;
+}*/
+#support ul>li>a>img{
+	margin-left: -60px;
+	width: 50px;
+}
+#support ul li>img{
+	width: 95%;
+	height: 95%;
+}

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>个人简历</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1462436457_0930831.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+        body {
+            color: #797979;
+            font-size: 14px;
+            line-height: 1.5;
+            background: #f7f6f8;
+            font-family: "微软雅黑","Open Sans",Helvetica,Arial,sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal
+        }
+        .clear:after {
+            content: " ";
+            display: block;
+            clear: both
+        }
+        .header {
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+            position: relative;
+            z-index: 1;
+            background: white;
+        }
+        .header>.warpper {
+            width: 970px;
+            margin: 0 auto;
+            line-height: 40px;
+            padding: 34px 0 26px;
+            background: white
+        }
+        .header>.warpper>h1 {
+            color: #BCBCBC;
+            font-size: 26px
+        }
+        .header>.warpper .menu {
+            font-size: 24px;
+            position: relative;
+            bottom: 2px
+        }
+        .header>.warpper .share {
+            float: right;
+            color: #20b295;
+            font-size: 24px
+        }
+        .summary {
+            width: 970px;
+            margin: 0 auto;
+            overflow: hidden
+        }
+        .summary>.picture {
+            float: left;
+            width: 240px;
+            height: 228px;
+            background: #6FBED1;
+            position: relative;
+            text-align: center;
+            padding-top: 32px
+        }
+        .summary>.picture>img {
+            height: 175px;
+            position: absolute;
+            bottom: 0;
+            margin-left: -82px
+        }
+        .summary>.picture>p {
+            color: white;
+            font-size: 18px;
+            line-height: 26px;
+            text-align: left;
+            margin-left: 20px
+        }
+        .summary>.intro {
+            margin-left: 240px;
+            padding-top: 55px;
+            padding-left: 50px;
+            line-height: 35px;
+            background: white;
+            color: #818181;
+            font-size: 18px;
+            height: 205px;
+        }
+        .profile{
+            width: 970px;
+            margin: 0 auto;
+            overflow: hidden;
+            margin-top: 15px;
+        }
+        .profile .profile-left{
+            width: 270px;
+            display: table-cell;
+        }
+        .profile .profile-left .profile-fill{
+            background: #fff;
+            margin-bottom: 15px;
+            padding: 20px;
+            position: relative;
+        }
+        .profile .profile-left .profile-fill div{
+            margin: 15px 0;
+        }
+        .profile .profile-left .profile-fill dl{
+            padding: 10px 0;
+            font-size: 16px;
+            border-bottom: 1px dashed #e4e4e4;;
+        }
+        .profile .profile-left .profile-fill h2{
+            color: #4cc1aa;
+            margin-top: -15px;
+        }
+        .profile .profile-left .profile-fill dt{
+            color: #797979;
+            float: left;
+        }
+        .profile .profile-left .profile-fill dd{
+            color: #4CC1AA;
+            float: right;
+        }
+        .willing-warp{
+            width: 970px;
+            margin: 0 auto;
+        }
+        .willing{
+            width: 230px;
+            margin-bottom: 15px;
+            padding: 20px;
+            background: white;
+        }
+        .willing>dl{
+            padding: 10px 0;
+            font-size: 16px;
+            border-bottom: 1px dashed #e4e4e4;;
+        }
+        .willing>dl>dt{
+            color: #797979;
+            float: left;
+        }
+        .willing>dl>dd{
+            color: #4CC1AA;
+            float: right;
+        }
+        .qa{
+            position: absolute;
+            top: 376px;
+            left: 513px;
+            width: 685px;
+            height: 266px;
+            background: white;
+        }
+        .qa h2{
+            margin-bottom: 20px;
+            color: #4cc1aa;
+        }
+        .qa h2:before{
+            content: "Q";
+            line-height: 100%;
+            padding: 5px 6px;
+            font-size: 14px;
+            display: inline-block;
+            background: #4CC1AA;
+            color: #fff;
+            position: relative;
+            top: -3px;
+            border-radius: 5px;
+        }
+        .qa h3{
+            margin-top: 10px;
+            font-size: 18px;
+            color: #4CC1AA;
+        }
+        .qa p{
+            color: #818181;
+            font-size: 16px;
+            padding: 10px 0;
+        }
+        .qa .qa-warp{
+            padding: 20px;
+        }
+        .contacts{
+            width: 685px;
+            height: 181px;
+            background: white;
+            position: absolute;
+            top: 657px;
+            left: 513px;
+        }
+        .contacts .contacts-warp{
+            padding: 20px;
+        }
+        .contacts .contacts-warp h2{
+            margin-bottom: 5px;
+            color: #4cc1aa;
+        }
+        .contacts .contacts-warp p{
+            color: #818181;
+            font-size: 16px;
+            padding: 4px 0;
+        }
+        </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="header">
+            <div class="warpper">
+                <h1 class="clear">
+                    <span class="menu iconfont icon-caidan"></span>
+                    陈东亮
+                    <span class="share iconfont icon-fenxiang"></span>
+                </h1>
+            </div>
+        </div>
+        <div class="  clear summary">
+            <div class="picture">
+                <p>05月05日</p>
+                <p>北京 | web前端工程师</p>
+                <img src="http://h5.jobdeer.com/img/avatar/3.png" alt="">
+            </div>
+            <div class="intro">
+                <p>【北京 | 技术】具有6年工作经验，熟悉AngularJS/JavaScript/jQuery/HTML/CSS/Ajax/JSONP等前端开发技术，熟悉semantic-ui/Bootstarap等前端框架，熟悉HTML5/CSS3移动端开发技术，熟悉MVC，熟悉面向对象开发。
+                </p>
+            </div>
+        </div>
+        <div class="profile">
+            <div class="profile-left">
+                <div class="profile-fill">
+                    <div>
+                        <h2>个人信息</h2>
+                        <dl class="clear">
+                            <dt>性别</dt>
+                            <dd>男</dd>
+                        </dl>
+                        <dl class="clear">
+                            <dt>出生年份</dt>
+                            <dd>1988年</dd>
+                        </dl>
+                        <dl class="clear">
+                            <dt>学历</dt>
+                            <dd>大专</dd>
+                        </dl>
+                        <dl class="clear">
+                            <dt>工作年限</dt>
+                            <dd>6年</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="willing-warp">
+            <div class="willing">
+                <h2> 求职意向 </h2>
+                <dl class="clear">
+                    <dt> 期望职位 </dt>
+                    <dd> 前端开发工程师 </dd>
+                </dl>
+                <dl class="clear">
+                    <dt> 当前所在城市 </dt>
+                    <dd> 北京 </dd>
+                </dl>
+                <dl class="clear">
+                    <dt> 目标城市 </dt>
+                    <dd> 北京 </dd>
+                </dl>
+                <dl class="clear">
+                    <dt> 当前薪资 </dt>
+                    <dd> 简历内可见 </dd>
+                </dl>
+                <dl class="clear">
+                    <dt> 期望薪资 </dt>
+                    <dd> 面议 </dd>
+                </dl>
+                <dl class="clear">
+                    <dt> 到岗时间 </dt>
+                    <dd> offer后一个月内 </dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="qa">
+            <div class="qa-warp">
+                <h2> 面试问答 </h2>
+                <h3> 为什么想换工作？ </h3>
+                <p> 目前城市互联网环境不发达，加上家人都在北京，目前观望北京的职业机会。 </p>
+                <h3> 对新公司的期待是什么？ </h3>
+                <p> 希望加入一家互联网公司，从事前端开发的工作，希望公司有扁平的管理结构，有良好的上下沟通渠道。 </p>
+            </div>
+        </div>
+        <div class="contacts">
+            <div class="contacts-warp">
+                <h2> 联系方式 </h2>
+                <p>QQ:747439590</p>
+                <p>Mobile: 18810125213  17001200210</p>
+                <P>E-Mail:747439590@qq.com</P>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

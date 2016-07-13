@@ -1,0 +1,55 @@
+NEW Semantic Elements 
+<article>  定义文章
+<aside>  定义主要内容之外的内容
+<bdi>  定义和别的文本方向不一样的文本
+<details>  定义用户可看到或隐藏的额外内容
+<dialog>  定义对话框或窗口
+<figcaption>  对<figure>进行解释说明
+<figure>  定义独立的内容，想解释说明，图表，图片，代码等
+<footer>  对文件或段落定义文档脚
+<header>  对文件或段落定义文档头
+<main>  定义文档的主要内容
+<mark>  定义被标记的或高亮的文本
+<menuitem>  定义用户可从弹出的菜单中引用的命令或者菜单选项
+<meter>  定义在已知范围内的量度
+<nav>  定义文档中的导航链接
+<progress>  定义任务进程
+<rp>  定义在不支持ruby注释的浏览器上显示内容
+<rt>  对字符的解释/朗读（针对东亚地区的排版）
+<ruby>  定义ruby注释(针对东亚地区排版)
+<section>  定义段落
+<summary>  对<details>定义一个可以看到的标题
+<time>  定义时间日期
+<wbr>  定义换行
+
+NEW Form Elements
+<datalist>  定义下拉菜单
+<keygen>  定义密匙生成（表单）
+<output>  定义计算结果
+
+NEW Input Types
+color,data,datatime,datatime-local,email,month,number,range,search,tel,time,url,week
+
+NEW Input Arritbutes
+autocomplete 浏览器是否自动填充值
+autofocus 加载页面时是否自动对焦input
+form,formenctype,formmethod,formvalidate,height and width,list,min and max,multiple,pattern,placeholder,required,step
+
+NEW Attribute Syntax 
+HTML5允许属性有四种不同的语法
+empty(空) <input type='text' value='John' disabled>
+Unquoted(无引号) <input type='text' value=John>
+Double-quoted(双引号) <input type='text' valuce='John Doe'>
+Single-quoted（单引号） <input type='text' value='John Doe'>
+
+
+HTML5 Graphics
+<canvas>  定义用JavaScript绘制图形
+<svg>  定义用矢量图绘制图形
+
+NEW Media Elements
+<audio>  定义声音或音乐
+<embed>  定义外部应用（例如插件）
+<source>  定义视频和音频的来源
+<track>  定义视频和音频的轨道
+<video>  定义视频或电影

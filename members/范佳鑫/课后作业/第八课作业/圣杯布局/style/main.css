@@ -1,0 +1,13 @@
+/*圣杯布局的样式主要运用两个技巧*/
+/**第一是利用左右两个块的负外边距大于其自身的宽度会往上一层推且继续往左拉**/
+/**第二个是利用中间块元素提前空出左右内边距占位，（为后面左右微调不会超过视窗口）**/
+/**然后利用左右块元素的相对自身定位的不删除文档流进行向左向右的微调，显示出被遮盖的内容**/
+/**整体用到相对定位，浮动，文档流**/
+*{margin:0;padding:0;}
+.header{height:100px;background:#ccc;}
+.footer{height:100px;background:#ccc;}
+.wrapper{overflow:hidden;padding:0 220px 0 200px;}
+.main,.left,.right{float:left;position:relative;}
+.main{background:blue;width:100%;height:200px;}
+.left{width:200px;background:red;margin-left:-100%;left:-200px;height:200px;}
+.right{width:220px;background:orange;margin-left:-220px;right:-220px;height:200px;}

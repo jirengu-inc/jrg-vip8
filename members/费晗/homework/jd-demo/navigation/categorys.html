@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://js.jirengu.com
+
+Copyright (c) 2016 by fei-han (http://js.jirengu.com/koha/3/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<meta name="description" content="导航条" />
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_1463889714_6587682.css">
+<style id="jsbin-css">
+*{margin: 0;padding:0;}
+ body{
+  background: white;
+  color: #666;
+  font:12px/1.5 Arial,Verdana,"\5b8b\4f53",serif;
+  -webkit-font-smoothing: antialiased;
+} 
+ul,li{
+  list-style: none;
+}
+.clearfix:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.categorys-wrapper{
+  border-bottom: 2px solid #B1191A
+}
+.categorys-wrapper .categorys{
+  margin: 0 auto;
+  width: 1210px;
+  line-height: 44px;
+}
+.categorys-wrapper .allCategory{
+  float: left;
+  padding: 0 10px;
+  width: 190px;
+  color: #fff;
+  font-size: 15px;
+  font-family: "microsoft yahei";
+  background: #b1191a;
+  overflow: visible;
+}
+.categorys-wrapper .categoryList>a{
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 20px;
+  color: #333;
+  font: 400 16px "microsoft yahei";
+}
+</style>
+</head>
+<body>
+<div class="categorys-wrapper">
+  <nav class="categorys clearfix">
+    <div class="allCategory">全部商品分类</div >
+    <div class="categoryList">
+      <a href="#">服装城</a>
+      <a href="#">美妆馆</a>
+      <a href="#">超市</a>
+      <a href="#">生鲜</a>
+      <a href="#">全球购</a>
+      <a href="#">闪购</a>
+      <a href="#">团购</a>
+      <a href="#">拍卖</a>
+      <a href="#">金融</a>
+    </div>
+  </nav>
+</div>
+
+</body>
+</html>

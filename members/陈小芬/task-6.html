@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>第六课作业</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+</head>
+<style type="text/css">
+	*{ margin:0; padding:0; font-family: arial,tahoma,'Microsoft Yahei','\5b8b\4f53',sans-serif;}
+	h2 , h3{ color:red; line-height:40px; }
+	.about p{ color: #444; font-size: 16px; line-height: 30px; text-indent: 2em;}
+	#explain{ color: pink; }
+	b{ color: #000;}
+	.experience > p{ color:#444; background: #f1f1f1; }
+	.experience+p{ color:blue; font-size:16px; margin: 5px 0; background: orange;}
+	a[target]{ color:green; }
+	ul{ margin: 15px 0 0 0; background: #f0f0f0; }
+	p~ul{ color:violet }
+	li[tab=value]{ color: red; }
+	li[tab~=contain]{ background:blue;}
+	li[tab|=tab]{ color: green; }
+</style>
+
+<body>
+
+<h2 id="title">亚利桑德罗·冈萨雷斯·伊纳里多</h2>
+<div class="about">
+	<p>1963年8月15日出生于墨西哥城，墨西哥导演、编剧、剪辑师、制作人。</p>
+	<p>2001年，执导处女作——剧情片<b>《爱情是狗娘》</b></p>
+	<p>2002年，与11位导演共同拍摄纪录片<b>《九一一事件簿》</b>，获得第59届威尼斯国际电影节联合国教科文组织奖。2006年，执导剧情片<b>《通天塔》</b>，获得第60届英国电影学院奖电影奖大卫·林恩导演奖提名。</p>
+	<p>2010年，凭借动作片<b>《美错》</b>获得第63届戛纳国际电影节主竞赛单元-金棕榈奖提名。</p>
+	<p>2015年，凭借喜剧片<b>《鸟人》</b>获得第87届奥斯卡金像奖最佳导演奖和第41届美国科幻恐怖电影奖土星奖最佳导演奖。</p>
+	<p>2016年1月11日，凭借冒险惊悚片<b><a href="http://baike.baidu.com/subview/2988719/13399764.htm" target>《荒野猎人》</a></b>获得第73届美国电影电视金球奖最佳导演奖和第88届奥斯卡金像奖最佳导演奖。</p>
+</div>
+<div class="experience">
+	<h3>早年经历</h3>
+	<p><span id="explain">1963年8月15日</span>出生于墨西哥墨西哥城，“亚利桑德罗”是他的名字，“冈萨雷斯”是父亲的家族姓，“伊纳里多”是母亲的家族姓，他是家里七个孩子中最小的一个。</p>
+	<p>16到18岁时，伊纳里多曾只身搭乘货船穿越大西洋，历经欧洲与非洲。这段宝贵的经历深刻地影响了他此后的电影创作，电影里故事发生地很多都是这期间他游历过的地方。
+这段旅行结束后，他回到墨西哥城，在伊比利亚美洲大学主修通信专业。</p>
+	<p>1980年代时二十出头的伊纳里多是一名摇滚电子乐电台的DJ，在1987至1989几年间，他还曾为六部墨西哥电影谱曲。他曾直言不讳地称自己在音乐方面的影响甚至大过电影。</p>
+</div>
+<p>亚利桑德罗·冈萨雷斯·伊纳里多的作品大多数都是以多线性叙述、结构巧妙和群戏而著称，他是一个完美主义者，经常会对所拍电影的最后版本不甚满意。他的导演风格自然而深刻，不惜运用一切手法达到他的天才设想，画面有很强的颗粒感，《爱情是狗娘》的推出便吸引了好莱坞的注意</p>
+
+<ul>
+	<li tab=value>[attribute=value]用于选取带有指定属性和值的元素</li>
+	<li tab=contain value>[attribute~=value]用于选取含有指定词汇的元素</li>
+	<li tab=tabdiv>[attribute|=value]用于选取带有指定值开头的属性值，该值必须是整个单词</li>
+</ul>
+
+</body>
+</html>

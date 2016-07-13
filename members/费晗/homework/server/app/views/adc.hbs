@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    .panel{
+    	margin-top: 10px;
+    	margin-left: 10px;
+    }
+    </style>
+</head>
+<body style="background:#f1f1f1;">
+<div>
+  <h1>this is adc again</h1> 
+   <form action="/" method="post">
+		<label>用户名：<input type="text" name="username" class="panel" /></label> <br/>
+		<label>密码：<input type="password" name="password" class="panel"/></label> <br/>
+		<label>性别：<input type="radio" name="sex" value="male" class="panel" checked/>男 
+					 <input type="radio" name="sex" value="female" class="panel"/>女
+		</label> <br/>
+		<label>爱好：
+			<input type="checkbox" name="dota" class="panel"/>dota
+			<input type="checkbox" name="travel" checked  class="panel"/>travel
+			<input type="checkbox" name="cook" class="panel"/>cook
+		</label> <br/>
+		<input type="submit" value="提交" class="panel">
+   </form>
+</div>
+
+
+<script src="http://style.c.aliimg.com/fdevlib/js/gallery/jquery/jquery-latest.js"></script>
+	<script>
+
+		$('form').on('submit',function(e){
+			e.preventDefault()
+			var form = this
+			var $form = $(this)
+			var data = $form.serialize()
+			$.post('/',data,function(responce){
+				var object = JSON.parse(responce)
+				console.log(object)
+				console.log('success')
+			})
+		})
+
+	</script>
+</body>
+</html>

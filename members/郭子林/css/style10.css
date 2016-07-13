@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/* style for homework10-三角形*/
+.square{
+    width:0px;
+    height:0px;
+    /*background:#1A9C9B;*/
+    border:50px solid #87CEFA;
+}
+.triangle-up {
+    height:0;
+    width:0;
+    border:50px solid #e5c3b2;
+    border-color:transparent transparent #e5c3b2 transparent;
+    /*改变各位置的transparent即可改变三角形方向与上右下左相反*/
+}
+/* style for homework10-箭头*/
+/*箭头实现原理：一个三角形；上层固定一个与背景色相同的三角形,利用两个三角形的间距控制线条粗细*/
+.a{
+    width:0;
+    height:0;
+    border-top:50px solid transparent;
+    border-bottom: 50px solid red;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    position:absolute;
+    left:50px;
+    top:20px;
+}
+.b{
+    width:0;
+    height:0;
+    border-top:50px solid transparent;
+    border-bottom: 50px solid white;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    position:absolute;
+    left:50px;
+    top:25px;
+}

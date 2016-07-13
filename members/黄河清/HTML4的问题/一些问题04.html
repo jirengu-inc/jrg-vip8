@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html class="theme theme-white">
+<head>
+<meta charset="utf-8">
+<title>一些问题04</title>
+<link href="https://www.zybuluo.com/static/assets/template-theme-white.css" rel="stylesheet" media="screen">
+</head>
+<body class="theme theme-white">
+<div id="wmd-preview" class="wmd-preview wmd-preview-full-reader"><div class="md-section-divider"></div><div class="md-section-divider"></div><h1 data-anchor-id="hpes" id="一些问题04">一些问题04</h1><p data-anchor-id="7y1o"><code class="">前端</code></p><hr><p data-anchor-id="ro8u"><div class="toc"><div class="toc">
+<ul>
+<li><a href="#一些问题04">一些问题04</a><ul>
+<li><ul>
+<li><ul>
+<li><a href="#1有序列表无序列表自定义列表如何使用写个简单的例子三者在语义上有什么区别使用场景是什么-能否嵌套">1.有序列表、无序列表、自定义列表如何使用？写个简单的例子。三者在语义上有什么区别？使用场景是什么？ 能否嵌套？</a></li>
+<li><a href="#2如何去除列表前面的点或者数字">2.如何去除列表前面的点或者数字？</a></li>
+<li><a href="#3class-和-id-有什么区别什么时候用-class-什么时候用-id">3.class 和 id 有什么区别？什么时候用 class 什么时候用 id？</a></li>
+<li><a href="#4块级元素行内元素是什么有什么区别分别对应哪些常用标签">4.块级元素、行内元素是什么？有什么区别？分别对应哪些常用标签？</a></li>
+<li><a href="#5display-blockdisplay-inlinedisplay-inline-block分别有什么作用">5.display: block、display: inline、display: inline-block分别有什么作用?</a></li>
+<li><a href="#6下列代码的作用">6.下列代码的作用？</a></li>
+<li><a href="#7如何理解-html-css-语义化">7.如何理解 HTML CSS 语义化?</a></li>
+<li><a href="#8form表单有什么作用有哪些常用的input-标签分别有什么作用">8.form表单有什么作用？有哪些常用的input 标签，分别有什么作用？</a></li>
+<li><a href="#9post-和-get-方式的区别">9.post 和 get 方式的区别？</a></li>
+<li><a href="#10在input里name-有什么作用">10.在input里，name 有什么作用？</a></li>
+<li><a href="#11提交的三种有什么区别">11.提交的三种有什么区别？</a></li>
+<li><a href="#12radio-如何-分组">12.radio 如何 分组?</a></li>
+<li><a href="#13placeholder属性有什么用">13.placeholder属性有什么用</a></li>
+<li><a href="#14typehidden隐藏域有什么作用-举例说明">14.type=hidden隐藏域有什么作用? 举例说明</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</p><div class="md-section-divider"></div><h4 data-anchor-id="bs6h" id="1有序列表无序列表自定义列表如何使用写个简单的例子三者在语义上有什么区别使用场景是什么-能否嵌套">1.有序列表、无序列表、自定义列表如何使用？写个简单的例子。三者在语义上有什么区别？使用场景是什么？ 能否嵌套？</h4><p data-anchor-id="78ua">有序列表：ol-li <br>
+无序列表：ul-li <br>
+自定义列表：dl-dt-dd</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="vcit"><ol class="linenums"><li class="L0"><code class="language-css"><span class="tag">&lt;dl&gt;</span></code></li><li class="L1"><code class="language-css"><span class="tag">&lt;dt&gt;</span><span class="pln">Coffee</span><span class="tag">&lt;/dt&gt;</span></code></li><li class="L2"><code class="language-css"><span class="tag">&lt;dd&gt;</span><span class="pln">Black hot drink</span><span class="tag">&lt;/dd&gt;</span></code></li><li class="L3"><code class="language-css"><span class="tag">&lt;dt&gt;</span><span class="pln">Milk</span><span class="tag">&lt;/dt&gt;</span></code></li><li class="L4"><code class="language-css"><span class="tag">&lt;dd&gt;</span><span class="pln">White cold drink</span><span class="tag">&lt;/dd&gt;</span></code></li><li class="L5"><code class="language-css"><span class="tag">&lt;/dl&gt;</span></code></li></ol></pre><blockquote data-anchor-id="1eb3" class="white-blockquote">
+  <p>自定义列表不仅仅是一列项目，而是项目及其注释的组合。</p>
+</blockquote><p data-anchor-id="wtve">均可以嵌套</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="8nqr"><ol class="linenums"><li class="L0"><code class="language-html"><span class="dec">&lt;!DOCTYPE html&gt;</span></code></li><li class="L1"><code class="language-html"><span class="tag">&lt;html</span><span class="pln"> </span><span class="atn">lang</span><span class="pun">=</span><span class="atv">"zh-cmn-Hans"</span><span class="tag">&gt;</span></code></li><li class="L2"><code class="language-html"><span class="tag">&lt;head&gt;</span></code></li><li class="L3"><code class="language-html"><span class="pln">    </span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"UTF-8"</span><span class="tag">&gt;</span></code></li><li class="L4"><code class="language-html"><span class="pln">    </span><span class="tag">&lt;title&gt;</span><span class="pln">列表的嵌套</span><span class="tag">&lt;/title&gt;</span></code></li><li class="L5"><code class="language-html"><span class="tag">&lt;/head&gt;</span></code></li><li class="L6"><code class="language-html"><span class="tag">&lt;body&gt;</span></code></li><li class="L7"><code class="language-html"><span class="pln">    </span><span class="tag">&lt;ul&gt;</span></code></li><li class="L8"><code class="language-html"><span class="pln">        </span><span class="tag">&lt;li&gt;</span></code></li><li class="L9"><code class="language-html"><span class="pln">        </span><span class="tag">&lt;p&gt;</span><span class="pln">你喜欢什么什么电影（无序列表展示）</span><span class="tag">&lt;/p&gt;</span></code></li><li class="L0"><code class="language-html"><span class="pln">        </span><span class="tag">&lt;ul&gt;</span></code></li><li class="L1"><code class="language-html"><span class="pln">            </span><span class="tag">&lt;li&gt;</span><span class="pln">末路狂花</span><span class="tag">&lt;/li&gt;</span></code></li><li class="L2"><code class="language-html"><span class="pln">            </span><span class="tag">&lt;li&gt;</span><span class="pln">忠犬八公</span><span class="tag">&lt;/li&gt;</span></code></li><li class="L3"><code class="language-html"><span class="pln">            </span><span class="tag">&lt;li&gt;</span><span class="pln">断背山</span><span class="tag">&lt;/li&gt;</span></code></li><li class="L4"><code class="language-html"><span class="pln">        </span><span class="tag">&lt;/ul&gt;</span></code></li><li class="L5"><code class="language-html"><span class="pln">        </span><span class="tag">&lt;br&gt;</span></code></li><li class="L6"><code class="language-html"><span class="pln">        </span><span class="tag">&lt;/li&gt;</span></code></li><li class="L7"><code class="language-html"></code></li><li class="L8"><code class="language-html"><span class="pln">        </span><span class="tag">&lt;li&gt;</span></code></li><li class="L9"><code class="language-html"><span class="pln">        </span><span class="tag">&lt;p&gt;</span><span class="pln">你想喝点什么吗？（有序列表）</span><span class="tag">&lt;/p&gt;</span></code></li><li class="L0"><code class="language-html"><span class="pln">        </span><span class="tag">&lt;ol&gt;</span></code></li><li class="L1"><code class="language-html"><span class="pln">            </span><span class="tag">&lt;li&gt;</span><span class="pln">coffee</span><span class="tag">&lt;/li&gt;</span></code></li><li class="L2"><code class="language-html"><span class="pln">            </span><span class="tag">&lt;li&gt;</span><span class="pln">milk</span><span class="tag">&lt;/li&gt;</span></code></li><li class="L3"><code class="language-html"><span class="pln">            </span><span class="tag">&lt;li&gt;</span><span class="pln">juice</span><span class="tag">&lt;/li&gt;</span></code></li><li class="L4"><code class="language-html"><span class="pln">        </span><span class="tag">&lt;/ol&gt;</span></code></li><li class="L5"><code class="language-html"><span class="pln">        </span><span class="tag">&lt;/li&gt;</span></code></li><li class="L6"><code class="language-html"></code></li><li class="L7"><code class="language-html"><span class="pln">        </span><span class="tag">&lt;li&gt;</span></code></li><li class="L8"><code class="language-html"><span class="pln">        </span><span class="tag">&lt;p&gt;</span><span class="pln">土豆泥怎么做？(自定义列表)</span><span class="tag">&lt;/p&gt;</span></code></li><li class="L9"><code class="language-html"><span class="pln">        </span><span class="tag">&lt;dl&gt;</span></code></li><li class="L0"><code class="language-html"><span class="pln">            </span><span class="tag">&lt;dt&gt;</span><span class="pln">土豆泥</span><span class="tag">&lt;/dt&gt;</span><span class="com">&lt;!--项目及其注释--&gt;</span></code></li><li class="L1"><code class="language-html"><span class="pln">            </span><span class="tag">&lt;dd&gt;</span><span class="pln">主料：土豆</span><span class="tag">&lt;/dd&gt;</span></code></li><li class="L2"><code class="language-html"><span class="pln">            </span><span class="tag">&lt;dd&gt;</span><span class="pln">辅料：玉米，火腿肠，洋葱，牛奶，千岛酱，生抽</span><span class="tag">&lt;/dd&gt;</span></code></li><li class="L3"><code class="language-html"><span class="pln">        </span><span class="tag">&lt;/dl&gt;</span></code></li><li class="L4"><code class="language-html"><span class="pln">        </span><span class="tag">&lt;/li&gt;</span></code></li><li class="L5"><code class="language-html"><span class="pln">    </span><span class="tag">&lt;/ul&gt;</span></code></li><li class="L6"><code class="language-html"><span class="tag">&lt;/body&gt;</span></code></li><li class="L7"><code class="language-html"><span class="tag">&lt;/html&gt;</span></code></li></ol></pre><div class="md-section-divider"></div><h4 data-anchor-id="b6xq" id="2如何去除列表前面的点或者数字">2.如何去除列表前面的点或者数字？</h4><p data-anchor-id="n9qn">使用 <code class="">list-style:none</code></p><div class="md-section-divider"></div><h4 data-anchor-id="h2di" id="3class-和-id-有什么区别什么时候用-class-什么时候用-id">3.class 和 id 有什么区别？什么时候用 class 什么时候用 id？</h4><blockquote data-anchor-id="7z36" class="white-blockquote">
+  <p>区别： <br>
+  1. 用于给一些元素加上共同的样式或者特性时，使用 class 选择器，一个 class 可以有多个元素，同样一个元素可以有多个 class 选择器 <br>
+  2. 而 id 则是一个独一无二的名字，用于给一个特殊的样式，并且 id 的权重高于 class</p>
+</blockquote><div class="md-section-divider"></div><h4 data-anchor-id="mlfp" id="4块级元素行内元素是什么有什么区别分别对应哪些常用标签">4.块级元素、行内元素是什么？有什么区别？分别对应哪些常用标签？</h4><blockquote data-anchor-id="8fi6" class="white-blockquote">
+  <p>块级元素：独占一行，不管内容多少 <br>
+  行内元素：内部的元素依次排列，<strong>注意行内元素的高度是由其内容撑开的</strong></p>
+</blockquote><ul data-anchor-id="7rg9">
+<li>块级元素：div/p/h1~h6/table/tr/ul/li/dl/dt/form</li>
+<li>行内元素：a,span,img,input,button,em,textarea</li>
+</ul><div class="md-section-divider"></div><h4 data-anchor-id="rsut" id="5display-blockdisplay-inlinedisplay-inline-block分别有什么作用">5.display: block、display: inline、display: inline-block分别有什么作用?</h4><p data-anchor-id="2bg6"><code class="">display: block</code>：表示把页面内容以块级元素显示 <br>
+<code class="">display: inline</code>：表示把页面内容以行内元素显示 <br>
+<code class="">display: inline-block</code>：让元素既有行内元素的紧跟其后的特性，又有块级元素的宽高margin，padding设置特性。</p><div class="md-section-divider"></div><h4 data-anchor-id="cqfu" id="6下列代码的作用">6.下列代码的作用？</h4><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="lept"><ol class="linenums"><li class="L0"><code class="language-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"header"</span><span class="tag">&gt;</span></code></li><li class="L1"><code class="language-html"><span class="tag">&lt;/div&gt;</span></code></li><li class="L2"><code class="language-html"></code></li><li class="L3"><code class="language-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"content"</span><span class="tag">&gt;</span></code></li><li class="L4"><code class="language-html"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"main"</span><span class="tag">&gt;&lt;/div&gt;</span></code></li><li class="L5"><code class="language-html"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"aside"</span><span class="tag">&gt;&lt;/div&gt;</span></code></li><li class="L6"><code class="language-html"><span class="tag">&lt;/div&gt;</span></code></li><li class="L7"><code class="language-html"></code></li><li class="L8"><code class="language-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"footer"</span><span class="tag">&gt;</span></code></li><li class="L9"><code class="language-html"><span class="tag">&lt;/div&gt;</span></code></li></ol></pre><blockquote data-anchor-id="08yk" class="white-blockquote">
+  <p>语义化，每一个名字都代表了本身 div 的作用，分为头部，底部，内容内又分为边栏和主要内容。</p>
+</blockquote><div class="md-section-divider"></div><h4 data-anchor-id="efjk" id="7如何理解-html-css-语义化">7.如何理解 HTML CSS 语义化?</h4><p data-anchor-id="qmjf">有助于其他人看懂你的代码，便于维护</p><div class="md-section-divider"></div><h4 data-anchor-id="8xuz" id="8form表单有什么作用有哪些常用的input-标签分别有什么作用">8.form表单有什么作用？有哪些常用的input 标签，分别有什么作用？</h4><p data-anchor-id="dc1k"><code>form</code>作用：用于为用户输入创建 HTML 表单。表单用于向服务器传输数据。</p><p data-anchor-id="nzhk"><code>input</code>常用标签： <br>
+<code>&lt;input type="text" name=""&gt;</code>：普通文本框 <br>
+<code>&lt;input type="password" name=""&gt;</code>：密码框 <br>
+<code>&lt;input type="file" name=""&gt;</code>：上传文件 <br>
+<code>&lt;input type="button" name=""&gt;</code>：普通按钮 <br>
+<code>&lt;input type="radio" name=""</code>&gt;：单选框 <br>
+<code>&lt;input type="checkbox" name=""&gt;</code>：复选框</p><blockquote data-anchor-id="iajy" class="white-blockquote">
+  <p>input一定要有 name 属性，可以添加 disabled 来禁止用户输入</p>
+</blockquote><div class="md-section-divider"></div><h4 data-anchor-id="ej2j" id="9post-和-get-方式的区别">9.post 和 get 方式的区别？</h4><blockquote data-anchor-id="256j" class="white-blockquote">
+  <p>两者都是将表单数据提交给服务器，但是有一些区别： <br>
+  1. get 提交的数据追加到 URL 的最后，然后对服务器请求，而 post 则是将数据作为请求的一部分发送给服务器，用户是不可见的 <br>
+  2. get 一般是提交少量数据，而post 则是提交大量数据 <br>
+  3. get最多提交1K 的数据，受到浏览器的限制；而 post 理论上无限制，收到服务器的限制 <br>
+  4. get 提交的数据会被记录在浏览器的历史记录中，安全性不佳 <br>
+  5. 如果期望用户对提交表单后的页面加书签，则必须用 get，如果用 post，服务器返回的页面则无法被用户添加书签</p>
+</blockquote><div class="md-section-divider"></div><h4 data-anchor-id="kyh7" id="10在input里name-有什么作用">10.在input里，name 有什么作用？</h4><blockquote data-anchor-id="avzn" class="white-blockquote">
+  <p>相当于表单和处理表单的服务器之间的一个粘合剂，提交表单的时候，浏览器会使用这些唯一的名字打包所有数据。浏览器会得到各部分数据，并用唯一的name属性作为这些数据的标签，然后把这些名字和值发送给服务器。</p>
+</blockquote><div class="md-section-divider"></div><h4 data-anchor-id="39l6" id="11提交的三种有什么区别">11.提交的三种有什么区别？</h4><ul data-anchor-id="lrhc">
+<li><code>&lt;button&gt;提交&lt;/button&gt;</code>双标签内可以放置其他内容，如图片。</li>
+<li><code>&lt;a class="btn" href="#"&gt;提交&lt;/a&gt;</code>这个通过样式来控制变成按钮样式，得用js来实现数据交互。</li>
+<li><code>&lt;input type="submit" value="提交"&gt;</code>放在form表单内，可以打包form表单内的数据</li>
+</ul><div class="md-section-divider"></div><h4 data-anchor-id="9z9t" id="12radio-如何-分组">12.radio 如何 分组?</h4><p data-anchor-id="hhud">设置相同的 name</p><div class="md-section-divider"></div><h4 data-anchor-id="zm7f" id="13placeholder属性有什么用">13.placeholder属性有什么用</h4><p data-anchor-id="a5b1">提示用户输入什么内容的占位符，但用户focus 表单时，并输入时，placeholder的内容会消失</p><div class="md-section-divider"></div><h4 data-anchor-id="swmz" id="14typehidden隐藏域有什么作用-举例说明">14.type=hidden隐藏域有什么作用? 举例说明</h4><p data-anchor-id="xiu8">是对于用户来讲是不可见的，但可以用于程序收集和发送信息，一点发送，就可以和form表单其他数据一起打包发送给服务器</p></div>
+</body>
+</html>

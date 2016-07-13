@@ -1,0 +1,55 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: "Microsoft Yahei"
+}
+
+
+
+.header{
+	height: 50px;
+	background-color: #4E474D;
+	margin-bottom: 25px;
+}
+
+.section{
+	position: relative;
+	overflow: hidden;
+}
+
+a{
+	color: #1559b5;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #40bbe1;
+}
+
+.article{
+	text-indent: 2em;
+	line-height: 150%;
+}
+
+.image{
+	float: right;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+.section,.section2,.section3{
+	background-color: #E0E0E0;
+	padding: 15px;
+	margin: 0px 10px 20px 10px;
+	box-shadow: 3px 3px 3px;
+
+}
+
+.article2{
+	margin-left: 55px;
+}
+
+.section3 ul{
+	list-style: none;
+}
+

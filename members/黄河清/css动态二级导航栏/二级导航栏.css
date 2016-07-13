@@ -1,0 +1,122 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-size: 18px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body{
+	background-color: #eee;
+}
+
+.menu a{
+	display: block;
+	width: 150px;
+	height: 50px;
+	color: black;
+	text-decoration: none;
+}
+
+.menu a:hover{
+	color: white;
+	background-color: #313E4E;
+	transition: background-color 2s;
+	font-size: 22px;
+	transition:font-size 0.3s;
+	font-weight: bold;
+}
+
+
+ul,ol{
+	list-style: none;
+	text-align: center;
+}
+
+
+
+.clearfix:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+header{
+	text-align: center;
+}
+
+.siteNavigation{
+	border-style: solid;
+	border-color: #ddd;
+	border-width: 0px 0px 0px 1px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.siteNavigation>li{
+	width: 150px;
+	height: 50px;
+	float: left;
+	border-right:1px solid #ddd;
+	line-height: 50px;
+	background-color: white;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	position: relative;
+}
+
+
+.siteNavigation>li>ol{
+	position: absolute;
+	top:100%;
+	left: -1px;
+	display: block; /*因为下面设定了透明度，所以不需要再使用 display：none 了*/
+	margin-top: -20px;
+	opacity: 0;
+	transition: opacity 1s,margin 0.5s;
+	visibility: hidden;
+	/*为什么不适用 display：none，是因为其使得元素从页面消失
+	所以在使用动画的时候，在 block 之前都不会有
+	然而 hidden 则是还占据着页面的空间，所以在变成 visiable 的
+	时候，是可以看见动画效果的
+	*/
+	z-index: -10;/*调整前后，使其自然*/
+}
+
+
+.siteNavigation>li>ol>li{
+
+	width: 150px;
+	height: 50px;
+}
+.siteNavigation>li>ol>li a{
+	text-decoration: none;
+	color: black;
+	display: block; /*这里必须要有，因为要设定宽高，要变成块级元素*/
+	width: 150px;
+	height: 50px;
+	background-color: white;
+	border: 1px solid #ddd;
+
+}
+
+.siteNavigation>li:hover ol{
+	margin-top: 0px;
+	opacity: 1;
+	visibility: visible;/*使二级菜单透明度为0的时候下方不被点击到*/
+}
+
+.siteNavigation>li>ol>li a:hover{
+	color: white;
+	background-color: #313E4E;
+	transition: background-color 2s;
+	font-size: 22px;
+	transition:font-size 0.3s;
+	font-weight: bold;
+}
+
+
+
+
+
+
+

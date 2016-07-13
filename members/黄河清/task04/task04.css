@@ -1,0 +1,93 @@
+*{padding:0;margin:0;}
+
+.sprite {
+    background-image: url(img/spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-apple_menu_01 {
+    width: 105px;
+    height: 36px;
+    background-position: -5px -5px;
+}
+
+.sprite-apple_menu_02 {
+    width: 104px;
+    height: 36px;
+    background-position: -5px -51px;
+}
+
+.sprite-apple_menu_03 {
+    width: 104px;
+    height: 36px;
+    background-position: -5px -97px;
+}
+
+.sprite-apple_menu_04 {
+    width: 104px;
+    height: 36px;
+    background-position: -5px -143px;
+}
+
+.sprite-apple_menu_05 {
+    width: 104px;
+    height: 36px;
+    background-position: -120px -5px;
+}
+
+.sprite-apple_menu_06 {
+    width: 103px;
+    height: 36px;
+    background-position: -119px -51px;
+}
+
+.sprite-apple_menu_07 {
+    width: 103px;
+    height: 36px;
+    background-position: -119px -97px;
+}
+
+.sprite-apple_menu_08 {
+    width: 103px;
+    height: 36px;
+    background-position: -119px -143px;
+}
+
+.sprite-apple_menu_09 {
+    width: 134px;
+    height: 36px;
+    background-position: -5px -189px;
+}
+
+.title-bar{
+	text-align: center;
+}
+
+.title-bar ul{
+	display: inline-block;
+	list-style: none;
+}
+
+
+.title .title-bar ul li{
+	float: left;
+}
+
+.image{
+	text-align: center;
+}
+
+.image img{
+	width: 970px;
+	display: inline-block;
+}
+
+
+
+
+
+
+
+
+

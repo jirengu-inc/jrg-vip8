@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 新标签</title>
+    <style>
+        body{
+            padding-left:50px;
+            font-family: 微软雅黑;
+        }
+        hr{
+            width:1220px;
+            margin:10px;
+            border:1px solid #EEEEEE;
+        }
+        table{
+            border-collapse:collapse;
+            width:1200px;
+        }
+        table,th,tr{
+            border:1px solid  #CCCCCC;
+        }
+        th,td{
+            padding-left:10px;
+            text-align:left;
+        }
+        tr{
+            height:40px;
+            line-height:40px;
+        }
+        tr>td:first-child{
+            width:200px;
+        }
+        tr>th:first-child,tr>td:first-child{
+            border-right:none;
+        }
+        tr>th:last-child,tr>td:last-child{
+            border-left:none;
+        }
+        ul{
+            line-height:25px;
+            font-size:14px;
+        }
+
+    </style>
+</head>
+<body style="">
+<h2>New Elements in HTML5(HTML5中的新元素)</h2>
+<p>Below is a list of the new HTML5 elements, and a description of what they are used for.(下面是新的HTML5元素的列表，以及它们的用途的描述。)</p>
+<hr>
+<h2>New Semantic/Structural Elements(新的语义/结构元素)</h2>
+<p>HTML5 offers new elements for better document structure:(HTML5提供了更好的文档结构的新元素)</p>
+<table  border="1" >
+    <tr>
+       <th>Tag(标签)</th>
+       <th>Description（描述）</th>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< article ></td>
+        <td>Defines an article in the document（在文档中定义一个文章）</td>
+    </tr>
+    <tr>
+        <td>< aside ></td>
+        <td>Defines content aside from the page content（从页面内容定义内容）</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< bdi ></td>
+        <td>Defines a part of text that might be formatted in a different direction from other text（
+            定义文字的一部分可能在从其他文本不同的方向进行格式化）</td>
+    </tr>
+    <tr>
+        <td>< details ></td>
+        <td>Defines additional details that the user can view or hide（定义其他详细信息，用户可以查看或隐藏）</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< dialog ></td>
+        <td>Defines a dialog box or window（定义对话框或窗口）</td>
+    </tr>
+    <tr>
+        <td>< figcaption ></td>
+        <td>Defines a caption for a < figure > element（定义一个标题为< figure >元素）</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< figure ></td>
+        <td>Defines self-contained content, like illustrations, diagrams, photos, code listings, etc.(
+            定义自包含的内容，如插图，图表，照片，代码清单等。)</td>
+    </tr>
+    <tr>
+        <td>< footer ></td>
+        <td>Defines a footer for the document or a section(定义页脚的文档或节)</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< header ></td>
+        <td>Defines a header for the document or a section(定义标头的文件或部分)</td>
+    </tr>
+    <tr>
+        <td>< main ></td>
+        <td>Defines the main content of a document(定义文档的主要内容)</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< mark ></td>
+        <td>Defines marked or highlighted text(定义标注或突出显示的文本)</td>
+    </tr>
+    <tr>
+        <td>< menuitem ></td>
+        <td>Defines a command/menu item that the user can invoke from a popup menu(定义了用户可以从一个弹出式菜单调用命令/菜单项)</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< meter ></td>
+        <td>Defines a scalar measurement within a known range (a gauge)[定义了一个已知的范围内的标量测定（量规）]</td>
+    </tr>
+    <tr>
+        <td>< nav ></td>
+        <td>Defines navigation links in the document(定义在文件中导航链接)</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< progress ></td>
+        <td>Defines the progress of a task(定义了一个任务的进度)</td>
+    </tr>
+    <tr>
+        <td>< rp ></td>
+        <td>Defines what to show in browsers that do not support ruby annotations(定义在不支持红宝石注释的浏览器中显示的)</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< rt ></td>
+        <td>Defines an explanation/pronunciation of characters (for East Asian typography)[定义字符的解释/的发音（东亚版式）]</td>
+    </tr>
+    <tr>
+        <td>< ruby ></td>
+        <td>Defines a ruby annotation (for East Asian typography)[定义红宝石注释（东亚版式）]</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< section ></td>
+        <td>Defines a section in the document(定义文档中的一个部分)</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< summary ></td>
+        <td>Defines a visible heading for a <   details   > element(定义可见标题为< details >元素)</td>
+    </tr>
+    <tr>
+        <td>< time ></td>
+        <td>Defines a date/time(定义日期/时间)</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< wbr ></td>
+        <td>Defines a possible line-break(定义可能换行)</td>
+    </tr>
+</table>
+<p>Read more about <a href="http://www.w3schools.com/html/html5_semantic_elements.asp"> HTML5 Semantics.</a>(了解更多关于HTML5语义。)</p>
+<hr>
+<h2>New Form Elements(新的表单元素)</h2>
+<table border="1">
+    <tr>
+        <th>Tag（标签）</th>
+        <th>Description（描述）</th>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< datalist ></td>
+        <td>Defines pre-defined options for input controls(定义为输入控制预先定义的选项)</td>
+    </tr>
+    <tr>
+        <td>< keygen ></td>
+        <td>Defines a key-pair generator field (for forms)[定义密钥对生成字段（表格）]</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< output ></td>
+        <td>Defines the result of a calculation(限定了计算的结果)</td>
+    </tr>
+</table>
+<p>Read all about old and new form elements in<a href="http://www.w3schools.com/html/html_form_elements.asp">HTML Form Elements.</a>(阅读所有关于新老表单元素HTML表单元素。)</p>
+<hr>
+<h2>New Input Types(新的输入类型)</h2>
+<table border="1">
+    <tr>
+        <th style="width:600px;">New Input Types(新的输入类型)</th>
+        <th>New Input Attributes(新输入属性)</th>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>
+            <ul>
+                <li>color</li>
+                <li>date</li>
+                <li>datetime</li>
+                <li>datetime-local(本地日期时间)</li>
+                <li>email</li>
+                <li>month</li>
+                <li>number</li>
+                <li>range（范围）</li>
+                <li>search（搜索）</li>
+                <li>tel</li>
+                <li>time</li>
+                <li>url</li>
+                <li>week</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>autocomplete（自动完成）</li>
+                <li>autofocus（自动对焦）</li>
+                <li>form （形成）</li>
+                <li>formaction</li>
+                <li>formenctype</li>
+                <li>formmethod</li>
+                <li>formnovalidate</li>
+                <li>formtarget</li>
+                <li>height and width</li>
+                <li>list</li>
+                <li>min and max</li>
+                <li>multiple（多）</li>
+                <li>pattern (regexp)（图案（正则表达式））</li>
+                <li>placeholder (占位符)</li>
+                <li>required (需要)</li>
+                <li>step（步）</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+<p>Learn all about old and new input types in <a href="http://www.w3schools.com/html/html_form_input_types.asp">HTML Input Types.</a>(要详细了解新旧输入类型 的HTML输入类型。)</p>
+<p>Learn all about input attributes in <a href="http://www.w3schools.com/html/html_form_attributes.asp">HTML Input Attributes.</a>(了解所有关于HTML输入属性。)</p>
+<hr>
+<h2>HTML5 - New Attribute Syntax(HTML5-新的属性语法)</h2>
+<p>HTML5 allows four different syntaxes for attributes.(HTML5允许四种不同的语法属性:)</p>
+<p>This example demonstrates the different syntaxes used in an < input > tag:(这个例子演示了在< 输入 >标签的不同语法形式：)</p>
+<table border="1">
+    <tr>
+        <th>Tag</th>
+        <th>Example</th>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>Empty（空）</td>
+        <td>< input type="text" value="John" disabled >（disabled 禁用）</td>
+    </tr>
+    <tr>
+        <td>Unquoted（未加引号）</td>
+        <td>< input type="text" value = John></td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>Double-quoted（双引号）</td>
+        <td>< input type="text" value="John Doe" ></td>
+    </tr>
+    <tr>
+        <td>Single-quoted（单引号）</td>
+        <td>< input type="text" value='John Doe' ></td>
+    </tr>
+</table>
+<p>In HTML5, all four syntaxes may be used, depending on what is needed for the attribute.(在HTML5，所有四个语法可以使用，这取决于什么是属性的需要。)</p>
+<hr>
+<h2>HTML5 Graphics(HTML5图形)</h2>
+<table border="1">
+    <tr>
+        <th>Tag</th>
+        <th>Description</th>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< canvas ></td>
+        <td>Defines graphic drawing using JavaScript(定义使用JavaScript图形绘制)</td>
+    </tr>
+    <tr>
+        <td>< svg ></td>
+        <td>Defines graphic drawing using SVG(定义了使用SVG图形绘制)</td>
+    </tr>
+</table>
+<p>Read more about <a href="http://www.w3schools.com/html/html5_canvas.asp">HTML5 Canvas.</a>(阅读更多关于HTML5画布。)</p>
+<p>Read more about <a href="http://www.w3schools.com/html/html5_svg.asp">HTML5 SVG.</a>(阅读更多关于HTML5 SVG。)</p>
+<hr>
+<h2>New Media Elements(新媒体元素)</h2>
+<table border="1">
+    <tr>
+        <th>Tag</th>
+        <th>Description</th>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< audio ></td>
+        <td>Defines sound or music content(定义声音或音乐内容)</td>
+    </tr>
+    <tr>
+        <td>< embed ></td>
+        <td>Defines containers for external applications (like plug-ins)(定义容器外部的应用程序（如插件）)</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< source ></td>
+        <td>Defines sources for < video > and < audio >(定义< video >和< audio >的源代码)</td>
+    </tr>
+    <tr>
+        <td>< track ></td>
+        <td>Defines tracks for < video > and < audio >(定义< video >和< audio >的曲目)</td>
+    </tr>
+    <tr style="background:#F1F1F1;">
+        <td>< video ></td>
+        <td>Defines video or movie content(定义视频或电影内容)</td>
+    </tr>
+</table>
+<p>Read more about <a href="http://www.w3schools.com/html/html5_video.asp">HTML5 Video.</a>(阅读更多关于HTML5视频。)</p>
+<p>Read more about <a href="http://www.w3schools.com/html/html5_audio.asp">HTML5 Audio.</a>(阅读更多关于HTML5音频。)</p>
+<hr>
+</body>
+</html>

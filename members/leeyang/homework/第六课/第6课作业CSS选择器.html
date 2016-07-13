@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>NO.6_homework_css selector</title>
+	<style>
+		.class1{color: red;}/*class选择器*/
+		#id1{color: blue;}/*id选择器*/
+		*{background-color: rgb(239,239,239);}/*通配符选择器*/
+		p{font-size: 18px;}/*element选择器*/
+		h1,p{font-family: "Microsoft YaHei";}/*'element,element'元素选择器，设置所有<h1>和所有<p>元素的样式*/
+		div p{font-size: 28px;}/*'element element'选择器；选择div内部的所有p元素*/
+		div>span{color:green;}/*element>element选择器；选择父元素为div元素的所有span元素*/
+		ul+p{color: purple;}/*'element+element选择器,用于选取第一个制定元素之后（不是内部）紧跟的元素'；选择紧接在ul之后的所有p元素*/
+		a[target]{background-color: yellow;}/*[attribute]选择器，用于选取带有指定属性的元素*/
+		p[align=center]{font-size: 30px; color: #FFA500;}/*[attribute=value]选择器，用于选取带有指定属性和值的元素*/
+		a[target~=_self]{background-color: red;}/*[attribute~=value]选择器,用于选择属性值中包含指定词汇的元素*/
+		p[lang|=en]{background-color:#A0522D;}/*[attribute|=value]选择器，用于选取带有以指定值开头的属性值的元素*/
+		p~ul{text-decoration: underline;}/*element1~element2选择器，为所有相同父元素中位于p元素之后的所有ul设置下划线*/
+	</style>
+</head>
+<body>
+	<p class="class1">这是class选择器</p>
+	<h3 id="id1">这是ID选择器</h3>
+	<h1><p>这是element,element选择器</p></h1>
+	<div><p>这是element&nbspelement选择器</p></div>
+	<div><span>这是element>element选择器</span></div>
+	<ul>
+		<li><span>test1</span></li>
+		<li><a href="http://leeyang.me">MyBlog</a></li>
+		<li><a href="http://leeyang.me" target="_blank">这是[attribute]选择器</a></li>
+		<li><p align="center">这是[attriblue=value]选择器</p></li>
+		<li><a href="http://leeyang.me" target="_self">这是[attribute~=value]选择器</a></li>
+		<li><p lang="us">Hi!</p></li>
+		<li><p lang="en">这是[attribute|=value]选择器</p></li>
+	</ul>
+	<p>这是element+element选择器</p>
+
+</body>
+</html>

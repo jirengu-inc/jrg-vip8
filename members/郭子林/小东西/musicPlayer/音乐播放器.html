@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>音乐播放器</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1468339538_8672445.css">
+    <link rel="icon" href="tuxiang.png" type="image/x-ic" >
+    <link rel="stylesheet" href="style.css">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+    <!-- 头部图像 -->
+    <div class="singer-pic">
+        <img src="" alt="">
+    </div>
+    <audio src=""></audio>
+    <!--  歌手-歌名-类型-分享-收藏-喜欢 -->
+    <div class="song-info clearfix">
+        <div class="song">
+            <h3 class="song-name"></h3>
+            <p class="singer-info"></p>
+            <p class="song-type"></p>
+        </div>
+        <div class="for-more clearfix">
+            <a href="http://service.weibo.com/share/share.php?appkey=&title=&url=&pic=&searchPic=false&style=simple" target="_blank"><i class="iconfont m-fenxiang"></i></a>
+            <span class="iconfont m-shoucang"></span>
+            <span class="iconfont m-love"></span>
+        </div>
+    </div>
+    <!-- 进度条 -->
+    <div class="progress-bar clearfix">
+        <div class="whole-time">
+            <div class="spent-time"></div>
+        </div>
+        <div class="time"></div>
+    </div>
+    <div class="footer clearfix">
+        <!-- 控制 -->
+        <div class="control">
+            <span class="pause"><i class="iconfont m-start"></i></span>
+            <span><i class="iconfont m-prevmusic"></i></span>
+            <span><i class="iconfont m-nextmusic"></i></span>
+        </div>
+        <!-- 播放模式 -->
+        <div class="play-mode">
+            <i class="iconfont m-xunhuan actived"></i>
+            <i class="iconfont m-suijibofang"></i>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

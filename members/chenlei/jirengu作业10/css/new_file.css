@@ -1,0 +1,22 @@
+.style_1{
+	width: 0px;
+	height: 0px;
+	border-top:20px solid transparent ;
+	border-left: 20px solid transparent;
+	border-bottom:20px solid #f5dead;
+	border-right: 20px solid transparent;
+	position:absolute;
+	top: 22px;
+	left: 56px;
+}
+.style_2{
+	width: 0px;
+	height: 0px;
+	border-top:20px solid transparent ;
+	border-left: 20px solid transparent;
+	border-bottom:20px solid white;
+	border-right: 20px solid transparent;
+	position:absolute;
+	top: 23px;
+	left: 56px;
+}

@@ -1,0 +1,471 @@
+body,html,ul,li,span,h2,h3,h4,h5,h6,p{
+ 	padding: 0;
+ 	margin: 0;
+ }
+ h2,h3,h4,h5,h6{
+ 	font-weight: normal;
+ }
+ body{
+	 font: 400 15px/1.8em "Microsoft YaHei","微软雅黑","\5b8b\4f53" sans-serif;
+	 color: #fff;
+	 text-rendering: optimizeLegibility;
+	 height: 100%;
+	 width: 100%;
+	 overflow-x: hidden;
+	 background: url(./imgs/bg.png) repeat;
+	 -webkit-font-smoothing: antialiased;
+}
+ a{
+ 	text-decoration: none;
+ }
+ul,li{
+ 	list-style: none;
+ }
+ .clearfix:after{
+ 	content: "";
+ 	display: block;
+ 	clear: both;
+ }
+ .clearfix{
+ 	*zoom: 1;
+ }
+ img{
+ 	border: 0;
+ 	vertical-align: middle;
+ }
+ .wrapper{
+ 	margin: 0 auto;
+ 	width: 1210px;
+ }
+  /**---topnav---**/
+ #site-topbar{
+ 	position: fixed;
+ 	top: 0;
+ 	left: 0;
+ 	right: 0;
+ 	width: 100%;
+ 	text-align: center;
+ 	z-index: 10;
+ }
+#site-topbar>.wrapper{
+	padding: 20px 0;
+}
+
+#site-topbar>.wrapper>ul.sitenav>li{
+	display: inline-block;
+	vertical-align: middle;
+	height: 50px;
+	line-height: 50px;
+ 	margin-left: 60px;
+ }
+ #site-topbar>.wrapper>ul.sitenav>li:first-of-type{
+ 	margin-left: 0;
+ }
+#site-topbar>.wrapper>ul.sitenav>li>a>img{
+ 	margin: 0 20px; 
+ }
+#site-topbar>.wrapper>ul.sitenav>li>a{
+ 	color: #fff;
+ }
+ #site-topbar>.wrapper>ul.sitenav>li>a:hover{
+ 	color: #ccc;
+ }
+
+ .big_bg{
+ 	background: url(./imgs/big_bg.png) no-repeat top center;
+ }
+ /**---header---**/
+ #site-header>.wrapper{
+ 	position: relative;	
+ }
+ #site-header{
+    padding-top: 60px;
+ }
+ #site-header>.wrapper h1{
+ 	font-size: 60px;
+ 	font-family: "宋体";
+ 	color: #00a0e9;
+ 	font-weight: normal;
+ 	padding-top: 40px; 
+ 	padding-bottom: 40px;
+ 	text-align: center;
+ }
+ #site-header .course>.course-left{
+ 	float: left;
+ 	width: 414px;
+    position: relative;
+	margin-left: 120px;
+ }
+  #site-header .course>.course-left>.banner{
+  	height: 328px;
+    background-color: rgba(58,114,176,0.2);
+  }
+
+#site-header .course>.course-left>.banner>.course-border{
+    border: 2px solid #309ecc;
+}
+#site-header .course>.course-left>.banner h2{
+	font-size: 32px;
+	text-align: center;
+	font-weight: normal;
+	margin: 0px 45px;
+	padding: 18px 0;
+	border-bottom: 1px solid #309ecc;
+}
+#site-header .course>.course-left>.banner>h2:before,
+#site-header .course>.course-left>.banner>h2:after{
+	content: '';
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: #309ecc;
+}
+#site-header .course>.course-left>.banner>h2:before{
+	top: 76px;
+	left: 40px;
+}
+#site-header .course>.course-left>.banner>h2:after{
+	top: 76px;
+	right: 40px;
+}
+#site-header .course>.course-left>.banner .course-slide{
+	text-align: center;
+	padding: 22px 19px;
+	
+}
+#site-header .course>.course-left>.desp{
+	margin-right: 20px;
+	text-align: right;
+}
+#site-header .course>.course-left>.desp>p{
+	font-size: 18px;
+	color: #8ba0a7;
+	padding: 8px 0;
+	margin-top: 3px;	
+}
+#site-header .course>.course-left>.desp>p a{
+	color: #8ba0a7;	
+}
+#site-header .course>.course-left>.desp a:hover{
+	color: #fff;
+}
+#site-header .course>.course-left>.desp>a.course-btn{
+	display: block;
+	width: 240px;
+	height: 55px;
+	line-height: 55px;
+	font-family: 'SimSun';
+	font-size: 24px;
+	font-weight: bold;
+	color: #333;
+	text-align: center;
+	background-color: #f3c544;
+	border-radius: 4px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	float: right;
+	position: relative;
+}
+#site-header .course>.course-left>.desp>a.course-btn:hover{
+	background-color: #fec503;
+}
+#site-header .course>.course-left>.desp>a i{
+	position: absolute;
+	top: -1px;
+	right: 15px;
+    height: 20px;
+	width: 20px;
+	text-align: center;
+	font-size: 24px;
+	font-weight: normal;
+}
+#site-header .course>.course-left>.desp .split{
+	width: 0px;
+	height: 18px;
+	border-left: 2px solid #333;
+	margin: 0 3px 0 4px;
+}
+#site-header .course>.course-right{
+	float: left;
+	width: 590px;
+	margin-left: -10px;
+	margin-top: -12px;
+}
+
+#site-header .course>.course-right h3{
+    font-size: 34px;
+    font-family: "宋体";
+    text-align: center;
+    font-weight: normal;
+	padding-top: 8px;
+    padding-bottom: 42px;
+}
+
+/**techer-introduction**/
+#techer-introduction>.wrapper{
+	margin-top: 100px;
+}
+#techer-introduction>.wrapper>h2{
+	font-size: 36px;
+	font-family: "微软雅黑";
+	font-weight: normal;
+	margin-bottom: 16px;
+	text-align: center;
+
+}
+#techer-introduction>.wrapper>p{
+	font-size: 18px;
+	font-family: "微软雅黑";
+	color: #01ace0;
+	text-align: center;
+	text-transform: uppercase;
+	padding-bottom: 20px;
+
+}
+#techer-introduction>.wrapper>.summary{
+	position: relative;
+	margin-top: 20px;
+}
+#techer-introduction>.wrapper>.summary>.picture{
+	float: left;
+	width: 248px;
+	margin-left: 160px;
+}
+#techer-introduction>.wrapper>.summary>.introduction{
+   position: absolute;
+   margin-left: 500px;
+   width: 670px;
+   margin-top: 30px;	
+}
+#techer-introduction>.wrapper>.summary>.introduction>h3{
+	font-size: 26px;
+	font-weight: normal;
+}
+#techer-introduction>.wrapper>.summary>.introduction>h3>a{
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	background: url(./imgs/name_bg.png) no-repeat;
+	width: 136px;
+	height: 56px;
+	line-height: 56px;
+	color: #00a0e9;
+}
+#techer-introduction>.wrapper>.summary>.introduction>.abstract{
+	height: 180px;
+	line-height: 1.8;
+	background-color: rgba(58,114,176,0.2);
+	padding: 30px 50px;
+	margin-top: 28px;
+	font-size: 24px;
+	text-align: justify;
+}
+  /**---suppor---**/
+#support h5{
+	font-size: 28px;
+	font-family: "微软雅黑";
+	font-weight: normal;
+	margin-top: 100px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+#support>.wrapper{
+	position: relative;
+}
+#support .student-wrapper{
+	width: 1100px;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	margin-top: 55px;
+}
+#support .student-wrapper>ul>li{
+	float: left;
+	width: 215px;
+	margin-left: 4px;
+}
+#support .student-wrapper>ul>li>img{
+	width: 90%;
+}
+#support .left,
+#support .right{
+	float: left;
+	position: absolute;
+	top: 148px;
+}
+#support .left{
+	left: 3px;
+}
+	
+#support .right{
+	right: 3px;
+}
+#support .student-wrapper>ul>li>.dec{
+	margin-top: 20px;
+	padding: 0 18px;
+}
+#support .student-wrapper>ul>li>.dec>.athor{
+	color: #00A0E9;
+	font-size: 18px;
+}
+#support .student-wrapper>ul>li>.dec>p{
+	font-size: 14px;
+	padding-top: 10px;
+	line-height: 1.5;
+}
+/* sign-up */
+#sign-up{
+	background: url(./imgs/footer_bg.png) no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	min-height: 852px;
+	position: relative;
+	top: 140px;
+}
+#sign-up .information>.order-left{
+	float: left;
+	margin-left: 70px;
+}
+#sign-up .information .detail{
+	background: rgba(45,143,209,1);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(45,143,209,1)), color-stop(100%, rgba(33,183,156,0.5)));
+    background: -webkit-linear-gradient(-45deg, rgba(45,143,209,1) 0%, rgba(33,183,156,0.5) 100%);
+    background: -webkit-linear-gradient(315deg, rgba(45,143,209,1) 0%, rgba(33,183,156,0.5) 100%);
+    background: linear-gradient(135deg, rgba(45,143,209,1) 0%, rgba(33,183,156,0.5) 100%);
+    width: 400px;
+    height: 180px;
+    color: #fff;
+}
+#sign-up .information .detail>h6{
+	font-family: "宋体"; 
+	font-size: 52px;
+	padding: 20px 0 30px 30px;
+}
+#sign-up .information .detail>span{
+	font-family: "宋体"; 
+	font-size: 38px;
+	padding: 0 40px 0 30px;
+}
+#sign-up .information .detail>a.btn{
+	display: inline-block;
+	vertical-align: middle;
+	background-color: #f3c544;
+	height: 55px;
+	line-height: 55px;
+	text-align: center;
+	padding: 0 5px;
+	width: 115px;
+	font-size: 24px;
+	color: #171c20;
+	font-family: "微软雅黑";
+	border-radius: 6px;
+}
+#sign-up .information .detail>a.btn:hover{
+	background-color: #FFD45B;
+}
+#sign-up .information .detail>a>i{
+	position: relative;
+    top: -1px;
+    right: -14px;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+#sign-up .information .order-left>img{
+	position: relative;
+	top: 103px;
+}
+#sign-up .information>.order-right{
+	float: right;
+	margin-right: 70px;
+}
+#sign-up .information>.order-right>p{
+	font-size: 36px;
+	color: #fff;
+	padding: 0 0 15px 0;
+}
+#sign-up .information>.order-right>p>img{
+	position: relative;
+	right: 15px;
+}
+#footer{
+	position: relative;
+	top: 215px;
+	text-align: center;
+	color: #19273a;
+	font-size: 14px;
+	font-family: "微软雅黑";
+}
+#footer a{
+	color: #19273a;
+	padding: 0 15px;
+}
+/*slides button  css*/
+	.course-slide{
+		position: relative;
+		margin: 0 auto;
+		width: 375px;
+		height: 209px;
+		overflow: hidden;
+	}
+	.viewpoint{
+		position: relative;
+	}
+	.viewpoint>li{
+		position: absolute;
+		display: none;
+	}
+	.arrow{
+		position: absolute;
+		top: 50%;
+		margin-top: -15px;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		font-size: 13px;
+		color: #fff;
+		background-color: #4e443c;
+		border-radius: 50%;
+		opacity: 0.3;
+		box-shadow: 0 0 2px #999;
+		display: none;
+	}
+	.course-slide .arrow:hover{
+		opacity: 0.8;
+	}
+	.course-slide:hover>.arrow{
+		display: block;
+	}
+	.pre{
+		left: 22px;
+	}
+	.next{
+		right: 22px;
+	}
+	ul.bullet{
+		position: absolute;
+		width: 100%;
+		left: 0;
+		bottom: 30px;
+		text-align: center;
+		z-index: 10;
+	}
+	ul.bullet>li{
+		display: inline-block;
+		margin: 0 0.3em;
+		width: 15px;
+		height: 5px;
+		border-radius: 2px;
+		background-color: #fff;
+		opacity: 0.8;
+		cursor: pointer;
+	}
+	ul.bullet>li.active{
+		background-color: #747474;
+	}

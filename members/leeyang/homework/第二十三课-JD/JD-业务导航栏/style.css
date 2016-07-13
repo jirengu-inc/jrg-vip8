@@ -1,0 +1,50 @@
+*{margin: 0;padding: 0;}
+.clearfix{
+	content: '';
+	display: block;
+	clear: both;
+}
+a{text-decoration: none; color: inherit;}
+body{
+	background: white;
+	color: #666;
+    font:12px/1.5 Arial,Verdana,微软雅黑,"\5b8b\4f53",serif;
+  -webkit-font-smoothing: antialiased;
+  	padding-top: 10px;
+}
+
+
+.bizNav-wrapper{
+	border-bottom: 2px solid #b1191a;
+}
+
+.bizNav{
+	width: 1210px;
+	margin: 0 auto;
+	line-height: 44px;
+}
+
+.bizNav > .allProduct{
+	float: left;
+	width: 182px;
+	height: 44px;
+	background: #b1191a;
+	padding: 0 10px;
+	font-size: 15px;
+	color: white;
+}
+
+.bizNav > .allBiz{
+	color: #333;
+	font-size: 16px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.bizNav > .allBiz > a{
+	margin: 0 18px;
+}
+
+.bizNav > .allBiz > a:hover{
+	color: #b1191a;
+}

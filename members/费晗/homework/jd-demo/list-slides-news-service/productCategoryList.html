@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://js.jirengu.com
+
+Copyright (c) 2016 by fei-han (http://js.jirengu.com/qos/7/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <script src="http://7xrxd2.com1.z0.glb.clouddn.com/jquery/jquery-1.12.3.min.js"></script>
+<meta name="description" content="productCategoryListJQ" />
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_1463889714_6587682.css">
+<style id="jsbin-css">
+*{margin: 0;padding:0;}
+ body{
+  background: white;
+  color: #666;
+  font:12px/1.5 Arial,Verdana,"\5b8b\4f53",serif;
+  -webkit-font-smoothing: antialiased;
+} 
+ul,li{
+  list-style: none;
+}
+.clearfix:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.list-slides-news-service{
+  margin: 0 auto;
+  width: 1210px;
+}
+/**menu**/
+.list-slides-news-service>.productCategoryList>ul.menu{
+  width: 210px;
+  background: #b61d1d;
+  color: #fff;
+  border-bottom: 1px solid #c81623;
+}
+.list-slides-news-service>.productCategoryList>ul.menu>li{
+  height: 31px;
+  line-height: 31px;
+  padding-left: 10px;
+  font-size: 14px;
+  font-family: "microsoft yahei";
+  border-left: 1px solid #c81623;
+  position: relative;
+}
+.list-slides-news-service>.productCategoryList>ul.menu>li:hover{
+  background: #fff;
+  color: #C81623;
+}
+.list-slides-news-service>.productCategoryList>ul.menu>li:after{
+  content:'\e604';
+  font-family: 'jd-iconfont';
+  position: absolute;
+  right: 5px;  
+}
+.list-slides-news-service>.productCategoryList>ul.menu>li:hover:after{
+  display: none;
+}
+
+/**submenu**/
+.productCategoryList{
+  position: relative;
+}
+.list-slides-news-service>.productCategoryList ul.submenu{
+  position: absolute;
+  top: 0;
+  left: 210px; 
+  border-bottom: 1px solid #c81623;
+  border-right: 1px solid #c81623;
+
+}
+
+.list-slides-news-service>.productCategoryList>.submenu>li{
+  width: 700px;
+  background: #f9f9f9;
+  padding: 10px;
+  height: 500px;
+  color: #333;
+  border-left: 1px solid #c81623;
+}
+
+.list-slides-news-service>.productCategoryList>.submenu>li{
+  display: none;
+}
+
+.list-slides-news-service>.productCategoryList>.submenu>li.active{
+  display: block;
+}
+.productCategoryList:hover:after{
+  content: '';
+  display: block;
+  position: absolute;
+  height: 500px;
+  background: black;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  box-sizing:border-box;
+  z-index: 100;
+}
+
+</style>
+</head>
+<body>
+<div class="list-slides-news-service">
+  <div class="productCategoryList">
+    <ul class="menu">
+        <li data-index=0><span class="categoryName">家用电器</span></li>
+        <li data-index=1><span class="categoryName">手机、数码、京东通信</span></li>
+        <li data-index=2><span class="categoryName">电脑、办公</span></li>
+        <li data-index=3><span class="categoryName">家居、家具、家装、厨具</span></li>
+        <li data-index=4><span class="categoryName">男装、女装、童装、内衣</span></li>
+        <li data-index=5><span class="categoryName">个护化妆、清洁用品、宠物</span></li>
+        <li data-index=6><span class="categoryName">鞋靴、箱包、珠宝、奢侈品</span></li>
+        <li data-index=7><span class="categoryName">运动户外、钟表</span></li>
+        <li data-index=8><span class="categoryName">汽车、汽车用品</span></li>
+        <li data-index=9><span class="categoryName">母婴、玩具乐器</span></li>
+        <li data-index=10><span class="categoryName">食品、酒类、生鲜、特产</span></li>
+        <li data-index=11><span class="categoryName">医药保健</span></li>
+        <li data-index=12><span class="categoryName">图书、音像、电子书</span></li>
+        <li data-index=13><span class="categoryName">彩票、旅行、充值、票务</span></li>
+        <li data-index=14><span class="categoryName">理财、众筹、白条、保险</span></li>
+    </ul>
+
+    <ul class="submenu">
+        <li>这里是菜单1</li>
+        <li>这里是菜单2</li>
+        <li>这里是菜单3</li>
+        <li>这里是菜单4</li>
+        <li>这里是菜单5</li>
+        <li>这里是菜单6</li>
+        <li>这里是菜单7</li>
+        <li>这里是菜单8</li>
+        <li>这里是菜单9</li>
+        <li>这里是菜单10</li>
+        <li>这里是菜单11</li>
+        <li>这里是菜单12</li>
+        <li>这里是菜单13</li>
+        <li>这里是菜单14</li>
+        <li>这里是菜单15</li>
+    </ul>
+  </div>
+</div>
+
+<script id="jsbin-javascript">
+$('.menu>li').on('mouseenter',function(e){
+  var $current=$(e.currentTarget);
+  var index=$current.attr('data-index');
+  var indexNumber=+index;
+//   console.log(indexNumber);
+
+$('.submenu').children('li.active').removeClass('active'); $('.submenu').children('li').eq(indexNumber).addClass('active');
+  
+})
+
+$('.submenu').on('mouseleave',function(e){
+var $current=$(e.currentTarget);
+var index=$current.attr('data-index');
+var indexNumber=+index;
+//   console.log(indexNumber);
+
+$('.submenu').children('li.active').removeClass('active'); 
+  
+  
+})
+</script>
+</body>
+</html>

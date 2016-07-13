@@ -1,0 +1,3 @@
+#nav{width:97.5%;height:80px;border:1px grey solid;padding-left:30px;margin-left:5px;margin-top:5px;}
+span a{font-size:35px;text-decoration:none;margin-right:60px;line-height:80px;color:#444;}
+span a:hover{color:red;font-size:45px;}

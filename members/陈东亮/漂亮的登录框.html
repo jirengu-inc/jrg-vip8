@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>漂亮的登录框</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1463130078_3485749.css">
+    <style>
+        *{margin: 0;padding: 0;}
+        li{list-style: none;}
+        ins{text-decoration: none;}
+        a{text-decoration: none;}
+        input{
+            outline: none;
+            border: none;
+        }
+        .clear:after{
+            display: block;
+            content: " ";
+            clear: both;
+        }
+        body{
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size: 12px;
+            background: #D8D1CB;
+            height: 100%;
+            letter-spacing:1px;
+        }
+        .warp .header{
+            width: 100%;
+            text-align: center;
+            background: rgba(0,0,0,0.2);
+            opacity: 0;
+        }
+        html:hover .header{
+            opacity: 1;
+        }
+        .warp .header a{
+            display: inline-block;
+            padding: 10px 20px;
+            text-align: center;
+            background: #EB452F;
+            margin: 20px 0;
+            color: white;
+            font-size: 14px;
+        }
+        .warp .content h2{
+            position: relative;
+            top: -50px;
+            color: #8e8e8e;
+            text-align: center;
+        }
+        .warp .content{
+            width: 310px;
+            height: 313px;
+            margin: 0 auto;
+            border-top: 1px solid white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -155px;
+            margin-top: -156.5px;
+            background: #E4E0DC;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+        }
+        h2{
+            text-align: center;
+        }
+        .warp .content-pack .box{
+            width: 230px;
+            height: 36px;
+            padding-left: 20px;
+            box-shadow:0 0 12px #CAC4BF inset;
+        }
+        .warp .content-pack .choose1{
+            zoom: 140%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .warp .content-pack{
+            width: 248px;
+            padding: 0 30px;
+        }
+        .warp .content-pack p{
+            color: #8e8e8e;
+            margin-top: 25px;
+        }
+        .warp .content-pack button{
+            width: 250px;
+            height: 39px;
+            color: white;
+            background: #748D45;
+            border-radius: 5px;
+            margin: 29px 0;
+            outline: none;
+            border: none;
+            box-shadow:0 0 12px black;
+        }
+        .footer{
+            width: 100%;
+            position: absolute;
+            top: 80%;
+            text-align: center;
+        }
+        .footer p {
+            color: #8e8e8e;
+            white-space: nowrap;
+        }
+        .footer ul li{
+            color: #8e8e8e;
+            display: inline-block;
+            padding: 10px 0;
+            text-decoration:underline;
+        }
+        .iconfont{
+            font-family:"iconfont" !important;
+            font-size:16px;
+            font-style:normal;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-stroke-width: 0.2px;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .menu{
+            position: relative;
+            top: 27px;
+            font-size: 18px;
+            padding-left: 2px;
+        }
+        .choose{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="warp">
+    <div class="header">
+        <a href="#">Pin it</a>
+    </div>
+
+    <div class="content">
+        <h2>Login to love.ly</h2>
+        <div class="content-pack">
+            <label class="menu iconfont icon-yonghu" for="yonghu"></label>
+            <input id="yonghu" class="box" type="text" placeholder="lconDeposit">
+            <label class="menu iconfont icon-mima" for="mima"></label>
+            <input id="mima" class="box" type="password" placeholder="~~~~~~~~~">
+            <div class="choose">
+                <input class="choose1" id="choose" type="checkbox"> <label for="choose">Remember Me</label>
+            </div>
+
+            <p>Forgot username or password?</p>
+            <button>Login</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Love.ly Personal Blog.PSD Template Copyright©2012 Matt Gentile</p>
+        <ul class="clear">
+            <li>Love.ly Home</li>
+            <ins>|</ins>
+            <li>Blog</li>
+            <ins>|</ins>
+            <li>Work</li>
+            <ins>|</ins>
+            <li>Terms of Use</li>
+            <ins>|</ins>
+            <li>Contact Me</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task-6-4</title>
+	<style>
+		div{
+			width:1024px;
+			margin:0 auto;
+		}
+	   .center{
+        	display: table-cell;/* block; inline; inline-blick; none; table-cell; */
+        	width: 200px;
+        	height: 200px;
+        	vertical-align: middle;
+        	text-align: center;
+            background-color: #ccc;
+   		}
+   		.nocenter{
+        	width: 200px;
+        	height: 200px;
+        	vertical-align: middle;
+        	text-align: center;
+            background-color: #ccc;
+   		}
+	</style>
+</head>
+<body>
+	<div>
+		<p>这个样式的display:table-cell，让标签元素以表格单元格的形式呈现，类似于td标签。目前IE8+以及其他现代浏览器都是支持此属性
+的，但是IE6/7只能对你说sorry了。用display:table-cell能让大小不固定元素垂直居中</p>
+		<p class="nocenter">未display: table-cell;</p>
+		<p class="center">display: table-cell;</p>
+		<p class="nocenter">行文字是多行文字是多行文字是多行文字是多行文字是多行文字是多行文字是多行文字是多行文字是多行文字是多行文字未设置display: table-cell;</p>
+		<p class="center">多行文字是多行文字是多行文字是多行文字是多行文字是多行文字是多行文字是多行文字是多行文字是多行文字是多行文字是多行文字是多</p>
+		<p class="nocenter"><img src="img/fengche.png" alt="未设置display:table-cell"></p>
+		<p class="center"><img src="img/fengche.png" alt="display:table-cell"></p>
+		
+	</div>
+</body>
+</html>

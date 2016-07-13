@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>导航</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .nav,.pform{
+            width:80%;
+            margin:0 auto;
+            border:1px solid #ccc;
+        }
+        .nav ul li{
+            display:inline-block;
+            margin-left:10px;
+        }
+        .nav ul li a{
+            color:#444;
+        }
+        .nav ul li a:hover{
+            color:red;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul class="clearfix">
+            <li><a href="">主页</a></li>
+            <li><a href="">课程</a></li>
+            <li><a href="">视频</a></li>
+            <li><a href="">关于</a></li>
+        </ul>
+    </div>
+    <div class="pform">
+        <form action="" method="">
+            <strong>姓名：</strong><input type="text" name="" value="用户名">
+            <br>
+            <strong>密码：</strong><input type="password" name="">
+            <br>
+            <strong>性别：</strong>
+            <input type="radio" name="gender" id="male" value="male" checked><label for="male">男</label>
+            <input type="radio" name="gender" id="female" value="female"><label for="female">女</label>
+            <br>
+            <strong>取向：</strong>
+            <input type="radio" name="like" id="boy" value="boy" ><label for="boy">男</label>
+            <input type="radio" name="like" id="girl" value="girl" checked><label for="girl">女</label>
+            <br>
+            <strong>爱好：</strong>
+            <input type="checkbox" name="hobby" value="旅游" checked>旅游
+            <input type="checkbox" name="hobby" value="LOL">LOL
+            <input type="checkbox" name="hobby" value="美女" checked>美女
+            <br>
+            <strong>评论：</strong>
+            <textarea rows="3" cols="20">请输入评论</textarea>
+            <br>
+            <strong>我的car：</strong>
+            <select name="" id="">
+                <option value="萨博" selected>萨博</option>
+                <option value="宝马">宝马</option>
+                <option value="奔驰">奔驰</option>
+            </select>
+            <input type="submit" value="提交">
+        </form>
+    </div>
+</body>
+</html>

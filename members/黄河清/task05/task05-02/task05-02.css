@@ -1,0 +1,29 @@
+*{padding: 0px;margin: 0px;}
+
+
+.main{
+	position: relative;
+	padding: 10px;
+}
+
+
+.A{
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 50px;
+	border-color: transparent transparent blue transparent;
+	position: absolute;
+	top: 5px;
+}
+
+.B{
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 50px;
+	border-color: transparent transparent white transparent;
+	position: absolute;
+
+	
+}

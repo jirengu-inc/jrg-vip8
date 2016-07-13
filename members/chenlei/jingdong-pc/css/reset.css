@@ -1,0 +1,33 @@
+	*{
+		padding: 0;
+		margin: 0;
+		font-weight: normal;
+		font-size: 12px;
+	}
+	
+	li{
+		list-style: none;
+	}
+	
+	a{
+		text-decoration: none;
+	}
+	
+	
+	img{
+		vertical-align: top;
+		border: none;
+	}
+	
+	form{
+		margin: 0;
+	}
+	
+	input{
+		border: none;
+		margin: 0;
+		padding: 0;
+	}
+	option{
+		padding: 0px;
+	}

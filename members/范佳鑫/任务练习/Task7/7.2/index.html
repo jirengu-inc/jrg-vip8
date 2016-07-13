@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>任务7-HTML4(2)</title>
+	<link rel="stylesheet" type="text/css" href="style/main.css">
+</head>
+<body>
+	<form id="reg">
+	  <fieldset>
+	  <legend>^_^请认真填写注册信息^_^</legend>
+		<p>
+			<label for="name">
+				姓名：<input list="name_list" autofocus required type="text" id="name" name="name" placeholder="用户名">
+			</label>
+		</p>
+		<p>
+			<label for="">
+				密码：<input autocomplete="on" required type="password" id="password" name="password" placeholder="请输入密码">
+			</label>
+		</p>
+		<p>
+		   性别：
+			<label class="radio">
+				<input type="radio" checked value="man" name="sex" id="man">
+                男
+			</label>
+			<label class="radio"> 
+				<input type="radio" value="woman" name="sex" id="woman">
+                女
+			</label>
+		</p>
+		<p>
+		   取向：
+			<label class="radio">
+				<input type="radio" checked value="man" name="trend" id="trend_man">
+                男
+			</label>
+			<label class="radio">
+				<input type="radio" value="woman" name="trend" id="trend_woman">
+                女
+			</label>
+		</p>
+		<p>
+			爱好：
+			<label class="checkbox">
+				<input type="checkbox" name="hobbies" id="dota">
+				Dota
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" name="hobbies" id="trip">
+				旅游
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" name="hobbies" id="pet">
+				宠物
+			</label>
+		</p>
+		<p>
+		    <span>评论:</span>
+			<textarea cols="55" rows="10" id="textarea"></textarea>
+		</p>
+		<p>
+			<label>
+			我的Car：
+				<select>
+					<option>Honda</option>
+					<option>Nissan</option>
+					<option>Toyota</option>
+					<option>Mitsubisi</option>
+					<option>Mazda</option>
+				</select>
+			</label>
+		</p>
+		<button type="submit">提交</button>
+		<button type="reset">重写信息</button>
+	  </fieldset>
+	</form>
+	<datalist id="name_list">
+		<option>张三</option>
+		<option>李四</option>
+		<option>王五</option>
+		<option>陈六</option>
+	</datalist>
+</body>
+</html>

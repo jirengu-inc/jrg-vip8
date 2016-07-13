@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>二级导航栏</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        a{text-decoration: none;color: black;}
+        ul,ol{list-style: none;}
+        body{background: #eee;font-size: 16px;}
+        .wrapper{
+            text-align: center;
+        }
+        .siteNavigation{
+            border-left: 1px solid #dddddd;
+            display: inline-block;
+        }
+        .siteNavigation>li{
+            float: left;
+            background: white;
+            text-align: center;
+            border-right: 1px solid #dddddd;
+            border-top: 1px solid #dddddd;
+            position: relative;
+        }
+        .siteNavigation>li>ul{
+            display: block;
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            left: 0;
+            border: 1px solid #dddddd;
+            background: white;
+            margin-left: -1px;
+            margin-top: -1px;
+            transform: translateY(-20px);
+            transition: margin 0.5s, opacity 0.5s;
+            opacity: 0.2;
+            visibility: hidden;
+        }
+        .siteNavigation>li:hover>ul{
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0px);
+        }
+        .siteNavigation li>a{
+            width: 150px;
+            line-height: 30px;
+            display: block;
+            padding: 10px 0;
+            transition: background 0.3s;
+            position: relative;
+            z-index: 1;
+            border-bottom: 1px solid #dddddd;
+        }
+        .siteNavigation li>a:hover{
+            background: #efefef;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <ul class="siteNavigation">
+        <li><a href="">首页</a>
+            <ul>
+                <li><a href="">产品1</a></li>
+                <li><a href="">产品2</a></li>
+                <li><a href="">产品3</a></li>
+            </ul>
+        </li>
+        <li><a href="">关于</a>
+            <ul>
+                <li><a href="">联系我们</a></li>
+                <li><a href="">加入我们</a></li>
+            </ul>
+        </li>
+        <li><a href="">下载</a>
+            <ul>
+                <li><a href="">产品1</a></li>
+                <li><a href="">产品2</a></li>
+                <li><a href="">产品3</a></li>
+            </ul>
+        </li>
+        <li><a href="">博客</a></li>
+    </ul>
+</div>
+
+</body>
+</html>

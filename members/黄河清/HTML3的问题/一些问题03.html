@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html class="theme theme-white">
+<head>
+<meta charset="utf-8">
+<title>一些问题03</title>
+<link href="https://www.zybuluo.com/static/assets/template-theme-white.css" rel="stylesheet" media="screen">
+</head>
+<body class="theme theme-white">
+<div id="wmd-preview" class="wmd-preview wmd-preview-full-reader"><div class="md-section-divider"></div><div class="md-section-divider"></div><h1 data-anchor-id="g7n2" id="一些问题03">一些问题03</h1><p data-anchor-id="na4f"><code>前端</code></p><hr><p data-anchor-id="wwk0"><div class="toc"><div class="toc">
+<ul>
+<li><a href="#一些问题03">一些问题03</a><ul>
+<li><ul>
+<li><ul>
+<li><a href="#1line-height有什么作用">1.line-height有什么作用?</a></li>
+<li><a href="#2如何去查css熟悉的兼容性比如inline-block哪些浏览器支持">2.如何去查CSS熟悉的兼容性？比如inline-block哪些浏览器支持？</a></li>
+<li><a href="#3a-标签的href-title-target-是什么-title-和-alt有什么区别如何新窗口打开链接">3.a 标签的href, title, target 是什么？ title 和 alt有什么区别？如何新窗口打开链接?</a></li>
+<li><a href="#4display-none-和-visibility-hiddenopacity0有什么作用有什么区别">4.display: none 和 visibility: hidden、opacity:0有什么作用？有什么区别？</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</p><div class="md-section-divider"></div><h4 data-anchor-id="xh14" id="1line-height有什么作用">1.line-height有什么作用?</h4><p data-anchor-id="o02g">被用来控制行与行之间的垂直距离，设定行高，不能使用负数，并且对于图片是无效的，<strong>在单行文本中当其与height相等时可实现垂直居中。</strong></p><p data-anchor-id="2ti1">默认状态下，浏览器使用的是1.0~1.2的 line-height，可以定义覆盖，并且可以在 font 中缩写，比如body{font:100%/1.2  arial;}  </p><blockquote data-anchor-id="u9n7" class="white-blockquote">
+  <p>使用百分比、长度属性的 line-height，计算出来的值会被层叠下去的元素（忽略自身的font-size）所继承，并且 line-height 不会随着相关的 font-size 做出相应的比例缩放；</p>
+  
+  <p>而使用normal 属性的 line-height，层叠下去的元素不会忽略自身的 font-size，并且使用基于自身的 font-size 计算出来的 line-height，而且 line-height 会随着相关的 font-size 做出相应的比例缩放；</p>
+  
+  <p>所以综上述所，想要灵活又想要设定一个自定义的值，那么最好的办法就是使用一个纯数字的值</p>
+</blockquote><div class="md-section-divider"></div><h4 data-anchor-id="1jcn" id="2如何去查css熟悉的兼容性比如inline-block哪些浏览器支持">2.如何去查CSS熟悉的兼容性？比如inline-block哪些浏览器支持？</h4><p data-anchor-id="luz4"><a href="http://caniuse.com/" target="_blank">caniuse.com</a>中输入相关的属性名字，可以查看每个浏览器对于其的兼容性; <br>
+<a href="http://caniuse.com/#search=inline-block" target="_blank">inline-block的兼容性</a></p><div class="md-section-divider"></div><h4 data-anchor-id="suey" id="3a-标签的href-title-target-是什么-title-和-alt有什么区别如何新窗口打开链接">3.a 标签的href, title, target 是什么？ title 和 alt有什么区别？如何新窗口打开链接?</h4><blockquote data-anchor-id="o6lh" class="white-blockquote">
+  <p>a 标签： <br>
+  href 是一个指定超链接目标的URL <br>
+  tiele 属性可以在鼠标停留在超链接上时，显示对于该超链接的注释 <br>
+  target表示链接的打开方式，常见的属性值有blank/parent/top/self。其中self为默认打开方式。</p>
+  
+  <p>title 与 alt 的区别： <br>
+  1. alt 是图片加载失败的时候，显示在网页上的替代文字 <br>
+  2. title 则是鼠标停留在超链接上时显示出的注释内容 <br>
+  3. alt 是 img 的必写属性，而 title 不是</p>
+</blockquote><p data-anchor-id="y5wv">打开新窗口，使用 target=_blank</p><div class="md-section-divider"></div><h4 data-anchor-id="69tu" id="4display-none-和-visibility-hiddenopacity0有什么作用有什么区别">4.display: none 和 visibility: hidden、opacity:0有什么作用？有什么区别？</h4><blockquote data-anchor-id="3jr2" class="white-blockquote">
+  <p>display:none  不为被隐藏的对象保留其物理空间，即该对象在页面上彻底消失，通俗来说就是看不见也摸不到。 <br>
+  visible:hidden  使对象在网页上不可见，但该对象在网页上所占的空间没有改变，通俗来说就是看不见但摸得到。 <br>
+  opacity:0  透明度为0，它在页面上也有空间，只不过它是透明的看不见而已。</p>
+</blockquote></div>
+</body>
+</html>

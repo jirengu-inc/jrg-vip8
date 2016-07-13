@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>饥人谷</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="style.css" rel="stylesheet">
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+     window.onload=function(){
+        var wrapper=document.getElementById("img-wrapper");
+        var list=document.getElementById("img-list");
+        var prev=document.getElementById("prev");
+        var next=document.getElementById("next");
+        var timer;
+
+        function animate(offset) {
+            var newLeft=parseInt(list.style.left) +offset;
+            list.style.left=newLeft + 'px';
+            if (newLeft>-208) {
+               list.style.left=-1248 +'px';
+            }
+            if (newLeft<-1248) {
+                list.style.left=-208+'px';
+            };
+        }
+
+        function play(){
+            timer=setInterval(function(){
+                next.onclick();
+            },1500);
+        }
+
+        function stop(){
+            clearInterval(timer);
+        }
+
+        next.onclick=function(){
+            animate(-208);
+        }
+        prev.onclick=function(){
+            animate(208);
+        }
+        prev.onmouseover=stop;
+        next.onmouseover=stop;
+        prev.onmouseout=play;
+        next.onmouseout=play;
+        play();
+     }
+ 
+  </script>
+
+</head>
+<body>
+<div id="X-bg">
+  <div id="tone-bg">
+    <div id="page-wrapper">
+
+     	  <div id="header">
+        	   	<div class="navWrapper">
+          	   		<ul class="siteNav">
+          	   			<li><a href="#">课程</a></li>
+          	   			<li><a href="#">讲师</a></li>
+          	   			<li><a href="#">课件</a></li>
+          	   			<li><a href="#"><img src="images/logo.png" alt="" height="44px;" width="137px;"></a></li>
+          	   			<li><a href="#">BBS</a></li>
+          	   			<li><a href="#">学员博客</a></li>
+          	   			<li><a href="#">报名预约</a></li>
+          	   		</ul>
+        	   	</div>
+     	  </div>
+
+     	  <div id="class-introduction">
+         		<h1>饥人谷前端直播九班</h1>
+         		<div class="classWrapper clearfix">
+      	   		  <div class="course">
+      		   		   <div class="bulletin">
+            		   			<h3>公开课视频</h3>
+            		   			<hr>
+            		   			<div class="carousel">
+                  						<ul class="img-wrapper">
+                  						    <li><a href="#"><img src="images/video-logo_04.png" alt=""></a></li>
+                  					    	<li><a href="#"><img src="images/video-logo_04.png" alt=""></a></li>
+                  					    	<li><a href="#"><img src="images/video-logo_04.png" alt=""></a></li>
+                  					    	<li><a href="#"><img src="images/video-logo_04.png" alt=""></a></li>
+                  						</ul>
+                  						<a class="pre arrow" href="#"><</a>
+                  						<a class="next arrow" href="#">></a>
+                  						<ul class="bullet">
+                  							<li class="active"></li>
+                  							<li></li>
+                  							<li></li>
+                  							<li></li>
+                  						</ul>
+            					   </div>
+      		   		   </div>
+
+      	   			   <p>更多往期公开课视频 : <a href="http://www.jirengu.com">www.jirengu.com</a></p>
+      	   			   <a href="#" class="btnScheme">查看大纲|课件<img src="images/icon-button.png" alt="" height="25px" width="25px"></a>
+      	   			   <a href="#" class="btnEnterance">报名收费<img src="images/icon-button.png" alt="" height="25px" width="25px"></a>
+      		   	  </div>
+
+      		   	  <div class="linear">
+      		   		  <img src="images/linear01.png" alt="">
+      		   	  </div>
+
+        	   		<div class="beginTime">
+          	   			 <h3>开班时间 : 5月下旬</h3>
+          	   			 <img src="images/moon01.png" alt="" height="545px" width="510px">	
+        	   		</div>
+         	  </div>
+        </div>
+
+     	  <div id="teacher-introduction">
+         		<h3>讲师简介</h3>
+         		<p>TEACHER  INTRODUCTUON</p>
+         		<div class="teaWrapper clearfix">	
+        	   		<div class="teacherImg">
+        		   		     <img src="images/tea04.png" alt="" width="241px" height="388px">
+        	   		</div>
+        	   		<div class="teacherInfo">
+        	   			<h4><a href="#">若愚</a></h4>
+        	   			<img src="images/rectangle01.png" alt="">
+        	   			<p>若愚，北航计算机硕士，曾任职于百度LBS搜索研发部、阿里巴巴B2B技术部，开发过百度地图、阿里巴巴中文站等产品，擅长CSS3、HTML5、nodejs，现任饥人谷教学研发总监。</p>
+        	   		</div>
+         		</div>
+     		    <h4>后援团介绍</h4>
+            <div class="carousel">
+              <a href="javascript:;" id="prev" class="arrow"><img src="images/arrow-left02.png" alt=""> </a>
+              <div id="img-wrapper">
+             		<ul id="img-list" style="left:-208px;" class="clearfix">
+                  <li>
+                     <ul>
+                        <li><img src="images/tea02.png" alt=""></li>
+                        <li>
+                            <h5>苏怡</h5>
+                           <p>金牌前端讲师，数年前端开发经验，现任某上市企业技术总监</p>
+                        </li>
+                     </ul>
+                  </li>
+             			<li>
+             				<ul>
+             					<li><img src="images/tea03.png" alt=""></li>
+             					<li>
+             						<h5>苏怡</h5>
+             						<p>金牌前端讲师，数年前端开发经验，现任某上市企业技术总监</p>
+             					</li>
+             				</ul>
+             			</li>
+             			<li>
+             				<ul>
+             					<li><img src="images/tea02.png" alt=""></li>
+             					<li>
+             					    <h5>苏怡</h5>
+             						<p>金牌前端讲师，数年前端开发经验，现任某上市企业技术总监</p>
+             					</li>
+             				</ul>
+             			</li>
+             			<li>
+             				<ul>
+             					<li><img src="images/tea01.png" alt=""></li>
+             					<li>
+             						<h5>苏怡</h5>
+             						<p>金牌前端讲师，数年前端开发经验，现任某上市企业技术总监</p>
+             					</li>
+             				</ul>
+             			</li>
+             			<li>
+             				<ul>
+             					<li><img src="images/tea02.png" alt=""></li>
+             					<li>
+             						<h5>苏怡</h5>
+             						<p>金牌前端讲师，数年前端开发经验，现任某上市企业技术总监</p>
+             					</li>
+             				</ul>
+             			</li>
+             			<li>
+             				<ul>
+             					<li><img src="images/tea03.png" alt=""></li>
+             					<li>
+             						<h5>苏怡</h5>
+             						<p>金牌前端讲师，数年前端开发经验，现任某上市企业技术总监</p>
+             					</li>
+             				</ul>
+             			</li>
+                      <li>
+                         <ul>
+                            <li><img src="images/tea03.png" alt=""></li>
+                            <li>
+                               <h5>苏怡</h5>
+                               <p>金牌前端讲师，数年前端开发经验，现任某上市企业技术总监</p>
+                            </li>
+                         </ul>
+                      </li>
+                      <li>
+                         <ul>
+                            <li><img src="images/tea02.png" alt=""></li>
+                            <li>
+                                <h5>苏怡</h5>
+                               <p>金牌前端讲师，数年前端开发经验，现任某上市企业技术总监</p>
+                            </li>
+                         </ul>
+                      </li>
+                      <li>
+                         <ul>
+                            <li><img src="images/tea01.png" alt=""></li>
+                            <li>
+                               <h5>苏怡</h5>
+                               <p>金牌前端讲师，数年前端开发经验，现任某上市企业技术总监</p>
+                            </li>
+                         </ul>
+                      </li>
+                      <li>
+                         <ul>
+                            <li><img src="images/tea02.png" alt=""></li>
+                            <li>
+                               <h5>苏怡</h5>
+                               <p>金牌前端讲师，数年前端开发经验，现任某上市企业技术总监</p>
+                            </li>
+                         </ul>
+                      </li>
+                      <li>
+                         <ul>
+                            <li><img src="images/tea03.png" alt=""></li>
+                            <li>
+                               <h5>苏怡</h5>
+                               <p>金牌前端讲师，数年前端开发经验，现任某上市企业技术总监</p>
+                            </li>
+                         </ul>
+                      </li>
+             		</ul>
+              </div>
+             <a href="javascript:;" id="next" class="arrow"><img src="images/arrow-right02.png" alt=""> </a>
+            </div> 
+     	  </div>
+    </div>
+  </div>
+
+  <div id="page-bg">
+       	<div id="booking" class="clearfix">
+         		<div class="bookingImg">
+           			<div class="preordination">
+               				<p>仅 25 席</p>
+               				<span>首付 100 元</span>
+               				<a href="#" class="btnPreoridination">抢座<img src="images/icon-button.png" alt="" width="25px" height="25px"></a>
+           			</div>
+         			  <img src="images/bookingimg01.png" alt="" width="307px" height="387px">
+         		</div>
+         		<div class="bookingMessage">
+           			<ul class="message">
+           				<li>
+           					<ul>
+           						<li class="numImgWrapper"><img src="images/num01.png" alt=""></li>
+           						<li>正式开课前订座 优惠100元</li>
+           					</ul>
+           				</li>
+           				<li>
+           					<ul>
+           						<li class="numImgWrapper"><img src="images/num02.png" alt=""></li>
+           						<li>支持按月支付课时费</li>
+           					</ul>
+           				</li>
+           				<li>
+           					<ul>
+           						<li class="numImgWrapper"><img src="images/num03.png" alt=""></li>
+           						<li>不满意 随时退</li>
+           					</ul>
+           				</li>
+           			</ul>
+         		</div>
+     	  </div>
+
+     	  <div id="footer">
+           		<ul>
+           			<li><a href="#">关于我们</a></li>
+           			<li><a href="#">加入我们</a></li>
+           			<li><a href="#">报名收费</a></li>
+           		</ul>
+           		<p>课程内容版权均归杭州饥人谷教育科技有限公司所有 浙ICP备14041127号-1 | Maded by <a href="https://github.com/jirengu-inc/jrg-vip8/tree/master/members/pangfei/">FayePam</a></p>
+     	  </div>
+  </div>
+</div>
+ <script type="text/javascript">
+		//$(function(){
+			
+			var $ct = $('.img-wrapper'),
+				$items = $ct.children(),
+				$pre = $('.pre'),
+				$next = $('.next'),
+				$bullet = $('.bullet'),
+				imgWidth = $items.width(),
+				imgCount = $ct.children().size();
+			var curIndex = 0;
+			var isAnimate = false;
+
+		    $next.on('click', function(){
+			playNext();
+			});
+
+			$pre.on('click', function(){
+			playPre();
+			});
+
+			$bullet.find('li').on('click', function(){
+			var idx = $(this).index();
+			play(idx);
+			});
+
+			play(0);
+			autoPlay();
+
+			function playNext(){
+				play((curIndex+1)%imgCount)
+			}
+
+			function playPre(){
+				play((imgCount+curIndex-1)%imgCount)
+			}
+
+			function play(idx){
+				if(isAnimate) return;
+				isAnimate = true;
+				$items.eq(curIndex).fadeOut(500);
+				$items.eq(idx).fadeIn(500, function(){
+					isAnimate = false;
+				});
+				
+				curIndex = idx;
+				setBullet();
+			}
+
+			function setBullet(){
+				$bullet.children().removeClass('active')
+				$bullet.children().eq(curIndex).addClass('active');
+			}
+
+			function stopAuto(){
+				clearInterval(clock);
+			}
+
+			function autoPlay(){
+				clock = setInterval(function(){
+					playNext();
+				}, 2000);	
+			}
+		//});
+		
+		</script>
+    
+</body>
+</html>

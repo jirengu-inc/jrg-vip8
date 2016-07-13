@@ -1,0 +1,48 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-05-07 09:41:11 
+ * @version $Id$
+ */
+ body{ font:12px/150% Arial,Verdana,"\5b8b\4f53"; color:#666;}
+ .jdTopbar{ background: #f1f1f1; height: 30px; line-height: 30px; }
+ .contain{ width: 1210px; min-width: 1210px; margin: auto; }
+ .localion-wrapper{line-height: 30px;}
+ .localion{position: relative;/* height: 30px; *//* overflow: hidden; */}
+ .localion>span{padding: 0 10px;display: inline-block;border-left: 1px solid transparent;border-right: 1px solid transparent;z-index: 10;position: relative;height: 30px;overflow: hidden;}
+ .localion:hover >span{background: #fff;border-left:1px solid #ddd;border-right:1px solid #ddd;}
+  .localion:hover >span >i{
+    display: inline-block;
+  }
+ .localion:hover >span >i{
+    transform: rotate(180deg);
+    transition: transform 0.1s;
+ }
+
+ ul.localion-picker {
+    display: none;
+    width: 301px;
+    padding:10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    position: absolute;
+    top: 29px;
+    left: 0;
+    z-index: 9;
+    }
+ .localion:hover ul.localion-picker{ display: block; }
+ .localion-picker li{ width: 60px; float: left;}
+ .localion-picker li a{padding: 5px 8px;color: #666;}
+ .localion-picker li a:hover{ background: #F4F4F4; color: #C81623; }
+ .localion-picker li a.selected {
+    background: #C81623;
+    color: #fff;
+}
+.links {}
+.links a{color: #666;float: left;padding: 0 10px;}
+.links a:hover , .links a.active{ color: #C81623;}
+.links span{float: left;height: 12px;margin-top: 9px;border-right:1px solid #ddd;}
+
+
+

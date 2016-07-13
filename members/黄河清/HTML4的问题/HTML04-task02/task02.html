@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<title>表格练习</title>
+	<style>
+		body{
+			line-height: 2.0;
+		}
+	</style>
+</head>
+<body>
+	<form action="form_action.asp" method="get">
+		<label for="name">姓名：</label>
+		<input type="text" name="name">
+		<br>
+
+		<label for="psw">密码：</label>
+		<input type="password" name="psd">
+		<br>
+
+		<label for="gender">性别：</label>
+		<label for="male">男</label>
+		<input type="radio" name="gender" checked="checked">
+		<label for="female">女</label>
+		<input type="radio" name="gender">
+		<br>
+
+		<label for="orientation">取向：</label>
+		<label for="male">男</label>
+		<input type="radio" name="orientation" checked="checked">
+		<label for="female">女</label>
+		<input type="radio" name="orientation">
+		<br>
+
+		<label for="hobby">爱好：</label>
+		<label for="hobby">Dota</label>
+		<input type="checkbox" name="Dota">
+		<label for="hobby">旅游</label>
+		<input type="checkbox" name="travel" checked="checked">
+		<label for="hobby">宠物</label>
+		<input type="checkbox" name="pet">
+		<br>
+
+		<label for="choose">评论：</label>
+		<textarea name="choose" cols="30" rows="10" placeholder="填写您的选择以及评论"></textarea>
+		<br>
+
+		<label for="drink">我喜爱的饮品：</label>
+		<select>
+			<option value="牛奶">牛奶</option>
+			<option value="咖啡">咖啡</option>
+			<option value="果汁">果汁</option>
+			<option value="纯净水" selected="selected">纯净水</option>
+		</select>
+	</form>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Clone方法</title>
+<script type="text/javascript" src="../scripts/jquery-1.11.2.js"></script>
+<style>
+	html,body,ul,li,p{
+			margin: 0;
+			padding: 0;
+	}
+	ul,li{
+		list-style: none;
+	}
+	a{
+		text-decoration: none;
+	}
+	.art{
+		position: relative;
+		height: 206px;
+		overflow: hidden;
+	}
+	.art .viewpoint{
+		position: absolute;
+	}
+	.art .viewpoint:after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+	.art .viewpoint li{
+		float: left;
+	}
+	.art .viewpoint img{
+		width: 310px;
+		height: 206px;
+	}
+	.arrow{
+		position: absolute;
+		top: 50%;
+		margin-top: -15px;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		background-color: #4e443c;
+		color: #fff;
+		border-radius: 50%;
+		box-shadow: 0 0 2px #999;
+		opacity: 0.3;
+	}
+	.arrow:hover{
+		opacity: 0.8;
+	}
+	.prev{
+		left: 10px;
+	}
+	.next{
+		right: 10px;
+	}
+	ul.bullet{
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	ul.bullet li{
+		display: inline-block;
+		margin: 0 0.3em;
+		width: 16px;
+		height: 4px;
+		background-color: #fff;
+		border-radius: 3px;
+		cursor: pointer;
+	}
+	ul.bullet li.active{
+		background-color: #666;
+	}
+</style>
+</head>
+<body>
+    <div class="art">
+    	<ul class="viewpoint">
+    		<li><a href="#"><img src="http://cdn.jirengu.com/book.jirengu.com/img/26.jpg"></a></li>
+			<li><a href="#"><img src="http://cdn.jirengu.com/book.jirengu.com/img/25.jpg"></a></li>
+			<li><a href="#"><img src="http://cdn.jirengu.com/book.jirengu.com/img/24.jpg"></a></li>
+			<li><a href="#"><img src="http://cdn.jirengu.com/book.jirengu.com/img/23.jpg"></a></li>
+    	</ul>
+    	<a class="prev arrow" href="#"><</a>
+    	<a class="next arrow" href="#">></a>
+    	<ul class="bullet">
+    		<li class="active"></li>
+    		<li></li>
+    		<li></li>
+    		<li></li>
+    	</ul>
+	</div>
+
+	<script type="text/javascript">
+		
+		var $art = $('.art'),
+			$viewpoint = $('.viewpoint'),
+			$items = $viewpoint.children(),
+			$prev = $('.prev'),
+			$next = $('.next'),
+			$bullet = $('.bullet'),
+			imgWidth = $items.width(),
+			imgCount = $viewpoint.children().length;
+
+		$viewpoint.css({
+			width: imgCount*imgWidth
+		});
+		$art.css({
+			width: imgWidth
+		})
+		var curIdx = 0;
+		var isAnimate = false;
+		//绑定事件
+		$art.on('mouseover',function(e){	
+			stopPlay();
+		}).on('mouseleave',function(e){
+			autoPlay();
+		})
+		$prev.on('click',function(e){
+			e.preventDefault()
+			playPrev();
+		})
+		$next.on('click',function(e){
+			e.preventDefault()
+			playNext();
+		})
+		$bullet.find('li').on('click',function(){
+			var idx = $(this).index();
+			if (idx>curIdx) {
+				playNext(idx-curIdx);
+			}else if(idx<curIdx){
+				playPrev(curIdx-idx);
+			}
+		});
+		var clock 
+		autoPlay()
+		function autoPlay(){
+			 clock = setInterval(function(){
+				playNext()
+			},2000);
+		}
+		function stopPlay(){
+			clearInterval(clock)
+		}
+		function playPrev(idx){
+			var idx = idx || 1;  //有传入参数取此参数，无则默认取1;
+			if (!isAnimate) {
+				isAnimate = true;
+				//把curIdx之后的（从最后一个开始）一次添加到格子队列($viewpoint)的尾部
+				for (var i = 0; i < idx; i++) {
+					$viewpoint.prepend($viewpoint.children().last())
+				} //做完之后窗口看到的不再是格子curIdx
+				$viewpoint.css('left',0-(imgWidth*idx)); //让窗口看到的还是当前格子的curIdx
+				$viewpoint.stop(true,true).animate({left: '+='+(imgWidth*idx)},function(){
+					curIdx = (imgCount+curIdx-idx)%imgCount;
+					isAnimate = false;
+					setBullet();
+				});
+			}
+		}
+		function playNext(idx){
+			var idx = idx || 1;
+			if (!isAnimate) {
+				isAnimate = true;  //var left = (-imgWidth)*idx
+				$viewpoint.stop(true,true).animate({left: '-='+(imgWidth*idx)},function(){
+					//格子队列（$viewpoint）相对窗口($art)移动idx数后 
+					curIdx = (curIdx + idx)%imgCount; //窗口现在看到的格子
+					//把curIdx之前的所有格子（从第一个开始）依次添加到格子队列的尾部 
+					for (var i = 0; i < idx; i++) {
+						$viewpoint.append($viewpoint.children().first())
+					} //做完之后窗口看到的不再是格子curIdx
+					$viewpoint.css('left',0); //让窗口看到的还是当前格子的curIdx
+					isAnimate = false;
+					setBullet()
+				});
+			}
+		}
+
+		function setBullet(){
+			$bullet.find('li').removeClass('active')
+							  .eq(curIdx).addClass('active')
+		}
+
+	</script>
+
+</body>
+</html>

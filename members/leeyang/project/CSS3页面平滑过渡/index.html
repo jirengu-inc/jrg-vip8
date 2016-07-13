@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3实现的页面平滑过渡</title>
+	<!-- 告诉IE去使用最新的渲染模式 -->
+	<meta http-equiv="X-UA-Compatible" content="IE-dege,chrome=1">
+	<!-- 宽度为设备的宽度，初始缩放比例 -->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="<link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css'>">
+	<link type="text/css" rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+	<div class="container">
+		<div class="st-container">
+			<!-- 导航开始 -->
+			<input type="radio" name="radio-set" checked="checked" id="st-control-1">
+			<a href="#st-panel-1">Serendipity</a>
+			<input type="radio" name="radio-set" id="st-control-2">
+			<a href="#st-panel-2">Happiness</a>
+			<input type="radio" name="radio-set" id="st-control-3">
+			<a href="#st-panel-3">Tranquillity</a>
+			<input type="radio" name="radio-set" id="st-control-4">
+			<a href="#st-panel-4">Positivity</a>
+			<input type="radio" name="radio-set" id="st-control-5">
+			<a href="#st-panel-5">Passion</a>
+
+			<!-- 导航结束 -->
+			<div class="st-scroll">
+				<section class="st-panel" id="st-panel-1">
+					<div class="st-desc" data-icon="H"></div>
+					<h2>Serendipity</h2>
+					<p>Serendipity and luck are by their very nature unpredictable,and therefore not part of any good plan.This is the kind of serendipity you want!</p>
+				</section>
+
+				<section class="st-panel st-color" id="st-panel-2">
+					<div class="st-desc" data-icon="2"></div>
+					<h2>Happiness</h2>
+					<p>Please accept my best wishes for your happiness and success.That was vital decision that bore upon our happiness.</p>
+				</section>
+
+				<section class="st-panel" id="st-panel-3">
+					<div class="st-desc" data-icon="B"></div>
+					<h2>Tranquillity</h2>
+					<p>Although seemingly at odds with the tranquillity of the surroundings, snowmobiles make a visit deep into the valley's heart possible, with stop-offs at some of the cabins en route.</p>
+				</section>
+
+				<section class="st-panel st-color" id="st-panel-4">
+					<div class="st-desc" data-icon="x"></div>
+					<h2>Positivity</h2>
+					<p>My intent is only to better explain the true nature of positivity and negativity to those who are striving for an accurate model of reality.</p>
+				</section>
+				
+				<section class="st-panel" id="st-panel-5">
+					<div class="st-desc" data-icon="C"></div>
+					<h2>Passion</h2>
+					<p>As all the specialists in passion teach us, there is no eternal love but what is thwarted.</p>
+				</section>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

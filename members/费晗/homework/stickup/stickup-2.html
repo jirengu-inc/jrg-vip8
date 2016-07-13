@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="多个stickup" />
+<script src="../scripts/jquery-1.11.2.js"></script>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+*{margin: 0; padding: 0;}
+.layout{
+  margin: auto;
+  width: 900px;
+  text-align: center;
+  font-size: 24px;
+}
+.header,.nav,.footer{
+  margin-bottom: 10px;
+  padding: 10px;
+  background: pink;
+  height: 40px;
+  line-height: 40px;  
+}
+.nav{
+  background: paleturquoise;
+}
+.content{
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.aside{
+  width: 200px;
+  height: 800px;
+  background: #ddd;  
+}
+.main{
+  width: 690px;
+  height: 800px;
+  margin-left: 10px;
+  background: cornflowerblue;
+}
+.aside,.main{
+  float: left;
+}
+</style>
+</head>
+<body>
+  <div class="layout">
+    <div class="header">header</div>
+    <div class="nav">nav1</div>
+    <div class="content">
+      <div class="aside">aside</div>
+      <div class="main">main</div>
+    </div>
+    <div class="footer">footer</div>
+  </div>
+    <div class="layout">
+    <div class="header">header</div>
+    <div class="nav">nav2</div>
+    <div class="content">
+      <div class="aside">aside</div>
+      <div class="main">main</div>
+    </div>
+    <div class="footer">footer</div>
+  </div>
+    <div class="layout">
+    <div class="header">header</div>
+    <div class="nav">nav3</div>
+    <div class="content">
+      <div class="aside">aside</div>
+      <div class="main">main</div>
+    </div>
+    <div class="footer">footer</div>
+  </div>
+    <div class="layout">
+    <div class="header">header</div>
+    <div class="nav">nav4</div>
+    <div class="content">
+      <div class="aside">aside</div>
+      <div class="main">main</div>
+    </div>
+    <div class="footer">footer</div>
+  </div>
+<script id="jsbin-javascript">
+/*
+*对上例stickup-2.html 做个 each 遍历循环即可实现对多个 nav 应用 stickup 效果
+*代码只是实现功能，但比较丑陋
+*/
+$('.nav').each(function(){
+  var $current = $(this)
+  
+  var navHeight = $current.height()
+  var navWidth = $current.width()
+  var offsetTop = $current.offset().top
+  var offsetLeft = $current.offset().left
+
+console.log(offsetLeft)
+console.log(offsetTop)
+
+  //把目标元素克隆一个用于占位，否则目标元素 Position 变为 fix后脱离文档流，导致页面跳动 
+  var $navClone = $current.clone().css({'visibility': 'hidden','display': 'none'}).insertBefore($current)
+
+  $(window).on('scroll',function(){
+    var scrollTop = $(this).scrollTop();
+    if(scrollTop >= offsetTop){
+      if(!isFixed()){
+        setFixed();
+      }
+    }else{
+      if(isFixed()){
+        unsetFixed()
+      }
+    }
+  })
+
+  function isFixed(){
+    return !!$current.data('data-fixed');
+  }
+
+  function setFixed(){
+    $current.data('data-fixed',true)
+        .css({
+          'position': 'fixed',
+          'top': 0,
+         // 'left': offsetLeft, /*这个加上后拖动页面时nav会错位*/
+          'width': navWidth,
+          'height': navHeight,
+          'margin': 0,
+          'z-index': 9999
+       });
+    $navClone.show()
+  }
+
+  function unsetFixed(){
+    $current.data('data-fixed',false).removeAttr('style')
+    $navClone.hide()
+  }
+
+
+})
+
+</script>
+</body>
+</html>

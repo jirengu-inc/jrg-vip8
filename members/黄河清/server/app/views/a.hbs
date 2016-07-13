@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body style="background:grey;">
+	<div>
+		<p>这里是 a.hbs</p>
+		<form action="/" method="post">
+			<label>
+				用户名
+				<input type="text" name='username''></label>
+			<label>
+				密码
+				<input type="password" name='password'></label>
+			<button type="submit">提交</button>
+		</form>
+
+	</div>
+
+	<script src='http://o7awcnd42.bkt.clouddn.com/jquery-2.2.4.js'></script>
+	<script>
+		$('form').on('submit',function(event){
+			event.preventDefault()
+			$form = $(this)
+			var data = $form.serialize()
+
+			$.post('/',data,function(){
+				alert('success')
+			})
+		})
+	</script>
+
+</body>
+</html>

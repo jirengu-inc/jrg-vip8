@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://js.jirengu.com
+
+Copyright (c) 2016 by guozilin (http://js.jirengu.com/bequ/2/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+*{padding: 0;margin: 0;}
+ul,li,ol{list-style-type:none}
+a{text-decoration: none;color:inherit;}
+.clearfix::after{
+  content:"";
+  display: block;
+  clear: both;
+}
+body{
+  	color:#444;
+	font-size:13px;
+	background: #f2f2f2;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.wrapper{
+  width: 920px;
+  margin: 15px auto;
+  text-align: center;
+}
+h1{
+  font-family: "Myriad Pro",Arial,Helvetica,sans-serif;
+  padding:35px;
+  font-weight: normal;
+  font-size: 42px;
+}
+h1+p{
+  font-family: "Myriad Pro",Arial,Helvetica,sans-serif;
+  font-size: 16px;
+  position: relative;
+  top:-18px;
+  margin-bottom:10px;
+}
+p > a{
+  color:#0196e3;
+}
+p > a:hover{
+  text-decoration: underline;
+}
+.main{
+  -webkit-border-radius: 0 0 4px 4px;
+border-radius: 0 0 4px 4px;
+  background: #fff;
+  padding-bottom: 1px;
+   -webkit-box-shadow: 0 0 3px 0 rgba(170,170,170,.4);
+box-shadow: 0 0 3px 0 rgba(170,170,170,.4);
+}
+.slides{
+  width: 920px;
+  height: 400px;
+  overflow: hidden;
+}
+.slides > .art{
+  width:3680px;
+  font-size: 0;
+  position: relative;
+  left: 0;
+  vertical-align: top;
+}
+.slides > .art > img{
+  vertical-align: top;
+    width: 920px;
+  height: 400px;
+  display: inline-block;
+}
+.menu{
+  margin:0 1px 0 1px;
+  height: 45px;
+ /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e0e0e0+0,f8f8f8+5,ececec+100 */
+background: rgb(224,224,224); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(224,224,224,1) 0%, rgba(248,248,248,1) 5%, rgba(236,236,236,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(224,224,224,1) 0%,rgba(248,248,248,1) 5%,rgba(236,236,236,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(224,224,224,1) 0%,rgba(248,248,248,1) 5%,rgba(236,236,236,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0e0', endColorstr='#ececec',GradientType=0 ); /* IE6-9 */
+}
+.menu li:first-child{
+  margin-left: 337px;
+  border-left: 1px solid #fff;
+}
+.menu li{
+  float: left;
+  width: 60px;
+  height: 100%;
+  border-right: 1px solid #fff;
+  position: relative;
+}
+.menu li.selected{
+  background: rgba(182,182,182,.6);
+}
+.menu li.selected::after{
+  content:"";
+  width: 0;
+  height: 0;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  border-top: 7px solid rgb(248,248,248);
+  position: absolute;
+  top:0;
+  left:23px;
+}
+.menu li a{
+  display: block;
+  height: 35px;
+  margin-top: 10px;
+  cursor:default;
+}
+.menu li a img{
+  vertical-align: bottom;
+}
+
+.footer{
+  padding: 10px;
+}
+.footer p{
+  height: 35px;
+  line-height: 35px;
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <h1>Apple-like Gallery<br><strong>Slideshow</strong></h1>
+  <p>View the <a href="">original tutorial »</a></p>
+  <div class="main">
+  <div class="slides clearfix">
+    <div class="art"><img src="http://book.jirengu.com/jirengu-inc/jrg-vip8/members/ouziming/Design/apple%20slides/image/macbook.jpg" alt="">
+    <img src="http://book.jirengu.com/jirengu-inc/jrg-vip8/members/ouziming/Design/apple%20slides/image/iphone.jpg" alt="">
+    <img src="http://book.jirengu.com/jirengu-inc/jrg-vip8/members/ouziming/Design/apple%20slides/image/imac.jpg" alt="">
+    <img src="http://book.jirengu.com/jirengu-inc/jrg-vip8/members/ouziming/Design/apple%20slides/image/info.jpg" alt="">
+      </div>
+  </div>
+   
+  <ul class="menu clearfix">
+    <li class="selected"><a href="javascript:;"><img src="http://book.jirengu.com/jirengu-inc/jrg-vip8/members/ouziming/Design/apple%20slides/image/thumb_macbook.png" alt="thumbnail"></a></li>
+    <li><a href="javascript:;"><img src="http://book.jirengu.com/jirengu-inc/jrg-vip8/members/ouziming/Design/apple%20slides/image/thumb_iphone.png" alt=""></a></li>
+    <li><a href="javascript:;"><img src="http://book.jirengu.com/jirengu-inc/jrg-vip8/members/ouziming/Design/apple%20slides/image/thumb_imac.png" alt=""></a></li>
+    <li><a href="javascript:;"><img src="http://book.jirengu.com/jirengu-inc/jrg-vip8/members/ouziming/Design/apple%20slides/image/thumb_about.png" alt=""></a></li>
+  </ul>
+  </div>
+  <div class="footer">
+    <p>This is a tutorialzine demo. View the <a href="javascript:;">original tutorial</a> to read and download the source files.</p>
+    <p>The gallery features artwork from  <a href="javascript:;">rambocre</a>, <a href="javascript:;">pickupjojo</a> and <a href="javascript:;">codenamebender</a></p>
+  </div>
+</div>
+<script id="jsbin-javascript">
+$.fn.slides = function(){
+  var $btn = $(".menu > li");
+  $btn.each(function(){
+    $(this).on('click',function(){
+      var _index = $(this).index();
+      $(this).addClass("selected")
+      .siblings('.selected').removeClass("selected");
+      $(".art").animate({'left':_index*(-920)})
+      var _left =parseInt($(".art").css("left"));
+      
+    })
+     
+  })
+  
+
+};
+$().slides();
+</script>
+</body>
+</html>

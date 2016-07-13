@@ -1,0 +1,76 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-04-20 12:12:41
+ * @version $Id$
+ */
+
+*{
+	margin: 0;
+	padding:0;
+}
+
+ul{
+	list-style: none;
+}
+
+.wrapper{
+	margin-top: 20px;
+   text-align: center;
+}
+
+.siteNavigation{
+	display: inline-block;
+	background: #057BDD;
+	vertical-align: top;
+}
+
+.siteNavigation li>a{
+	display: block;
+	text-decoration: none;
+	color: #fff;
+}
+
+.siteNavigation>li{
+	font-family: "微软雅黑";
+	float: left;
+	width: 150px;
+	line-height:20px;
+	padding: 10px 0;
+	border:1px solid #ddd;
+	border-left: none;
+	position: relative;
+}
+
+.siteNavigation>li:nth-child(1){
+	border-left:1px solid #ddd;
+}
+
+.siteNavigation>li>ul{
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+    background:#52A0F9;
+	border:1px solid #ddd;
+	margin-left: -1px;
+}
+
+.siteNavigation>li:hover>ul{
+	display: block;
+	background:#52A0F9;
+	border:1px solid #ddd;
+	border-top: none;
+	margin-right: -1px;
+}
+
+.siteNavigation>li>ul>li{
+	line-height: 20px;
+	padding: 10px 0;
+}
+
+.siteNavigation>li>ul>li:hover{
+	background: #057BDD;
+}

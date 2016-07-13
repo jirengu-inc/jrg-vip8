@@ -1,0 +1,9 @@
+*{margin:0;padding:0;}
+.clearfix::after{content:"";display:block;clear:both;}
+.header{height:100px;background:#ccc;border:1px solid black;}
+.footer{height:100px;background:#ccc;border:1px solid black;}
+.main,.left,.right{float:left;}
+.main{height:200px;background:blue;width:100%}
+.left{height:200px;background:red;width:220px;margin-left:-100%;}
+.right{height:200px;background:yellow;width:200px;margin-left:-200px;}
+.inner{margin-left:220px;margin-right:200px;width:}

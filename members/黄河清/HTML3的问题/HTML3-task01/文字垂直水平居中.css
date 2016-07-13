@@ -1,0 +1,14 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+.article p{
+	border: 1px solid #ccc;
+	width:200px;
+	height:80px;
+	font-size: 14px;
+	color: #f0f;
+	line-height: 80px;
+	text-align: center;
+}

@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html class="theme theme-white">
+<head>
+<meta charset="utf-8">
+<title>CSS问题01</title>
+<link href="https://www.zybuluo.com/static/assets/template-theme-white.css" rel="stylesheet" media="screen">
+</head>
+<body class="theme theme-white">
+<div id="wmd-preview" class="wmd-preview wmd-preview-full-reader"><div class="md-section-divider"></div><div class="md-section-divider"></div><h1 data-anchor-id="vz1h" id="css问题01">CSS问题01</h1><p data-anchor-id="4jfj"><code>前端</code></p><hr><p data-anchor-id="exf3"><div class="toc"><div class="toc">
+<ul>
+<li><a href="#css问题01">CSS问题01</a><ul>
+<li><ul>
+<li><ul>
+<li><a href="#1css选择器常见的有几种">1.CSS选择器常见的有几种?</a></li>
+<li><a href="#2选择器的优先级是怎样的">2.选择器的优先级是怎样的?</a></li>
+<li><a href="#3class-和-id-的使用场景">3.class 和 id 的使用场景?</a></li>
+<li><a href="#4使用css选择器时为什么要划定适当的命名空间">4.使用CSS选择器时为什么要划定适当的命名空间？</a></li>
+<li><a href="#5以下选择器分别是什么意思">5.以下选择器分别是什么意思?</a></li>
+<li><a href="#6列出你知道的伪类选择器">6.列出你知道的伪类选择器</a></li>
+<li><a href="#7first-child和first-of-type的作用和区别">7.:first-child和:first-of-type的作用和区别</a></li>
+<li><a href="#8text-align-center的作用是什么作用在什么元素上能让什么元素水平居中">8.text-align: center的作用是什么，作用在什么元素上？能让什么元素水平居中</a></li>
+<li><a href="#8如果遇到一个属性想知道兼容性在哪查看">8.如果遇到一个属性想知道兼容性，在哪查看?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</p><div class="md-section-divider"></div><h4 data-anchor-id="yhx3" id="1css选择器常见的有几种">1.CSS选择器常见的有几种?</h4><blockquote data-anchor-id="88pj" class="white-blockquote">
+  <ol>
+  <li>class 选择器</li>
+  <li>id 选择器</li>
+  <li>伪类选择器</li>
+  <li>基于关系的选择器</li>
+  <li>标签选择器</li>
+  <li>属性选择器</li>
+  <li>分组选择器</li>
+  <li>派生选择器</li>
+  </ol>
+</blockquote><div class="md-section-divider"></div><h4 data-anchor-id="56pu" id="2选择器的优先级是怎样的">2.选择器的优先级是怎样的?</h4><ol data-anchor-id="fwp9">
+<li>selector 越精准，则优先级越高</li>
+<li>下面的比上面的高</li>
+<li><code>!important</code>最高</li>
+</ol><div class="md-section-divider"></div><h4 data-anchor-id="00il" id="3class-和-id-的使用场景">3.class 和 id 的使用场景?</h4><p data-anchor-id="fsiq">id 选择器一般都是在页面布局的时候使用，因为 id 只能用一次； <br>
+class 选择器一般都是用在重复多次利用的样式上，一个 class 可以被多个标签使用</p><div class="md-section-divider"></div><h4 data-anchor-id="nag4" id="4使用css选择器时为什么要划定适当的命名空间">4.使用CSS选择器时为什么要划定适当的命名空间？</h4><p data-anchor-id="tkh3">方便看代码，明确作用域，方便其他人的维护</p><div class="md-section-divider"></div><h4 data-anchor-id="d5mq" id="5以下选择器分别是什么意思">5.以下选择器分别是什么意思?</h4><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="05g3"><ol class="linenums"><li class="L0"><code class="language-css"><span class="com">#header{</span></code></li><li class="L1"><code class="language-css"><span class="pun">}</span></code></li><li class="L2"><code class="language-css"><span class="pun">.</span><span class="pln">header</span><span class="pun">{</span></code></li><li class="L3"><code class="language-css"><span class="pun">}</span></code></li><li class="L4"><code class="language-css"><span class="pun">.</span><span class="pln">header </span><span class="pun">.</span><span class="pln">logo</span><span class="pun">{</span></code></li><li class="L5"><code class="language-css"><span class="pun">}</span></code></li><li class="L6"><code class="language-css"><span class="pun">.</span><span class="pln">header</span><span class="pun">.</span><span class="pln">mobile</span><span class="pun">{</span></code></li><li class="L7"><code class="language-css"><span class="pun">}</span></code></li><li class="L8"><code class="language-css"><span class="pun">.</span><span class="pln">header p</span><span class="pun">,</span><span class="pln"> </span><span class="pun">.</span><span class="pln">header h3</span><span class="pun">{</span></code></li><li class="L9"><code class="language-css"><span class="pun">}</span></code></li><li class="L0"><code class="language-css"><span class="com">#header .nav&gt;li{</span></code></li><li class="L1"><code class="language-css"><span class="pun">}</span></code></li><li class="L2"><code class="language-css"><span class="com">#header a:hover{</span></code></li><li class="L3"><code class="language-css"><span class="pun">}</span></code></li></ol></pre><ol data-anchor-id="4iag">
+<li>选择 id 属性为 header 的元素</li>
+<li>选择 class 属性为 header 的元素</li>
+<li>选择 class 属性下的子元素中，class 属性为 logo 的元素</li>
+<li>选择同时拥有 header 与 mobile 的 class 属性的元素</li>
+<li>选择 class 属性为“header”元素的 p 元素和 h3 元素</li>
+<li>选择id属性为"header"的元素中class为"nav"的子元素的第一级子元素 里的 li 元素。</li>
+<li>择id属性为"header"的元素的子元素 a ，为其设置 鼠标滑过的样式。</li>
+</ol><div class="md-section-divider"></div><h4 data-anchor-id="esrr" id="6列出你知道的伪类选择器">6.列出你知道的伪类选择器</h4><p data-anchor-id="tjul">a:hover(鼠标悬停的元素) <br>
+a:visited(已经点击的链接) <br>
+a:active(鼠标按住的元素)</p><div class="md-section-divider"></div><h4 data-anchor-id="w6hn" id="7first-child和first-of-type的作用和区别">7.<code>:first-child</code>和<code>:first-of-type</code>的作用和区别</h4><p data-anchor-id="ik61"><code>:first-child</code>，选择属于其父元素的首个子元素的每个E 元素，并为其设置样式，父元素不做限制，只要是有新的父元素，下面的第一个 E 标签的子元素就会被选中，但是如果不是第一个就不会被选中 <br>
+<code>:first-of-type</code>，指定父元素的首个类型为E的元素，不论顺序是否为第一个，只要是符合要求的第一个 E 类型的元素，都会被选中</p><div class="md-section-divider"></div><h4 data-anchor-id="lhf1" id="8text-align-center的作用是什么作用在什么元素上能让什么元素水平居中">8.text-align: center的作用是什么，作用在什么元素上？能让什么元素水平居中</h4><blockquote data-anchor-id="c70w" class="white-blockquote">
+  <p>作用：水平居中，用在块级元素上，能让行级元素水平居中。</p>
+</blockquote><div class="md-section-divider"></div><h4 data-anchor-id="vcfb" id="8如果遇到一个属性想知道兼容性在哪查看">8.如果遇到一个属性想知道兼容性，在哪查看?</h4><p data-anchor-id="371s"><a href="http://caniuse.com/" target="_blank">caniuse</a></p></div>
+</body>
+</html>

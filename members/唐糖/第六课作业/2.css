@@ -1,0 +1,13 @@
+*{width£º1200px;border:1px solid palevioletred}
+.header {color:green}
+#header-2 {color: aqua}
+span1 {color:orange}
+h1,span{border:0px}
+p span{color:deeppink}
+p>li{color:lightblue}
+li+li{color: blue}
+a[href] {background:gold}
+a[href="www.jirengu.com"]{background: lightgreen}
+a[title~="no"]{background: lightskyblue}
+a[title|="yes"]{background: lightpink}
+p~h3{color: orange}

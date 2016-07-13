@@ -1,0 +1,38 @@
+@charset"utf-8";
+*{margin: 0;padding:0;}
+body{min-width: 700px;}
+.header,.footer{
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid black;
+	text-align:center;
+	background-color:#bbb;
+}
+.container{
+	overflow: hidden;
+	padding:0 220px 0 200px;
+}
+.middle,.left,.right{
+	float: left;
+	min-height:200px;
+	position:relative;    
+}
+.left{
+	width: 200px;
+    margin-left:-100%;
+    left: -200px;
+	background-color: green;
+}
+.right{
+	width: 220px;
+    margin-left:-220px;
+    left: 220px;
+	background-color: blue;
+}
+.middle{
+	width: 100%;
+	background-color: red;
+}
+.footer{
+	clear:both;
+}

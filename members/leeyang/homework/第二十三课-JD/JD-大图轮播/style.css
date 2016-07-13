@@ -1,0 +1,38 @@
+*{margin: 0;padding: 0;}
+ol,ul{list-style: none;}
+a{text-decoration: none;}
+.artList{
+	width: 730px;
+	height: 454px;
+	position: relative;
+}
+
+.artList .slidesjs-pagination{
+	position: absolute;
+	left: 0;
+	width: 100%;
+	bottom: 10px;
+	z-index: 10;
+	text-align: center;
+}
+
+
+.artList .slidesjs-pagination > li{
+	display: inline-block;
+	text-align: center;
+	margin: 0.2em;
+}
+
+.artList .slidesjs-pagination > li > a{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #3e3e3e;
+	line-height: 20px;
+	display: block;
+	color: white;
+}
+
+.artList .slidesjs-pagination > li > a.active{
+	background: red;
+}

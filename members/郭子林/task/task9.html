@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        li{
+            float: left;
+            margin-left:10px;
+        }
+        span,a{
+            display:inline-block;
+            width:50px;
+            height:30px;
+            vertical-align: bottom;
+        }
+        .sprite{
+            background:url(img/img.png) no-repeat;
+        }
+        .stop:hover{height:32px;width:30px;background-position:-35px -43px;}
+        .start{height:33px;width:31px;background-position:0 0;}
+        .next{height:35px;width:32px;background-position:-67px 0;}
+        .next:hover{height:39px;width:33px;background-position:-66px -36px;}
+        .stop{height:36px;width:34px;background-position:-32px 0;}
+        .start:hover{height:37px;width:35px;background-position:0 -38px;}
+    </style>
+</head>
+<body>
+<div class="demo">
+    <ul class="clearfix">
+        <li><span class="sprite next" ></span><a href="">前进</a></li>
+        <li><span class="sprite start" ></span><a href="">开始</a></li>
+        <li><span class="sprite stop" ></span><a href="">停止</a></li>
+    </ul>
+</div>
+</body>
+</html>

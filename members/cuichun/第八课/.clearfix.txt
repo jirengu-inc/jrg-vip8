@@ -1,0 +1,2 @@
+通过content后面加一个空的字符串把after激活，display:block把它变成类似div的元素，
+然后把这个div加上clear:both,清除左右浮动。把所有的div抽成一个clearfix选择器。

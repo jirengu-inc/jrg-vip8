@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第十课作业三角形与箭头</title>
+	<style>
+	.triangle{
+		border: 20px solid;
+		width: 0;
+		height: 0;
+		border-color: red  transparent transparent transparent;
+	}
+	.wrapper{position: relative;}
+	.a{
+		border:solid;
+		border-width: 0 30px 30px 30px;
+		top: 50px;
+		width: 0px;
+		height: 0px;
+		border-color: transparent transparent red transparent;
+		position: absolute;
+	}
+	.b{
+	border:solid;
+	border-width: 0 30px 30px 30px;
+	top: 51px;
+	width: 0px;
+	height: 0px;
+	border-color: transparent transparent white transparent;
+	position: absolute;
+    }
+	</style>
+</head>
+<body>
+	<div class="triangle"></div>
+	<div class="wrapper">
+		<div class="a"></div>
+		<div class="b"></div>
+	</div>
+</body>
+</html>

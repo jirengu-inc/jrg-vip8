@@ -1,0 +1,74 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+.title{
+	height: 40px;
+	background-color: #8A8F70;
+	text-align:center;
+}
+
+.title span{
+	line-height: 200%;
+}
+
+#main{
+	height: 1000px;
+	background-color:#F5DEAE;
+	padding: 10px;
+}
+
+.article{
+
+	background-color: #ECA38B;
+
+}
+
+.article>p{
+	color: #FFEDCE;
+}
+
+.article2{
+	background-color: #A46C70;
+	
+}
+
+.article3{
+	background-color: #604D5A;
+}
+
+.article,.article2,.article3{
+	margin:10px;
+	text-indent: 2em;
+	line-height: 150%;
+	padding: 5px;
+}
+
+div+p{
+	color: #E0E0E0;
+}
+
+p[lang|="zh"]{
+	font-family: "Microsoft Yahei"
+}
+
+a[target]{
+	color: #E0E0E0;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #7CD2F9;
+}
+
+p[lang="zh-cmn"]{
+	font-family: sans-serif;
+	color: #7CD2F9;
+}
+
+p~ul{
+	list-style: none;
+}
+

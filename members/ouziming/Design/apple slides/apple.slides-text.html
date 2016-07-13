@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>apple slides</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<style>
+	*{margin:0;padding:0;}
+	ul li{list-style: none;}
+	a{text-decoration:none;}
+	body{
+		width: 100%;
+		color:#444444;
+		font-size:13px;
+		background: #f2f2f2;
+		font-family:Arial, Helvetica, sans-serif;
+	}
+	.apple-slide .photo img{	
+		width:920px;
+		height: 400px;
+		vertical-align: top;
+	}
+	.warpped{
+		width:100%;
+		width: 920px;
+		height: 450px;
+		position: relative;
+		margin:0 auto;
+		overflow: hidden;
+
+		/* CSS3 Box Shadow */
+		-moz-box-shadow:0 0 3px #AAAAAA;
+		-webkit-box-shadow:0 0 3px #AAAAAA;
+		box-shadow:0 0 3px #AAAAAA;
+
+		/* CSS3 Rounded Corners */
+		-moz-border-radius-bottomleft:4px;
+		-webkit-border-bottom-left-radius:4px;
+		border-bottom-left-radius:4px;
+
+		-moz-border-radius-bottomright:4px;
+		-webkit-border-bottom-right-radius:4px;
+		border-bottom-right-radius:4px;
+
+		border:1px solid white;
+
+		background:url(image/panel.jpg) repeat-x bottom center #fff;
+	}
+	.title{
+		width: 920px;
+		margin:0 auto;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	.title h1{
+	    font-family: "Myriad Pro",Arial,Helvetica,sans-serif;
+	    font-size: 42px;
+	    font-weight: normal;
+	    padding: 5px;
+	}
+	.title h1+h1{
+		font-weight: bold;
+		margin-bottom:10px;
+	}
+	.title h2{
+		font-family: "Myriad Pro",Arial,Helvetica,sans-serif;
+	    font-size: 16px;
+	    font-weight: normal;
+	}
+	.title h2 a{
+		color:  #0196e3;
+	}
+	.apple-slide{
+		width:3700px;/*yl要给个宽度*/
+		height: 405px;
+		overflow: hidden;
+		position: absolute;
+	}
+	.apple-slide .photo{
+		width:920px;
+		height: 405px;
+		display: inline;
+		float: left;
+	}
+	.menu-warpped{
+		width: 920px;
+	    height: 45px;
+	    position: relative;
+	    overflow: hidden;
+	    top: 405px;
+	}
+	.menu{
+		width: 245px;
+	    margin: 0 auto;
+	    text-align: center;
+	    height: 45px;
+	    line-height: 45px;
+	    vertical-align: middle;
+	}
+	.menu .but{
+	    width: 60px;
+	    height: 45px;
+	    float: left;
+	    border-right:1px solid #ddd ;
+	}
+	.menu .but.on{
+		background:url(image/active_bg.png)
+	}
+	.menu .but:first-child{
+		border-left: 1px solid #ddd;
+	}
+	.menu .but a{
+		cursor:pointer;
+		display: inline-block;
+		width: 32px;
+		height: 32px;
+    	position: relative;
+    	top: 8px;
+	}
+	.footer{
+		width: 700px;
+		text-align: center;
+		margin:0 auto;
+		font-size: 10px;
+	}
+	.footer p{padding: 20px 0 5px 0}
+	.footer a{color: #0196e3;}
+
+</style>
+<body>
+	<div class="title">
+			<h1>Apple-like Gallery</h1>
+			<h1>Slideshow</h1>
+			<h2>View the <a href="#">original tutorial » </a></h2>
+	</div>
+	<div class="warpped"><!--窗口-->
+	    <ul class="apple-slide"><!--画板-->
+	    	<li class="photo data-1"><img src="image/macbook.jpg"></li>
+	    	<li class="photo data-2"><img src="image/iphone.jpg"></li>
+	    	<li class="photo data-3"><img src="image/imac.jpg"></li>
+	    	<li class="photo data-4"><img src="image/info.jpg"></li>
+	    </ul>
+	    <div class="menu-warpped">
+			<ul class="menu">
+		    	<li class="but on"><a href="javascript:;"><img src="image/thumb_macbook.png"></a></li>
+		    	<li class="but"><a href="javascript:;"><img src="image/thumb_iphone.png"></a></li>
+		    	<li class="but"><a href="javascript:;"><img src="image/thumb_imac.png"></a></li>
+		    	<li class="but"><a href="javascript:;"><img src="image/thumb_about.png"></a></li>
+		    </ul>
+		</div>
+    </div>
+    <div class='footer'>
+    	<p>This is a tutorialzine demo. View the <a href="">original tutorial</a> to read and download the source files.<br></p>
+    	<p>The gallery features artwork from <a href="">rambocre, pickupjojo</a> and <a href="">codenamebender</a></p>
+    </div>
+    <script type="text/javascript">
+
+    	//构造者
+    	$.fn.slides = function(){
+    		var current
+    		var $photo = $('.photo')
+    		var $button = $('.but')
+    		var $ct = $('.apple-slide')
+    		//console.log($button)
+
+    		$button.each(function(){//遍历每一个按钮
+    			//console.log($(this))
+    			$(this).on('click',function(){//在每一个按钮中加click事件
+    				// console.log($(this))
+    				var current = $(this).index()//获取点击的索引值
+    				$(this).addClass('on').siblings('.on').removeClass('on')
+    				console.log(current)
+					$ct.animate({'left':current*(-920)})
+    			})
+    		})
+    	}
+
+
+    	//使用者
+    	$('.apple-slide').slides()
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>实现圣杯布局或双飞翼布局</title>
+		<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		
+			.header{
+				height: 100px;
+				background: red;
+					
+			}
+			.middle,.left,.right{
+				
+				float:left
+			}
+			.middle{
+				height: 500px;
+				background: blue;
+				overflow: hidden;
+				width: 100%;
+				padding-left: 200px;
+				padding-right: 100px;
+				position: relative;
+			}
+			.left{
+				height: 500px;
+				width: 200px;
+				background: palegreen;
+				margin-left: -100%;
+			    position: absolute;
+			    right: 0px;
+				
+			}
+			.right{
+				height: 500px;
+				width: 100px;
+				background: orange;
+				margin-left: -100px;
+				position: absolute;
+				left: 100px;
+			
+			}
+			.footer{
+				height: 100px;
+				background: red;
+				
+			}
+			.clearfix:after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+			
+			/*#new{
+				margin-left:200px ;
+				margin-right: 200px;
+			}*/
+		</style>
+	</head>
+	<body>
+		<section>
+		<div class="header">11111111111</div>
+		<div class="page clearfix">
+		<div class="middle">
+			<div id="new">
+				2222222
+			</div>
+		</div>
+		<div class="left">1111111111111</div>
+		<div class="right">111111111111</div>
+		</div>
+		<div class="footer">1111111111</div>
+	</section>
+	</body>
+</html>

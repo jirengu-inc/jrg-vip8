@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BFC</title>
+	<style>
+		*{padding: 0;margin: 0;}
+
+		#header,#footer{
+			height: 50px;
+			background-color: #6DC1EB;
+		}
+		
+		#content{
+			background-color: white;
+		}
+
+		.aside{
+			background-color: #E0E0E0;
+			width: 400px;
+			height: 30px;
+			float: left;
+		}
+
+		.main{
+			overflow: hidden;
+			background-color: #FFB0BF
+		}
+
+	</style>
+</head>
+<body>
+	<div id="header">header</div>
+    <div id="content">
+        <div class="aside">aside</div>
+        <div class="main">
+            我是main 
+            我是main 我是main 我是main 我是main 我是main 我是main 我是main 我是main 我是main 我是main 我是main... 
+            我是main 
+            我是main 我是main 我是main 我是main 我是main 我是main 我是main 我是main 我是main 我是main 我是main... 
+            我是main 
+            我是main 我是main 我是main 我是main 我是main 我是main 我是main 我是main 我是main 我是main 我是main... 
+            我是main 
+            我是main 我是main 我是main 我是main 我是main 我是main 我是main 我是main 我是main 我是main 我是main... 
+            我是main 
+            我是main 我是main 我是main 我是main 我是main 我是main 我是main 我是main 我是main 我是main 我是main... 
+        </div>
+    </div>
+    <div id="footer">footer</div>
+</body>
+</html>

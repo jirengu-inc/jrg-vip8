@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* style for homework9 nav-map*/
+.items{
+    width:80%;
+    margin:0 auto;
+    text-align: center;
+    border-bottom:1px dotted gray;
+}
+.nav{
+    width:100%;
+    margin:0 auto;
+}
+.sprite{
+    background:url(../images/apple-sprite.png) no-repeat ;
+    display: block;
+}
+ul > li{
+    float: left;
+}
+.apple-nav-1{height:37px;width:105px;background-position:0 0;}
+.apple-nav-1:hover{height:37px;width:105px;background-position:0 -38px;}
+.apple-nav-2{height:37px;width:104px;background-position:-105px 0;}
+.apple-nav-3{height:37px;width:104px;background-position:-209px 0;}
+.apple-nav-4{height:37px;width:105px;background-position:-314px 0;}
+.apple-nav-5{height:37px;width:104px;background-position:-421px 0;}
+.apple-nav-6{height:37px;width:103px;background-position:-526px 0;}
+.apple-nav-7{height:37px;width:102px;background-position:-630px 0;}
+.apple-nav-8{height:37px;width:104px;background-position:-733px 0;}
+.apple-nav-9{height:37px;width:136px;background-position:-838px 0;}
+.clearfix:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.clearfix{*zoom:1; }/*IE8以下，清除浮动*/

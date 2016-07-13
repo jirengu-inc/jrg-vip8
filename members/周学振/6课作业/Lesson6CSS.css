@@ -1,0 +1,43 @@
+ckground-color:silver;}
+
+.classdemo{
+  color:red;
+  }
+  #iddemo{
+    color:green;
+    }
+    a{
+      color:blue;
+      }
+      div,p{
+        color:grey;
+	}
+	div a{
+	  color:orange;
+	    
+	    }
+	    div>li{
+	      color:black
+	      }
+
+	      div+ul{
+	        color:purple;
+		}
+		div[target]{
+		  color:yellow;
+		  }
+		  div[target='valuedemo']{
+		    color:pink;
+		    }
+		    div[target~=flower]{
+		      color:brown;
+		      }
+		      div[target|=ab]{
+		        background-color:red;
+			  width:200px;
+			  }
+			  p~ul{
+			    background-color: blue;
+			      font-size:30px;
+			        color:red;
+				}

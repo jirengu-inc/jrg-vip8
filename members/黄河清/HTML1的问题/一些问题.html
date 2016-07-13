@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html class="theme theme-white">
+<head>
+<meta charset="utf-8">
+<title>一些问题</title>
+<link href="https://www.zybuluo.com/static/assets/template-theme-white.css" rel="stylesheet" media="screen">
+</head>
+<body class="theme theme-white">
+<div id="wmd-preview" class="wmd-preview wmd-preview-full-reader"><div class="md-section-divider"></div><div class="md-section-divider"></div><h1 data-anchor-id="k9nv" id="一些问题">一些问题</h1><p data-anchor-id="laa5"><code class="">前端</code></p><hr><div class="md-section-divider"></div><h2 data-anchor-id="xljs" id="html的一些问题及其答案">HTML的一些问题及其答案</h2><div class="md-section-divider"></div><h4 data-anchor-id="73vf" id="1网页乱码的问题是如何产生的怎样解决">1.网页乱码的问题是如何产生的？怎样解决</h4><blockquote data-anchor-id="wpxl" class="white-blockquote">
+  <p>造成 HTML 网页乱码的主要原因有三种： <br>
+  1. HTML 的源代码内文字内容与 HTML 的编码不同造成的。比如网页源代码是gbk的编码，而内容中的中文字是 utf-8编码的，这样浏览器打开就出现了 HTML 的乱码，反之也一样。 <br>
+  2. HTML 的网页编码是 gbk，而程序从数据库调出呈现的是utf-8编码的内容也会造成编码乱码 <br>
+  3. 浏览器不能自动检测出网页编码，造成网页乱码。</p>
+</blockquote><p data-anchor-id="8jfu"><a href="http://jscode.me/topic/80/%E8%A7%A3%E7%AD%94-%E5%85%B3%E4%BA%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B9%B1%E7%A0%81" target="_blank">解决方法</a></p><div class="md-section-divider"></div><h4 data-anchor-id="t7lp" id="2颜色有几种写法">2.颜色有几种写法</h4><blockquote data-anchor-id="e12t" class="white-blockquote">
+  <p>颜色有三种写法： <br>
+  1. 英文名字，如 red <br>
+  2. RGB 写法 <br>
+  3. 16进制写法</p>
+</blockquote><div class="md-section-divider"></div><h4 data-anchor-id="v4dq" id="3doctype-html-的作用是什么">3.doctype html 的作用是什么</h4><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="yfez"><ol class="linenums"><li class="L0"><code class="language-html"><span class="dec">&lt;!DOCTYPE&gt;</span><span class="pln"> 声明不是 HTML 标签；它是指示 web 浏览器关于页面使用哪个 HTML 版本进行编写的指令。</span></code></li><li class="L1"><code class="language-html"><span class="pln">提示：</span><span class="dec">&lt;!DOCTYPE&gt;</span><span class="pln"> 声明对大小写不敏感。</span></code></li></ol></pre><div class="md-section-divider"></div><h4 data-anchor-id="z4yv" id="4严格模式和混杂模式指什么">4.严格模式和混杂模式指什么</h4><blockquote data-anchor-id="sx0r" class="white-blockquote">
+  <p>Doctype可声明三种DTD类型，分别表示严格版本、过渡版本以及基于框架的 HTML 文档。 <br>
+  当浏览器厂商开始创建与标准兼容的浏览器时，他们希望确保向后兼容性。为了实现这一点，他们创建了两种呈现模式：标准模式和混杂模式</p>
+</blockquote><p data-anchor-id="1tjk">在标准模式中，浏览器以其支持的最高标准呈现页面</p><p data-anchor-id="yrhu">在混杂模式中，页面以一种比较宽松的向后兼容的方式显示。混杂模式通常模拟老式浏览器的行为以防止老站点无法工作。</p><div class="md-section-divider"></div><h4 data-anchor-id="arlb" id="5meta-有什么作用常见的值有哪些">5.meta 有什么作用，常见的值有哪些</h4><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="i4w7"><ol class="linenums"><li class="L0"><code class="language-html"><span class="pln">定义和用法</span></code></li><li class="L1"><code class="language-html"><span class="tag">&lt;meta&gt;</span><span class="pln"> 元素可提供有关页面的元信息（meta-information），比如针对搜索引擎和更新频度的描述和关键词。</span></code></li><li class="L2"><code class="language-html"><span class="tag">&lt;meta&gt;</span><span class="pln"> 标签位于文档的头部，不包含任何内容。</span><span class="tag">&lt;meta&gt;</span><span class="pln"> 标签的属性定义了与文档相关联的名称/值对</span></code></li><li class="L3"><code class="language-html"></code></li><li class="L4"><code class="language-html"><span class="pln">一般使用</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"UTF-8"</span><span class="tag">&gt;</span></code></li></ol></pre><p data-anchor-id="f5l4"><img src="http://static.zybuluo.com/cocoon/opfgng7224eh6sra14rf21j8/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-04-02%20%E4%B8%8A%E5%8D%889.34.50.png" alt="屏幕快照 2016-04-02 上午9.34.50.png-126.3kB" title=""></p><div class="md-section-divider"></div><h4 data-anchor-id="1ytv" id="6常见的浏览器有哪些什么内核">6.常见的浏览器有哪些，什么内核</h4><p data-anchor-id="1kw8">常见浏览器： <br>
+chrome，Firefox，Safari，IE，Opera</p><blockquote data-anchor-id="qy7o" class="white-blockquote">
+  <p>Trident： <br>
+  Trident（又称为MSHTML），是微软的Windows系统搭载的网页浏览器—Internet Explorer的排版引擎的名称，它的第一个版本随着1997年10月Internet Explorer第四版释出，之后不断的加入新的技术并随着新版本的Internet Explorer释出。在Internet Explorer第七版中，微软对Trident排版引擎做了的重大的变动，除了加入新的技术之外，并增加对网页标准的支持。</p>
+</blockquote><p data-anchor-id="ht7k">常见 trident 内核浏览器：IE</p><blockquote data-anchor-id="9zep" class="white-blockquote">
+  <p>Webkit、chromium: <br>
+  Chromium是一个由Google主导开发的网页浏览器，以BSD许可证等多重自由版权发行并开放源代码。Chromium的开发可能早自2006年即开始，设计思想基于简单、高速、稳定、安全等理念，在架构上使用了苹果发展出来的WebKit排版引擎、Safari的部份源代码与Firefox的成果，并采用Google独家开发出的V8引擎以提升解译JavaScript的效率，而且设计了“沙盒”、“黑名单”、“无痕浏览”等功能来实现稳定与安全的网页浏览环境。</p>
+  
+  <p>国内的所谓双核浏览器，除了傲游3是直接基于Webkit开发的之外，其他浏览器都是基于Google的Chromium开源项目。而Webkit浏览器引擎是苹果公司的开源项目，苹果的Safari浏览器就是基于Webkit开发的。Chromium和Webkit的区别是，Webkit是爷爷辈；Chromium是父亲辈，傲游3也是父亲这一辈的；而Chrome是嫡长孙，搜狗浏览器、QQ浏览器、360极速浏览器、百度浏览器和世界之窗浏览器极速版则都是孙子辈分的。</p>
+</blockquote><p data-anchor-id="61i5">常见 chromium浏览器：chrome <br>
+常见 Webkit 浏览器：Safari</p><blockquote data-anchor-id="ze3c" class="white-blockquote">
+  <p>Gecko <br>
+  Gecko是一套开放源代码、C++编写的网页排版引擎。目前为Mozilla家族网页浏览器以及Netscape 6以后版本浏览器所使用。该引擎原本是由网景通信公司开发的，现则由Mozilla基金会维护，以多许可方式授权发布，包括Mozilla公共许可证（MPL）、GNU通用公共授权条款（GPL）以及GNU较宽松公共许可证（LGPL）。</p>
+</blockquote><p data-anchor-id="r66q">常见 Gecko 浏览器：Firefox</p><blockquote data-anchor-id="giuh" class="white-blockquote">
+  <p>Presto <br>
+  Presto是一个由Opera Software开发的浏览器排版引擎，供Opera7.0及以后版使用。Presto取代了旧版Opera 4至6版本使用的Elektra排版引擎，包括加入动态功能，例如网页或其部分可随着DOM及Script语法的事件而重新排版。</p>
+</blockquote><p data-anchor-id="zioc">常见的 presto 浏览器：Opera</p></div>
+</body>
+</html>

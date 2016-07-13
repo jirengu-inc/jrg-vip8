@@ -1,0 +1,78 @@
+	*{margin: 0;padding: 0;}
+	ul{
+		list-style: none;
+	}
+	body{
+		background: #eee;
+		font-size: 16px;
+	}
+	.wrapper{
+		text-align: center;
+	}
+	.siteNav{
+		border-left: 1px solid #ddd;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.siteNav > li{
+		float: left;
+		background: white;
+		text-align: center;
+		border-right: 1px solid #ddd;
+		border-top: 1px solid #ddd;
+		/*border-bottom: 1px solid #ddd;*/
+		position: relative;
+	}
+	.siteNav > li > ul {
+		display: block;
+		position: absolute;
+		top: 100%;
+		width: 100%;
+		left: 0;
+		background: white;
+		border: 1px solid #ddd;
+		margin-left: -1px;/*解决1px无法对齐的问题*/
+		margin-top: -1px;
+		-webkit-transform: translateY(-20px);
+		   -moz-transform: translateY(-20px);
+		    -ms-transform: translateY(-20px);
+		     -o-transform: translateY(-20px);
+		        transform: translateY(-20px);
+		-webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+		transition: opacity 0.5s, -webkit-transform 0.5s;
+		-moz-transition: transform 0.5s, opacity 0.5s, -moz-transform 0.5s;
+		-o-transition: transform 0.5s, opacity 0.5s, -o-transform 0.5s;
+		transition: transform 0.5s, opacity 0.5s;
+		transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s, -moz-transform 0.5s, -o-transform 0.5s;
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.siteNav > li:hover >ul{
+		display: block;
+		opacity: 1;
+		visibility: visible;
+		-webkit-transform: translateY(0px);
+		   -moz-transform: translateY(0px);
+		    -ms-transform: translateY(0px);
+		     -o-transform: translateY(0px);
+		        transform: translateY(0px);
+	}
+	.siteNav li > a{
+		display: block;
+		text-decoration: none;
+		color: black;
+		width: 150px;
+		line-height: 30px;
+		padding: 10px 0;
+		-webkit-transition: background 0.3s;
+		-moz-transition: background 0.3s;
+		-o-transition: background 0.3s;
+		transition: background 0.3s;
+		position: relative;
+		z-index: 1;
+		border-bottom: 1px solid #ddd;
+	}
+	.siteNav li >a:hover{
+		background: #efefef;
+	}

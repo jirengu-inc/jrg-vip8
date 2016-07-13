@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-05-23 21:34:32
+ * @version $Id$
+ */
+
+*{
+	margin:0;
+	padding:0;
+	text-decoration: none;
+}
+
+ul,ol{
+	list-style: none;
+}
+
+i{
+   font-style: normal;
+}
+
+a{
+	color: inherit;
+}
+
+body{
+	font: 12px/150% Arial,Verdana,"\5b8b\4f53";
+	color: #666;
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+#line-wrapper{border-bottom:2px solid #B1191A; }
+
+#line-wrapper .goods-wrapper{
+	width: 1210px;
+	margin: 0 auto;
+	/*border:1px solid;*/
+	font-size:0;
+    vertical-align: top;
+}
+
+#line-wrapper .goods-wrapper .goods{
+	display: inline-block;
+	height: 44px;
+	width: 190px;
+	padding:0 10px;
+	background: rgb(182,29,29);
+	color: #fff;
+	font:400 15px/44px "microsoft yahei";
+}
+
+#line-wrapper .goods-wrapper .category{
+	display: inline-block;
+	color: #333;
+	height: 44px;
+	font:400 15px/44px "microsoft yahei";
+}
+
+#line-wrapper .goods-wrapper .category>a{
+	display: inline-block;
+	padding: 0 18px;
+}
+
+

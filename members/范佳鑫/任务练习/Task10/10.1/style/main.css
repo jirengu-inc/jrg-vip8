@@ -1,0 +1,15 @@
+.clearfix:after{content:'';display:block;clear:both;}
+.header{height:55px;width:100%;background:#333;position:relative;}
+.footer{height:60px;width:100%;background:#333;}
+.wrapper{width:900px;background:white;margin:0px auto;margin-top:10px;}
+.left{width:200px;background:#ddd;float:left;height:600px;}
+.right{width:690px;background:#ddd;float:left;height:200px;margin-left:10px;color:grey;}
+.header-inner{position:relative;width:70%;margin:0 auto;}
+.nav-menu{position:absolute;left:680px;top:0px;}
+.logo{margin-left:115px;}
+li{display:inline-block;margin-right:35px;}
+a{text-decoration:none;font-size:20px;color:#fff;}
+a:hover{color:red;font-size:25px;}
+.footer-inner{width:57%;margin:0 auto;line-height:55px;}
+.right-inner{width:100%;height:80%;margin-top:50px;margin-left:10px;}
+p{margin-bottom:-10px;}

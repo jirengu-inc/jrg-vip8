@@ -1,0 +1,83 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+#wangyi{
+	margin: 0 auto;
+	height: 387px;
+	width: 312px;
+}
+header,#news{
+	width: 312px;
+}
+header{
+	height: 2px;
+	
+	background: #206f96 ;
+}
+.u1{
+	font-size: 0px;
+}
+.u1 li{
+	background: #f6f6f6;
+	display: inline-block;
+	height: 30px;
+	width: 102px;
+	border: 1px solid #cfcfcf;
+	margin: 0px;
+	font-size: 14px;
+	text-align: center;
+	line-height: 30px;
+}
+#d1{
+	margin-top: 19px;
+	width: 130px;
+	height: 126px;
+	
+	display:inline-block;
+}
+#d1 > dd{
+	font-size: 12px;
+}
+#d1+ul{
+	display:inline-block;
+	font-size: 12px;
+	width: 150px;
+	height: 126px;
+	line-height: 23px;
+	margin-left: 14px;
+	
+}
+
+#news{
+	height: 170px;
+
+}
+#news ul{
+	margin-left: 10px;
+}
+
+#news li{
+	
+	font-size: 14px;
+	line-height: 28px;
+}
+
+[class=t]{
+	color: red;
+}
+/*所有属性名为class，属性值为t的颜色为红色*/
+em~span{
+	color: orange;
+}
+/*同级元素span前为em的span元素内的颜色为橘黄色*/
+
+[alt~=img1]{
+	border: 1px solid black;
+}
+/*alt属性中所有包含img1这个单词的元素边框为黑色*/
+
+[class|=L1]{
+	background: gray;
+}
+/*class属性中包含L1这个单词的元素背景颜色为灰色*/

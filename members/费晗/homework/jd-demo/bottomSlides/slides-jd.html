@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<script src="http://o7m41tvmg.bkt.clouddn.com/jquery-1.12.4.min.js"></script>
+<script src="http://o7m41tvmg.bkt.clouddn.com/jquery.slides.min.js"></script>
+<style type="text/css">
+a{
+	text-decoration: none;
+}
+*{
+	padding: 0;
+	margin: 0;
+}
+ul,li{
+	list-style: none;
+}
+.recommend-slider{
+  height: 164px;
+  width: 1000px;
+  position: relative;
+  float: left;
+}
+.recommend-slider div a{
+  float: left;
+}
+.recommend-slider img{
+  width: 249px;
+  margin-right: 1px;
+}
+.recommend-slider .slidesjs-navigation{
+	position: absolute;
+	top: 50%;
+    margin-top: -31px;
+    z-index: 1;
+    display: none;
+    width: 28px;
+    height: 62px;
+    line-height: 62px;
+    background: rgba(0,0,0,.2);
+	z-index: 100;
+	text-align: center;
+	color: #fff;
+}
+.recommend-slider .slidesjs-next{
+	right: 1px;
+}
+.recommend-slider:hover .slidesjs-navigation{
+	display: block;
+}
+</style>
+</head>
+<body>
+     <div class="recommend-slider">
+	        <div>
+	        	<a href=""><img src="http://img12.360buyimg.com/da/jfs/t769/106/1035911116/19452/a6fa4a81/5510d809N70c3eb71.jpg" alt=""></a>
+	     	 	<a href=""><img src="http://img13.360buyimg.com/vclist/jfs/t2803/190/2490782639/14518/59c26acd/5763c9b7N29d4bf48.jpg" alt=""></a>
+	     	 	<a href=""><img src="http://img12.360buyimg.com/da/jfs/t1165/148/256068185/11839/6b3f7b04/5510e394N7d91092f.jpg" alt=""></a>
+	      		<a href=""><img src="http://img13.360buyimg.com/da/jfs/t2782/15/2520293628/31503/da9fc7d8/5767a07fN3342bdc4.jpg" alt=""></a>
+	      	</div>
+	        <div>
+		        <a href=""><img src="http://img11.360buyimg.com/da/jfs/t2704/315/2607228847/27060/d12732ac/576ca569N66841cb7.jpg" alt=""></a>
+		        <a href=""><img src="http://img10.360buyimg.com/vclist/jfs/t2938/349/802305921/19306/7481ee53/5768efb7N13532f05.jpg" alt=""></a>
+		        <a href=""><img src="http://img12.360buyimg.com/vclist/jfs/t2728/272/2385591419/11070/a3500c0a/57634f77N99399564.jpg" alt=""></a>
+		        <a href=""><img src="http://img10.360buyimg.com/da/jfs/t2347/117/2376697236/32174/63bae8de/56fdd89eN9085e00d.png" alt=""></a>
+	        </div>
+	      <a class="slidesjs-previous slidesjs-navigation" href="#"><</a>
+	      <a class="slidesjs-next slidesjs-navigation" href="#">></a>
+    </div>
+
+    <script>
+    $(function(){
+    	$(".recommend-slider").slidesjs({
+	        width: 1000,
+	        height: 164,
+	        pagination: false,
+	        navigation: {
+	            active: false,
+	            // [boolean] Generates next and previous buttons.
+	            // You can set to false and use your own buttons.
+	            // User defined buttons must have the following:
+	            // previous button: class="slidesjs-previous slidesjs-navigation"
+	            // next button: class="slidesjs-next slidesjs-navigation"
+	            effect: "slide"
+	            // [string] Can be either "slide" or "fade".
+	        }
+	    });
+	});
+    </script>
+</body>
+</html>
