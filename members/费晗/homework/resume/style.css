@@ -97,7 +97,7 @@ button{
 	font-size: 18px;
 }
 .summary .intro{
-	width: 640px;
+	max-width: 640px;
 	height: 160px;
 	padding: 50px;
 	background-color: #fff;
@@ -211,4 +211,41 @@ button{
 }
 .vary>.wrapper{
 	line-height: 50px;
+}
+@media (max-width: 720px){
+	.question-and-resume,
+	.wrapper{
+		width: auto;
+	}
+	.summary .intro{
+		float: none;
+		padding-left: 295px;
+	}
+	.question-and-resume{
+		float: none;
+		padding-left: 270px;
+	}
+}
+@media (max-width: 500px){
+	.summary>.picture,
+	.profile-and-willing,
+	.question-and-resume,
+	.wrapper{
+		width: auto;
+	}
+	.summary .intro {
+		width: 90%;
+		padding: 5%;
+	}
+	.summary>.picture,
+	.summary .intro,
+	.profile-and-willing,
+	.question-and-resume{
+		float: none;
+
+	}
+	.question-and-resume{
+		margin: 0;
+		padding-left: 0;
+	}
 }
