@@ -43,6 +43,14 @@ $(function(){
     $('.slidesjs-next').text(">");
 });
 
+$("ul.s-1 > li").on('mouseenter',function(e){
+    var $current = $(e.currentTarget);
+    var index = $current.attr('data-index');
+    var indexNumber = +index;
+    $('ul.s-2').children('li.active').removeClass('active');
+    $('ul.s-2').children('li').eq(indexNumber).addClass('active');
+});
+
 $.fn.slides = function(options){
     var $mc = this;
     $mc.each(function(){
@@ -77,9 +85,6 @@ $.fn.slides = function(options){
                 left: left
             },function(){
                 current = index;
-                if(!hover){
-                    autoPlay();
-                }
             })
         };
         var prev = function(){
@@ -98,7 +103,6 @@ $.fn.slides = function(options){
         $viewpoint.on('mouseenter', function(){
             hover = true
         }).on('mouseleave', function(){
-            autoPlay()
             hover = false
         })
 
