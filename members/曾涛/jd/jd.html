@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<!-- IE 兼容模式 -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="仿京东首页作品">
+		<meta name="keywords" content="仿京东,HTML,CSS,JavaScript">
+		<title>京东</title>
+		<link rel="stylesheet" href="http://at.alicdn.com/t/font_1464142669_501641.css">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/jd.css">
+	</head>
+	<body>
+		<!-- siteTopbar -->
+		<nav class="siteTopbar">
+			<div class="layout clearfix">
+				<div class="location-wrapper fl">
+					<span class="location">
+						送至：江苏<i class="icon-jd i-arrow"></i>
+					</span>
+					<div class="locationPicker">
+						<div class="dd-spacer"></div>
+						<ul class="location-list clearfix">
+							<li><a href="javascript:;">北京</a></li>
+							<li><a href="javascript:;">上海</a></li>
+							<li><a href="javascript:;">天津</a></li>
+							<li><a href="javascript:;">重庆</a></li>
+							<li><a href="javascript:;">河北</a></li>
+							<li><a href="javascript:;">山西</a></li>
+							<li><a href="javascript:;">河南</a></li>
+							<li><a href="javascript:;">辽宁</a></li>
+							<li><a href="javascript:;">吉林</a></li>
+							<li><a href="javascript:;">黑龙江</a></li>
+							<li><a href="javascript:;">内蒙古</a></li>
+							<li><a class="selected" href="javascript:;">江苏</a></li>
+							<li><a href="javascript:;">山东</a></li>
+							<li><a href="javascript:;">安徽</a></li>
+							<li><a href="javascript:;">浙江</a></li>
+							<li><a href="javascript:;">福建</a></li>
+							<li><a href="javascript:;">湖北</a></li>
+							<li><a href="javascript:;">湖南</a></li>
+							<li><a href="javascript:;">广东</a></li>
+							<li><a href="javascript:;">广西</a></li>
+							<li><a href="javascript:;">江西</a></li>
+							<li><a href="javascript:;">四川</a></li>
+							<li><a href="javascript:;">海南</a></li>
+							<li><a href="javascript:;">贵州</a></li>
+							<li><a href="javascript:;">云南</a></li>
+							<li><a href="javascript:;">西藏</a></li>
+							<li><a href="javascript:;">陕西</a></li>
+							<li><a href="javascript:;">甘肃</a></li>
+							<li><a href="javascript:;">青海</a></li>
+							<li><a href="javascript:;">宁夏</a></li>
+							<li><a href="javascript:;">新疆</a></li>
+							<li><a href="javascript:;">台湾</a></li>
+							<li><a href="javascript:;">香港</a></li>
+							<li><a href="javascript:;">澳门</a></li>
+							<li><a href="javascript:;">钓鱼岛</a></li>
+							<li><a href="javascript:;">海外</a></li>
+						</ul>
+					</div>
+				</div>
+				<ul class="links fr clearfix">
+					<li>
+						<a href="https://passport.jd.com/new/login.aspx" target="_blank">你好，请登录</a>&nbsp;
+						<a class="register" href="https://reg.jd.com/reg/person" target="_blank">免费注册</a>
+					</li>
+					<li class="split"></li>
+					<li>
+						<div class="dropdown">
+							<a href="https://passport.jd.com/uc/login">我的订单</a>
+						</div>
+					</li>
+					<li class="split"></li>
+					<li id="myjd" class="links-wrapper">
+							<div class="dropdown">
+								<a href="">我的京东</a>
+								<i class="icon-jd i-arrow"></i>
+							</div>
+							<div class="dropdown-layer">
+								<div class="dd-spacer"></div>
+								<div class="userinfo">
+									<i class="u-pic">
+										<a href="http://home.jd.com/">
+											<img src="http://i.jd.com/commons/img/no-img_mid_.jpg" alt="icon">
+										</a>
+									</i>
+									<h3 class="u-login">
+										<a href="https://passport.jd.com/new/login.aspx">你好，请登录</a>
+									</h3>
+									<p class="u-meesage">
+										<a href="">优惠券</a>
+										&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+										<a href="">消息</a>
+									</p>
+								</div>
+								<ul class="otherlist clearfix">
+									<li><a target="_blank" href="http://order.jd.com/center/list.action">待处理订单</a></li>
+									<li><a target="_blank" href="http://t.jd.com/home/follow">我的关注</a></li>
+									<li><a target="_blank" href="http://club.jd.com/myjd/userConsultationList_1.html">咨询回复</a></li>
+									<li><a target="_blank" href="http://bean.jd.com/myJingBean/list">我的京豆</a></li>
+									<li><a target="_blank" href="http://t.jd.com/product/followProductList.action?isReduce=true">降价商品</a></li>
+									<li><a target="_blank" href="http://trade.jr.jd.com/centre/browse.action">我的理财</a></li>
+									<li><a target="_blank" href="http://myjd.jd.com/repair/orderlist.action">返修退换货</a></li>
+									<li><a target="_blank" href="http://baitiao.jd.com/">京东白条</a></li>
+								</ul>
+								<div class="viewlist">
+									<div class="title clearfix">
+										<h4 class="fl">我的足迹</h4>
+										<a target="_blank" href="http://my.jd.com/history/list.html" class="more fr">
+											更多&nbsp;>
+										</a>
+									</div>
+								</div>
+							</div>
+					</li>
+					<li class="split"></li>
+					<li>
+						<div class="dropdown">
+							<a href="http://vip.jd.com/" target="_blank">京东会员</a>
+						</div>
+					</li>
+					<li class="split"></li>
+					<li>
+						<div class="dropdown">
+							<a href="http://b.jd.com/" target="_blank">企业采购</a>
+						</div>
+					</li>
+					<li class="split"></li>
+					<li id="apps" class="links-wrapper">
+						<div class="dropdown">
+							<i class="icon-jd i-phone"></i>
+							<a href="">手机京东</a>
+							<i class="icon-jd i-arrow"></i>
+						</div>
+						<div class="dropdown-layer">
+							<div class="dd-spacer"></div>
+							<a href="http://app.jd.com/" class="link link1" target="_blank">京东客户端</a>
+							<a href="http://dc2.jd.com/?rXkGQQ" class="link link2" target="_blank">京东钱包客户端</a>
+							<a href="http://itunes.apple.com/cn/app/id414245413" class="link3 jdapp-ios" target="_blank">京东客户端ios版</a>
+							<a href="http://storage.jd.com/jdmobile/JDMALL-PC2.apk" class="link3 jdapp-android" target="_blank">京东客户端android版</a>
+							<a href="https://itunes.apple.com/cn/app/jing-dong-hd/id434374726" class="link3 jdapp-ipad" target="_blank">京东客户端ipad版</a>
+							<a href="https://itunes.apple.com/cn/app/wang-yin-qian-bao/id832444218?mt=8" class="jdapp-ios wyapp-ios" target="_blank">京东钱包客户端ios版</a>
+							<a target="_blank" href="http://sq.jd.com/vFIRtq" class="jdapp-android wyapp-android" target="_blank">京东钱包客户端android版</a>
+							<a href="#" class="link link4">新人专享188元大礼包</a>
+							<a href="#" class="link link5">扫一扫封顶立减999元</a>
+						</div>
+					</li>
+					<li class="split"></li>
+					<li id="atte" class="links-wrapper">
+						<div class="dropdown">
+							关注京东
+							<i class="icon-jd i-arrow"></i>
+						</div>
+						<div class="dropdown-layer">
+							<div class="dd-spacer"></div>
+							<div class="dd-inner">
+								<img src="http://img12.360buyimg.com/da/jfs/t730/245/639798100/7883/8271c72d/54c84f72Ncc1a02a2.jpg" alt="">
+							</div>
+						</div>
+					</li>
+					<li class="split"></li>
+					<li id="serv" class="links-wrapper">
+						<div class="dropdown">
+							客户服务
+							<i class="icon-jd i-arrow"></i>
+						</div>
+						<div class="dropdown-layer">
+							<div class="dd-spacer"></div>
+							<div class="inner-client">
+								<h3>客户</h3>
+								<ul class="clearfix">
+									<li><a target="_blank" href="http://help.jd.com/index.html">帮助中心</a></li>
+									<li><a target="_blank" href="https://passport.jd.com/new/login.aspx?ReturnUrl=http%3A%2F%2Fmyjd.jd.com%2Fafs%2Flist%2FallRepairs.action">售后服务</a></li>
+									<li><a target="_blank" href="">在线客服</a></li>
+									<li><a target="_blank" href="https://passport.jd.com/new/login.aspx?ReturnUrl=http%3A%2F%2Fdd3-web.jd.com%2Fjdchat%2Fcustom.action%3Fentry%3Djd_fwztc">意见建议</a></li>
+									<li><a target="_blank" href="https://passport.jd.com/new/login.aspx?ReturnUrl=http%3A%2F%2Fmyjd.crm.jd.com%2Fopinion%2ForderList.action">电话客服</a></li>
+									<li><a target="_blank" href="http://www.jd.com/contact/service.html">客服邮箱</a></li>
+								</ul>
+							</div>
+							<div class="inner-tenant">
+								<h3>商户</h3>
+								<a target="_blank" href="http://xue.jd.com/">京东商学院</a>
+							</div>
+						</div>
+					</li>
+					<li class="split"></li>
+					<li id="navs" class="links-wrapper">
+						<div class="dropdown">
+							网站导航
+							<i class="icon-jd i-arrow"></i>
+						</div>
+						<div class="dropdown-layer clearfix">
+							<div class="dd-spacer"></div>
+							<dl class="fore1 fl">
+								<dt>特色主题</dt>
+								<dd><a target="_blank" href="http://pinpaijie.jd.com/">品牌街</a></dd>
+								<dd><a target="_blank" href="http://hao.jd.com/">好物100</a></dd>
+								<dd><a target="_blank" href="http://xinpin.jd.com/presale.html">京东预售</a></dd>
+								<dd><a target="_blank" href="http://zan.jd.com/">尖er货</a></dd>
+								<dd><a target="_blank" href="http://xinpin.jd.com/new.html">京东首发</a></dd>
+								<dd><a target="_blank" href="http://tuan.jd.com/quanguo-index.html">今日团购</a></dd>
+								<dd><a target="_blank" href="http://youhuiquan.jd.com/">优惠券</a></dd>
+								<dd><a target="_blank" href="http://red.jd.com/">闪购</a></dd>
+								<dd><a target="_blank" href="http://vip.jd.com/">京东会员</a></dd>
+								<dd><a target="_blank" href="http://xuan.jd.com/">天天低价</a></dd>
+								<dd><a target="_blank" href="http://ding.jd.com/">定期送</a></dd>
+								<dd><a target="_blank" href="http://diy.jd.com/">装机大师</a></dd>
+								<dd><a target="_blank" href="http://hao.jd.com/hwy.html">新奇特</a></dd>
+								<dd><a target="_blank" href="http://try.jd.com/">京东试用</a></dd>
+								<dd><a target="_blank" href="http://gift.jd.com/">礼品购</a></dd>
+								<dd><a target="_blank" href="http://smarthome.jd.com/">智能馆</a></dd>
+								<dd><a target="_blank" href="http://sale.jd.com/act/tp6KfYH7wb.html">玩bigger</a></dd>
+								<dd><a target="_blank" href="http://sale.jd.com/act/rKhJit1fWVDR.html">大牌免息</a></dd>
+								<dd><a target="_blank" href="http://sale.jd.com/act/3je8ZTCxNl6SusId.html">北京老字号</a></dd>
+							</dl>
+							<dl class="fore2 fl">
+								<dt>行业频道</dt>
+								<dd><a target="_blank" href="http://channel.jd.com/fashion.html">服装城</a></dd>
+								<dd><a target="_blank" href="http://channel.jd.com/electronic.html">家用电器</a></dd>
+								<dd><a target="_blank" href="http://channel.jd.com/computer.html">电脑办公</a></dd>
+								<dd><a target="_blank" href="http://shouji.jd.com/">手机</a></dd>
+								<dd><a target="_blank" href="http://channel.jd.com/beauty.html">美妆馆</a></dd>
+								<dd><a target="_blank" href="http://chaoshi.jd.com/">食品</a></dd>
+								<dd><a target="_blank" href="http://channel.jd.com/digital.html">数码</a></dd>
+								<dd><a target="_blank" href="http://baby.jd.com/">母婴</a></dd>
+								<dd><a target="_blank" href="http://channel.jd.com/jiazhuang.html">家装城</a></dd>
+								<dd><a target="_blank" href="http://channel.jd.com/sports.html">运动户外</a></dd>
+								<dd><a target="_blank" href="http://car.jd.com/?ccode=1502">整车</a></dd>
+								<dd><a target="_blank" href="http://book.jd.com/">图书</a></dd>
+								<dd><a target="_blank" href="http://nong.jd.com/">农资频道</a></dd>
+								<dd><a target="_blank" href="http://smart.jd.com/">京东智能</a></dd>
+							</dl>
+							<dl class="fore3 fl">
+								<dt>生活服务</dt>
+								<dd><a target="_blank" href="http://z.jd.com/sceneIndex.html">京东众筹</a></dd>
+								<dd><a target="_blank" href="http://baitiao.jd.com/activity/third">白条</a></dd>
+								<dd><a target="_blank" href="https://www.jdpay.com/">京东钱包</a></dd>
+								<dd><a target="_blank" href="http://trade.jr.jd.com/myxjk/jrbincome.action">京东小金库</a></dd>
+								<dd><a target="_blank" href="http://licai.jd.com/">理财</a></dd>
+								<dd><a target="_blank" href="http://chongzhi.jd.com/">话费</a></dd>
+								<dd><a target="_blank" href="http://trip.jd.com/">旅行</a></dd>
+								<dd><a target="_blank" href="http://caipiao.jd.com/">彩票</a></dd>
+								<dd><a target="_blank" href="http://game.jd.com/">游戏</a></dd>
+								<dd><a target="_blank" href="http://jipiao.jd.com/">机票酒店</a></dd>
+								<dd><a target="_blank" href="http://movie.jd.com/index.html">电影票</a></dd>
+								<dd><a target="_blank" href="http://chongzhi.jd.com/index.action?bussType=3">水电煤</a></dd>
+								<dd><a target="_blank" href="https://daojia.jd.com/activity/welcome.html">京东到家</a></dd>
+								<dd><a target="_blank" href="http://smartcloud.jd.com/app">京东微联</a></dd>
+								<dd><a target="_blank" href="http://try-smart.jd.com/">京东众测</a></dd>
+							</dl>
+							<dl class="fore4 fl">
+								<dt>更多精选</dt>
+								<dd><a target="_blank" href="http://sale.jd.com/act/n0hAvqy5CW8.html">京东社区</a></dd>
+								<dd><a target="_blank" href="http://mobile.jd.com/index.do">京东通信</a></dd>
+								<dd><a target="_blank" href="http://read.jd.com/">在线读书</a></dd>
+								<dd><a target="_blank" href="http://o.jd.com/market/index.action">京东E卡</a></dd>
+								<dd><a target="_blank" href="http://group.jd.com/site/20000121/20000032.htm">智能社区</a></dd>
+								<dd><a target="_blank" href="http://group.jd.com/index/20000001.htm">游戏社区</a></dd>
+								<dd><a target="_blank" href="http://you.jd.com/index.html?entrance=jd_home">京友邦</a></dd>
+								<dd><a target="_blank" href="http://sale.jd.com/act/wQTpIm7GnXE.html">卖家入驻</a></dd>
+								<dd><a target="_blank" href="http://b.jd.com/">企业采购</a></dd>
+								<dd><a target="_blank" href="http://fw.jd.com/">服务市场</a></dd>
+								<dd><a target="_blank" href="http://zhaomu.jd.com/XCDLzm.html">乡村招募</a></dd>
+								<dd><a target="_blank" href="http://zhaomu.jd.com/intro.html">校园加盟</a></dd>
+								<dd><a target="_blank" href="http://channel.jd.com/office.html">办公生活馆</a></dd>
+								<dd><a target="_blank" href="http://ipr.jd.com/">知识产权维权</a></dd>
+								<dd><a target="_blank" href="http://www.joybuy.com/">English Site</a></dd>
+							</dl>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- /siteTopbar -->
+
+		<!-- siteBanner -->
+		<div class="siteBanner">
+			<div class="layout">
+				<img src="img/siteBanner.jpg" alt="">
+				<a href="#" class="icon-jd i-close"></a>
+			</div>
+		</div>
+		<!-- /siteBanner -->
+
+		<!-- logo-search-cart -->
+		<div class="logo-search-cart">
+			<div class="layout clearfix">
+				<h1 class="logo fl">
+					<a href="http://www.jd.com/?cu=true&utm_source=baidu-pinzhuan&utm_medium=cpc&utm_campaign=t_288551095_baidupinzhuan&utm_term=0f3d30c8dba7459bb52f2eb5eba8ac7d_0_255743618b144b2dbd322604b40cd004" target="_blank">
+						<img src="http://misc.360buyimg.com/lib/img/e/logo-201305.png" alt="京东">
+					</a>
+				</h1>
+				<div class="search fl">
+					<div class="search-top clearfix">
+						<input type="text" class="text fl" placeholder="饥人谷">
+						<input type="button" class="btn fl" value="搜索">
+					</div>
+					<ul class="search-links clearfix">
+						<li><a href="#" class="selected">超值预售</a></li>
+						<li><a href="#">家电618</a></li>
+						<li><a href="#">多肉植物</a></li>
+						<li><a href="#">低价抢拍</a></li>
+						<li><a href="#">188减60</a></li>
+						<li><a href="#">爆裂飞车</a></li>
+						<li><a href="#">天王</a></li>
+						<li><a href="#">免费试用</a></li>
+						<li><a href="#">钢笔</a></li>
+					</ul>
+				</div>
+				<div class="cart fr">
+					<div class="dropdown">
+						<i class="icon-jd i-cart"></i>
+						<a href="#">我的购物车</a>
+						<i class="i-count">0</i>
+						<i class="icon-jd i-right"></i>
+					</div>
+					<div class="dropdown-layer">
+						<div class="dd-spacer"></div>
+						<i class="fl"></i>
+						购物车中还没有商品，赶紧选购吧！
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /logo-search-cart -->
+
+		<!-- siteNav -->
+		<nav class="siteNav">
+			<div class="layout clearfix">
+				<h2 class="productCategory fl">
+					<a href="">全部商品分类</a>
+				</h2>
+				<ul class="siteNav-list fl">
+					<li><a href="http://channel.jd.com/fashion.html" target="_blank">服装城</a></li>
+					<li><a href="http://beauty.jd.com/" target="_blank">美妆馆</a></li>
+					<li><a href="http://chaoshi.jd.com/" target="_blank">超市</a></li>
+					<li><a href="http://fresh.jd.com/" target="_blank">生鲜</a></li>
+					<li><a href="http://www.jd.hk/" target="_blank">全球购</a></li>
+					<li><a href="http://red.jd.com/" target="_blank">闪购</a></li>
+					<li><a href="http://tuan.jd.com/quanguo-index.html" target="_blank">团购</a></li>
+					<li><a href="http://auction.jd.com/home.html" target="_blank">拍卖</a></li>
+					<li><a href="http://jr.jd.com/" target="_blank">金融</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- /siteNav -->
+
+		<!-- list-slides-news-service -->
+		<div class="list-slides-news-service">
+			<div class="layout clearfix">
+				<div class="productCategoryList fl">
+					<a href="#">家用电器</a>
+					<a href="#">手机、数码、京东通信</a>
+					<a href="#">电脑、办公</a>
+					<a href="#">家居、家具、家装、厨具</a>
+					<a href="#">男装、女装、童装、内衣</a>
+					<a href="#">个护化妆、清洁用品、宠物</a>
+					<a href="#">鞋靴、箱包、珠宝、奢侈品</a>
+					<a href="#">运动户外、钟表</a>
+					<a href="#">汽车、汽车用品</a>
+					<a href="#">母婴、玩具乐器</a>
+					<a href="#">食品、酒类、生鲜、特产</a>
+					<a href="#">医药保健</a>
+					<a href="#">图书、音像、电子书</a>
+					<a href="#">彩票、旅行、充值、票务</a>
+					<a href="#">理财、众筹、白条、保险</a>
+				</div>
+				<div class="sliderWrapper fl">
+					<div class="slider">
+						<a href="http://sale.jd.com/act/x1jyHDimFv.html?cpdad=1DLSUE" target="_blank">
+							<img src="http://img11.360buyimg.com/da/jfs/t2662/256/2924807206/127862/aec7288/577b17ceN7fbbc6c8.jpg">
+						</a>
+						<a href="http://sale.jd.com/act/hZYx0QgN1FVpJBd7.html?cpdad=1DLSUE" target="_blank">
+							<img src="http://img11.360buyimg.com/da/jfs/t2794/333/3056569226/85281/3131337c/577f0d9eN94800e6c.jpg">
+						</a>
+						<a href="http://sale.jd.com/act/LfXWwcMzs3NvtAb.html?cpdad=1DLSUE" target="_blank">
+							<img src="http://img13.360buyimg.com/da/jfs/t2986/170/1365170757/92073/c35506a0/577df78cN881c3185.jpg">
+						</a>
+						<a href="http://sale.jd.com/act/rKhJit1fWVDR.html?from=jdsj_04_101182&cpdad=1DLSUE" target="_blank">
+							<img src="http://img10.360buyimg.com/da/jfs/t2608/357/3095831486/113700/1565b0bb/577f6768Nd9354227.jpg">
+						</a>
+						<a href="http://sale.jd.com/act/L1Y2V6ERZePab4.html?cpdad=1DLSUE" target="_blank">
+							<img src="http://img20.360buyimg.com/da/jfs/t2683/44/3136545226/113654/2615e9c6/57834e18Ndc8c089c.jpg">
+						</a>
+						<a href="http://sale.jd.com/act/IFR3oBPSWut.html?cpdad=1DLSUE" target="_blank">
+							<img src="http://img12.360buyimg.com/da/jfs/t2956/153/1325269238/132509/b99ecde2/577de462N8bc9a6eb.jpg">
+						</a>
+					</div>
+				</div>
+				<aside class="fr extra">
+					<section class="news">
+						<div class="news-title">
+							<h2 class="fl">京东快报</h2>
+							<a href="" class="more fr">更多 ></a>
+						</div>
+						<ul class="news-content">
+							<li>
+								<a href="">
+									<span>[特惠]</span>
+									京东啤酒满199减100
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<span>[公告]</span>
+									京东最新捐赠物资抵达抗洪前线
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<span>[特惠]</span>
+									笔记本5折限量抢！
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<span>[公告]</span>
+									1号店周年庆诚邀您体验
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<span>[特惠]</span>
+									好丽友 早餐乐生活 满99-40
+								</a>
+							</li>
+						</ul>
+					</section>
+					<section class="service">
+						<ul class="clearfix">
+							<li><a href=""><i></i><span>话费</span></a></li>
+							<li><a href=""><i></i><span>机票</span></a></li>
+							<li><a href=""><i></i><span>电影票</span></a></li>
+							<li><a href=""><i></i><span>游戏</span></a></li>
+							<li>
+								<a href="">
+									<i></i>
+									<span>彩票</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i></i>
+									<span>加油卡</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i></i>
+									<span>酒店</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i></i>
+									<span>火车票</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i></i>
+									<span>众筹</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i></i>
+									<span>理财</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i></i>
+									<span>礼品卡</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i></i>
+									<span>白条</span>
+								</a>
+							</li>
+						</ul>
+					</section>
+					<div class="right-pic">
+						<a href="http://channel.jd.com/fashion.html?cpdad=1DLSUE" target="_blank">
+							<img src="img/aside-ad.jpg" alt="太阳镜惊天大满减">
+						</a>
+					</div>
+				</aside>
+			</div>
+		</div>
+		<!-- /list-slides-news-service -->
+
+		<!-- main -->
+		<section class="main">
+			<div class="layout">
+				<div data-index="1">
+					<div id="todays">
+						<div class="todays-title fl"></div>
+						<div class="todays-content slider fl">
+							<div>
+								<a href="http://sale.jd.com/act/F5ZurL6zbcN.html">
+									<img src="img/slider_2_img1.jpg" alt="">
+								</a>
+								<a href="">
+									<img src="img/slider_2_img2.jpg" alt="">
+								</a>
+								<a href="">
+									<img src="img/slider_2_img3.jpg" alt="">
+								</a>
+								<a href="">
+									<img src="img/slider_2_img4.jpg" alt="">
+								</a>
+							</div>
+							<div>
+								<a href="http://sale.jd.com/act/Oxp4vLQCaDl.html" target="_blank">
+									<img src="img/slider_2_img5.jpg" alt="百变娱乐萌宝">
+								</a>
+								<a href="http://zan.jd.com/" target="_blank">
+									<img src="img/slider_2_img6.jpg" alt="">
+								</a>
+								<a href="http://sale.jd.com/act/SxavK8Lw4nysD5d.html?cpdad=1DLSUE">
+									<img src="img/slider_2_img7.jpg" alt="">
+								</a>
+								<a href="http://sale.jd.com/act/AuQznxFJqfpO1k2.html?cpdad=1DLSUE">
+									<img src="img/slider_2_img8.jpg" alt="">
+								</a>
+							</div>
+							<div>
+								<a href="http://sale.jd.com/act/tH03KyMOp81a.html" target="_blank">
+									<img src="img/slider_2_img9.jpg" alt="">
+								</a>
+								<a href="http://sale.jd.com/act/rKhJit1fWVDR.html" target="_blank">
+									<img src="img/slider_2_img10.jpg" alt="">
+								</a>
+								<a href="http://sale.jd.com/act/AvHOT6ViqtCyKe.html?t=1467703658783&cpdad=1DLSUE" target="_blank">
+									<img src="img/slider_2_img11.jpg" alt="">
+								</a>
+								<a href="http://sale.jd.com/act/InLz0uTVQqxYC.html?cpdad=1DLSUE" target="_blank">
+									<img src="img/slider_2_img12.jpg" alt="">
+								</a>
+							</div>
+							<div>
+								<a href="https://biggerplay.jd.com/" target="_blank">
+									<img src="img/slider_2_img13.jpg" alt=""></a>
+								<a href="http://sale.jd.com/act/Zz7V2H8xMyFeNnWb.html" target="_blank">
+									<img src="img/slider_2_img14.jpg" alt="">
+								</a>
+								<a href="http://mall.jd.com/index-1000002027.html?cpdad=1DLSUE" target="_blank">
+									<img src="img/slider_2_img15.jpg" alt="">
+								</a>
+								<a href="http://baby.jd.com/?cpdad=1DLSUE" target="_blank">
+									<img src="img/slider_2_img16.jpg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div id="guess-like"></div>
+					<div id="special-buy"></div>
+				</div>
+				<div data-index="2">
+					<div class="ad-first">
+						<a href="http://sale.jd.com/act/k5pSdTsDich.html?cpdad=1DLSUE" target="_blank">
+							<img src="img/ad1.jpg" alt="99%的莓好果汁">
+						</a>
+						<a href="http://mall.jd.com/index-1000003691.html?cpdad=1DLSUE" target="_blank">
+							<img src="img/ad2.jpg" alt="飞利浦男士新品">
+						</a>
+						<a href="http://sale.jd.com/act/rIhsM1BbHczxwm.html?cpdad=1DLSUE" target="_blank">
+							<img src="img/ad3.jpg" alt="">
+						</a>
+					</div>
+
+					<div data-title="服饰">
+						<div class="clothes">
+
+							<div class="clothes-top clearfix">
+								<h2 class="fl">服装鞋包</h2>
+								<ul class="tab fr">
+									<li><a href="">大牌</a><span></span></li>
+									<li><a href="">男装</a><span></span></li>
+									<li><a href="">女装</a><span></span></li>
+									<li><a href="">鞋靴</a><span></span></li>
+									<li><a href="">箱包</a><span></span></li>
+									<li><a href="">内衣配饰</a><span></span></li>
+									<li><a href="">珠宝首饰</a><span></span></li>
+									<li><a href="">奢品礼品</a><span></span></li>
+									<li><a href="">奢华腕表</a><span></span></li>
+								</ul>
+							</div>
+							
+							<div class="clothes-content clearfix">
+								<div class="side fl">
+									<div class="side-inner">
+										<div class="banner">
+											<a href="http://sale.jd.com/act/mYaHwo4CpNT0e61R.html?cpdad=1DLSUE" target="_blank">
+												<img src="img/sd-ad1.jpg" alt="服装夏季清仓">
+											</a>
+										</div>
+										<ul class="themes">
+											<li>
+												<a href="">
+													<i></i>
+													<span>男装</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i></i><span>女装</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i></i><span>内衣</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i></i><span>鞋靴</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i></i><span>箱包</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i></i><span>奢侈品</span>
+												</a>
+											</li>
+										</ul>
+										<ul class="words">
+											<li class="fore1 fl">
+												<a href="http://channel.jd.com/women.html">潮流女装</a>
+												<a href="">太阳镜</a>
+												<a href="">服装城</a>
+												<a href="">品质男鞋</a>
+												<a href="">时尚女鞋</a>
+												<a href="">精品男装</a>
+												<a href="">纯棉内裤</a>
+												<a href="">奢侈品</a>
+											</li>
+											<li class="fore2 fl">
+												<a href="">菩提手串</a>
+												<a href="">水晶手链</a>
+												<a href="">时尚女包</a>
+												<a href="">精品男包</a>
+												<a href="">维氏手表</a>
+												<a href="">奢品名表</a>
+												<a href="">国表经典</a>
+												<a href="">潮流日表</a>
+											</li>
+										</ul>
+									</div>
+									<div class="side-extra">
+										<a href="http://sale.jd.com/act/C7aWxbYdlqn.html?cpdad=1DLSUE" target="_blank">
+											<img src="img/sd-ad2.jpg" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="main fl">
+									<div class="main-inner clearfix">
+										<ul class="main-body fl">
+											<li class="item1">
+												<a href="http://sale.jd.com/act/h8OeHVqYGUc.html" target="_blank">
+													<img src="img/logo-01.jpg" alt="度假时装周">
+												</a>
+											</li>
+											<li class="item2">
+												<a href="http://sale.jd.com/act/RYn6UM8NvQTuZz.html" target="_blank">
+													<img src="img/logo-05.jpg" alt="自营瑞表联合专场">
+												</a>
+											</li>
+											<li class="item3">
+												<a href="http://sale.jd.com/act/0vmIn14TJuEwd.html" target="_blank">
+													<img src="img/logo-06.jpg" alt="男鞋自营清仓购">
+												</a>
+											</li>
+											<li class="item4">
+												<a href="http://sale.jd.com/act/kavwGizVrs.html" target="_blank">
+													<img src="img/logo-07.jpg" alt="国际馆精选大牌">
+												</a>
+											</li>
+											<li class="item5">
+												<a href="http://sale.jd.com/act/0jJFK1ItrfUBLQ.html" target="_blank">
+													<img src="img/logo-08.jpg" alt="清凉一夏">
+												</a>
+											</li>
+											<li class="item6">
+												<a href="https://sale.jd.com/act/MYQJaHXokBLqm2KO.html" target="_blank">
+													<img src="img/logo-09.jpg" alt="自营银饰专场">
+												</a>
+											</li>
+										</ul>
+										<ul class="main-extra fl">
+											<li>
+												<a href="http://sale.jd.com/act/XHktOjiFVR1UPA.html" target="_blank">
+													<img src="img/logo-10.jpg" alt="京东耍酷节">
+												</a>
+											</li>
+											<li>
+												<a href="http://sale.jd.com/act/EnCKJUbrXN4.html" target="_blank">
+													<img src="img/logo-11.jpg" alt="睡衣">
+												</a>
+											</li>
+											<li>
+												<a href="http://belle.jd.com/?cpdad=1DLSUE" target="_blank">
+													<img src="img/logo-12.jpg" alt="百丽集团夏季清仓">
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div class="slider">
+										<a href="http://sale.jd.com/act/0hdQrtNVOCRSl.html?cpdad=1DLSUE" target="_blank">
+											<img src="img/slider_3_img1.jpg" alt="太阳镜惊天大满减">
+										</a>
+										<a href="http://sale.jd.com/act/cEtlOdvqHMn.html?cpdad=1DLSUE" target="_blank">
+											<img src="img/slider_3_img2.jpg" alt="夏季女包冰点直降">
+										</a>
+										<a href="http://sale.jd.com/act/gCGMw7UevnJQB.html?cpdad=1DLSUE" target="_blank">
+											<img src="img/slider_3_img3.jpg" alt="奢品钟表">
+										</a>
+										<a href="http://sale.jd.com/act/2Uboxesaw7JQR4.html?cpdad=1DLSUE" target="_blank">
+											<img src="img/slider_3_img4.jpg" alt="银色情人节">
+										</a>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<ul class="brands clearfix">
+							<li class="first">
+								<a href="http://mall.jd.com/index-1000001032.html?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand1.jpg" alt="热风">
+								</a>
+							</li>
+							<li>
+								<a href="http://levis.jd.com/?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand2.jpg" alt="levis">
+								</a>
+							</li>
+							<li>
+								<a href="http://rayban.jd.com/?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand3.png" alt="雷朋">
+								</a>
+							</li>
+							<li>
+								<a href="http://aimer.jd.com/?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand4.jpg" alt="爱慕">
+								</a>
+							</li>
+							<li>
+								<a href="http://balabala.jd.com/?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand5.png" alt="巴拉巴拉">
+								</a>
+							</li>
+							<li>
+								<a href="http://handuyishe.jd.com/?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand6.jpg" alt="韩都衣舍">
+								</a>
+							</li>
+							<li>
+								<a href="http://aokang.jd.com/?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand7.jpg" alt="奥康">
+								</a>
+							</li>
+							<li>
+								<a href="http://mall.jd.com/index-1000002307.html?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand8.jpg" alt="VICTORINOX">
+								</a>
+							</li>
+							<li>
+								<a href="http://bolon.jd.com/?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand9.png" alt="BOLON">
+								</a>
+							</li>
+							<li>
+								<a href="http://chowsangsang.jd.com/?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand10.jpg" alt="周生生">
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div data-title="服饰">
+						<div class="clothes">
+
+							<div class="clothes-top clearfix">
+								<h2 class="fl">服装鞋包</h2>
+								<ul class="tab fr">
+									<li><a href="">大牌</a><span></span></li>
+									<li><a href="">男装</a><span></span></li>
+									<li><a href="">女装</a><span></span></li>
+									<li><a href="">鞋靴</a><span></span></li>
+									<li><a href="">箱包</a><span></span></li>
+									<li><a href="">内衣配饰</a><span></span></li>
+									<li><a href="">珠宝首饰</a><span></span></li>
+									<li><a href="">奢品礼品</a><span></span></li>
+									<li><a href="">奢华腕表</a><span></span></li>
+								</ul>
+							</div>
+							
+							<div class="clothes-content clearfix">
+								<div class="side fl">
+									<div class="side-inner">
+										<div class="banner">
+											<a href="http://sale.jd.com/act/mYaHwo4CpNT0e61R.html?cpdad=1DLSUE" target="_blank">
+												<img src="img/sd-ad1.jpg" alt="服装夏季清仓">
+											</a>
+										</div>
+										<ul class="themes">
+											<li>
+												<a href="">
+													<i></i>
+													<span>男装</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i></i><span>女装</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i></i><span>内衣</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i></i><span>鞋靴</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i></i><span>箱包</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i></i><span>奢侈品</span>
+												</a>
+											</li>
+										</ul>
+										<ul class="words">
+											<li class="fore1 fl">
+												<a href="http://channel.jd.com/women.html">潮流女装</a>
+												<a href="">太阳镜</a>
+												<a href="">服装城</a>
+												<a href="">品质男鞋</a>
+												<a href="">时尚女鞋</a>
+												<a href="">精品男装</a>
+												<a href="">纯棉内裤</a>
+												<a href="">奢侈品</a>
+											</li>
+											<li class="fore2 fl">
+												<a href="">菩提手串</a>
+												<a href="">水晶手链</a>
+												<a href="">时尚女包</a>
+												<a href="">精品男包</a>
+												<a href="">维氏手表</a>
+												<a href="">奢品名表</a>
+												<a href="">国表经典</a>
+												<a href="">潮流日表</a>
+											</li>
+										</ul>
+									</div>
+									<div class="side-extra">
+										<a href="http://sale.jd.com/act/C7aWxbYdlqn.html?cpdad=1DLSUE" target="_blank">
+											<img src="img/sd-ad2.jpg" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="main fl">
+									<div class="main-inner clearfix">
+										<ul class="main-body fl">
+											<li class="item1">
+												<a href="http://sale.jd.com/act/h8OeHVqYGUc.html" target="_blank">
+													<img src="img/logo-01.jpg" alt="度假时装周">
+												</a>
+											</li>
+											<li class="item2">
+												<a href="http://sale.jd.com/act/RYn6UM8NvQTuZz.html" target="_blank">
+													<img src="img/logo-05.jpg" alt="自营瑞表联合专场">
+												</a>
+											</li>
+											<li class="item3">
+												<a href="http://sale.jd.com/act/0vmIn14TJuEwd.html" target="_blank">
+													<img src="img/logo-06.jpg" alt="男鞋自营清仓购">
+												</a>
+											</li>
+											<li class="item4">
+												<a href="http://sale.jd.com/act/kavwGizVrs.html" target="_blank">
+													<img src="img/logo-07.jpg" alt="国际馆精选大牌">
+												</a>
+											</li>
+											<li class="item5">
+												<a href="http://sale.jd.com/act/0jJFK1ItrfUBLQ.html" target="_blank">
+													<img src="img/logo-08.jpg" alt="清凉一夏">
+												</a>
+											</li>
+											<li class="item6">
+												<a href="https://sale.jd.com/act/MYQJaHXokBLqm2KO.html" target="_blank">
+													<img src="img/logo-09.jpg" alt="自营银饰专场">
+												</a>
+											</li>
+										</ul>
+										<ul class="main-extra fl">
+											<li>
+												<a href="http://sale.jd.com/act/XHktOjiFVR1UPA.html" target="_blank">
+													<img src="img/logo-10.jpg" alt="京东耍酷节">
+												</a>
+											</li>
+											<li>
+												<a href="http://sale.jd.com/act/EnCKJUbrXN4.html" target="_blank">
+													<img src="img/logo-11.jpg" alt="睡衣">
+												</a>
+											</li>
+											<li>
+												<a href="http://belle.jd.com/?cpdad=1DLSUE" target="_blank">
+													<img src="img/logo-12.jpg" alt="百丽集团夏季清仓">
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div class="slider1">
+										<a href="#">
+											<img src="http://img12.360buyimg.com/da/jfs/t2776/213/3125047002/38760/e32a1761/57825c86Nf1327983.jpg" alt="">
+										</a>
+										<a href="#">
+											<img src="http://img30.360buyimg.com/da/jfs/t2587/127/3081739307/39018/91c5f8b0/57825ca1N0ee2a17d.jpg" alt="">
+										</a>
+										<a href="#">
+											<img src="http://img20.360buyimg.com/da/jfs/t2749/346/3129203552/39865/2e7b962/57825ccdNc7893e0a.jpg" alt="">
+										</a>
+										<a href="#">
+											<img src="http://img12.360buyimg.com/da/jfs/t2830/233/3277408360/38753/5d793fac/5784d592Nc5672031.jpg" alt="">
+										</a>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<ul class="brands clearfix">
+							<li class="first">
+								<a href="http://mall.jd.com/index-1000001032.html?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand1.jpg" alt="热风">
+								</a>
+							</li>
+							<li>
+								<a href="http://levis.jd.com/?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand2.jpg" alt="levis">
+								</a>
+							</li>
+							<li>
+								<a href="http://rayban.jd.com/?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand3.png" alt="雷朋">
+								</a>
+							</li>
+							<li>
+								<a href="http://aimer.jd.com/?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand4.jpg" alt="爱慕">
+								</a>
+							</li>
+							<li>
+								<a href="http://balabala.jd.com/?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand5.png" alt="巴拉巴拉">
+								</a>
+							</li>
+							<li>
+								<a href="http://handuyishe.jd.com/?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand6.jpg" alt="韩都衣舍">
+								</a>
+							</li>
+							<li>
+								<a href="http://aokang.jd.com/?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand7.jpg" alt="奥康">
+								</a>
+							</li>
+							<li>
+								<a href="http://mall.jd.com/index-1000002307.html?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand8.jpg" alt="VICTORINOX">
+								</a>
+							</li>
+							<li>
+								<a href="http://bolon.jd.com/?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand9.png" alt="BOLON">
+								</a>
+							</li>
+							<li>
+								<a href="http://chowsangsang.jd.com/?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand10.jpg" alt="周生生">
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="ad-first">
+						<a href="">
+							<img src="img/ad4.jpg" alt="">
+						</a>
+						<a href="">
+							<img src="img/ad5.jpg" alt="">
+						</a>
+						<a href="">
+							<img src="img/ad6.jpg" alt="">
+						</a>
+					</div>
+
+					<div data-title="服饰">
+						<div class="clothes">
+
+							<div class="clothes-top clearfix">
+								<h2 class="fl">服装鞋包</h2>
+								<ul class="tab fr">
+									<li><a href="">大牌</a><span></span></li>
+									<li><a href="">男装</a><span></span></li>
+									<li><a href="">女装</a><span></span></li>
+									<li><a href="">鞋靴</a><span></span></li>
+									<li><a href="">箱包</a><span></span></li>
+									<li><a href="">内衣配饰</a><span></span></li>
+									<li><a href="">珠宝首饰</a><span></span></li>
+									<li><a href="">奢品礼品</a><span></span></li>
+									<li><a href="">奢华腕表</a><span></span></li>
+								</ul>
+							</div>
+							
+							<div class="clothes-content clearfix">
+								<div class="side fl">
+									<div class="side-inner">
+										<div class="banner">
+											<a href="http://sale.jd.com/act/mYaHwo4CpNT0e61R.html?cpdad=1DLSUE" target="_blank">
+												<img src="img/sd-ad1.jpg" alt="服装夏季清仓">
+											</a>
+										</div>
+										<ul class="themes">
+											<li>
+												<a href="">
+													<i></i>
+													<span>男装</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i></i><span>女装</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i></i><span>内衣</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i></i><span>鞋靴</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i></i><span>箱包</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i></i><span>奢侈品</span>
+												</a>
+											</li>
+										</ul>
+										<ul class="words">
+											<li class="fore1 fl">
+												<a href="http://channel.jd.com/women.html">潮流女装</a>
+												<a href="">太阳镜</a>
+												<a href="">服装城</a>
+												<a href="">品质男鞋</a>
+												<a href="">时尚女鞋</a>
+												<a href="">精品男装</a>
+												<a href="">纯棉内裤</a>
+												<a href="">奢侈品</a>
+											</li>
+											<li class="fore2 fl">
+												<a href="">菩提手串</a>
+												<a href="">水晶手链</a>
+												<a href="">时尚女包</a>
+												<a href="">精品男包</a>
+												<a href="">维氏手表</a>
+												<a href="">奢品名表</a>
+												<a href="">国表经典</a>
+												<a href="">潮流日表</a>
+											</li>
+										</ul>
+									</div>
+									<div class="side-extra">
+										<a href="http://sale.jd.com/act/C7aWxbYdlqn.html?cpdad=1DLSUE" target="_blank">
+											<img src="img/sd-ad2.jpg" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="main fl">
+									<div class="main-inner clearfix">
+										<ul class="main-body fl">
+											<li class="item1">
+												<a href="http://sale.jd.com/act/h8OeHVqYGUc.html" target="_blank">
+													<img src="img/logo-01.jpg" alt="度假时装周">
+												</a>
+											</li>
+											<li class="item2">
+												<a href="http://sale.jd.com/act/RYn6UM8NvQTuZz.html" target="_blank">
+													<img src="img/logo-05.jpg" alt="自营瑞表联合专场">
+												</a>
+											</li>
+											<li class="item3">
+												<a href="http://sale.jd.com/act/0vmIn14TJuEwd.html" target="_blank">
+													<img src="img/logo-06.jpg" alt="男鞋自营清仓购">
+												</a>
+											</li>
+											<li class="item4">
+												<a href="http://sale.jd.com/act/kavwGizVrs.html" target="_blank">
+													<img src="img/logo-07.jpg" alt="国际馆精选大牌">
+												</a>
+											</li>
+											<li class="item5">
+												<a href="http://sale.jd.com/act/0jJFK1ItrfUBLQ.html" target="_blank">
+													<img src="img/logo-08.jpg" alt="清凉一夏">
+												</a>
+											</li>
+											<li class="item6">
+												<a href="https://sale.jd.com/act/MYQJaHXokBLqm2KO.html" target="_blank">
+													<img src="img/logo-09.jpg" alt="自营银饰专场">
+												</a>
+											</li>
+										</ul>
+										<ul class="main-extra fl">
+											<li>
+												<a href="http://sale.jd.com/act/XHktOjiFVR1UPA.html" target="_blank">
+													<img src="img/logo-10.jpg" alt="京东耍酷节">
+												</a>
+											</li>
+											<li>
+												<a href="http://sale.jd.com/act/EnCKJUbrXN4.html" target="_blank">
+													<img src="img/logo-11.jpg" alt="睡衣">
+												</a>
+											</li>
+											<li>
+												<a href="http://belle.jd.com/?cpdad=1DLSUE" target="_blank">
+													<img src="img/logo-12.jpg" alt="百丽集团夏季清仓">
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div class="slider1">
+										<a href="#">
+											<img src="http://img12.360buyimg.com/da/jfs/t2776/213/3125047002/38760/e32a1761/57825c86Nf1327983.jpg" alt="">
+										</a>
+										<a href="#">
+											<img src="http://img30.360buyimg.com/da/jfs/t2587/127/3081739307/39018/91c5f8b0/57825ca1N0ee2a17d.jpg" alt="">
+										</a>
+										<a href="#">
+											<img src="http://img20.360buyimg.com/da/jfs/t2749/346/3129203552/39865/2e7b962/57825ccdNc7893e0a.jpg" alt="">
+										</a>
+										<a href="#">
+											<img src="http://img12.360buyimg.com/da/jfs/t2830/233/3277408360/38753/5d793fac/5784d592Nc5672031.jpg" alt="">
+										</a>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<ul class="brands clearfix">
+							<li class="first">
+								<a href="http://mall.jd.com/index-1000001032.html?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand1.jpg" alt="热风">
+								</a>
+							</li>
+							<li>
+								<a href="http://levis.jd.com/?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand2.jpg" alt="levis">
+								</a>
+							</li>
+							<li>
+								<a href="http://rayban.jd.com/?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand3.png" alt="雷朋">
+								</a>
+							</li>
+							<li>
+								<a href="http://aimer.jd.com/?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand4.jpg" alt="爱慕">
+								</a>
+							</li>
+							<li>
+								<a href="http://balabala.jd.com/?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand5.png" alt="巴拉巴拉">
+								</a>
+							</li>
+							<li>
+								<a href="http://handuyishe.jd.com/?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand6.jpg" alt="韩都衣舍">
+								</a>
+							</li>
+							<li>
+								<a href="http://aokang.jd.com/?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand7.jpg" alt="奥康">
+								</a>
+							</li>
+							<li>
+								<a href="http://mall.jd.com/index-1000002307.html?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand8.jpg" alt="VICTORINOX">
+								</a>
+							</li>
+							<li>
+								<a href="http://bolon.jd.com/?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand9.png" alt="BOLON">
+								</a>
+							</li>
+							<li>
+								<a href="http://chowsangsang.jd.com/?cpdad=1DLSUE" target="_blank">
+									<img src="img/brand10.jpg" alt="周生生">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /main -->
+				
+		<!-- footer -->
+		<footer class="footer">
+			<div class="layout">
+				<div class="footer-wrapper">
+					<p class="links">
+						<a target="_blank" href="www.jd.com/intro/about.aspx">关于我们</a>|<a rel="nofollow" target="_blank" href="//www.jd.com/contact/">联系我们</a>|<a rel="nofollow" target="_blank" href="//help.jd.com/user/custom.html">联系客服</a>|<a rel="nofollow" target="_blank" href="//www.jd.com/contact/joinin.aspx">商家入驻</a>|<a rel="nofollow" target="_blank" href="//jzt.jd.com">营销中心</a>|<a rel="nofollow" target="_blank" href="//app.jd.com/">手机京东</a>|<a target="_blank" href="//club.jd.com/links.aspx">友情链接</a>|<a target="_blank" href="//media.jd.com/">销售联盟</a>|<a href="//club.jd.com/" target="_blank">京东社区</a>|<a href="//gongyi.jd.com" target="_blank">京东公益</a>|<a href="//en.jd.com/" target="_blank">English Site</a>|<a href="//en.jd.com/help/question-58.html" target="_blank">Contact Us</a>
+	
+					</p>
+					<div class="copyright">
+						<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000088"><img src="img/footer-icon7.png"> 京公网安备 11000002000088号</a>&nbsp;&nbsp;|&nbsp;&nbsp;京ICP证070359号&nbsp;&nbsp;|&nbsp;&nbsp;<a target="_blank" href="//img14.360buyimg.com/da/jfs/t256/349/769670066/270505/3b03e0bb/53f16c24N7c04d9e9.jpg">互联网药品信息服务资格证编号(京)-经营性-2014-0008</a>&nbsp;&nbsp;|&nbsp;&nbsp;新出发京零&nbsp;字第大120007号<br>互联网出版许可证编号新出网证(京)字150号&nbsp;&nbsp;|&nbsp;&nbsp;<a rel="nofollow" href="//img30.360buyimg.com/uba/jfs/t1036/328/1487467280/1405104/ea57ab94/5732f60aN53b01d06.jpg" target="_blank">出版物经营许可证</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="//misc.360buyimg.com/wz/wlwhjyxkz.jpg" target="_blank">网络文化经营许可证京网文[2014]2148-348号</a>&nbsp;&nbsp;|&nbsp;&nbsp;违法和不良信息举报电话：4006561155<br>Copyright&nbsp;©&nbsp;2004&nbsp;-&nbsp;2016&nbsp;&nbsp;京东JD.com&nbsp;版权所有&nbsp;&nbsp;|&nbsp;&nbsp;消费者维权热线：4006067733<br>京东旗下网站：<a href="https://www.jdpay.com/" target="_blank">京东钱包</a>
+					</div>
+					<ul class="authentication">
+						<ul>
+							<li>
+								<a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202007080200026" target="_blank">
+									<img src="img/footer-icon1.png" alt="">
+								</a>
+							</li>
+							<li>
+							<a href="">
+								<img src="img/footer-icon2.png" alt="">
+							</a>
+							</li>
+							<li>
+							<a href="">
+								<img src="img/footer-icon3.jpg" alt="">
+							</a>
+							</li>
+							<li>
+							<a href="">
+								<img src="img/footer-icon4.png" alt="">
+							</a>
+							</li>
+							<li>
+							<a href="">
+								<img src="img/footer-icon5.jpg" alt="">
+							</a>
+							</li>
+							<li>
+							<a href="">
+								<img src="img/footer-icon6.jpg" alt="">
+							</a>
+							</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+		<!-- /footer -->
+
+		<script src="js/lib/jquery-1.12.4.js"></script>
+		<script src="js/jd.js"></script>
+	</body>
+</html>
