@@ -157,6 +157,8 @@ ul.submenu>li>div.submenu-right>div.submenu-right-two>img.one{margin-top:10px;}
 .NewsService .News .one .box>li>a{line-height: 24px;display:inline-block;}
 .NewsService .News .one .box>li:hover>a{color:#C81623;cursor: pointer;}
 .NewsService .Service{width:248px;border-left:1px solid  #E8E8E7;border-right:1px solid  #E8E8E7;margin-bottom:4px;position: relative;overflow: hidden;}
+.NewsService .Service>span.s-3{position:absolute;top:27px;right:-3px;width:20px;height:20px;line-height: 20px;text-align: center;font-weight:normal;font-family: simsun;}
+.NewsService .Service>span.s-3:hover{background: #ccc;color: #fff;}
 .NewsService .Service>ul.s-1{text-align: center;position:relative;}
 .NewsService .Service>ul.s-1>li{float:left;display:inline;width: 61px;height:69px;border-right: 1px solid #E8E8E7;border-bottom: 1px solid #E8E8E7;overflow: hidden;cursor: pointer;text-align: center;border-top:none;}
 .NewsService .Service>ul.s-1>li.right{border-right:none;}
@@ -164,16 +166,14 @@ ul.submenu>li>div.submenu-right>div.submenu-right-two>img.one{margin-top:10px;}
 .NewsService .Service>ul.s-1>li>a{line-height:28px;height:28px;width:62px;padding-top:41px;display:inline-block;text-align: center;position:relative;}
 .NewsService .Service>ul.s-1>li>a .ci-left{left: 18px;width: 25px;height: 25px;display:block;margin:0 auto;position:absolute;top:13px;}
 .NewsService .Service>ul.s-1>li>a:hover>span{color:#C81623;}
-.NewsService .Service>ul.s-2{position:absolute; width:248px; height: 210px; overflow: hidden;background: white;top:0;display:none;animation:in 0.4s;animation-iteration-count:1;z-index：5； }
+.NewsService .Service>ul.s-2{position:absolute; width:248px; height: 210px; overflow: hidden;background: white;top:0;animation:in 0.8s;animation-iteration-count:1;}
 @keyframes  in{
     from{top:210px;}
     to{top:0;}
 }
-.NewsService .Service>ul.s-2>li.active{display:block;}
+.NewsService .Service>ul.s-2>li.active{display:block;border-top: 2px solid #c81623;border-bottom: none;}
 .NewsService .Service>ul.s-2>li{float:left;display:inline;width:60px;height:25px;line-height:25px;border-right: 1px solid #E8E8E7;border-bottom: 1px solid #E8E8E7;border-top:2px solid transparent; border-left:1px solid transparent;overflow: hidden;cursor: pointer;text-align: center;}
 .NewsService .Service>ul.s-2>li>div{width:248px;height:183px;position:absolute;left:0;display:none;}
-.NewsService .Service>ul.s-2>li:hover{border-top: 2px solid #c81623;}
-.NewsService .Service>ul.s-2>li:hover:after{content:'';display: block;position: absolute;height:0;border-top: 5px solid white;border-left: 1px solid transparent;border-right: 1px solid transparent;-webkit-box-sizing: border-box;box-sizing: border-box;width:60px;z-index:2;}
 .NewsService .Service>ul.s-2>li:hover>div{display:block;}
 .NewsService .page{height:75px;display: inline-block;vertical-align:top;width:250px;}
 .NewsService .page>a{height:75px;line-height:75px;display: inline-block;vertical-align: top;}
@@ -195,7 +195,7 @@ ul.submenu>li>div.submenu-right>div.submenu-right-two>img.one{margin-top:10px;}
 .mc .next{position:absolute;top:50px;background:rgb(190,190,190);right:0;width:28px;height:62px;border:none;line-height:62px;opacity:0.8;color:white;font-weight:400;font-size:22px;font-family: simsun;outline:none;display:none;text-align: center;}
 .viewpoint:hover .next,.viewpoint:hover .prev{display:block;}
 .viewpoint:hover {cursor: pointer;}
-.guessyou{height:269px;margin-bottom:20px;overflow: hidden;}
+.guessyou{height:269px;overflow: hidden;width:1210px;margin:0 auto 20px auto;}
 .guessyou .guessyou-mt{width:1210px;line-height:36px;height:36px;margin:0 auto;}
 .guessyou-mt>h2{float:left;width:80px;display:inline;line-height: 30px;font-size: 20px;color: #333;height:30px;padding-right:228px;background: url(//misc.360buyimg.com/product/home/1.0.0/css/i/homebg.png) 85px -91px;}
 .guessyou-mt>a{width:36px;height:18px;line-height: 18px;padding-right:25px;float:right;margin-top:8px;background: url(//misc.360buyimg.com/product/home/1.0.0/css/i/homebg.png) -310px -5px no-repeat;}
@@ -203,6 +203,11 @@ ul.submenu>li>div.submenu-right>div.submenu-right-two>img.one{margin-top:10px;}
 .guessyou .guessyou-mc{width:1208px;height:232px;margin:0 auto;text-align: center;border:1px solid #ededed;border-top:none;}
 .guessyou .guessyou-mc .spacer{position: relative;height: 1px;line-height: 0;font-size: 0;background-color: #d1d1d1;}
 .guessyou .guessyou-mc .spacer>i{width: 365px;height: 5px;overflow: hidden;position: absolute;right: -1px;top: -2px;background: #b72323 url(//misc.360buyimg.com/product/home/1.0.0/css/i/homebg.png) no-repeat 0 -124px;}
+.guessyou .guessyou-mc:hover  .spacer>i{animation:idf 1s}
+@keyframes idf {
+    from{right:1200px;}
+    to{right:-1px;}
+}
 .guessyou .guessyou-mc>ul{width:1208px;height:210px;padding-top:20px;}
 .guessyou .guessyou-mc>ul>li{display:inline;float:left;width:201px;height:210px;padding-bottom: 15px;}
 .guessyou-mc>ul>li .p-img{width:201px;height:130px;line-height: 130px;margin-bottom: 10px;}
