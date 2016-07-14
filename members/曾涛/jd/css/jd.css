@@ -832,6 +832,11 @@ li#navs dl > dd {
     border-bottom: 1px solid #E8E8E7;
 }
 
+.service .lifeserv-current li {
+	height: 27px;
+	border-bottom: 1px solid #E8E8E7;
+}
+
 .service li a {
 	position: relative;
 	display: block;
@@ -910,6 +915,12 @@ li#navs dl > dd {
 	background-position: -25px -225px;
 }
 
+.service-inner {
+	width: 250px;
+    height: 180px;
+	background-color: #fff;
+}
+
 .right-pic {
 	position: absolute;
 	top: 391px;
@@ -968,17 +979,17 @@ li#navs dl > dd {
 	left: 0;
 } 
 
-.main .ad-first {
+.main .art {
 	width: 1200px;
 	height: 140px;
 	margin: 0 auto;
 }
 
-.main .ad-first a {
+.main .art a {
 	float: left;
 }
 
-.main .ad-first img {
+.main .art img {
 	width: 400px;
 	height: 125px;
 }
