@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>CSS3 行星轨迹</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css">
+*{margin:0;padding: 0}
+ul,ol,li{list-style: none;}
+a{text-decoration: none;}
+body{
+	font:12px/1.5 Arial,Verdana,"\5b8b\4f53",serif;
+  	-webkit-font-smoothing: antialiased;/*矿锯齿*/
+  	background:url(http://pkimg.b0.upaiyun.com/upload/20150406/644e70c6a39e45bc8311eacb6c8406eb.jpeg);
+  	background-repeat: no-repeat;
+  	background-size:100% 100%;
+}
+.galaxy{
+	position: relative;
+	width:1300px;
+	height:1300px;
+	margin:0 auto;
+	overflow: hidden;
+}
+div[class*=track]{/*轨迹的公共样式*/
+	position: absolute;
+	border:1px solid white;
+	margin:0 auto;
+	border-radius: 50%	
+}
+.pluto-track{/*最远冥王星轨迹*/
+	left:50px;
+	top:50px;
+	width:1200px;
+	height: 1200px;
+}
+.pluto{/*冥王星*/
+	background: url(http://images2015.cnblogs.com/blog/818663/201510/818663-20151013210116038-1431613611.png) 0 0 no-repeat;
+    position: absolute;
+    left: 1210px;
+    top: 600px;
+    width: 70px;
+    height: 70px;
+    animation: rotation 1648s linear infinite;
+    transform-origin: -565px 45px;/*transform-origin: x-offset y-offset */
+    						/*x-offset定义变形中心距离盒模型的左侧的<length>或<percentage>偏移值。*/	
+    						/*y-offset定义变形中心距离盒模型的顶的<length>或<percentage>偏移值。*/
+}
+
+.uranus-track{/*天王星轨迹*/
+	left:150px;
+	top:150px;
+	width:1000px;
+	height: 1000px;
+}
+.uranus{/*天王星*/
+	background: url(http://images2015.cnblogs.com/blog/818663/201510/818663-20151013210048304-974518986.png) 0 0 no-repeat;
+    position: absolute;
+    left: 1115px;
+    top: 600px;
+    width: 80px;
+    height: 80px;
+    animation: rotation 840s linear infinite;
+    transform-origin: -460px 45px;
+}
+
+.saturn-track{/*土星轨迹*/
+	left:235px;
+	top:235px;
+	width:830px;
+	height: 830px;
+}
+.saturn{/*土星*/
+	background: url(http://images2015.cnblogs.com/blog/818663/201510/818663-20151013210041710-1584827250.png) 0 0 no-repeat;
+	position: absolute;
+	left:1005px;
+	top:600px;
+    width: 120px;
+    height: 80px;
+    animation: rotation 295s linear infinite;
+    transform-origin: -355px 50px
+}
+
+.jupiter-track{/*木星轨迹*/
+	left:300px;
+	top:300px;
+	width: 700px;
+	height: 700px;
+}
+.jupiter{/*木星*/
+    background: url(http://images2015.cnblogs.com/blog/818663/201510/818663-20151013210021944-1129782361.png) 0 0 no-repeat;
+    position: absolute;
+    top: 600px;
+    left: 960px;
+    width: 80px;
+    height: 80px;
+    animation: rotation 118s linear infinite;
+    transform-origin: -310px 50px;
+}
+
+.mars-track{/*火星轨迹*/
+	left:350px;
+	top:350px;
+	width:600px;
+	height: 600px;
+}
+.mars{
+    background: url(http://images2015.cnblogs.com/blog/818663/201510/818663-20151013210013101-347441696.png) 0 0 no-repeat;
+    position: absolute;
+    top: 600px;
+    left: 925px;
+    width: 50px;
+    height: 50px;
+    animation: rotation 19s linear infinite;
+    transform-origin: -275px 50px;
+}
+
+.earth-track{/*地球轨迹*/
+	left:400px;
+	top:400px;
+	width: 500px;
+	height: 500px;
+}
+.earth{/*地球*/
+	background: url(http://images2015.cnblogs.com/blog/818663/201510/818663-20151013205943538-1279197333.png) 0 0 no-repeat;
+	position: absolute;
+    top: 600px;
+    left: 870px;
+    width: 60px;
+    height: 60px;
+    animation: rotation 10s linear infinite;
+    transform-origin: -225px 48px;
+}
+
+.venus-track{/*金星轨迹*/
+	left:450px;
+	top:450px;
+	width: 400px;
+	height: 400px;
+}
+.venus{
+    background: url(http://images2015.cnblogs.com/blog/818663/201510/818663-20151013205908382-878096313.png) 0 0 no-repeat;
+    position: absolute;
+    left: 820px;
+    top: 620px;
+    width: 60px;
+    height: 60px;
+    animation: rotation 6.16s linear infinite;
+    transform-origin: -170px 25px;
+}
+
+.mercury-track{/*水星轨迹*/
+	left: 525px;
+    top: 525px;
+    width: 250px;
+    height: 250px;
+}
+.mercury{/*水星*/
+    background: url(http://images2015.cnblogs.com/blog/818663/201510/818663-20151013205828679-1300811025.png) 0 0 no-repeat;
+    position:absolute;
+    width: 50px;
+    height: 50px;
+    left: 750px;
+    top: 625px;
+    text-align: center;
+    transform-origin: -100px 25px;
+    /*border:1px solid red;用border就可以测出原来是以边框 ‘左上角’为圆心转动了*/
+    animation: rotation 2.4s linear infinite;
+}
+
+.sun{
+	background: url(http://images2015.cnblogs.com/blog/818663/201510/818663-20151013205656257-1729257972.png) 0 0 no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width:100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
+    z-index: 1000;
+}
+
+@keyframes rotation{
+	from{transform: rotate(0deg);}
+	to{transform:rotate(360deg);}
+}
+</style>
+</head>
+<body>
+<!-- 九大行星离太阳的近到远排列顺序：水星、金星、地球、火星、木星、土星、天王星、海王星、冥王星   -->
+    <div class="galaxy">
+    	<div class='sun'></div><!-- 太阳 -->
+        <div class='mercury-track'></div><!-- 水星轨迹 -->
+        <div class='mercury'></div>
+        <div class='venus-track'></div><!-- 金星轨迹 -->
+        <div class='venus'></div>
+        <div class='earth-track'></div><!-- 地球轨迹 -->
+        <div class='earth'></div>
+        <div class='mars-track'></div><!-- 火星轨道  -->
+        <div class='mars'></div>
+        <div class='jupiter-track'></div><!-- 木星轨迹 -->
+        <div class='jupiter'></div>
+        <div class='saturn-track'></div><!-- 土星轨迹 -->
+        <div class='saturn'></div>
+        <div class='uranus-track'></div><!-- 天王星轨迹 -->
+        <div class='uranus'></div>
+        <div class='pluto-track'></div><!-- 冥王星轨迹 -->
+        <div class='pluto'></div>
+    </div>
+</body>
+</html>

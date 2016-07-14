@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>放大镜</title>
+    <style>
+        div,body,img,figure{
+            padding: 0;
+            margin: 0;
+        }
+        figure#small{
+            border:1px solid #ccc;
+            width: 240px;
+            height: 240px;
+            position: relative;
+            margin:20px 50px;
+        }
+        figure#small img{
+            width: 240px;
+            height: 240px;
+            display: block;
+        }
+        figure#small #smask{
+            width: 60px;
+            height: 60px;
+            background: rgba(0,0,0,.2);
+            position: absolute;
+            z-index:3;
+            top:0;
+            left:0;
+            cursor: move;
+            display: none;
+        }
+        figure#big{
+            border:1px solid #ccc;
+            width: 240px;
+            height: 240px;
+            position: relative;
+            overflow: hidden;
+            display: none;
+            top:-240px;
+            left:330px;
+        }
+        figure#big img{
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="demo">
+    <figure id="small">
+        <img src="http://o8197y60e.bkt.clouddn.com/ss.png" alt="小图片">
+        <div id="smask"></div>
+    </figure>
+    <figure id="big">
+        <img src="http://o8197y60e.bkt.clouddn.com/big.png" alt="大图片">
+    </figure>
+</div>
+    <script>
+        window.onload = function(){
+//            获取到需要使用的各元素
+            var demo = document.getElementById('demo');
+            var small = document.getElementById('small');
+            var big = document.getElementById('big');
+            var sImg = small.getElementsByTagName('img')[0];
+            var bImg = big.getElementsByTagName('img')[0];
+            var sMask = document.getElementById('smask');
+//            鼠标移入小图片区域 大图片显示，移动层显示
+            small.onmouseover = function(){
+                sMask.style.display = "block";
+                big.style.display = "block";
+            };
+//            鼠标移出小图片区域 大图片隐藏，移动层隐藏
+            small.onmouseout = function(){
+                sMask.style.display = "none";
+                big.style.display = "none";
+            };
+//           鼠标在小图片内移动
+            small.onmousemove = function(event){
+//              设置移动层的left&top;当前坐标 - demo与small两个“父节点”的左偏移 - 移动层width的一半
+                var  _left = event.clientX - demo.offsetLeft - small.offsetLeft - sMask.offsetWidth/2;
+                var _top = event.clientY-demo.offsetTop - small.offsetTop - sMask.offsetHeight/2;
+//              当移动层超出小图片边界时设置top&left为两个边界值
+                if(_left<0){
+                    _left = 0;
+                }else if(_left>small.offsetWidth - sMask.offsetWidth){
+                    _left = small.offsetWidth - sMask.offsetWidth;
+                }
+                if(_top<0){
+                    _top = 0;
+                }else if(_top>small.offsetHeight - sMask.offsetHeight){
+                    _top = small.offsetHeight - sMask.offsetHeight;
+                }
+//              设置移动层的left&top
+                sMask.style.left = _left + 'px';
+                sMask.style.top = _top + 'px';
+//              计算大图片应移动的比例
+                var perX = _left/(small.offsetWidth-sMask.offsetWidth);
+                var perY = _top/(small.offsetHeight-sMask.offsetHeight);
+//              设置大图片的left&top     
+                bImg.style.left = - perX * (bImg.offsetWidth - big.offsetWidth)+'px';
+                bImg.style.top = - perY * (bImg.offsetHeight - big.offsetHeight)+'px';
+
+            }
+
+        };
+
+    </script>
+</body>
+</html>
