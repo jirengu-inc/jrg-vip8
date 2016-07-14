@@ -440,6 +440,7 @@ li#serv .inner-tenant a {
 }
 
 li#serv h3 {
+	margin: 0;
 	font-weight: 700;
 	font-size: 12px
 }
@@ -681,7 +682,26 @@ li#navs dl > dd {
 	background-color: #c81623
 }
 
-.productCategoryList > a {
+.productCategoryList .item {
+	position: relative;
+	height: 31px;
+	color: #fff;
+}
+
+.productCategoryList h3 {
+	margin: 0;
+}
+
+.productCategoryList i {
+	position: absolute;
+    top: 9px;
+    right: 14px;
+    width: 4px;
+    height: 14px;
+    font: 400 9px/14px consolas;
+}
+
+.productCategoryList a {
 	display: block;
 	height: 31px;
 	padding-left: 9px;
@@ -813,6 +833,7 @@ li#navs dl > dd {
 }
 
 .service li a {
+	position: relative;
 	display: block;
     width: 62px;
     height: 28px;
@@ -822,6 +843,73 @@ li#navs dl > dd {
     cursor: pointer;
 }
 
+.service li .ci-left {
+	position: absolute;
+	top: 13px;
+    left: 18px;
+	width: 25px;
+    height: 25px;
+	background: url(../img/service-bg.png) no-repeat;
+}
+
+.service .ci-tip {
+	position: absolute;
+	width: 12px;
+    height: 15px;
+    top: 0;
+    right: 0;
+	background: url(../img/ci-tip1.png) no-repeat;
+}
+
+.service .fore12 .ci-tip {
+	right: 3px;
+	background-image: url(../img/ci-tip2.png)
+}
+
+.service .fore2 .ci-left {
+	background-position: 0 -25px;
+}
+
+.service .fore3 .ci-left {
+	background-position: 0 -50px;
+}
+
+.service .fore4 .ci-left {
+	background-position: 0 -75px;
+}
+
+.service .fore5 .ci-left {
+	background-position: 0 -100px;
+}
+
+.service .fore6 .ci-left {
+	background-position: 0 -125px;
+}
+
+.service .fore7 .ci-left {
+	background-position: 0 -150px;
+}
+
+.service .fore8 .ci-left {
+	background-position: 0 -175px;
+}
+
+.service .fore9 .ci-left {
+	background-position: -25px -250px;;
+}
+
+.service .fore10 .ci-left {
+	background-position: -25px -200px;;
+}
+
+.service .fore11 .ci-left {
+	background-position: 0 -275px;
+}
+
+.service .fore12 .ci-left {
+	background-position: -25px -225px;
+}
+
 .right-pic {
 	position: absolute;
 	top: 391px;
@@ -829,6 +917,10 @@ li#navs dl > dd {
 }
 
 /* 网站主要内容 */
+
+.floor {
+	margin-bottom: 30px;
+}
 
 #todays {
 	height: 164px;
