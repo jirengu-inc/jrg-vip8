@@ -48,22 +48,22 @@ $(function(){
         $(".s-2").hide();
         $(".s-3").hide();
     })
-    $("ul.s-1>li>a>i").on('mouseover',function(){
-        $(".s-2").show("slow");
-        $(".s-3").show(1000);
+    $("ul.s-1>li>a>i").on('mouseover',function(e){
+        var $current = $(e.currentTarget);
+        var index = $current.attr('data-index');
+        var indexNumber = +index;
+        if(indexNumber<=3){
+            $(".s-2").show("slow");
+            $(".s-3").show(1000);
+        }
+        $('ul.s-2').children('li.active').removeClass('active');
+        $('ul.s-2').children('li').eq(indexNumber).addClass('active');
     });
     $(".s-3").on('click',function(){
         $(".s-2").hide();
         $(".s-3").hide();
     });
-    $("ul.s-1 > li").on('mouseenter',function(e){
-        var $current = $(e.currentTarget);
-        var index = $current.attr('data-index');
-        var indexNumber = +index;
-        $('ul.s-2').children('li.active').removeClass('active');
-        $('ul.s-2').children('li').eq(indexNumber).addClass('active');
-    });
-    $("ul.s-2 > li").on('mouseenter',function(e){
+    $("ul.s-2 > li").on('mouseenter',function(){
         $(this)
             .addClass('active')
             .siblings('.active')

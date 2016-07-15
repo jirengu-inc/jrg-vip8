@@ -172,9 +172,9 @@ ul.submenu>li>div.submenu-right>div.submenu-right-two>img.one{margin-top:10px;}
     to{top:0;}
 }
 .NewsService .Service>ul.s-2>li.active{display:block;border-top: 2px solid #c81623;border-bottom: none;}
-.NewsService .Service>ul.s-2>li{float:left;display:inline;width:60px;height:25px;line-height:25px;border-right: 1px solid #E8E8E7;border-bottom: 1px solid #E8E8E7;border-top:2px solid transparent; border-left:1px solid transparent;overflow: hidden;cursor: pointer;text-align: center;}
-.NewsService .Service>ul.s-2>li>div{width:248px;height:183px;position:absolute;left:0;display:none;}
-.NewsService .Service>ul.s-2>li:hover>div{display:block;}
+.NewsService .Service>ul.s-2>li{float:left;display:inline;width:60px;height:25px;line-height:25px;border-right: 1px solid #E8E8E7;border-bottom: 1px solid #E8E8E7;border-top:2px solid transparent; border-left:1px solid transparent;cursor: pointer;text-align: center;}
+.NewsService .Service>ul.s-2>li>div{width:248px;height:183px;position:absolute;left:0;display:none;top:27px;}
+.NewsService .Service>ul.s-2>li.active>div{display:block;}
 .NewsService .page{height:75px;display: inline-block;vertical-align:top;width:250px;}
 .NewsService .page>a{height:75px;line-height:75px;display: inline-block;vertical-align: top;}
 .NewsService .page>a>img{width:250px;height:75px;}
