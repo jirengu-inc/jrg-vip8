@@ -9,6 +9,8 @@
             .parent().siblings().children()
             .removeClass('selected');
     });
+
+    $('')
 })();
 
 function Slider(node, options) {

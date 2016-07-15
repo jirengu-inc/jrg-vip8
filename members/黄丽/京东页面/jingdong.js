@@ -43,6 +43,35 @@ $(function(){
     $('.slidesjs-next').text(">");
 });
 
+$(function(){
+    $("ul.s-1").ready(function(){
+        $(".s-2").hide();
+        $(".s-3").hide();
+    })
+    $("ul.s-1>li>a>i").on('mouseover',function(e){
+        var $current = $(e.currentTarget);
+        var index = $current.attr('data-index');
+        var indexNumber = +index;
+        if(indexNumber<=3){
+            $(".s-2").show("slow");
+            $(".s-3").show(1000);
+        }
+        $('ul.s-2').children('li.active').removeClass('active');
+        $('ul.s-2').children('li').eq(indexNumber).addClass('active');
+    });
+    $(".s-3").on('click',function(){
+        $(".s-2").hide();
+        $(".s-3").hide();
+    });
+    $("ul.s-2 > li").on('mouseenter',function(){
+        $(this)
+            .addClass('active')
+            .siblings('.active')
+            .removeClass('active')
+    });
+});
+
+
 $.fn.slides = function(options){
     var $mc = this;
     $mc.each(function(){
@@ -77,9 +106,6 @@ $.fn.slides = function(options){
                 left: left
             },function(){
                 current = index;
-                if(!hover){
-                    autoPlay();
-                }
             })
         };
         var prev = function(){
@@ -98,7 +124,6 @@ $.fn.slides = function(options){
         $viewpoint.on('mouseenter', function(){
             hover = true
         }).on('mouseleave', function(){
-            autoPlay()
             hover = false
         })
 
