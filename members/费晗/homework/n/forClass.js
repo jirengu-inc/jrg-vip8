@@ -28,9 +28,7 @@ function removeClass(ele,cls){
     }
 }
 function singleAddClass(ele,cls){
-    if(hasClass(ele,cls)){
-        return true;
-    }
+    if(hasClass(ele,cls)){return}
     ele.className += ' '+cls;
 }
 function singleRemoveClass(ele,cls){

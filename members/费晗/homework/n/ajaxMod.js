@@ -1,10 +1,3 @@
-/**
- * 
- * @authors  ()
- * @date    2016-07-15
- * @version $Id$
- */
-
 function ajax(opts){
     var xhr=createAjax();
     if (!xhr) {

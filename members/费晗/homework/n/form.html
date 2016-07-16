@@ -100,81 +100,74 @@ body {
 <script src="reg.js"></script>
 <script src="ajaxMod.js"></script>
 <script id="jsbin-javascript">
-var userName = document.querySelector('#username')
-var email = document.querySelector('#email')
-var usernameTip = document.querySelector('#nametip')
-var emailTip = document.querySelector('#emailtip')
+var userNameIpt = document.querySelector('#username')
+var emailIpt = document.querySelector('#email')
 var formBtn = document.querySelector('#formbtn')
+var usernameTip = document.getElementsByClassName('nametip')[0]
+var emailTip = document.getElementsByClassName('emailtip')[0]
 
-userName.addEventListener('change',function(){
-  if(testUseName()){
-    ajax({
-      url: 'userName.php',
-      type: 'post',
-      data: {userName: userName.value},
-      success: function (responseText){
-        console.log('success已经收到数据了');
-        reCheck(responseText);
-      },
-      error: function(){
-        console.log('后台连接错误')
-      }
-    });
-  }else{
-    addClass(userName,'error')
-  }
+userNameIpt.addEventListener('change',function(){
+ testUseName() &&testUnUseage()
 });
 
-email.addEventListener('change',function(){
+emailIpt.addEventListener('change',function(){
   testEmail()
 });
-formBtn.addEventListener('click',function(){
-  if(testUseName() && testEmail() &&reCheck()){
-    console.log('系统正在注册中')
-    alert('注册成功')
+formBtn.addEventListener('click',function(e){
+  e.preventDefault()
+  if(testUseName() && testEmail()){
+    testUnUseage(function (validName){
+      if (validName) {
+        console.log('系统正在注册中')
+        alert('注册成功')
+      }
+    })  
   }
 });
-
+function testUnUseage(handle){
+  ajax({
+    url: 'userName.php',
+    type: 'post',
+    data: {userName: usernameTip.value},
+    success: function(ret){
+      if(!ret.data){
+        usernameTip.innerText = '用户名已经存在'
+        addClass(userNameIpt,'error')
+        handle && handle(false)
+      }else if (ret.data) {
+        usernameTip.innerText = ''
+        removeClass(userNameIpt,'error')
+        handle && handle(true)
+      }
+    }
+  })
+}
 function testUseName(){
-  var userName = userName.value;
+  var userName = userNameIpt.value;
   if(!regName(userName)){
-    userNameTip.innerText = '用户名格式不正确';
+    userNameTip.innerText = '用户名格式不正确'
     addClass(userNameIpt,'error')
     console.log('本地：用户名输入格式错了，没有发送Ajax')
     return false
   }else{
     userNameTip.innerText =''
-    removeClass(userName,'error')
+    removeClass(userNameIpt,'error')
     console.log('本地：用户名输入格式对了')
     return true
   }
 }
 function testEmail(){
-  var email = email.value
+  var email = emailIpt.value
   if(!regEmail(email)){
     emailTip.innerText = 'email格式不正确';
-    addClass(emailTip,'error')
+    addClass(emailIpt,'error')
     console.log('本地：email格式不正确')
     return false
   }else{
     emailTip.innerText = '' 
-    removeClass(emailTip,'error')
+    removeClass(emailIpt,'error')
     console.log('本地：密码符合要求')
     return true
-  }
-}
-function reCheck(responeseText){
-  if(responseText.data == true){
-    console.log('Ajax: 数据回来了，name有效')
-    return true
-  }else if(responseText.data === true){
-    addClass(userName,'error');
-    usernameTip.value = '这个name无效'
-    console.log('Ajax: 数据回来了，name无效')
-    return false
-  }else{
-    console.log('本地：Ajax还没回来，急啥')
-    return false
   }
 }
 /*

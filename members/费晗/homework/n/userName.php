@@ -6,7 +6,7 @@
  * Time: 15:11
  */
 $username= $_POST['userName'];
-if ($username == 'ran'){
+if ($username == 'aa'){
     $arr = array('data'=>false);
     echo json_encode($arr);
 }
