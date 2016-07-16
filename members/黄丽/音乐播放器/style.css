@@ -8,6 +8,7 @@ body{height:100%;font-family:"Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 .musicPlay .viewpoint .list{width:270px;height:300px;top:0;position: absolute}
 .musicPlay .viewpoint .list>img{width:270px;height:100px;vertical-align: middle;}
 .musicPlay .song-details{width:240px;padding:0 15px;margin-top:25px;position: absolute;top:105px;}
+.musicPlay .song-details .myAudio .source.active{display: block;}
 .musicPlay .song-details .songs{word-break: break-all;width:160px;height:80px;color:#415266;}
 .musicPlay .song-details .songs .song-name{font-size:16px;color:#415266;}
 .musicPlay .song-details  .selec{width:80px;float:right;line-height: 20px;text-align:right;}

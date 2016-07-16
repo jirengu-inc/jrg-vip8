@@ -83,19 +83,26 @@ $('.music').musicPlay();
 */
 
 $(function() {
-    var audio = document.getElementById("myAudio");
+    var audio = document.getElementById('myAudio');
+    var myAudio = $("audio")[0];
+    var $sourceList = $("source");
+    var currentSrcIndex = 0;
     var current =0 ;
-    var $pics = $('source');
     console.log(audio);
-    !function someclick() {
+    someclick();
+    function someclick() {
         // Button cilick
         $(".i-bf").ready(function () {
             $('.i-zt').hide();
-            message();
+            var world = $sourceList.eq(0).attr('src');
+            var art =  $sourceList.eq(0).attr('title');
+            $('.song-name').text(world);
+            $('.singer').text(art);
         }).on('click', function () {
             $('.i-zt').show();
             $('.i-bf').hide();
             Play();
+            mainclick();
         });
         //icon click
         $(".i-zt").on('click', function () {
@@ -115,53 +122,63 @@ $(function() {
         $(".i-xh").click(function () {
             $(this).css("color", "#415266");
             if ($('.i-sj').css("color", "#415266")) {
-                $('.i-sj').css("color", "#CDD2D7")
+                $('.i-sj').css("color", "#CDD2D7");
             }
         });
         $(".i-sj").click(function () {
             $(this).css("color", "#415266");
             if ($('.i-xh').css("color", "#415266")) {
-                $('.i-xh').css("color", "#CDD2D7")
+                $('.i-xh').css("color", "#CDD2D7");
             }
         });
-    }();
-
-    !function mainclick(){
+    }
+    function mainclick(){
         $('.i-sys').on('click',function(){
             prev();
+            --currentSrcIndex < 0 && (currentSrcIndex = 0);
+            currentSrc = $sourceList.eq(currentSrcIndex+1).prop("src");
+            myAudio.src = currentSrc;
+            myAudio.play();
         });
         $('.i-xys').on('click',function(){
             next();
+            ++currentSrcIndex > $sourceList.length - 1 && (currentSrcIndex = 0);
+            var currentSrc = $sourceList.eq(currentSrcIndex).prop("src");
+            myAudio.src = currentSrc;
+            myAudio.play();
         });
-    }();
-    function message(){
-        var world = $('source').eq(current).attr('src');
-        var art =  $('source').eq(current).attr('title');
+    }
+    function mess(ind){
+       if(ind<0){
+            ind = $sourceList.length-1;
+        }else if(ind>$sourceList.length-1){
+            ind = 0;
+       }
+       var world = $sourceList.eq(ind).attr('src');
+        var art =  $sourceList.eq(ind).attr('title');
         $('.song-name').text(world);
         $('.singer').text(art);
-    };
+       current = ind;
+    }
     function go(index){
-
         if(index<0){
-            index = $pics.length-1;
-        }else if(index>$pics.length-1){
+            index = $sourceList.length-1;
+        }else if(index>$sourceList.length-1){
             index=0;
         }
-        message();
         var top = index *(-100);
         $('.list').stop(true,true).animate({top:top},function(){
             current = index;
         });
-        $('source').eq(current).animate(function(){
-            Play();
-        });
-    };
+    }
     function prev(){
         go(current-1);
-    };
-     function next(){
+        mess(current-1);
+    }
+    function next(){
         go(current+1);
-    };
+        mess(current+1);
+    }
     function Play() {
         audio.play();
         TimeSpan();
@@ -169,7 +186,6 @@ $(function() {
     function Pause() {
         audio.pause();
     } //Pause()
-
     function TimeSpan() {
         var processnow = 0;
         setInterval(function () {
@@ -180,7 +196,6 @@ $(function() {
             $(".song-time").html(currentTime + " | " + timeAll);
         }, 1000);
     }  //TimeSpan()
-
     function timeFormat(number) {
         var minute = parseInt(number / 60);
         var second = parseInt(number % 60);
