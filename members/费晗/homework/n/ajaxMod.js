@@ -14,7 +14,7 @@ function ajax(opts){
             var responseText=JSON.parse(xhr.responseText);//将php返回的json格式的数据转换成字符串对象
             opts.success(responseText);//将数据传递到目标函数内
         }
-        if (xhr.readyState === 4 && xhr.status === 404) {
+        else{   //(xhr.readyState === 4 && xhr.status === 404)
             opts.error();//失败之后如何处理
         }
     };
