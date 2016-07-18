@@ -28,36 +28,36 @@ a{
 	background: white;
 }
 .bg{
-	width: 438px;
-	height: 230px;
+	width: 100%;
+	height: 260px;
 	border-radius:10px 10px 0 0;
 	overflow: hidden;
-	box-shadow: 0 0 30px #ddd;
 }
-.bg1{
-	width: 440px;
+.bg .music_lyric{
+	width: 100%;
 	height: 230px;
-	background: url(img/work_from_home.jpg);
+	padding:15px 0;
+	background: rgba(100, 100, 100, 0.5)
 }
-.bg2{
-	width: 440px;
+.bg .music_lyric .lyric_view{
 	height: 230px;
-	background: url(img/Cake_By_The_Ocean.jpg);
+	overflow: hidden;
 }
-.bg3{
-	width: 440px;
-	height: 230px;
-	background: url(img/Hush_Hush.jpg);
+.bg .music_lyric ul{
+	position: relative;
+	transition:all 1s;
 }
-.show_bg{
-	display: block;
-}
-.hide_bg{
-	display: none;
+.bg .music_lyric ul li{
+	padding:5px 0 2px 0;
+	position: relative;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.6);
+	font-size:12px;
+	transition:all 1s;
 }
 .mus_message{
-    margin-top: 25px;
-    height: 110px;
+    margin-top: 15px;
+    height: 100px;
 	padding:0 20px;
 	font-family: 微软雅黑, sans-serif;
 	color: #455569;
@@ -140,7 +140,7 @@ a{
 }
 .playerwrapper>.control{
 	height: 50px;
-	padding:20px 20px;
+	padding:15px 20px;
 	font-family: "icon-play";
 	line-height: 50px;
 }
@@ -167,7 +167,7 @@ a{
 .mus_pause:after{
 	content: "\e603";
 }
-.play_control>.btn2,.play_control>.btn3{
+.play_control>.btn3{
 	display: inline-block;
 	height: 28px;
 	width: 28px;
@@ -179,13 +179,10 @@ a{
 	text-align: center;
 	line-height: 28px;
 }
-.play_control>.btn2:after{
-	content: "\e605";
-}
 .play_control>.btn3:after{
 	content: "\e606";
 }
-.play_control>.btn1:hover,.play_control>.btn2:hover,.play_control>.btn3:hover{
+.play_control>.btn1:hover,.play_control>.btn3:hover{
 	background: #00131E;
 	cursor:pointer;
 	color:white;
