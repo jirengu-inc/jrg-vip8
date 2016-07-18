@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>面向对象</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+    
+
+    <script>
+        function Animal(name){
+              this.种类='动物';
+              this.name=name;
+        }
+
+        Animal.prototype.say=function(){
+              console.log(this.种类+this.name+'叫');
+        } 
+
+        function Cat(){
+        	Animal.apply(this,arguments);
+        	this.tail='一条尾巴';
+        }
+        
+        function zeCat(){
+        	Cat.apply(this,arguments);
+        	this.ear='折的';
+        }
+       
+        function F(){};
+        F.prototype=Animal.prototype;
+        Cat.prototype=new F();
+        Cat.prototype.constructor=Cat;
+
+        function G(){};
+        G.prototype=Cat.prototype;
+        zeCat.prototype=new G();
+        zeCat.prototype.constructor=zeCat;
+
+        Cat.prototype.run=function(){
+        	console.log('猫儿在跑');
+        }
+
+        Cat.prototype.say=function(){
+        	console.log('喵~喵~喵~');
+        }
+
+        zeCat.prototype.say=function(){
+        	console.log('喵~');
+        }
+
+        var zecat=new zeCat('折耳猫');
+        console.dir(zecat);
+        zecat.say();
+        zecat.run();
+ 
+    </script>
+       
+        
+</body>
+</html>

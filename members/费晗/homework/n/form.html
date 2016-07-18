@@ -49,9 +49,8 @@ body {
   border-left: 1px solid #c3c3c3;
   border-bottom: 1px solid #ddd;
 }
-.form-content .error{
-  color: red;
-  font-size: 13px;
+.form-content .ipt-error{
+  border-color: red;
 }
 #formbtn{
   display: inline-block;
@@ -63,7 +62,10 @@ body {
 #formbtn:hover{
   background: #eada98;
 }
-
+p.error{
+  color: red;
+  font-size: 13px;
+}
 </style>
 </head>
 <body>
@@ -75,14 +77,14 @@ body {
           <div>
             <input type="text" class="panel" id=username name="name" placeholder="只能是字母、数字、下划线，3-10个字符">
           </div>
-          <p class="nametip error"></p>
+          <p class="nameErro error"></p>
           </li>
        <li> 
           <lable class=title for=name>邮箱</lable>
           <div>
             <input type="text" class="panel" id=email name="email" placeholder="mysupermail@mail.com">
           </div>
-          <p class="emailtip error"></p>
+          <p class="emailErro error"></p>
        </li>
        <li>
         <lable class=title for=conment>留言</lable>
@@ -103,8 +105,8 @@ body {
 var userNameIpt = document.querySelector('#username')
 var emailIpt = document.querySelector('#email')
 var formBtn = document.querySelector('#formbtn')
-var usernameTip = document.getElementsByClassName('nametip')[0]
-var emailTip = document.getElementsByClassName('emailtip')[0]
+var nameErro = document.getElementsByClassName('nameErro')[0]
+var emailErro = document.getElementsByClassName('emailErro')[0]
 
 userNameIpt.addEventListener('change',function(){
  testUseName() &&testUnUseage()
@@ -124,19 +126,20 @@ formBtn.addEventListener('click',function(e){
     })  
   }
 });
+// AJAX请求后台数据验证用户名是否存在
 function testUnUseage(handle){
   ajax({
     url: 'userName.php',
     type: 'post',
-    data: {userName: usernameTip.value},
+    data: {userName: usernameIpt.value},
     success: function(ret){
       if(!ret.data){
-        usernameTip.innerText = '用户名已经存在'
-        addClass(userNameIpt,'error')
+        nameErro.innerText = '用户名已经存在'
+        addClass(userNameIpt,'ipt-error')
         handle && handle(false)
       }else if (ret.data) {
-        usernameTip.innerText = ''
-        removeClass(userNameIpt,'error')
+        nameErro.innerText = ''
+        removeClass(userNameIpt,'ipt-error')
         handle && handle(true)
       }
     }
@@ -145,13 +148,13 @@ function testUnUseage(handle){
 function testUseName(){
   var userName = userNameIpt.value;
   if(!regName(userName)){
-    userNameTip.innerText = '用户名格式不正确'
-    addClass(userNameIpt,'error')
+    nameErro.innerText = '用户名格式不正确'
+    addClass(userNameIpt,'ipt-error')
     console.log('本地：用户名输入格式错了，没有发送Ajax')
     return false
   }else{
-    userNameTip.innerText =''
-    removeClass(userNameIpt,'error')
+    nameErro.innerText =''
+    removeClass(userNameIpt,'ipt-error')
     console.log('本地：用户名输入格式对了')
     return true
   }
@@ -159,14 +162,14 @@ function testUseName(){
 function testEmail(){
   var email = emailIpt.value
   if(!regEmail(email)){
-    emailTip.innerText = 'email格式不正确';
-    addClass(emailIpt,'error')
+    emailErro.innerText = 'email格式不正确';
+    addClass(emailIpt,'ipt-error')
     console.log('本地：email格式不正确')
     return false
   }else{
-    emailTip.innerText = '' 
-    removeClass(emailIpt,'error')
-    console.log('本地：密码符合要求')
+    emailErro.innerText = '' 
+    removeClass(emailIpt,'ipt-error')
+    console.log('本地：email格式正确')
     return true
   }
 }
