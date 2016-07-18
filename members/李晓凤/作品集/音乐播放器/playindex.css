@@ -22,39 +22,18 @@ a{
 	top: 50px;
 	left: 35%;
 	border:1px solid #ddd;
-	box-shadow: 0 0 30px #ddd;
+	box-shadow: 0 5px 10px #aaa;
 	border-radius:10px;
 	box-sizing:border-box;
 	background: white;
 }
 .bg{
-	width: 100%;
+	width: 438px;
 	height: 260px;
 	border-radius:10px 10px 0 0;
 	overflow: hidden;
 }
-.bg .music_lyric{
-	width: 100%;
-	height: 230px;
-	padding:15px 0;
-	background: rgba(100, 100, 100, 0.5)
-}
-.bg .music_lyric .lyric_view{
-	height: 230px;
-	overflow: hidden;
-}
-.bg .music_lyric ul{
-	position: relative;
-	transition:all 1s;
-}
-.bg .music_lyric ul li{
-	padding:5px 0 2px 0;
-	position: relative;
-	text-align: center;
-	color: rgba(255, 255, 255, 0.6);
-	font-size:12px;
-	transition:all 1s;
-}
+
 .mus_message{
     margin-top: 15px;
     height: 100px;
@@ -167,7 +146,7 @@ a{
 .mus_pause:after{
 	content: "\e603";
 }
-.play_control>.btn3{
+.play_control>.btn2,.play_control>.btn3{
 	display: inline-block;
 	height: 28px;
 	width: 28px;
@@ -179,10 +158,13 @@ a{
 	text-align: center;
 	line-height: 28px;
 }
+.play_control>.btn2:after{
+	content: "\e605";
+}
 .play_control>.btn3:after{
 	content: "\e606";
 }
-.play_control>.btn1:hover,.play_control>.btn3:hover{
+.play_control>.btn1:hover,.play_control>.btn2:hover,.play_control>.btn3:hover{
 	background: #00131E;
 	cursor:pointer;
 	color:white;
