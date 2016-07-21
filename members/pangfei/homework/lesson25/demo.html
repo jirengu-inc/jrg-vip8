@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>demo</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+    <div class="box">
+         <p><a href="#">13456789</a></p>
+    </div>
+
+
+
+    <script>
+          // 随机数
+          // function random_str(length){
+          // 	var ALPHABET='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+          // 	ALPHABET+='abcdefghijklmnopqrstuvwxyz';
+          // 	ALPHABET+='0123456789-_';
+          // 	var str='';
+          // 	for(var i=0;i<length;++i){
+          // 		var rand=Math.floor(Math.random()*ALPHABET.length);
+          // 		str+=ALPHABET.substring(rand,rand+1);
+          // 	}
+          // 	return str;
+          // }
+
+          // console.log(random_str(6));
+           
+
+          // var d=p.ownerDocument;
+          // console.log(d===document);
+       
+          // new操作的作用
+          // function Life(){
+          //       this.body='life';
+          //       this.born=function(){
+          //         console.log('我出生了');
+          //       }
+                
+          //      this.die=function(){
+          //        console.log('我死亡了');
+          //      } 
+          //  }
+
+          // var life=new Life();
+          // console.log(life);
+         
+
+
+          // 使用对象的方法指定this的情况                  
+           // var object={
+           //    name:'frank',
+           //    say:function(){
+           //    console.log(this.name)
+           //    }
+           // }
+
+           // var name='faye';      // 全局变量name===window.name
+           // var temp=object.say;
+           // temp();
+           // console.log(window.name);
+           // object.say();
+          
+          
+
+          // 默认情况this指向window
+          // function Life(name){
+          //   this.name=name;
+          //   console.log(this.name);
+          // }
+
+          // var life=Life('frank');
+          // console.log(window.name);
+
+          
+          // object.method指定this
+          // function sayName(){
+          //   console.log(this.name);
+          // }
+
+          // var object1={name:'frank'};
+          // var object2={name:'faye'};
+          // var newFunction=sayName.bind(object1);
+          // newFunction.call(object2);
+           
+          
+
+          // 使用object._proto指定对象的原型的方法
+          // var a={name:'a'};
+          // a.__proto__={
+          //   say:function(){
+          //     console.log(this.name)
+          //   }
+          // };
+          // console.dir(a);
+           
+          
+          // 借用new操作的this.__proto__指向构造函数的prototype
+          // var p={
+          //   say:function(){
+          //     console.log(this.name);
+          //   }
+          // };
+
+          // function Empty(){
+
+          // };
+
+          // Empty.prototype=p;
+          // var a=new Empty();
+          // a.name='a';
+          // console.dir(a);
+           
+
+
+          //  var Animal=function(name){
+          //       this.种类='动物';
+          //       this.name=name;
+          //  }
+
+          //  Animal.prototype.say=function(){
+          //       console.log(this.种类+this.name+'叫');
+          //  }
+          // var animal1=new Animal('动物1');
+          // animal1.say();
+          // var animal2=new Animal('动物2');
+          // animal2.say();
+          // console.dir(animal1);
+          // console.dir(animal2);
+          
+
+          // // 使用构造函数让Cat(子类)继承Animal(父类)
+          var Animal=function(name){
+                 this.种类='动物';
+                 this.name=name;
+          }
+
+          Animal.prototype.say=function(){
+                 console.log(this.种类+this.name+'叫');
+          }
+
+          function Cat(){
+            Animal.apply(this,arguments);   //第一步：使用Animal的apply方法， 让Cat具有Animal的属性
+            this.tail='一条尾巴';
+          } 
+
+
+          // 第二步：借用new
+          // 注释：以下三行代码的作用是Cat.prototype.__proto__===F.prototype===Animal.prototype => Cat.prototype.__proto__=Animal.prototype，并且等价于Cat.prototype=Object.create(Animal.prototype)
+          // 
+           var F=function(){};
+           F.prototype=Animal.prototype;     /*构造函数的prototype属性是一个对象*/
+           Cat.prototype=new F();
+          
+           // 第三步：指定constructor
+           Cat.prototype.constructor=Cat;
+           
+           Cat.prototype.run=function(){
+             console.log('猫儿在跑');
+           }
+          
+           Cat.prototype.say=function(){
+             console.log('喵喵喵');
+           }
+
+          var cat=new Cat('小花');
+
+          console.dir(cat);
+          console.log(cat.say());
+          console.log(cat.run());
+
+
+          // // 不使用构造函数实现继承，ES6的方法，直接对象继承对象
+          // var animal={
+          // 	'种类' : '动物',
+          // 	say:function(){
+          // 		console.log('动物叫');
+          // 	}
+          // }
+
+          // var cat=Object.create(animal);
+          // cat.tail='猫尾巴';
+          // cat.say=function(){
+          // 	console.log('喵喵喵');
+          // }
+
+          // console.dir(cat);
+
+          
+    </script>
+</body>
+</html>

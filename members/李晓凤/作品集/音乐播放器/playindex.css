@@ -22,42 +22,21 @@ a{
 	top: 50px;
 	left: 35%;
 	border:1px solid #ddd;
-	box-shadow: 0 0 30px #ddd;
+	box-shadow: 0 5px 10px #aaa;
 	border-radius:10px;
 	box-sizing:border-box;
 	background: white;
 }
 .bg{
 	width: 438px;
-	height: 230px;
+	height: 260px;
 	border-radius:10px 10px 0 0;
 	overflow: hidden;
-	box-shadow: 0 0 30px #ddd;
 }
-.bg1{
-	width: 440px;
-	height: 230px;
-	background: url(img/work_from_home.jpg);
-}
-.bg2{
-	width: 440px;
-	height: 230px;
-	background: url(img/Cake_By_The_Ocean.jpg);
-}
-.bg3{
-	width: 440px;
-	height: 230px;
-	background: url(img/Hush_Hush.jpg);
-}
-.show_bg{
-	display: block;
-}
-.hide_bg{
-	display: none;
-}
+
 .mus_message{
-    margin-top: 25px;
-    height: 110px;
+    margin-top: 15px;
+    height: 100px;
 	padding:0 20px;
 	font-family: 微软雅黑, sans-serif;
 	color: #455569;
@@ -140,7 +119,7 @@ a{
 }
 .playerwrapper>.control{
 	height: 50px;
-	padding:20px 20px;
+	padding:15px 20px;
 	font-family: "icon-play";
 	line-height: 50px;
 }

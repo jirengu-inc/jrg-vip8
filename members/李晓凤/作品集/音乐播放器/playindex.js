@@ -1,9 +1,6 @@
 
 var myAudio=$('audio')[0]
 var Audio=$('audio')
-var currentSrcindex=0
-var sourcelist=$('source')
-var currentSrc=""
 //播放、暂停函数
 var _play=function(){
 	myAudio.play();
@@ -22,42 +19,70 @@ $('.btn1').on('click',function(){
 	}
 })
 
-//下一首、上一首功能
-$('.btn2').on('click',function(){
-	prev();
+//下一首功能
+$('.btn3').on('click',function(){
+	getChannel();
 	$('.btn1').removeClass('mus_play').addClass('mus_pause')
 })
 
-$('.btn3').on('click',function(){
-	next();
-	$('.btn1').removeClass('mus_play').addClass('mus_pause')
-})
-function prev(){
-	change(currentSrcindex-1);
+
+function getChannel(){
+	$.ajax({
+		url: 'http://api.jirengu.com/fm/getChannels.php',
+		dataType: 'json',
+		Method: 'get',
+		success: function(response){
+			var channels = response.channels;
+			var num = Math.floor(Math.random()*channels.length);
+			var channelName = channels[num].name;
+			var channelId = channels[num].channel_id;
+			$('.channel').text(channelName);
+			$('.channel').attr('title',channelName);
+			$('.channel').attr('data-id',channelId);
+			getMusic();
+		}
+	})
 }
-function next(){
-	change(currentSrcindex+1);
+function getMusic(){
+	$.ajax({
+		url: 'http://api.jirengu.com/fm/getSong.php',
+		dataType: 'json',
+		Method: 'get',
+		data:{
+			'channel':$('.channel').attr('data-id')
+		},
+		success:function(ret){
+			var resource=ret.song[0],
+			    url=resource.url,
+			    bgPic=resource.picture,
+			    sid=resource.sid,
+			    ssid=resource.ssid,
+			    title=resource.title,
+			    singer=resource.artist;
+			$('audio').attr('src',url);
+			$('audio').attr('sid',sid);
+			$('audio').attr('ssid',ssid);
+			$('.songs_name').text(title);
+			$('.songs_name').attr('title',title);
+			$('.singer').text(singer);
+			$('.singer').attr('title',singer);
+			$('.bg').css({
+				'background':'url('+bgPic+')',
+				'background-repeat':'no-repeat',
+				'background-position':'center',
+				'background-size':'cover',
+			})
+			_play();
+		}
+	})
 }
-var change=function(index){
-	if (index<0) {index=sourcelist.length-1};
-	if (index>sourcelist.length-1){index=0};
-	currentSrc=$('source').eq(index).prop("src");
-	var title = $("source").eq(index).prop("title").split(/-/);
-	console.log(title[1])
-	$('.songs_name').text(title[1]);
-	$('.singer').text(title[0]);
-	$('.channel').text(title[1]);
-	myAudio.src=currentSrc;
-	myAudio.play();
-	$('.bg').children().eq(index).addClass('show_bg').removeClass('hide_bg').siblings().addClass('hide_bg').removeClass('show_bg')
-	currentSrcindex=index;
-}
+
 //进度条
 function playProgress(){
 var scale=myAudio.currentTime/myAudio.duration;
 var progresswidth=$('.progress').width()
 $('.progressbar').width(progresswidth*scale)
-if(myAudio.currentTime == myAudio.duration){next()}
+if(myAudio.currentTime == myAudio.duration){getChannel()}
 }
 if (timer!=null) {clearInterval(timer)}
 var timer=setInterval(function(){
@@ -67,9 +92,9 @@ var timer=setInterval(function(){
 //控制进度条（点击位置x坐标-进度条初始位置x坐标）/进度条总长度=用户需求进度百分比
 $('.progress').on('mousedown',function(e){
 	//拿到进度条初始位置x坐标（相对于窗口）
-	var parentoffset=$(this).offset();
+	var parentOffset=$(this).offset();
 	//拿到点击位置x坐标，并减去初始位置x坐标，得到百分比
-	var percPos=(e.pageX-parentoffset.left)/400;
+	var percPos=(e.pageX-parentOffset.left)/400;
 	//得到用户要求时间。
 	myAudio.currentTime=myAudio.duration*percPos;
 })
@@ -91,4 +116,4 @@ Audio.on('timeupdate',function(){
 	$('.time-now').html(songCurrentParse);
 	$('progress').attr("value", this.currentTime / this.duration);
 })
-
+$(document).ready(getChannel());

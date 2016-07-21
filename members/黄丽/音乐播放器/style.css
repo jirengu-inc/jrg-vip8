@@ -1,0 +1,29 @@
+*{margin:0;padding:0;}
+html,body{height:100%;}
+body{height:100%;font-family:"Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;background:#D2D5D6;}
+.clearfix:after{content: '';display:block;clear:both;}
+.play-wrapper{width:270px;position:absolute; right:0; left:0; bottom:0; top:0; margin:auto;height:100%;display: flex;}
+.musicPlay{width:270px;border:1px solid #EAEEEF;border-radius:15px;background:#EAEEEF;height:300px;margin-top:80%;flex-direction:column;overflow: hidden;box-shadow:0 2px 8px 2px #A4A6A7;position:relative;}
+.musicPlay .viewpoint{width:270px;height:100px;position:absolute;overflow: hidden;}
+.musicPlay .viewpoint .list{width:270px;height:300px;top:0;position: absolute}
+.musicPlay .viewpoint .list>img{width:270px;height:100px;vertical-align: middle;}
+.musicPlay .song-details{width:240px;padding:0 15px;margin-top:25px;position: absolute;top:105px;}
+.musicPlay .song-details .myAudio .source.active{display: block;}
+.musicPlay .song-details .songs{word-break: break-all;width:160px;height:80px;color:#415266;}
+.musicPlay .song-details .songs .song-name{font-size:16px;color:#415266;}
+.musicPlay .song-details  .selec{width:80px;float:right;line-height: 20px;text-align:right;}
+.musicPlay .song-details  .selec>i{width:20px;height:20px;font-size:20px;color:#CDD2D7;}
+.musicPlay .process{width:240px;height:35px;position: absolute;bottom:55px;margin:0 15px;}
+.musicPlay .process .processAll{height:5px;width:240px;border-radius:15px;background:#414141;position:absolute;}
+.musicPlay .process .processnow{height:5px;width:0;border-radius:15px;background:#D2D5D6;position:absolute;z-index:1;}
+.musicPlay .process .song-time{width:240px;text-align: right;line-height:30px;height:30px;position:absolute;right:0;font-size:12px;color:#414141;}
+.musicPlay .buttons{width:240px;overflow: hidden;padding-left:15px;padding-right:15px;position:absolute;bottom:10px;}
+.musicPlay .buttons .play-button{width:160px;height:40px;line-height: 40px;float:left;position:relative;}
+.musicPlay .buttons .play-button>i{float:left;}
+.i-bf,.i-zt{width:38px;height:38px;border:1px solid #414141 ;position:absolute;top:0;left:0;color:#414141;border-radius: 50%;text-align: center;color:#D6D6D6;background:#414141;line-height: 40px;}
+.i-sys{position:absolute;top:5px;left:45px;width:30px;height:30px;color:#D6D6D6;background:#414141;border-radius:50%;line-height: 30px;text-align: center;  }
+.i-xys{position:absolute;top:5px;left:80px;width:30px;height:30px;color:#D6D6D6;background:#414141;border-radius:50%;line-height: 30px;text-align: center;  }
+.musicPlay .buttons .play-mode{width:80px;float:left;line-height: 40px;position:relative;height:40px;}
+.i-xh{width:40px;height:40px;text-align: center;line-height: 40px;font-size:28px;left:-25px;position:absolute;color:#CDD2D7;}
+.i-sj{width:40px;height:40px;text-align: center;line-height: 40px;float:left;font-size:25px;right:-9px;position:absolute;color:#CDD2D7;}
+
