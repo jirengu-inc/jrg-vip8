@@ -35,11 +35,7 @@ li {
 	overflow: hidden;
 }
 
-<<<<<<< HEAD
 .items .selected img {
-=======
-.items > .selected img {
->>>>>>> aa46419e0fdc83319e3ad64cc8f81174bf947134
 	width: 360px;
 	height: 300px;
 }
