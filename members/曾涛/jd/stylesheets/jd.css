@@ -359,7 +359,7 @@ li#navs:hover {
 li#apps > .dropdown-layer {
 	width: 250px;
 	height: 195px;
-	background: url(../img/apps.png) no-repeat
+	background: url(../images/apps.png) no-repeat
 }
 
 li#apps > .dropdown-layer a {
@@ -606,7 +606,7 @@ li#navs dl > dd {
 	width: 57px;
 	height: 49px;
 	padding-left: 29px;
-	background: url(../img/settleup-nogoods.png) no-repeat 30px 0
+	background: url(../images/settleup-nogoods.png) no-repeat 30px 0
 }
 
 .cart > .dropdown-layer > .dd-spacer {
@@ -854,7 +854,7 @@ li#navs dl > dd {
     left: 18px;
 	width: 25px;
     height: 25px;
-	background: url(../img/service-bg.png) no-repeat;
+	background: url(../images/service-bg.png) no-repeat;
 }
 
 .service .ci-tip {
@@ -863,12 +863,12 @@ li#navs dl > dd {
     height: 15px;
     top: 0;
     right: 0;
-	background: url(../img/ci-tip1.png) no-repeat;
+	background: url(../images/ci-tip1.png) no-repeat;
 }
 
 .service .fore12 .ci-tip {
 	right: 3px;
-	background-image: url(../img/ci-tip2.png)
+	background-image: url(../images/ci-tip2.png)
 }
 
 .service .fore2 .ci-left {
@@ -939,9 +939,87 @@ li#navs dl > dd {
 }
 
 .todays-title {
+	position: relative;
 	width: 210px;
 	height: 151px;
-	background: url(http://misc.360buyimg.com/product/home/1.0.0/css/i/homebg.png) no-repeat -213px -136px;
+	background: url(http://misc.360buyimg.com/product/home/1.0.0/css/i/homebg.png) no-repeat 0 -136px;
+	cursor: pointer;
+}
+
+.todays-title .jd-clock,
+.todays-title .jd-clock::before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+.todays-title .jd-clock {
+	width: 43px;
+	height: 43px;
+	border: 7px solid #fff;
+	border-radius: 50%;
+	transform: translate(-50%, -80%);
+}
+
+.todays-title .jd-clock::before {
+	content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #fff;
+	transform: translate(-50%, -50%);
+}
+
+.todays-title .jd-clock-h {
+	position: absolute;
+    left: 50%;
+    top: 3px;
+    height: 19px;
+    width: 5px;
+    border-radius: 2px;
+    background-color: #fff;
+    transform: rotate(68deg);
+    transform-origin: 2.5px 16.5px;
+}
+
+.todays-title .jd-clock-m {
+	position: absolute;
+    left: 50%;
+    margin-left: -2.5px;
+    width: 5px;
+    height: 21px;
+    background-color: #fff;
+    transform-origin: bottom;
+    border-radius: 2px;
+    animation: tick-tock 20s steps(60,end) infinite;
+}
+
+.todays-title .jd-clock-s {
+	position: absolute;
+    left: 50%;
+    margin-left: -2.5px;
+    top: -6px;
+    width: 5px;
+    height: 28px;
+	transform-origin: bottom;
+	animation: tick-tock 10s linear infinite;
+}
+
+.todays-title .jd-clock-s::before {
+	content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 5px;
+    background-color: #5e5252;
+    border-radius: 50%;
+}
+
+@keyframes tick-tock {
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 .todays-content {
@@ -1220,7 +1298,7 @@ li#navs dl > dd {
 	width: 40px;
 	height: 40px;
 	margin: 5px 5px 0 55px;
-	background: url(../img/iconlist_2.png) no-repeat;
+	background: url(../images/iconlist_2.png) no-repeat;
 }
 
 .mainCategory dl {

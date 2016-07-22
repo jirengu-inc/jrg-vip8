@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="description" content="这是我的一个网页作品">
+		<meta name="author" content="jimmzy,https://github.com/Jimmzy">
+		<meta name="keywords" content="todos,html,css,javascript,前端开发">
+		<title>Todos</title>
+		<link href="stylesheets/todo.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="todo-container">
+			<h1>todos</h1>
+			<div class="todo-banner"></div>
+			<div class="todo-content">
+				<div class="todo-input">
+					<label class="todo-toggle"></label>
+					<input class="gradient" type="text" name="input" value="What needs to be done?">
+				</div>
+				<ul class="todo-items">
+					<!-- <li class="todo-item">
+						<div class="item-status"></div>
+						<strong class="item-text">item1</strong>
+						<span class="item-delete"></span>
+					</li> -->
+				</ul>
+				<div class="seperator"></div>
+			</div>
+			<div class="todo-summary">
+				<div class="todo-left">
+					<span class="active-num"></span>
+					items left
+				</div>
+				<div class="todo-filters">
+					<strong class="switch switch-all current">All</strong>
+					<strong class="switch switch-active">Active</strong>
+					<strong class="switch switch-complete">Complete</strong>
+				</div>
+				<div class="todo-clear">
+					Clear complete
+					<span class="complete-wrap">
+						(<label class="complete-num">0</label>)
+					</span>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<p>Double-click to edit a todo</p>
+			<p>Created by <strong><a href="https://github.com/Jimmzy" title="My Github">Jimmzy</a></strong></p>
+		</div>
+		<script src="javascripts/jquery-1.12.3.js"></script>
+		<script src="javascripts/todo.js"></script>
+		<script>
+			var todo = new Todo('#todo-container');
+			todo.add('Happiness');
+			todo.add('Smile');
+		</script>
+	</body>
+</html>
