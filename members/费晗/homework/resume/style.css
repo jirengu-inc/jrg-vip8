@@ -1,10 +1,4 @@
 @charset "UTF-8";
-/**
- * 
- * @authors  ()
- * @date    2016-05-10
- * @version $Id$
- */
 body{
  	font: 16px/1.5 "微软雅黑","Open Sans",Helvetica,Arial,sans-serif;
 	color: #797979;
@@ -208,6 +202,7 @@ button{
 /* header js */
 .vary{
 	height: 50px;
+	transition: all .1s;
 }
 .vary>.wrapper{
 	line-height: 50px;
