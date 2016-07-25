@@ -1,0 +1,20 @@
+@charset "UTF-8";
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.item {
+	width: 700px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+    border: solid 1px orange;
+    padding: 10px;
+    text-align: center;
+    background: url(../images/loading_32x32.gif) no-repeat center center;
+}
+
+.item img {
+	width: 600px;
+	height: 378px;
+}
