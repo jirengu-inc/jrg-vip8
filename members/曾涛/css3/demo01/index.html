@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 animation</title>
+    <style>
+        .container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+            border: 2px solid #000;
+        }
+
+        .container > img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }   
+
+        .sf, .red {
+            visibility: hidden;
+        }
+
+        .cic {
+            animation: jump 2s forwards;
+        }
+
+        .sf {
+            animation: img-show 1s 2s forwards;
+        }
+
+        .red {
+            animation: img-end 1s 3s forwards;
+        }
+
+        @keyframes jump {
+            0% { 
+                left:5px; 
+                top:0px; 
+            }  
+
+            10%  { 
+                left:15px; 
+                top:15px; 
+            }
+
+            15%  { 
+                left:15px; 
+                top:35px; 
+            }
+
+            20%  { 
+                left:15px; 
+                top:55px; 
+            }
+
+            25%  { 
+                left:15px; 
+                top:75px; 
+            }
+
+            30%  { 
+                left:20px; 
+                top:85px; 
+            }
+
+            35%  { 
+                left:20px; 
+                top:75px; 
+            }
+
+            40%  { 
+                left:20px; 
+                top:55px; 
+            }
+
+            45%  { 
+                left:20px; 
+                top:35px; 
+            }
+
+            50%  { 
+                left:30px; 
+                top:25px; 
+            }
+
+            55%  { 
+                left:30px; 
+                top:35px; 
+            }
+
+            60%  { 
+                left:40px; 
+                top:25px;
+                transform: scale(0.5); 
+            }
+
+            70%  { 
+                left:40px; 
+                top:40px; 
+                transform: scale(0.4);
+            }
+
+            80%  { 
+                left:40px; 
+                top:50px;
+                transform: scale(0.3); 
+            }
+
+            90%  { 
+                left:50px; 
+                top:70px;
+                transform: scale(0.2); 
+            }
+
+            95% {
+                left:50px; 
+                top:40px;
+                transform: scale(0.1); 
+            }
+
+            100% { 
+                opacity: 0;
+            }
+        }
+
+        @keyframes img-show {
+            0% {
+                left: 40px; 
+                top: 25px;
+                visibility: visible;
+                opacity: 0.2;
+                transform: scale(0.2);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: scale(0.5);
+            }
+
+            70% {
+                opacity: 0.7;
+                transform: scale(0.7);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes img-end {
+            0% {
+                left: 40px; 
+                top: 25px;
+                visibility: visible;
+                opacity: 0.2;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="cic" src="images/cic.png" alt="">
+        <img class="red" src="images/red.png" alt="">
+        <img class="sf" src="images/sf.png" alt="">
+    </div>
+</body>
+</html>
