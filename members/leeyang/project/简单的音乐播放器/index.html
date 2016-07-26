@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<title>音乐播放器</title>
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1469415204_9569566.css">
+	<script src="main.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<!-- 歌手图片 -->
+		<div class="singer">
+			<img src="" alt="">
+		</div>
+		<audio src=""></audio>
+		<!-- 歌名，歌手，类型，分享，收藏，喜欢 -->
+		<div class="music-info clearfix">
+			<div class="music">
+				<h3 class="music-name">a</h3>
+				<p class="singer-info">a</p>
+				<p class="music-type">a</p>
+			</div>
+			<div class="more clearfix">
+				<a href="http://service.weibo.com/share/share.php?appkey=&title=&url=&pic=&searchPic=false&style=simple" target="_blank"><i class="iconfont music-share"></i></a>
+				<span class="iconfont music-collect"></span>
+				<span class="iconfont music-like"></span>
+			</div>
+		</div>
+		<!-- 进度条 -->
+		<div class="progess-bar clearfix">
+			<div class="full-time">
+				<div class="wasting-time"></div>
+			</div>
+			<div class="time"></div>
+		</div>
+		<div class="footer clearfix">
+			<!-- 按钮 -->
+			<div class="button">
+				<span class="pause"><i class="iconfont music-start"></i></span>
+				<span><i class="iconfont music-previous"></i></span>
+				<span><i class="iconfont music-next"></i></span>
+			</div>
+			<!-- 播放顺序 -->
+			<div class="play-order">
+				<i class="iconfont music-circulation actived"></i>
+				<i class="iconfont music-random"></i>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
