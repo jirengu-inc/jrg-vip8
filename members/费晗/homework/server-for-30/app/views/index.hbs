@@ -85,6 +85,9 @@ $('form').on('submit',function(e){
     })
 
     var rules = {
+        usermam: function(value){
+            return value.length>=3 &&value.length<=10
+        }
         phone: function(value){
             return /^1\d{10}$/.test(value)
         },
