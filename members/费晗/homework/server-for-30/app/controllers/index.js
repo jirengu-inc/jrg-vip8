@@ -1,6 +1,6 @@
 module.exports = {
     index: function *(next) {
-        yield this.render('index2.hbs');
+        yield this.render('index3.hbs');
         yield next;
     },
     adc: function *(next) {

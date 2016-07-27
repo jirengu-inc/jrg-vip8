@@ -1,0 +1,162 @@
+body {
+    background-color: #000;
+}
+
+.galaxy {
+    position: relative;
+    width: 1300px;
+    height: 1300px;
+}
+
+.galaxy > div {
+    position: absolute;
+}
+
+.galaxy > div[class*=track] {
+    top: 50%;
+    left: 50%;
+    border: 1px solid #555;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.galaxy .mercury-track {
+    width: 150px;
+    height: 150px;
+}
+
+.galaxy .venus-track {
+    width: 260px;
+    height: 260px;
+}
+
+.galaxy .earth-track {
+    width: 370px;
+    height: 370px;
+}
+
+.galaxy .mars-track {
+    width: 480px;
+    height: 480px;
+}
+
+.galaxy .jupiter-track {
+    width: 620px;
+    height: 620px;
+}
+
+.galaxy .saturn-track {
+    width: 820px;
+    height: 820px;
+}
+
+.galaxy .uranus-track {
+    width: 1020px;
+    height: 1020px;
+}
+
+.galaxy .neptune-track {
+    width: 1190px;
+    height: 1190px;
+}
+
+.sprite {
+    top: 50%;
+    left: 50%;
+    background-image: url(../images/spritesheet.png);
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.sprite-Sun {
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    background-position: -225px -5px;
+}
+
+.sprite-Mercury {
+    top: 48%;
+    left: 700px;
+    width: 50px;
+    height: 50px;
+    background-position: -165px -65px;
+    transform-origin: -50px 25px;
+    animation: rotation 2.4s linear infinite;
+}
+
+.sprite-Venus {
+    top: 48%;
+    left: 750px;
+    width: 60px;
+    height: 60px;
+    background-position: -5px -205px;
+    transform-origin: -100px 30px;
+    animation: rotation 6.1s linear infinite;
+}
+
+.sprite-Earth {
+    top: 48%;
+    left: 805px;
+    width: 60px;
+    height: 60px;
+    background-position: -5px -5px;
+    transform-origin: -155px 30px;
+    animation: rotation 10s linear infinite;
+}
+
+.sprite-Mars {
+    top: 48%;
+    left: 865px;
+    width: 50px;
+    height: 50px;
+    background-position: -165px -5px;
+    transform-origin: -215px 25px;
+    animation: rotation 19s linear infinite;
+}
+
+.sprite-Jupiter {
+    top: 47%;
+    left: 920px;
+    width: 80px;
+    height: 80px;
+    background-position: -75px -5px;
+    transform-origin: -270px 40px;
+    animation: rotation 120s linear infinite;
+}
+
+.sprite-Saturn {
+    top: 47%;
+    left: 1000px;
+    width: 120px;
+    height: 80px;
+    background-position: -85px -125px;
+    transform-origin: -350px 40px;
+    animation: rotation 290s linear infinite;
+}
+
+.sprite-Uranus {
+    top: 48%;
+    left: 1120px;
+    width: 80px;
+    height: 80px;
+    background-position: -225px -115px;
+    transform-origin: -470px 40px;
+    animation: rotation 840s linear infinite;
+}
+
+.sprite-Neptune {
+    top: 48%;
+    left: 1210px;
+    width: 70px;
+    height: 70px;
+    background-position: -5px -125px;
+    transform-origin: -560px 35px;
+    animation: rotation 1650s linear infinite;
+}
+
+@keyframes rotation {
+    100% {
+        transform: rotate(360deg);
+    }
+}

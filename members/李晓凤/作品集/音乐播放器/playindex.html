@@ -1,30 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>player</title>
+	<meta name="referrer" content="no-referrer">
+	<title>Min Player</title>
 	<link rel="stylesheet" href="playindex.css">
+	<link rel="icon" href="music.png">
 	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1467902531_8276124.css">
 </head>
 <body>
 	<div class="playerwrapper">
-	    <div class="content">
-			<audio>
-				<source title="Miss Li-work from home" src="songs/Miss Li-work from home.mp3"></source>
-				<source title="DNCE-Cake By The Ocean" src="songs/DNCE-Cake By The Ocean.mp3"></source>
-				<source title="The Pussycat Dolls-Hush Hush" src="songs/The Pussycat Dolls-Hush Hush.mp3"></source>
-			</audio>
-		</div>
 		<div class="bg">
-			<div class="bg1 show_bg"></div>
-			<div class="bg2 hide_bg"></div>
-			<div class="bg3 hide_bg"></div>
+			<div class="music_lyric" style="display:block">
+				<div class="lyric_view">
+					<ul class="lyric"></ul>
+				</div>
+			</div>
 		</div>
 		<div class="mus_message clearfix">
+		    <audio src=""></audio>
 			<div class="songs_message">
-				<p class="songs_name">work from home</p>
-				<p class="singer">Miss Li</p>
-				<p class="channel">work from home</p>
+				<p class="songs_name" title=''></p>
+				<p class="singer" title=''></p>
+				<p class="channel" title='' data-id=''></p>
 			</div>
 			<div class="songs_share">
 				<span class="share"><a href="https://www.google.com.hk" target="_blank"></a></span>
@@ -42,7 +40,6 @@
 		<div class="control clearfix">
 		    <div class="play_control">
 				<span class="mus_play btn1"></span>
-				<span class="prev btn2"></span>
 				<span class="next btn3"></span>
 			</div>
 			<div class="songs_text">
