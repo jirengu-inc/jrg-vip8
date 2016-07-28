@@ -5,8 +5,9 @@ module.exports = function(app) {
 	var router = new Router();
 
 	router
-		.get('/', indexCtrl.index)
-                .post('/', indexCtrl.post)
+		  .get('/', indexCtrl.index)
+		  .get('/Login.hbs',indexCtrl.Login)
+          .post('/Login.hbs', indexCtrl.LoginPost)
 
 	app.use(router.middleware());
 };

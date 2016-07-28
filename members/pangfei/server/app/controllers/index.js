@@ -3,8 +3,38 @@ module.exports = {
         yield this.render('index.hbs');
         yield next;
     },
+    Login: function *(next) {
+        yield this.render('Login.hbs');
+        yield next;
+    },
     index2: function *(next) {
         yield this.render('index2.hbs');
+        yield next;
+    },
+    LoginPost: function *(next) {
+        var username = this.request.body.username
+        var password = this.request.body.pwd
+
+        if(password === '123456'&&username==='faye'){
+            yield this.render('post.hbs')
+        }else{
+            yield this.render('error.hbs')
+        }
+        // 提交到数据库...
+        // mysql ...
+
+        //yield this.render('post.hbs', {
+        //    name: name,
+        //    phone: phone
+        //});
+
+        //this.body = {
+            //errorCode: 0,
+            //data: {
+                //name: name,
+                //phone: phone
+            //}
+        //}
         yield next;
     },
     data: function *(next) {
