@@ -229,12 +229,12 @@ Slider.prototype.secondWay = {
 
     init2: function () {
         var $container = this.container,
-            $links = $container.children('a'),
-            $imgItem = this.$imgItem = $container.find('img'),
-            imgSize = this.imgSize = $imgItem.size(),
-            imgWidth = this.imgWidth = $imgItem.width(),
-            $extra = $('<div class="slider-extra"></div>'),
-            _self = this;
+        $links = $container.children('a'),
+        $imgItem = this.$imgItem = $links,
+        imgSize = this.imgSize = $links.size(),
+        imgWidth = this.imgWidth = $links.width();
+        $extra = $('<div class="slider-extra"></div>'),
+        _self = this;
 
         // 创建无序列表元素   
         $links.wrap('<li class="slider-panel"></li>');
@@ -246,7 +246,7 @@ Slider.prototype.secondWay = {
 
         // 克隆图片的第一张和最后一张，实现无缝滚动的效果
         $list.prepend($li.last().clone())
-             .append($li.first().clone());
+            .append($li.first().clone());
 
         // 获取真实的图片个数
         imgRealSize = $list.children().size();

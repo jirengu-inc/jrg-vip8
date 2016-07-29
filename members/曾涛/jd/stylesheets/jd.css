@@ -1213,6 +1213,10 @@ li#navs dl > dd {
 	float: left;
 }
 
+.clothes .slider-panel a {
+	display: inline-block;
+}
+
 .clothes .slider-nav {
 	position: absolute;
 	width: 100%;
