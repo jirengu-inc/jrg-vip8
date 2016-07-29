@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<canvas id="canvas" style="border: 1px solid #aaa;display: block;margin: 50px auto;">
+		
+	</canvas>
+
+	<script>
+		window.onload = function(){
+			var canvas = document.getElementById("canvas");
+			canvas.width = 1024;
+			canvas.height = 768;
+			
+			if(canvas.getContext("2d")){
+				var context = canvas.getContext("2d");
+				//使用Context控制
+
+				context.beginPath()   //从此时起，声明了一段新的路径
+				context.moveTo(100,100);
+				context.lineTo(700,700);
+				context.lineTo(100,700);
+				context.lineTo(100,100);
+				context.closePath();  //声明的路径在此结束
+				context.lineWidth = 5;
+				context.strokeStyle = "red";
+				context.stroke();  //绘制笔画（线条）
+				// context.fillStyle = "rgb(2,100,30)";
+				// context.fill();
+
+				context.beginPath();
+				context.moveTo(200,100);
+				context.lineTo(700,600);
+				context.closePath();
+				context.strokeStyle ="black";
+				context.stroke();
+
+
+			}else{
+				alert('当前浏览器不支持Canvas，请更换浏览器后再试')
+			}
+		}
+	</script>
+</body>
+</html>
