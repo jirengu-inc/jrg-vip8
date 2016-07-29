@@ -9,8 +9,6 @@
             .parent().siblings().children()
             .removeClass('selected');
     });
-
-    $('')
 })();
 
 function Slider(node, options) {
@@ -244,12 +242,13 @@ Slider.prototype.secondWay = {
         var $li = this.$li = $container.find('.slider-panel');
         $li.wrapAll($('<ul class="slider-main"></ul>'));
 
-        var $list = this.$list = $li.parent();
+        var $list = this.$list = $li.parents('ul');
 
         // 克隆图片的第一张和最后一张，实现无缝滚动的效果
         $list.prepend($li.last().clone())
              .append($li.first().clone());
 
+        // 获取真实的图片个数
         imgRealSize = $list.children().size();
         $list.width(imgWidth * imgRealSize)
             .css('left', -imgWidth);

@@ -544,7 +544,8 @@ li#navs dl > dd {
 	border: solid #B61D1D;
 	border-width: 2px 0 2px 2px;
 	padding: 4px;
-	outline: none
+	background-color: #fff;
+	outline: none;
 }
 
 .search > .search-top .btn {
