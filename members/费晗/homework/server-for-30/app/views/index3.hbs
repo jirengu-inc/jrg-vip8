@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body style="background:grey;">
+<div>
+表单校验
+<hr>
+<span style="color:red;">{{message}}</span>
+<form action="/">
+      <lable>username: <input type="text" name = username></lable></br></br>
+      <lable>phone: <input type="text" name=phone></lable><br><br>
+      <lable>email: <input type="password" name=email></lable><br><br>
+      <input type="submit" value=submit>
+</form>
+</div>
+
+<script src="http://7xrxd2.com1.z0.glb.clouddn.com/jquery/jquery-1.12.3.min.js"></script>
+<script>
+$('form').on('submit',function(e){
+    e.preventDefault()
+    var $form = $(e.currentTarget)
+    var username = $form.find('[name=username]').val()
+    var phone = $.trim($form.find('[name=phone]').val())
+    var email = $form.find('[name=email]').val()
+    var data = {}
+    $form.find('input[name]').each(function(index, dom){
+        var name = $(dom).attr('name')        
+        var value = $(dom).val()   
+        data[name] = value
+    })
+    var rules = {
+      username: function(value){
+        return value.length >= 3 && value.length <= 10
+      },
+      phone: function(value){
+        return /^[1]\d{10}$/.test(value)
+      },
+      email: function(value){
+        return value.indexOf('@') >= 0
+      }
+    }
+    var map = {
+      username: 'username',
+      username2: 'username',
+      phone: 'phone',
+      phone2: 'phone',
+      email: 'email',
+      email2: 'email'
+    }
+    var allValid = true
+    for(var key in data){
+      var value = data[key]
+      var validName = map[key]
+      var validtor = rules[validName]
+      var valid = validtor(value)
+      if(valid === false){
+        allValid = false
+        console.log('valid error')
+        break;
+      }
+        $.ajax({
+            url: '/', //请求一个不存在的路径
+            type: 'post',
+            data: {
+                username: username,
+                phone: phone,
+                email: email
+            },
+            success: function(response){
+                //success
+                    if (response.errorCode === 0) {
+                        alert('success')
+                    }else{
+                        alert(response.message || '服务器忙，请稍后再试')
+                    }
+                },
+            error: function(xhr){
+                    //error
+                    xhr.status  //处理404，服务器挂掉
+                    $form.find('[name=phone]').css({'border': '1px solid red'})
+                }
+        })
+
+  }
+})
+
+</script>
+
+
+</body>
+</html>
