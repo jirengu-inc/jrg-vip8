@@ -384,7 +384,7 @@ test1.secondWay.init1.call(test1);
 test1.secondWay.bindEvent.call(test1);
 
 var test2 = new Slider($('.clothes .slider'), { interval: 5000 });
-$.load(function(){
+$(window).load(function(){
     test2.secondWay.init2.call(test2);
 });
 test2.secondWay.bindEvent.call(test2);
