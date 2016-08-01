@@ -449,7 +449,7 @@
 	
 	.content-wraped .submenu-nav .submenu li a{
 		color: #fff;
-    	font-family: "微软雅黑"sans-serif;
+    	font-family: microsoft yahei;
     	cursor: pointer;
 	}
 
@@ -728,22 +728,77 @@
 	}
 
 	/*最后部分如下*/
-	#footer{
+	#column{
 		width: 1210px;
     	margin: 0 auto;
     	margin-top: 3px;
     	overflow: hidden;
 	}
 
-	.footer-left{
+	.column-gif img{
 		float: left;
 		display: inline-block;
 	    width: 198px;
 	    height: 151px;
 	}
 
-	.footer-right{
+	.column-main{
 		display: inline-block;
 		margin-left: 2px;
-		float: left;
 	}
+
+	.column-font{
+		margin-top: 10px;
+		height: 40px; 
+		display: block;
+	}
+
+	.column-font span{
+		float: left;
+	    display: inline-block;
+	    line-height: 30px;
+	    font-size: 20px;
+	}
+	.column-font a{
+		display: inline-block;
+		float: right;
+	}
+	
+	.column-produce{
+		border:1px solid #ddd;
+		overflow: hidden;
+	}
+
+	.column-produce-list{
+		margin-top: 10px;
+		border: 1px solid transparent;
+	    display: inline-block;
+	    width: 196px;
+	    text-align: center;
+	}
+
+	.column-produce-list img{
+		padding: 20px 0px;
+		width: 130px;
+		height:130px;
+		display: inline-block;
+	}
+
+	.column-produce-list a{
+		width: 138px;
+		height:30px;
+		display: inline-block;
+	}
+
+	.column-produce-list a:hover{
+		color: #C81623;
+	}
+
+	.column-produce-list span{
+		width: 130px;
+		height:30px;
+		color: #b51d1a;
+    	font-size: 18px;
+		display: inline-block;
+	}
+

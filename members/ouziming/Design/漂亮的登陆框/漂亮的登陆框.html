@@ -16,9 +16,14 @@
 
 	li{list-style: none;}
 
+	body{
+		font:12px/1.5 Arial,Verdana,"\5b8b\4f53",serif;
+	  	-webkit-font-smoothing: antialiased;/*矿锯齿*/
+	}
+
 	#warp{
 		width: 500px;
-	    height: 520px;
+	    height: 540px;
 	    overflow: hidden;
 	    position: absolute;
 	    top: 0;
@@ -26,6 +31,7 @@
 	    bottom: 0;
 	    right: 0;
 	    margin:auto;
+	    /*以上是新的垂直居中方式（相对于浏览器）*/
 		/*border: 1px solid red;*/
 	}
 
@@ -54,12 +60,11 @@
 	
 	#main-nav{
 		width: 320px;
-		height:345px;
-		overflow: hidden;
-		margin:0 auto;
-		margin-top: 80px;
-		/*-webkit-box-shadow:0px -1px 10px #CCC6C2;
-		-moz-box-shadow:0px -1px 10px #CCC6C2;*/
+	    height: 333px;
+	    overflow: hidden;
+	    margin: 0 auto;
+	    margin-top: 80px;
+	    box-shadow: inset 0px 1px 0px rgb(255,255,255), -1px 1px 2px 2px rgba(171,165,161,0.3)
 	}
 
 	.main{
@@ -176,8 +181,8 @@
 	}
 
 	.choose .text{
-		letter-spacing: 0.8px;/*即字符间距*/
-		word-spacing: -6px;/*即单词之间的间隔*/
+		/*letter-spacing: 0.8px;/*即字符间距*/*/
+		/*word-spacing: -6px;/*即单词之间的间隔*/*/
 	    position: relative;
 	    font-size: 18px;
 	    font-weight: bold;
@@ -198,6 +203,7 @@
 	    border-radius: 0.3em;
 	    width: 25px;
 	    height: 25px;
+	    cursor: pointer;
 	    background-color: #F5F2EF;
 	}/*图标3*/
 	
@@ -206,7 +212,7 @@
 	}
 
 	.frame p{
-		word-spacing: -6px;/*即单词之间的间隔*/
+		/*word-spacing: -6px;/*即单词之间的间隔*/*/
 	    display: inline-block;
 	    width: 252px;
 	    height: 40px;
@@ -225,11 +231,11 @@
 		border-radius: 0.3em;
 		-webkit-box-shadow: inset 0px 1px 1px #EAEAEA;
 		-moz-box-shadow: inset 0px 1px 1px #EAEAEA;
-		background: -webkit-gradient( linear, left top, left bottom, from(#91A760), color-stop(0.50, #799149), to(#6B823D));
+		background: -webkit-gradient( linear, left top, left bottom, from(#9cb16e), color-stop(0.50, #7a924a), to(#9bb16e));
 	}
 
 	button:hover{
-		background: -webkit-gradient( linear, left top, left bottom, from(#B1CE74), color-stop(0.50, #99B562), to(#819E46));
+		opacity: 0.9;
 	}
 	
 	button>span{
