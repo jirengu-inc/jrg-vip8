@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <title>Document</title>
 </head>
-<body style="background:grey;">
+<body style="background:;">
 <div>
-    <form action="/" method=post>
-        <input type="text" name=username>
-        <input type="password" name="password">
+   表单校验：
+   
+    <br><br>
+   <form action="/" method=post>
+	    <label for="">手 机：<input type="text" name=phone></label>
+        <span style="color:#ccc;opciaty:0.6;background:red">{{message}}</span>   <!-- hbs文件可以使用带两个花括号的变量作为提示和信息，该变量在渲染页面的时候浏览器会自动找 -->
+        <br><br>
+        <label for="">密 码：<input type="password" name="password"></label>
+        <br><br>
         <input type="submit" value="提交">
     </form>
 </div>
@@ -16,14 +22,16 @@
 <script src="http://7xrxd2.com1.z0.glb.clouddn.com/jquery/jquery-1.12.3.min.js"></script>
 <script>
 $('form').on('submit',function(e){
-    e.preventDefault()
-    var form = this   
-    var $form = $(this)
-    var data= $form.serialize()
-    $.post('/', data, function(response){
-        var object = JSON.parse(response)
-        console.log(object)
-    }, 'json')
+    var form = this        //拿到当前的表单,还可以用form=e.currentTarget
+    var phone=form.phone.value   //拿到表单的phone属性的属性值
+    var password=form.password.value  
+    var regex=/^1\d{10}$/
+    var valid=regex.test(phone);
+    if(valid){
+    }else{
+         e.preventDefault()     //劫持form表单的提交，不让form发请求
+        form.phone.style.border="1px solid red";
+    }
 })
 
 </script>

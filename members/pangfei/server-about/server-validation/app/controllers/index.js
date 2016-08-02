@@ -28,14 +28,19 @@ module.exports = {
     },
 
     post: function *(next) {
-        var username = this.request.body.username
+        var phone = this.request.body.phone
         var password = this.request.body.password
 
-        if(password === '123'){
-            yield this.render('post.hbs')
+        var regex=/^1\d{10}$/
+        var valid=regex.test(phone);
+        if(valid){
+            yield this.render('index.hbs',{message:'提交成功'});
         }else{
-            yield this.render('error.hbs')
+            yield this.render('index.hbs',{message:'手机号错误'});
         }
+
+        
+        
         // 提交到数据库...
         // mysql ...
 
