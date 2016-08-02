@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>回到顶部+瀑布流+懒加载</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+
+<style type="text/css">
+  *{margin:0;padding:0}
+  a{text-decoration:none;}
+  ul li{list-style:none;}
+  body{
+  	height: 100vh;
+  	background-color: #fbdaaa;
+  }
+  .warpped{
+    position: relative;
+    width: auto;
+    margin: 0 10px;
+    /*overflow: hidden;*/
+  }
+  .item{
+    position: absolute;/*位置*/
+    width:240px;/*大小*/
+    margin-top: 15px;
+    margin-left:20px;
+    box-shadow: 1px 2px 10px rgba(0,0,0,.2);
+    background-color: white;
+    transition:all 1s;
+  }
+  .h1{
+    height:200px;
+ 	  text-align: center;
+  }
+  .h2{
+    height: 280px;
+    text-align: center;
+  }
+  .h3{
+    height: 350px;
+    text-align: center;
+  }
+  img{
+    padding: 10px;
+    text-align: center;
+  	width:220px;
+  	height: 90%;
+  }
+  button{
+    position: fixed;
+    bottom: 5px;
+    right: 10px;
+    display: none;
+    text-align: center;
+    width: 60px;
+    height: 40px;
+    line-height: 40px
+    box-shadow:inset 0px 1px 5px rgba(0,0,0,.2);
+  }
+</style>
+
+<body>
+    <div class="warpped">
+        <div class="item h1"><img src="http://img03.tooopen.com/images/20160629/tooopen_sy_168249847294.jpg" alt=""></div>
+        <div class="item h2"><img src="http://img02.tooopen.com/images/20160601/tooopen_sy_163933439186.jpg" alt=""></div>
+        <div class="item h3"><img src="http://img02.tooopen.com/images/20160621/tooopen_sy_165840127198.jpg" alt=""></div>
+        <div class="item h1"><img src="http://img02.tooopen.com/images/20160330/tooopen_sy_157795262551.jpg" alt=""></div>
+        <div class="item h2"><img src="http://img06.tooopen.com/products/20160712/tooopen_71876368.jpg" alt=""></div>
+        <div class="item h3"><img src="http://img02.tooopen.com/images/20151019/tooopen_sy_145700437111.jpg" alt=""></div>
+        <div class="item h1"><img src="http://img06.tooopen.com/products/20160712/tooopen_91297425.jpg" alt=""></div>
+        <div class="item h2"><img src="http://img06.tooopen.com/products/20160712/tooopen_18219676.jpg" alt=""></div>
+        <div class="item h3"><img src="http://img06.tooopen.com/images/20160712/tooopen_sy_170169718399.jpg"  alt=""></div>   
+        <div class="item h1"><img src="http://img02.tooopen.com/images/20160608/tooopen_sy_164582848729.jpg" alt=""></div>
+        <div class="item h2"><img src="http://img02.tooopen.com/images/20151226/tooopen_sy_152835944639.jpg" alt=""></div>
+        <div class="item h3"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://img05.tooopen.com/images/20150906/tooopen_sy_141560868431.jpg" alt=""></div>
+        <div class="item h1"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://img05.tooopen.com/images/20150817/tooopen_sy_138579512463.jpg" alt=""></div>
+        <div class="item h2"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://img05.tooopen.com/images/20150326/tooopen_sy_83625324232.jpg" alt=""></div>
+        <div class="item h3"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://img05.tooopen.com/images/20150122/sy_79672329748.jpg" alt=""></div> 
+        <div class="item h1"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://img05.tooopen.com/images/20140911/sy_70460413661.jpg" alt=""></div>
+        <div class="item h2"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://img05.tooopen.com/images/20140903/sy_70095789643.jpg" alt=""></div>   
+        <div class="item h3"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://img03.tooopen.com/images/20160701/tooopen_sy_168544222482.jpg" alt=""></div>   
+        <div class="item h1"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://img02.tooopen.com/images/20160506/tooopen_sy_161741199875.jpg" alt=""></div>   
+        <div class="item h2"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://img02.tooopen.com/images/20151222/tooopen_sy_152375696216.jpg" alt=""></div>   
+        <div class="item h3"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://static.gicpic.cn/html/gettyback/images1/20160324/1_20160324100339_3e0gb.jpg" alt=""></div>
+        <div class="item h1"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://pic2.desk.chinaz.com/file/201212/5/jialebihaia7.jpg" alt=""></div>  
+        <div class="item h2"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://g.hiphotos.baidu.com/zhidao/pic/item/cc11728b4710b9126678dba3c1fdfc0392452235.jpg" alt=""></div>  
+        <div class="item h3"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://g.hiphotos.baidu.com/zhidao/pic/item/1ad5ad6eddc451da5711c5ebb0fd5266d11632cf.jpg" alt=""></div>  
+        <div class="item h1"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://dl.bizhi.sogou.com/images/2013/03/26/334124.jpg" alt=""></div>  
+        <div class="item h2"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://a.hiphotos.baidu.com/zhidao/pic/item/0ff41bd5ad6eddc4f995afa438dbb6fd5266337a.jpg" alt=""></div>  
+        <div class="item h3"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://www.bz55.com/uploads/allimg/130516/1-130516160615.jpg" alt=""></div>  
+        <div class="item h1"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://tupian.enterdesk.com/2013/xll/007/09/06/1.jpg" alt=""></div>
+        <div class="item h2"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://img.ivsky.com/img/bizhi/pre/201605/27/lykan_hypersport-001.jpg" alt=""></div>
+        <div class="item h3"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://p4.image.hiapk.com/uploads/allimg/140611/7730-140611145644.jpg" alt=""></div>   
+        <div class="item h1"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://imga1.pic21.com/bizhi/130918/01196/s25.jpg" alt=""></div>        
+        <div class="item h2"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://tupian.enterdesk.com/2013/xll/012/05/10/7.jpg" alt=""></div>
+        <div class="item h3"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://dl.bizhi.sogou.com/images/2012/02/18/52291.jpg" alt=""></div>
+        <div class="item h1"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://img.ivsky.com/img/tupian/pre/201606/06/russian_federation-003.jpg" alt=""></div>
+        <div class="item h1"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://img.ivsky.com/img/bizhi/pre/201606/28/adidas-002.jpg" alt=""></div> 
+        <div class="item h2"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://img.ivsky.com/img/bizhi/pre/201606/07/fanxingdiandian_wenxin_langmansheying-001.jpg" alt=""></div>   
+        <div class="item h1"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://img.ivsky.com/img/tupian/pre/201606/01/jinyanghu-002.jpg" alt=""></div>        
+        <div class="item h1"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://img.ivsky.com/img/bizhi/pre/201604/25/poodle.jpg" alt=""></div> 
+        <div class="item h1"><img src="http://7xt1vz.com1.z0.glb.clouddn.com/loading.gif" data-src="http://imgstore.cdn.sogou.com/app/a/100540002/469034.jpg" alt=""></div>   
+    </div>
+    <button class="go-top">回到顶部</button>
+<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.js"></script>
+
+<script type="text/javascript">
+  //以下是回到顶部demo的代码
+  $(function(){
+      $goTop = $('.go-top')
+      $(window).on('scroll',function(){
+        var scrollTop = $('body').scrollTop()
+        console.log(scrollTop)
+        if(scrollTop > 1800){
+          $goTop.css({'display':'block'})
+        }else if(scrollTop < 1800){
+          $goTop.css({'display':'none'})
+        }
+      })
+
+      $goTop.click(function(){
+        $('body').animate({'scrollTop':0},'slow')
+      })
+  })
+
+
+  //以下是瀑布流demo的代码
+  var waterfall = (function(){
+      function init(){
+          var winWidth = $(window).width();//窗口宽度，现时是父容器宽度
+          var itemWidth = $('.item').outerWidth(true);//盒子宽度（包含外边距+边框）
+          var culNum = Math.floor(winWidth/itemWidth);//一行可以放的列数
+          //console.log(culNum)
+          
+          var colHeight = [];
+
+          for(i=0; i<culNum; i++){
+            colHeight.push(0)
+            // console.log(colHeight)//[0:840;1:940;2:1010;3:790;4:860;5:720]
+          }
+          
+          $('.item').each(function(){//遍历盒子的高度，找出盒子中最矮的。关键：摆放每一个元素总是放到各列总高度最小的列下
+            //console.log(this)
+          var $cur = $(this)
+          
+          var minHeight = colHeight[0]
+          var index = 0
+          for(j=0; j<colHeight.length; j++){ 
+            if (colHeight[j]<minHeight) {
+              minHeight = colHeight[j]
+              index = j
+            }
+          }
+          // console.log(index)//0,1,2,3,4,5   0,1,2,3,4,5  0,1,2,3,4,5
+
+           $cur.css({//设置位置：绝对定位
+            left:index*itemWidth,
+            top:minHeight
+           })
+
+            colHeight[index] = colHeight[index]+$cur.outerHeight(true)
+      
+          })
+      	}
+
+	    return{
+	      init:init
+	    }
+
+  	})()
+
+	  $(window).on('resize',function(){
+	    waterfall.init()
+	  })
+	  waterfall.init()
+
+
+
+//以下是懒加载demo的代码
+
+$(function(){
+		$(window).on('scroll',function(){
+			var $img = $('.warpped img');
+			
+			$img.each(function(){//遍历滚动下的每一个图片
+				if($(this).attr('isLoaded')){return}//有过滤标记的以后就无需再操作
+
+				var scrollH = $(window).scrollTop();//页面顶部距离窗口顶部的滚动距离
+				var	winH = $(window).height();//浏览器页面的高度
+				
+				var	Top = $(this).offset().top;//元素距画卷的顶部距离,关键：这里的this必须是每次遍历的一张图片
+				
+				if((scrollH +winH) > (Top+150)){
+					showImg($(this))
+				}
+			})
+
+		function showImg($panel){
+			var dataSrc = $panel.attr('data-src');
+			$panel.attr('src', dataSrc)
+			$panel.attr('isLoaded', true)
+		}
+	})
+})   
+
+</script>
+</body>
+</html>
