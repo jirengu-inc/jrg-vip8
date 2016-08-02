@@ -1,0 +1,190 @@
+*{margin: 0;padding: 0;}
+h1,h2,h3,h4,h5,h6{font-weight: normal;}
+
+body{
+	/*color: #797979;*/
+	font-family: "微软雅黑","Open Sans",Helvetica,Arial,sans-serif;
+	background: #f7f6f8;
+	box-sizing: border-box;
+}
+
+.header {
+	box-shadow: 0 0 11px rgba(0,0,0,0.25);
+	width: 100%;
+	background: white;
+	position: fixed;
+	z-index: 1000;
+}
+.header > .wrapper{
+	width: 970px;
+	margin: 0 auto;
+	line-height: 40px;
+	padding: 34px 0px 26px;
+	background: white;
+}
+
+/*.wrapperhead {
+	padding: 5px;
+	line-height: normal;
+	width: 970px;
+	margin: 0 auto;
+	background:white;
+}*/
+
+.header > .wrapper > h1{
+	font-size: 28px;
+	color: #bcbcbc;
+}
+
+.header > .wrapper .menu {
+	font-size: 26px;
+}
+
+.header > .wrapper .share {
+	font-size: 19px;
+	float: right;
+	color: #20b295;
+}
+
+.wrapper {display: block;}
+.summary {
+	background-color: #fff;
+	color: #818181;
+	margin: 0 auto;
+	width: 970px;
+	padding-top: 100px;
+}
+.picture {
+	background: rgb(40, 197, 214);
+}
+
+.summary > .picture {
+	float: left;
+	width: 220px;
+	height: 230px;
+	background-color: #58c1d3;
+	padding-top: 30px;
+	padding-left: 20px;
+	color: white;
+	position: relative;
+}
+
+.summary > .picture > img{
+	bottom: 0;
+	left: 50%;
+	margin-left: -82px;
+	position: absolute;
+	width: 164px;
+	height: 175px;
+}
+
+.intro {
+	height: 160px;
+	width: 750px;
+	display: table-cell;
+	vertical-align: top;
+	word-break: break-all;
+	overflow: hidden;
+	background: #fff;
+	padding: 50px;
+	color: #797979;
+	font-size: 18px;
+	line-height: 180%;
+}
+
+
+.profile-and-willing {
+	float: left;
+	width: 270px;
+}
+
+.panel {
+	margin-bottom: 15px;
+	background-color: #fff;
+	color: #818181;
+	overflow: hidden;
+}
+
+.profile, .willing, .qa, .contacts {
+	padding: 12px 19px 35px;
+}
+
+.panel h2{
+	font-size: 24px;
+	color: #74bcaa;
+	font-weight: normal;
+}
+
+.profile dl, .willing dl {
+	display: block;
+	-webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.panel dt, .panel dt {
+	display: block;
+}
+
+.panel dd {
+	text-align: right;
+	color: #74bcaa;
+}
+
+.panel dt, .panel dd {
+	float: left;
+	width: 50%;
+	border-bottom: 1px dashed #e4e4e4;
+	line-height: 45px;
+}
+
+.qa-and-contacts {
+	width: 685px;
+	float: left;
+	margin-left: 15px;
+}
+
+.qa h3 {
+	margin-top: 18px;
+	margin-bottom: 4px;
+	color: #74bcaa;
+}
+
+.contacts p {
+	padding-bottom: 50px;
+	padding-top: 50px;
+	text-align: center;
+	font-size: 20px;
+	color: rgb(242,242,242);
+}
+
+.btn-green {
+	background: #36b39a;
+	color: #fff;
+	font-size: 16px;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn {
+	display: inline-block;
+	padding:6px 12px;
+	margin-bottom: 0;
+	font-weight: 400;
+	text-align: center;
+	white-space: normal;
+	vertical-align: middle;
+	cursor: pointer;
+	-webkit-user-select:none;
+	border:1px solid transparent;
+	border-radius: 4px;
+	margin-right: 15px;
+	margin-top: 15px;
+}
+
+.content {
+	margin: 0 auto;
+	overflow: hidden;
+	width: 970px;
+	margin-top: 15px;
+}
