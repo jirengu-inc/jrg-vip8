@@ -20,27 +20,31 @@ body{
 	margin: 0 auto;
 	line-height: 40px;
 	padding: 34px 0px 26px;
+	transition: padding 0.3s;
 	background: white;
 }
 
-/*.wrapperhead {
+.wrapperheader {
 	padding: 5px;
-	line-height: normal;
+	transition: padding 0.5s;
 	width: 970px;
 	margin: 0 auto;
-	background:white;
-}*/
+	line-height: 40px;
+	background: white;
+	font-size: 14px;
+	color: #bcbcbc;
+}
 
 .header > .wrapper > h1{
 	font-size: 28px;
 	color: #bcbcbc;
 }
 
-.header > .wrapper .menu {
+.header > #wrapper .menu {
 	font-size: 26px;
 }
 
-.header > .wrapper .share {
+.header > #wrapper .share {
 	font-size: 19px;
 	float: right;
 	color: #20b295;
