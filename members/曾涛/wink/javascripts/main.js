@@ -17,4 +17,9 @@
       left: '+=' + $itemWidth
     });
   });
+
+  $('.help').on('click', function(e){
+    $(this).next('.help-tip').show(500)
+           .siblings('.help-close').show(500);
+  });
 })();

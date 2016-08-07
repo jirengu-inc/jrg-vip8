@@ -1,18 +1,18 @@
 /* reset */
-body, ul, li {
+body, ul, li, p {
   margin: 0;
   padding: 0;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
-li {
+ul {
   list-style: none;
 }
 
@@ -21,7 +21,7 @@ li {
 }
 
 .fr {
-    float: right;
+  float: right;
 }
 
 .clearfix:after {
@@ -31,22 +31,22 @@ li {
 }
 
 body {
-    text-align: center;
+  text-align: center;
 }
 
 .pic-one {
-    position: relative;
+  position: relative;
 }
 
 .pic-one img {
-    width: 100%;
+  width: 100%;
 }
 
 .pic-one .photo {
-    position: absolute;
-    bottom: 100px;
-    width: 45%;
-    margin-left: -85px;
+  position: absolute;
+  bottom: 26%;
+  width: 56%;
+  margin-left: -110px;
 }
 
 .pic-one .photo input {
@@ -60,9 +60,44 @@ body {
 
 .pic-one .help {
   position: absolute;
-  bottom: 122px;
+  bottom: 31%;
   width: 8%;
-  margin-left: 82px;
+  margin-left: 96px;
+}
+
+.pic-one .help-tip {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 83%;
+  padding: 22px 10px;
+  background-color: #fff;
+  line-height: 22px;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: scroll;
+  color: #a1daf1;
+  font-size: 14px;
+}
+
+.pic-one .tip-one,
+.pic-one .tip-two,
+.pic-one .tip-three,
+.pic-one .tip-four,
+.pic-one .tip-five,
+.pic-one .tip-last {
+  margin-top: 22px;
+}
+
+.pic-one .help-close {
+  opacity: 0;
+  width: 12%;
+  position: absolute;
+  top: 40px;
+  right: 34px;
 }
 
 .pic-two {
