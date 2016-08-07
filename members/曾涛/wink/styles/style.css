@@ -1,0 +1,132 @@
+/* reset */
+body, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+li {
+  list-style: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+body {
+    text-align: center;
+}
+
+.pic-one {
+    position: relative;
+}
+
+.pic-one img {
+    width: 100%;
+}
+
+.pic-one .photo {
+    position: absolute;
+    bottom: 100px;
+    width: 45%;
+    margin-left: -85px;
+}
+
+.pic-one .photo input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 170px;
+  height: 50px;
+  opacity: 0;
+}
+
+.pic-one .help {
+  position: absolute;
+  bottom: 122px;
+  width: 8%;
+  margin-left: 82px;
+}
+
+.pic-two {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.pic-two .title img {
+    width: 100%;
+}
+
+.pic-two .load-pic,
+.pic-three .load-pic {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #000;
+}
+
+.pic-two .sex {
+    width: 30%;
+    margin: 20px auto;
+    border: 1px solid #000;
+    border-radius: 40px;
+    padding: 15px 30px;
+}
+
+.pic-two .sex img {
+    width: 28%;
+}
+
+.pic-two .icon-wrapper,
+.pic-three .icon-wraper {
+    padding: 15px;
+}
+
+.pic-two .icon-wrapper img {
+    float: left;
+    width: 50%;
+}
+
+.pic-three {
+    display: none;
+    padding: 20px;
+}
+
+.pic-three .icon-wrapper .dislike {
+    width: 28%;
+}
+
+.pic-three .icon-wrapper .clear {
+    width: 60%;
+}
+
+.pic-three .count {
+    margin-bottom: 10px;
+    text-align: right;
+    color: #fba6b7;
+}
+
+.pic-three .current:after {
+    content: ' /';
+}
+
+.pic-three .total:after {
+    content: ' 张';
+}
