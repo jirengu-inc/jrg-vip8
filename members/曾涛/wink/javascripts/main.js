@@ -18,8 +18,13 @@
     });
   });
 
-  $('.help').on('click', function(e){
-    $(this).next('.help-tip').show(500)
-           .siblings('.help-close').show(500);
+  $('.help').on('touchend', function(e){
+    $(this).next('.help-tip').show()
+           .siblings('.help-close').show();
+  });
+
+  $('.help-close').on('touchend', function(e){
+    $(this).hide()
+           .prev('.help-tip').hide();
   });
 })();
