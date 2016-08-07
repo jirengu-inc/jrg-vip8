@@ -24,9 +24,15 @@ body {
 	background: #e9edee;
 }
 
-.singer img {
-	width: 271px;
+.singer {
 	height: 110px;
+	overflow: hidden;
+}
+
+.singer img {
+	width: 100%;
+	/*width: 271px;*/
+	/*height: 110px;*/
 	vertical-align: top;
 	border-top-left-radius: 15px;
     border-top-right-radius: 15px;
