@@ -10,11 +10,15 @@
 </head>
 
 <body>
-    <ul>
-        <li class="pic-one">
-            <img src="images/bg.jpg" alt="背景图片">
-            <img class="photo" src="images/camera.png"></a>
-            <img class="help" src="images/help.png"></a>
+    <ul class="pic-list">
+        <li class="pic pic-one">
+            <img class="bg" src="images/bg.jpg" alt="背景图片">
+            <div class="help-wrapper">
+              <img class="photo" src="images/camera.png"></a>
+              <img class="help" src="images/help.png"></a>
+              <input type="file">
+              <img class="one" src="" alt="">
+            </div>
             <div class="help-tip">
               <p>1. 怎么搞起来？</p>
               <p>po一张照片，即可参与～</p>
@@ -33,28 +37,44 @@
             </div>
             <img class="help-close" src="images/dislike.png">
         </li>
-        <li class="pic-two">
+        <li class="pic pic-two">
             <h1 class="title">
                 <img src="images/topic.png" alt="七夕搞点事情">
             </h1>
-            <div class="load-pic"></div>
+            <div class="load-pic">
+              <div class="load-pic-inner">
+                <img class="userpic" src="" alt="">
+              </div>
+              <div class="progress">
+                <div class="progress-inner"></div>
+              </div>
+            </div>
             <div class="sex clearfix">
                 <img class="female fl" src="images/female.png">
                 <img class="male fr" src="images/male.png">
             </div>
             <div class="icon-wrapper clearfix">
-                <img class="reshot icon fl" src="images/reshot.png" alt="">
-                <img class="upload icon fr" src="images/upload.png" alt="">
+                <img class="reshot icon fl" src="images/reshot.png" alt="重拍">
+                <div class="upload">
+                  <img class="icon" src="images/upload.png" alt="上传">
+                </div>
             </div>
         </li>
-        <li class="pic-three">
+        <li class="pic pic-three">
             <div class="count">
                 <span class="current">7</span>
                 <span class="total">10</span>
             </div>
-            <div class="load-pic"></div>
-            <div class="love">
-                <img class="avatar" src="" alt="">
+            <div class="load-pic">
+              <div class="load-pic-inner">
+                <img src="http://img05.tooopen.com/images/20150830/tooopen_sy_140703593676.jpg" alt="">
+              </div>
+            </div>
+            <div class="love clearfix">
+                <div class="avatar">
+                  <img src="http://www.sliwu6.com/images/201601/goods_img/3260_P_1453992511863.jpg" alt="头像">
+                </div>
+                <span>我爱王俊凯</span>
                 <img class="follow" src="images/follow.png" alt="添加">
             </div>
             <div class="icon-wrapper clearfix">
@@ -63,7 +83,9 @@
             </div>
         </li>
     </ul>
-    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="javascripts/jquery-3.1.0.min.js"></script>
+    <script src="javascripts/exif.js"></script>
+    <script src="javascripts/rotate1.js"></script>
     <script src="javascripts/main.js"></script>
 </body>
 

@@ -38,31 +38,31 @@ body {
   position: relative;
 }
 
-.pic-one img {
+.pic-one .bg {
   width: 100%;
 }
 
-.pic-one .photo {
+.pic-one .help-wrapper {
   position: absolute;
-  bottom: 26%;
-  width: 56%;
-  margin-left: -110px;
+  top: 61%;
+  transform: translateX(4%);
 }
 
-.pic-one .photo input {
+.pic-one .photo {
+  width: 50%;
+}
+
+.pic-one .help-wrapper input {
+  width: 47%;
+  height: 80%;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 170px;
-  height: 50px;
+  left: 21%;
   opacity: 0;
 }
 
 .pic-one .help {
-  position: absolute;
-  bottom: 31%;
-  width: 8%;
-  margin-left: 96px;
+  width: 10%;
+  transform: translateY(-4px);
 }
 
 .pic-one .help-tip {
@@ -101,61 +101,92 @@ body {
 }
 
 .pic-two {
-    display: none;
-    padding: 20px;
-    background-color: #fff;
+  display: none;
+  padding: 20px;
+  background-color: #fff;
 }
 
 .pic-two .title img {
-    width: 100%;
+  width: 100%;
 }
 
 .pic-two .load-pic,
 .pic-three .load-pic {
-    width: 100%;
-    height: 200px;
-    border: 1px solid #000;
+  width: 100%;
+  height: 335px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.pic-two .load-pic {
+  position: relative;
+}
+
+.pic-two .progress {
+  position: absolute;
+  left: 25px;
+  bottom: 32px;
+  width: 85%;
+  height: 12px;
+  border-radius: 10px;
+  padding: 2px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.pic-two .progress-inner {
+  height: 100%;
+  background-color: #f5b3c2;
+  border-radius: 10px;
+}
+
+.pic-two .load-pic-inner img,
+.pic-three .load-pic-inner img {
+  width: 100%;
+  height: 301px;
 }
 
 .pic-two .sex {
-    width: 30%;
-    margin: 20px auto;
-    border: 1px solid #000;
-    border-radius: 40px;
-    padding: 15px 30px;
+  width: 30%;
+  margin: 20px auto;
+  border: 1px solid #000;
+  border-radius: 40px;
+  padding: 15px 30px;
 }
 
 .pic-two .sex img {
-    width: 28%;
+  width: 28%;
 }
 
 .pic-two .icon-wrapper,
 .pic-three .icon-wraper {
-    padding: 15px;
+  padding: 15px;
 }
 
 .pic-two .icon-wrapper img {
-    float: left;
-    width: 50%;
+  float: left;
+  width: 50%;
 }
 
 .pic-three {
-    display: none;
-    padding: 20px;
+  display: none;
+  padding: 20px;
 }
 
 .pic-three .icon-wrapper .dislike {
-    width: 28%;
+  width: 28%;
 }
 
 .pic-three .icon-wrapper .clear {
-    width: 60%;
+  width: 60%;
 }
 
 .pic-three .count {
-    margin-bottom: 10px;
-    text-align: right;
-    color: #fba6b7;
+  margin-bottom: 20px;
+  text-align: right;
+  color: #fba6b7;
 }
 
 .pic-three .current:after {
@@ -164,4 +195,38 @@ body {
 
 .pic-three .total:after {
     content: ' 张';
+}
+
+.pic-three .love {
+  position: relative;
+  top: -30px;
+  left: 8%;
+  width: 84%;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 10px 18px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.pic-three .avatar img {
+  width: 30%;
+  float: left;
+  border-radius: 50%;
+}
+
+.pic-three .love span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pic-three .follow {
+  right: 18px;
+  top: 50%;
+  position: absolute;
+  width: 16%;
+  transform: translateY(-50%);
+  float: right;
 }
