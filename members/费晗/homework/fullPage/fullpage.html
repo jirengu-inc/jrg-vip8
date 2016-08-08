@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FullPage</title>
+<style type="text/css">
+*{margin: 0; padding: 0}
+*{box-sizing: border-box;}
+html{height: 100%}
+body{
+	overflow: hidden;
+}
+img{
+	width: 100%;
+}
+#fullpage{
+	width: 100vh;
+	height: 100vh;
+}
+section{
+	width: 100vh;
+	height: 100vh;
+	background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+<div id="fullpage">
+    <section><img src="images/uber1.jpg"></section>
+    <section><img src="images/uber2.jpg"></section>
+    <section><img src="images/uber3.jpg"></section>
+    <section><img src="images/uber4.jpg"></section>
+    <section><img src="images/uber5.jpg"></section>
+    <section><img src="images/uber6.jpg"></section>
+    <section><img src="images/uber7.jpg"></section>
+    <section><img src="images/uber8.jpg"></section>
+    <section><img src="images/uber9.jpg"></section>
+</div>
+<script src="javaScript/jquery-3.1.0.min.js"></script>
+<script>
+console.log('ss')
+!function(){
+	var isAnimation = false /*判断是否处于动画状态*/
+	var viewpointHeight = document.documentElement.clientHeight
+	$(window).on('wheel',function(e){
+		if (!isAnimation) { /*如果没有在做动画，那就做动画*/
+			isAnimation = true  
+			var deltaY = e.originalEvent.deltaY
+			var operation = deltaY > 0? '+=':'-='
+			$('html,body').stop(true,true).animate({
+				scrollTop: operation + viewpointHeight
+			},1000,function(){
+				isAnimation = false  /*动画完成之后的回调*/
+			})
+		} 
+	})
+		
+}();
+</script>
+
+</body>
+</html>
