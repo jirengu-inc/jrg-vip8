@@ -35,6 +35,7 @@ body {
 }
 
 .pic-one {
+  display: block;
   position: relative;
 }
 
@@ -52,12 +53,11 @@ body {
   width: 50%;
 }
 
-.pic-one .help-wrapper input {
-  width: 47%;
-  height: 80%;
-  position: absolute;
-  left: 21%;
-  opacity: 0;
+.pic-one #pickfiles {
+    position: absolute;
+    left: 21%;
+    width: 47%;
+    height: 82%;
 }
 
 .pic-one .help {
@@ -110,7 +110,7 @@ body {
   width: 100%;
 }
 
-.pic-two .load-pic,
+.pic-two #load-pic,
 .pic-three .load-pic {
   width: 100%;
   height: 335px;
@@ -120,7 +120,7 @@ body {
   box-sizing: border-box;
 }
 
-.pic-two .load-pic {
+.pic-two #load-pic {
   position: relative;
 }
 
@@ -137,6 +137,7 @@ body {
 }
 
 .pic-two .progress-inner {
+  width: 1%;
   height: 100%;
   background-color: #f5b3c2;
   border-radius: 10px;
