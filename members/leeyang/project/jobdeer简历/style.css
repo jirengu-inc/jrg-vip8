@@ -8,6 +8,7 @@ body{
 	box-sizing: border-box;
 }
 
+
 .header {
 	box-shadow: 0 0 11px rgba(0,0,0,0.25);
 	width: 100%;
@@ -20,27 +21,31 @@ body{
 	margin: 0 auto;
 	line-height: 40px;
 	padding: 34px 0px 26px;
+	transition: padding 0.3s;
 	background: white;
 }
 
-/*.wrapperhead {
+.wrapperheader {
 	padding: 5px;
-	line-height: normal;
+	transition: padding 0.5s;
 	width: 970px;
 	margin: 0 auto;
-	background:white;
-}*/
+	line-height: 40px;
+	background: white;
+	font-size: 14px;
+	color: #bcbcbc;
+}
 
 .header > .wrapper > h1{
 	font-size: 28px;
 	color: #bcbcbc;
 }
 
-.header > .wrapper .menu {
+.header > #wrapper .menu {
 	font-size: 26px;
 }
 
-.header > .wrapper .share {
+.header > #wrapper .share {
 	font-size: 19px;
 	float: right;
 	color: #20b295;
@@ -54,6 +59,15 @@ body{
 	width: 970px;
 	padding-top: 100px;
 }
+
+@media(max-width: 1000px){
+	.summary {
+		width: 720px;
+		background: none;
+	}
+}
+
+
 .picture {
 	background: rgb(40, 197, 214);
 }
@@ -69,6 +83,13 @@ body{
 	position: relative;
 }
 
+@media(max-width: 720px){
+	.summary > .picture {
+		float: none;
+		width: auto;
+	}
+}
+
 .summary > .picture > img{
 	bottom: 0;
 	left: 50%;
@@ -80,16 +101,27 @@ body{
 
 .intro {
 	height: 160px;
-	width: 750px;
+	/*width: 750px;*/
 	display: table-cell;
 	vertical-align: top;
 	word-break: break-all;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	background: #fff;
 	padding: 50px;
 	color: #797979;
 	font-size: 18px;
 	line-height: 180%;
+}
+@media(max-width: 720px){
+	.intro {
+		padding: 10px;
+		height: auto;
+		width: auto;
+		background: transparent;
+	}
+	.intro p {
+		background: white;
+	}
 }
 
 
@@ -97,6 +129,7 @@ body{
 	float: left;
 	width: 270px;
 }
+
 
 .panel {
 	margin-bottom: 15px;
@@ -140,10 +173,31 @@ body{
 }
 
 .qa-and-contacts {
-	width: 685px;
-	float: left;
-	margin-left: 15px;
+/*	width: 685px;
+	float: left;*/
+	margin-left: 290px;
 }
+
+/*@media(max-width: 1000px){
+	.qa-and-contacts {
+		margin-left: 280px;
+	}
+}
+*/
+
+/*@media(max-height: 720px){
+	.profile-and-willing {
+		float: none;
+		width: auto;
+	}
+	.profile, .willing{
+		margin: 15px;
+	}
+}
+*/
+
+
+
 
 .qa h3 {
 	margin-top: 18px;
@@ -187,4 +241,10 @@ body{
 	overflow: hidden;
 	width: 970px;
 	margin-top: 15px;
+}
+
+@media(max-width: 1000px){
+	.content {
+		width: 720px;
+	}
 }

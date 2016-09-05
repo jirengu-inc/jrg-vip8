@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>音乐播放器</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="referrer" content="no-referrer">
+<link rel="shortcut icon" href="favicon-20160804055241661.ico"/>
+<link rel="stylesheet" href="http://at.alicdn.com/t/font_1470146383_1820898.css">
+<script src=" http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<link href="" rel="stylesheet">
+<style>
+*{margin:0;padding: 0}
+ul ,li{list-style: none;}
+a{text-decoration: none;}
+html,body{
+	background: -webkit-gradient(linear,center top,center bottom,from(rgba(255, 207, 125, 0.78)), to(#f5b5b5));
+	/*background: #e27272;*/
+  	height: 100%;
+  	font:18px/1.5 Arial,Verdana,"\5b8b\4f53",serif;
+    -webkit-font-smoothing: antialiased;/*矿锯齿*/
+}
+.musicPlayer-wrapper{
+  text-align: center;
+  border: 1px solid black;
+  height: 100%;
+  line-height: 1;
+}
+.musicPlayer-wrapper:before{
+  content:'';
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.musicPlayer-wrapper:after{
+  content:'';
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.musicPlayer{
+  display: inline-block;
+  width: 250px;
+  height: 300px;
+  background: #E9EDEE;
+  vertical-align: middle;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.player-cover{
+	width: 100%;
+	height: 100px;
+	overflow: hidden;
+}
+.player-cover img{
+	width: 100%;
+	transform: translateY(-60%);
+}
+.musicPlayer-wrapper .summary{
+	width: 100%;
+	height: 60px;
+	margin: 10px 0;
+}
+.summary .player-message{
+	float: left;
+	width: 150px;
+	overflow: hidden;
+}
+.summary .player-message p{
+	display: block;
+    margin: 5px 0;
+	color: #798796;
+	position: relative;
+	left: -5px;
+	font-weight: bold;
+	font-size:20px;
+}
+
+.summary .player-message p:nth-child(2){
+	font-size: 12px;
+	position: relative;
+	left: -13px;
+}
+
+.summary .icon-share{
+	position: relative;
+    font-size: 20px;
+}
+
+.summary .music-icon{
+	float: right;
+    width: 100px;
+    height: 50px;
+    overflow: hidden;
+}
+.summary .music-icon li{
+	float: left;
+    display: inline-block;
+    opacity: 0.5;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+
+.summary .icon-stars.selected{
+	color:#c7c702;
+}
+.summary .icon-love1.selected{
+	color: red;
+}
+
+
+.musicPlayer-wrapper .progress{
+	display: block;
+	position: relative;
+    width: 200px;
+    height: 5px;
+    margin: 23px auto;
+    border-radius: 2%;
+    background:#c1c1c1;
+}
+
+.musicPlayer-wrapper .progress .progress-basebar{
+	display:block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    height: 5px;
+    background: #8c8c8c;
+    cursor: pointer;
+}
+
+.progress .curTime{
+	color:#bbbaba;
+	width: 25px;
+    height: 10px;
+    position: absolute;
+  	border-bottom: 1px solid #bbbaba;
+    right: 12px;
+    top: 15px;
+    font-size: 12px;
+    overflow: hidden;
+}
+.progress .songTime{
+	color:#bbbaba;
+	width: 25px;
+    height: 10px;
+    position: absolute;
+ 	border-bottom: 1px solid #bbbaba;
+    right: -20px;
+    top: 15px;
+    font-size: 12px;
+    overflow: hidden;
+}
+.progress i{
+	color:#bbbaba;
+	display: inline-block;
+    position: absolute;
+    right: -6px;
+    top: 13px;
+}
+/*.musicPlayer-wrapper .progress progress{
+	height: 15px;
+    width: 160px;
+}*/
+
+.musicPlayer-wrapper .controls{
+	opacity: 0.5;
+	width: 100%;
+    padding-top: 15px;
+  	height: 50px;
+    overflow: hidden;
+}
+.musicPlayer-wrapper .controls .play-control{
+	width: 150px;
+    float: left;
+    position: relative;
+}
+.controls .iconfont{
+	width: 25px;
+    height: 25px;
+    line-height: 25px;
+    display: inline-block;
+}
+
+
+.controls .play-control .icon-play{
+	position: absolute;
+    left: 19px;
+	width: 35px;
+    height: 35px;
+    line-height: 35px;
+	border-radius: 50%;
+	border:2px solid black;
+	visibility:visible;
+}
+.controls .play-control .icon-play.hide{
+	border-radius: 50%;
+	border:2px solid black;
+	visibility: hidden;
+}
+
+.controls .play-control .icon-pause.hide{
+	position: absolute;
+    left: 19px;
+	border-radius: 50%;
+	border:2px solid black;
+	visibility: hidden;
+}
+.controls .play-control .icon-pause{
+	width: 35px;
+    height: 35px;
+    line-height: 35px;
+	position: absolute;
+    left: 19px;
+	border-radius: 50%;
+	border:2px solid black;
+	visibility: visible;
+}
+
+.controls .play-control .icon-fastrewind{
+	position: absolute;
+    left: 65px;
+    top: 5px;
+	border-radius: 50%;
+	border:2px solid black;
+}
+.controls .play-control .icon-fastforward{
+	position: absolute;
+    left: 100px;
+    top: 5px;
+	border-radius: 50%;
+	border:2px solid black;
+}
+
+.musicPlayer-wrapper .controls .music-control{
+	width: 100px;
+	float: right;
+}
+
+.musicPlayer-wrapper .controls .music-control span{
+	opacity: 0.5;
+	display: inline-block;
+	float: left;
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+	margin: 0 8px;
+}
+
+.musicPlayer-wrapper .controls .music-control .icon-xunhuan{
+	position: relative;
+	top:6px;
+	left: 20px;
+}
+
+.musicPlayer-wrapper .controls .music-control .icon-suiji{
+	position: relative;
+	top:8px;
+	left: 15px
+}
+
+</style>
+</head>
+<body>
+<audio id=audio src=""></audio><!--src-->
+
+<div class="musicPlayer-wrapper">
+	<div class="musicPlayer">
+		<div class="player-cover"><!--封面-->
+			<img src="http://img.xiami.net/images/album/img25/25325/4009561284348507_2.jpg" alt="">
+		</div>
+		<div class="summary">
+			<div class="player-message"><!--歌曲信息-->
+				<p class="song-name">Sturrering</p>
+				<p class="player-name">Fefe Dobson</p>
+			</div>
+			<ul class="music-icon"><!--分享按钮-->
+				<li class="share"><a id="share" href="#" class="iconfont icon-share"></a></li>
+				<li class="stars"><i class="iconfont icon-stars"></i></li>
+				<li class="loves"><i class="iconfont icon-love1"></i></li>
+			</ul>
+		</div>
+
+		<!-- <div class="progress">进度条
+	    	<span id=time></span>
+	      	<progress max="" value=""></progress>max是总时间段，value是播放的当前时间
+	    </div> -->
+
+		<div class="progress"><!--智能进度条-->
+			<span class="progress-basebar"></span>
+			<!-- <span class='curTime'></span><i>&nbsp;&nbsp;/&nbsp;&nbsp;</i><span class='songTime'></span> -->
+		</div>
+
+
+		<div class="controls"><!--控制器-->
+		    <div class="play-control"><!-- 音乐频道按钮-->
+		        <span class="iconfont icon-play" title="播放/暂停"></span>
+		        <span class="iconfont icon-pause hide" title="播放/暂停"></span>
+		        <span class="iconfont icon-fastrewind" title="换频道"></span>
+		        <span class="iconfont icon-fastforward" title="换曲"></span>
+		    </div>
+		    <div class="music-control"> <!-- 循环播放，随机播放按钮 -->
+		        <span class="iconfont icon-xunhuan"></span>
+		        <span class="iconfont icon-suiji"></span>
+		    </div>
+		</div>            
+	</div>
+</div>
+
+<script type="text/javascript">
+
+(function(){
+	var songs =[
+	{
+		url:"http://so1.111ttt.com:8282/2015/1/10m/11/103111612218.m4a?tflag=1470477844&pin=9fd99ed19046f587d48c0228cb400d80&ip=14.145.251.169",
+		name:"夏洛特烦恼",
+		singer:"金志文",
+		cover:"http://musicdata.baidu.com/data2/pic/247910603/247910603.jpg"
+	},
+
+	{
+		url:"http://audio.xmcdn.com/group10/M02/4A/FF/wKgDZ1Wu82yRJMBoABfK8WZ_B-s128.m4a",
+		name:"Stuttering",
+		singer:"Fefe Dobson",
+		cover:"http://img.xiami.net/images/album/img25/25325/4009561284348507_2.jpg"
+	},
+
+	{
+		url:"http://yinyueshiting.baidu.com/data2/music/42783748/42783748.mp3?xcode=ad1ee00050abca52718197b4a0f16666",
+		name:"海阔天空",
+		singer:"Beyond",
+		cover:"http://musicdata.baidu.com/data2/pic/5517daa53d9146462c0a8763970964ed/88582715/88582715.jpg"
+
+	},
+
+	{
+		url:"http://so1.111ttt.com:8282/2015/3/11m/27/104271329456.m4a?tflag=1470105954&pin=3971a8efd167f75811776c65b2ad255e&ip=183.5.121.253",
+		name:"小幸运",
+		singer:"田馥甄"	,
+		cover:"http://img3.yxlady.com/yl/UploadFiles_5361/20151128/20151128202005467.jpg"
+	},
+
+	{
+		url:"http://ok.96x.cn/2015/7yue_2651.cn/晴天%20-%20周杰伦.mp3",
+		name:"《叶惠美》晴天",
+		singer:"周杰伦",
+		cover:"http://img4.kuwo.cn/star/starheads/240/42/97/3914752958.jpg"
+	}
+
+	]
+
+    	
+		var current = 0//当前默认第0首
+    	var audio = $("audio").get(0)//先拿到那个标签
+    	var $progressBar = $(".progress-basebar")//进度条时间，进度条在play情况一下有变化，在切换switch情况二下也有变化
+    	var cover = $(".player-cover img").get(0)//获取标签里的src，都要get（0），记住都是DDM的属性
+    	var songName = $('.summary .song-name').get(0)
+    	var author = $('.summary .player-name').get(0)
+    	var $play = $(".icon-play")
+    	var $pause = $(".icon-pause") 
+    	var $prev = $(".icon-fastrewind")
+    	var $next = $(".icon-fastforward")   	
+    	var $share = $('#share')
+    	var $curTime = $('.curTime')
+    	var $songTime = $('.songTime')
+		var $star = $('.icon-stars')
+		var $love = $('.icon-love1')
+
+
+
+    	function play(n){//做一个play的方法
+    		if(n>=songs.length){
+    			n=0
+    		}else if(n<0){
+    			n=songs.length-1
+    		}
+
+    		var song = songs[n];
+    		audio.src = song.url;
+    		cover.src = song.cover;
+    		songName.innerHTML = song.name
+    		author.innerHTML = song.singer
+    		audio.play()
+    		updataProgress()
+    		current = n//把当前那首歌换成current
+
+    		updataProgress()
+    		// progress.value = 0
+    		// setTimeout(function(){
+    		// 	progress.max = audio.duration
+    		// 	// console.log(progress.max)
+    		// },100)
+   
+    	} 
+    	play(current)
+
+
+    	var clock;
+    	//更新进度条时间
+    	function updataProgress(){
+    		clock = setInterval(upData,500)
+    		$('.progress').on('mousedown',function(event){
+    			var prX = event.clientX//鼠标点击时相对于浏览器的x方向位置
+    			var dragX = $(this).offset().left//元素左边缘相对于浏览器处在具体的什么位置，是一个固定值
+    			var percentage = (prX - dragX)/200*100;
+          		audio.currentTime = audio.duration * percentage/100;// audio.duration是播放总时间 //audio.currentTime是播放进度
+          
+    		})
+  
+    		function upData(){
+    			var widthOffset = (audio.currentTime/audio.duration)*100+"%";
+    			$progressBar.width(widthOffset);
+    			if(audio.currentTime == audio.duration){
+					play(current+1)//时间完就播放下一首
+    			}
+    	
+				// $curTime.get(0).innerHTML = Math.round(audio.currentTime)//innerHTML的是DOM的方法，所以加get(0)
+				// $songTime.get(0).innerHTML = Math.round(audio.duration)
+    		}
+		}
+
+
+    	//暂停更新进度时间
+    	function stopupdataProgress(){
+    		clearInterval(clock)
+    	}
+
+    	
+    	$play.on("click",function(){//播放按钮只管播放，切暂停功能
+    		$(this).addClass('hide');
+    		$pause.removeClass('hide');
+    		audio.play()
+    	})
+    	$pause.on("click",function(){//暂停按钮只管暂停，切播放功能
+    		$(this).addClass('hide');
+    		$play.removeClass('hide');
+    		audio.pause();
+    		stopupdataProgress()
+    	})
+    	$prev.on('click',function(){//上一首按钮只管播放，更新数据
+    		play(current-1)
+    	})
+    	$next.on('click',function(){//下一首按钮只管播放，更新数据
+    		play(current+1)
+    	})
+
+		$share.get(0).href = "http://service.weibo.com/share/share.php?url="+encodeURIComponent(location.href)+"$title="+encodeURIComponent(location.href)//分享按钮只管把url用字符串形式拼接
+
+		$star.on('click',function(){
+			$(this).addClass('selected')
+			$('.icon-love1').removeClass('selected')
+		})
+		$love.on('click',function(){
+			$(this).addClass('selected')
+			$('.icon-stars').removeClass('selected')
+		})
+
+
+})()
+</script>
+</body>
+</html>

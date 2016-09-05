@@ -1,0 +1,233 @@
+/* reset */
+body, ul, li, p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+ul {
+  list-style: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+body {
+  text-align: center;
+}
+
+.pic-one {
+  display: block;
+  position: relative;
+}
+
+.pic-one .bg {
+  width: 100%;
+}
+
+.pic-one .help-wrapper {
+  position: absolute;
+  top: 61%;
+  transform: translateX(4%);
+}
+
+.pic-one .photo {
+  width: 50%;
+}
+
+.pic-one #pickfiles {
+    position: absolute;
+    left: 21%;
+    width: 47%;
+    height: 82%;
+}
+
+.pic-one .help {
+  width: 10%;
+  transform: translateY(-4px);
+}
+
+.pic-one .help-tip {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 83%;
+  padding: 22px 10px;
+  background-color: #fff;
+  line-height: 22px;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: scroll;
+  color: #a1daf1;
+  font-size: 14px;
+}
+
+.pic-one .tip-one,
+.pic-one .tip-two,
+.pic-one .tip-three,
+.pic-one .tip-four,
+.pic-one .tip-five,
+.pic-one .tip-last {
+  margin-top: 22px;
+}
+
+.pic-one .help-close {
+  display: none;
+  width: 12%;
+  position: absolute;
+  top: 40px;
+  right: 34px;
+}
+
+.pic-two {
+  display: none;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.pic-two .title img {
+  width: 100%;
+}
+
+.pic-two #load-pic,
+.pic-three .load-pic {
+  width: 100%;
+  height: 335px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.pic-two #load-pic {
+  position: relative;
+}
+
+.pic-two .progress {
+  position: absolute;
+  left: 25px;
+  bottom: 32px;
+  width: 85%;
+  height: 12px;
+  border-radius: 10px;
+  padding: 2px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.pic-two .progress-inner {
+  width: 1%;
+  height: 100%;
+  background-color: #f5b3c2;
+  border-radius: 10px;
+}
+
+.pic-two .load-pic-inner img,
+.pic-three .load-pic-inner img {
+  width: 100%;
+  height: 301px;
+}
+
+.pic-two .sex {
+  width: 30%;
+  margin: 20px auto;
+  border: 1px solid #000;
+  border-radius: 40px;
+  padding: 15px 30px;
+}
+
+.pic-two .sex img {
+  width: 28%;
+}
+
+.pic-two .icon-wrapper,
+.pic-three .icon-wraper {
+  padding: 15px;
+}
+
+.pic-two .icon-wrapper img {
+  float: left;
+  width: 50%;
+}
+
+.pic-three {
+  display: none;
+  padding: 20px;
+}
+
+.pic-three .icon-wrapper .dislike {
+  width: 28%;
+}
+
+.pic-three .icon-wrapper .clear {
+  width: 60%;
+}
+
+.pic-three .count {
+  margin-bottom: 20px;
+  text-align: right;
+  color: #fba6b7;
+}
+
+.pic-three .current:after {
+    content: ' /';
+}
+
+.pic-three .total:after {
+    content: ' 张';
+}
+
+.pic-three .love {
+  position: relative;
+  top: -30px;
+  left: 8%;
+  width: 84%;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 10px 18px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.pic-three .avatar img {
+  width: 30%;
+  float: left;
+  border-radius: 50%;
+}
+
+.pic-three .love span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pic-three .follow {
+  right: 18px;
+  top: 50%;
+  position: absolute;
+  width: 16%;
+  transform: translateY(-50%);
+  float: right;
+}
