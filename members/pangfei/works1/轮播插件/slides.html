@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>轮播</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+<!--  用户提供一个包含图片的容器 -->
+    <div class="arts">
+        <div class="pic" style="background:pink;width:300px;height:150px;"></div>
+        <div class="pic" style="background:yellow;width:300px;height:150px;"></div>
+        <div class="pic" style="background:orange;width:300px;height:150px;"></div>
+        <div class="pic" style="background:green;width:300px;height:150px;"></div>
+        <div class="pic" style="background:blue;width:300px;height:150px;"></div>
+    </div>
+  
+     <!-- <div class="arts">
+        <div class="pic" style="background:pink;width:300px;height:200px;"></div>
+        <div class="pic" style="background:yellow;width:300px;height:200px;"></div>
+        <div class="pic" style="background:orange;width:300px;height:200px;"></div>
+        <div class="pic" style="background:green;width:300px;height:200px;"></div>
+        <div class="pic" style="background:blue;width:300px;height:200px;"></div>
+      
+    </div> -->
+
+<script>
+    $.fn.slides=function(options){
+
+		  var $arts=this;    
+
+		  $arts.each(function(){
+		    var $art=$(this);
+		    var current=0;
+		    var width=options.width;
+
+		    var $pic=$art.children().wrapAll('<div class=list></div>').css({float:'left'});
+            
+		    var $first=$pic.first();
+    		var $last=$pic.last();
+
+		    var $list=$art.children().wrapAll('<div class=viewpoint></div>');
+            $art.css({width:'width'})
+		    $first.clone().appendTo($list);
+		    $last.clone().prependTo($list);  
+
+		    $list.css({
+		      width:$list.children().length*width,
+		      overflow:'hidden',
+		      position:'relative',
+		      left:-width
+		    });
+
+		    var $viewpoint=$list.parent();
+
+		    console.log($viewpoint[0]);
+
+		    $viewpoint.css({
+		      width:width,
+		      overflow:'hidden',
+		      position:'relative'
+		    });
+
+		    var $prev=$('<button class="art-prev arrow"><</button>').appendTo($viewpoint);
+		    var $next=$('<button class="art-next arrow">></button>').appendTo($viewpoint);
+
+           $('.art-prev').css({
+       	    border:'none',
+       	    // backgroundColor:'#eee',
+       	    opacity:'0.3',
+       	    width:'20px',
+       	    height:'30px',
+       	    lineHeight:'30px',
+       	    position:'absolute',
+           	top:'50%',
+           	left:'0',
+           	marginTop:'-15px',
+           	visibility:'hidden'
+           })
+
+           $('.art-next').css({
+           	border:'none',
+       	    // backgroundColor:'#eee',
+       	    opacity:'0.3',
+       	    width:'20px',
+       	    height:'30px',
+       	    lineHeight:'20px',
+           	position:'absolute',
+           	top:'50%',
+           	right:'0',
+           	marginTop:'-15px',
+           	visibility:'hidden'
+           })
+
+		    var go=function(index){
+		      var left;
+
+		      if(timer){
+		        window.clearInterval(timer);
+		      }
+
+		      if(hover===false){
+		          autoPlay();
+		         }
+		      
+		      if(index!=-1&&index!=$list.children().length-1){
+                $list.stop(true,true).animate({left:(index)*(-width)},800,function(){
+		         current=index;
+		        });
+		       }else if(index==-1){
+		          $list.stop(true,true).animate({left:0},800,function(){
+		         $list.css({'left':($list.children().length-2)*(-width)})
+		         current=$list.children().length-2;
+		        });
+		      }else if(index==$list.children().length-1){
+		          $list.stop(true,true).animate({left:(index)*(-width)},800,function(){
+		             $list.css({'left':-width})
+		             current=0;
+		        });
+		        
+		      }
+		      
+		    };
+
+		    var next=function(){
+		      go(current+1); 
+		    };
+
+		    var prev=function(){
+		      go(current-1); 
+		    };
+
+		    $prev.on('click',function(){
+		      console.log('prev');
+		      prev();
+		    });
+
+		    $next.on('click',function(){
+		      console.log('next');
+		      next();
+		    });
+
+		    var timer;
+		    var hover; 
+		    var autoPlay=function(){
+		      timer=setInterval(function(){
+		        next();
+		      },2000);
+		    };
+
+		    if(options.auto){
+		      autoPlay();
+		    }
+
+		    $viewpoint.on('mouseenter',function(){
+		      window.clearInterval(timer);
+		      hover=true;
+              $('.arrow').css({
+              	visibility:'visible'
+              })
+		    }).on('mouseleave',function(){
+		      autoPlay();
+		      hover=false;
+		       $('.arrow').css({
+              	visibility:'hidden'
+              })
+		    });
+		     
+		   });
+    
+    };
+
+
+// 使用插件并提供图片的宽高
+$('.arts').slides({
+  width:300,
+  auto:true
+});
+</script>
+    
+</body>
+</html>

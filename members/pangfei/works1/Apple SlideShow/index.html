@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Apple Slides</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="style.css" rel="stylesheet">
+<link href="img/apple-logo.ico" rel="shortcut icon"/>
+<script type="text/javascript" src="js/jquery.1.10.2.js"></script>
+<style></style>
+
+</head>
+<body>
+
+	   <div id="main">
+             <h1>Apple-like Gallery<br><b>Slideshow</b></h1>
+             <h2> View the <a href="javascript:;" class="inner">original tutorial »</a></h2>	
+             <div id="gallery">
+             	    <div id="slides">
+             	    	    <div class="slide"><img src="img/sample_slides/macbook.jpg" alt="" width:'920px' height:'400px'></div>
+             	    	    <div class="slide"><img src="img/sample_slides/iphone.jpg" alt="" width:'920px' height:'400px'></div>
+             	    	    <div class="slide"><img src="img/sample_slides/imac.jpg" alt="" width:'920px' height:'400px'></div>
+             	    	    <div class="slide"><img src="img/sample_slides/info.jpg" alt="" width:'920px' height:'400px'></div>
+             	    </div>
+ 
+                    <div id="menu">
+                    	   <ul class="clearfix">
+	             	            <li class="fbar"><a href="javascript=:;">&nbsp</a></li>
+		             	    	<li class="menuItem"><a href="javascript=:;"><img src="img/sample_slides/thumb_macbook.png" alt=""></a></li>
+		             	    	<li class="menuItem"><a href="javascript=:;"><img src="img/sample_slides/thumb_iphone.png" alt=""></a></li>
+		             	    	<li class="menuItem"><a href="javascript=:;"><img src="img/sample_slides/thumb_imac.png" alt=""></a></li>
+		             	    	<li class="menuItem"><a href="javascript=:;"><img src="img/sample_slides/thumb_about.png" alt=""></a></li>
+	             	    </ul>
+                    </div>
+	         </div>
+  
+	   </div>
+       <p>This is a tutorialzine demo. View the <a href="javascript:;" class="inner">original tutorial</a> to read and download the source files.</p>
+       <p>The gallery features artwork from <a href="javascript:;" class="inner">rambocre</a>, <a href="javascript:;">pickupjojo</a> and <a href="javascript:;">codenamebender</a></p>
+  
+
+	   <script>
+               $(document).ready(function(){
+                     var toWidth=0;
+                     var positions=[];
+                     $('#slides .slide').each(function(i){
+                            positions[i]=toWidth;
+                            toWidth+=$(this).width();
+                            // if(!$(this).width()){
+                            // 	alert('Please,fill in width & height for your images');
+                            // 	return false;
+                            // }
+                     })
+                     $('#slides').width(toWidth);
+                     $('#menu ul li a').click(function(e,keepScroll){
+                            $('li.menuItem').removeClass('act').addClass('inact');
+                            $(this).parent().addClass('act');
+
+                            var pos=$(this).parent().prevAll('.menuItem').length;
+
+                            $('#slides').stop().animate({marginLeft:-positions[pos]+'px'},450);
+                            e.preventDefault();
+                            if(!keepScroll){ clearInterval(itvl)}
+
+                     });
+                     $('#menu ul .menuItem:first').addClass('act').siblings().addClass('inact'); 
+                     
+
+                    var current=1;
+                   function autoAdvance(){
+                       if(current==-1){return false;}
+      
+                       $('#menu ul li a').eq(current%$('#menu ul li a').length).trigger('click',[true]);
+                       current++;
+                    }
+      
+                    var changeEvery=10;
+                    var itvl=setInterval(function(){autoAdvance();},changeEvery*1000);
+                    
+                     
+              });
+	   </script>
+
+      <!--   -->
+
+                     
+    
+</body>
+</html>

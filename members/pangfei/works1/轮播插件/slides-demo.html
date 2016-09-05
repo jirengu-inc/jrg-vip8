@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>demo——轮播插件</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+ -->
+ <script src="js/jquery.1.10.2.js"></script>
+      <style>
+	         *{margin:0;padding:0;}
+	         ul,ol{list-style:none;}
+	         a{text-decoration:none;}
+	         .clearfix{content:'';display:block;clear:both;}
+	         .slides img{width:400px;height:300px; }
+             .arrow{width:35px;height:35px;border:none;font-size:20px;border-radius:50%;color:#fff;background:#000;opacity:0.4;position: absolute;top:50%;margin-top:-17.5px; visibility: hidden;text-align: center;line-height: 35px;}
+             .arrow-prev{left:0;}
+             .arrow-next{right:0;}
+             .arrow:focus{outline: none;}
+             .arrow:hover{opacity:0.6;}
+             .listNav{vertical-align:top;display:inline-block;position:absolute;bottom:5px;left:50%;z-index:5;}
+             .listNav>li{display:inline-block;margin-left:2px;width:10px;height:10px;border-radius: 50%;background:#000;opacity:0.6;}
+             .active{background:red;}
+      </style>
+
+</head>
+<body>
+        <div class="slides">
+        	<img src="img/14.jpg" alt="">
+        	<img src="img/15.jpg" alt="">
+        	<img src="img/16.jpg" alt="">
+        	<img src="img/17.jpg" alt="">
+        	<img src="img/18.jpg" alt="">
+        	<img src="img/19.jpg" alt="">
+        	<img src="img/20.jpg" alt="">
+        	<img src="img/22.jpg" alt="">
+        </div>
+
+
+        <script>
+            function Slides($element,options){
+                   this.$element=$element;
+                   this.options=options;
+                   this.init();
+                   this.current=1;
+            }
+
+            Slides.prototype.init=function(){
+            	   this.prepareHtml();
+            	   this.blidElevent();
+                   if(this.options.auto){
+                   	  this.autoPlay();
+                   }
+
+            }
+
+            Slides.prototype.blidElevent=function(){
+            	   var self=this;
+
+            	   // 标记鼠标是否进入指定区域以判断是否进行自动播放
+                   var hover=this.hover=false;    
+
+            	   // 按钮点击事件
+            	   this.$prev.on('click',function(){
+            	   	   self.prev();   
+            	   });
+            	   this.$next.on('click',function(){
+            	   	   self.next(); 
+            	   });
+
+                   // 鼠标进入事件
+            	   this.$viewpoint.on('mouseenter',function(){
+                        window.clearInterval(this.timer);
+                        $('.arrow').css({visibility:'visible'})
+                        self.hover=true;
+            	   })
+            	   if(this.options.auto){
+	                 	this.$viewpoint.on('mouseleave',function(){
+	                 	  self.autoPlay();
+					      self.hover=false;
+					      $('.arrow').css({visibility:'hidden' })
+				        });
+                   }else{
+                 	    this.$viewpoint.on('mouseleave',function(){
+					      self.hover=false;
+					      $('.arrow').css({visibility:'hidden' })
+				        });
+                   }
+               	
+            }
+
+            Slides.prototype.prev=function(){
+            	   this.go(this.current-1);
+            	   
+            }
+
+            Slides.prototype.next=function(){
+            	   this.go(this.current+1);
+            	   
+            }
+
+            Slides.prototype.go=function(index){
+            	   var self=this;
+            	   var $art=this.$element;
+            	   var width=this.options.width;
+            	   if(this.hover===false){this.autoPlay();}
+
+            	   if(this.timer){window.clearInterval(this.timer);}
+
+            	   if (index!=0&&index!=this.num-1){
+            	   	    $art.stop(true,true).animate({left:(index)*(-width)},1000,function(){
+			                 self.current=index;
+			            });
+            	   }else if(index==0){
+                        $art.stop(true,true).animate({left:0},1000,function(){
+	                        $art.css({left:(self.num-2)*(-width)});
+	                        self.current=self.num-2;
+                        });
+            	   }else if(index==this.num-1){
+                        $art.stop(true,true).animate({left:index*(-width)},1000,function(){
+            	   	  	    $art.css({left:-width});
+            	   	  	    self.current=1;
+            	   	    });   
+            	   }
+
+            }
+
+            Slides.prototype.autoPlay=function(){
+            	   var self=this;
+            	   this.timer=setInterval(function(){
+            	   	   self.next();
+            	   },2000);
+            }
+
+
+            Slides.prototype.prepareHtml=function(){       /*DOM操作需要注意顺序*/
+                   var $art=this.$element;
+                   var width=this.options.width;
+
+                   // 克隆第一张和最后一张并分别添加到图片list的最后和第一
+                   var $first=this.$first=$art.children().first();
+                   var $last=this.$last=$art.children().last();
+                   $first.clone().appendTo($art);
+                   $last.clone().prependTo($art);
+
+                   // 获取每一张图片以添加样式
+                   var $pic=this.$pic=$art.children();
+                   $pic.css({float:'left'});
+                   
+                   //设置包裹层及其样式
+                   var num=this.num=$art.children().length;
+                   $art.wrapAll('<div class=viewpoint></div>'); 
+                   var $viewpoint=this.$viewpoint=$('.viewpoint');
+                   $viewpoint.css({width:width,position:'relative',overflow:'hidden','text-align':'center'});
+                   $art.css({width:num*width,position:'relative',left:-width,overflow:'hidden'});
+
+                   // 添加按钮及其样式
+                   var $prev=this.$prev=$('<button><</button>');
+                   var $next=this.$next=$('<button>></button>');
+                   $prev.appendTo($viewpoint);
+                   $next.appendTo($viewpoint);
+                   $prev.addClass('arrow-prev arrow');
+                   $next.addClass('arrow-next arrow');
+
+                   //添加图片导航
+                   var $listNav=this.$listNav=$('<ul class=listNav></ul>').appendTo($viewpoint);
+                   var temp='';
+                   for(var i=1;i<this.num-1;i++){
+                   	   temp+='<li><a href="javascript:;"></a></li>';
+                   }
+                   $listNav.append(temp);
+                   var $listItem=this.$listItem=$listNav.children();
+                   var halfNav=this.halfNav=-$listNav.width()/2+'px';
+                   $listNav.css({'margin-left':halfNav});
+
+                   // 用于调试
+                   console.log($art[0]);
+                   console.log($viewpoint[0]);
+                   console.log(temp);
+                   console.log($listNav[0]);
+                   console.log(halfNav);
+            }
+
+            var slide1=new Slides($('.slides'),{width:400,auto:true})
+              
+
+            // var $slides=$('.slides');
+            // console.log($slides[0]);
+        </script>
+</body>
+</html>

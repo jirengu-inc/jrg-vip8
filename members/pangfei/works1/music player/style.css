@@ -1,0 +1,250 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Faye Pam (you@example.org)
+ * @date    2016-07-01 23:15:52
+ * @version $Id$
+ */
+
+
+*{
+	margin: 0;
+	padding:0;
+	text-decoration: none;
+}
+
+ul,ol{
+	list-style: none;
+}
+
+html,body{
+	height:100%;
+	background-color:rgb(210,213,214);
+	font-family:Arial, Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+a{
+	color:inherit;
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('http://at.alicdn.com/t/font_1472828135_4403882.eot'); /* IE9*/
+  src: url('http://at.alicdn.com/t/font_1472828135_4403882.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('http://at.alicdn.com/t/font_1472828135_4403882.woff') format('woff'), /* chrome、firefox */
+  url('http://at.alicdn.com/t/font_1472828135_4403882.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('http://at.alicdn.com/t/font_1472828135_4403882.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont{
+	font-family:"iconfont";
+	font-size:24px;
+	font-style:normal;
+	color: rgb(205,210,215);
+}
+
+#player-wrapper{
+	height:100%;
+    text-align: center;
+    line-height: 1;
+    /*border: 1px solid red;*/
+}
+
+#player-wrapper:before{
+	content: '';
+	height: 100%;
+	display: inline-block;
+    vertical-align: middle;
+}
+
+#player-wrapper:after{
+	content: '';
+	height: 100%;
+	display: inline-block;
+    vertical-align: middle;
+}
+
+
+.music-player{
+	display: inline-block;
+	vertical-align: middle;
+	width:380px;
+	height: 400px;
+	/*margin: 0px auto;*/
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+	background: rgb(233,237,238);
+	box-shadow: 0px 2px 8px #666;  
+}
+
+.img-ct img{
+	height:100%;
+	width: 100%;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.show{
+	display: block;
+}
+
+.hide{
+	display: none;
+}
+
+
+.message-controller{
+	position:absolute;
+	bottom: 0;
+	width: 100%;
+	height:65%;
+	background-color:rgba(233,237,238,0.95);
+	border-radius: 0 0 10px 10px;
+
+}
+
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.info-icon{
+	margin: 30px;
+}
+
+.info{
+	/*color: rgb(233,237,239);*/
+	color: rgb(71,87,107);
+	width:200px;
+	float: left;
+	text-align: left;
+	/*border: 1px solid;*/
+	overflow: hidden;
+}
+
+.info h2{
+	font-size: 20px;
+	white-space:nowrap; 
+	text-overflow:ellipsis;
+	overflow: hidden;
+}
+
+.info h3{
+	white-space:nowrap; 
+	text-overflow:ellipsis;
+	overflow: hidden;
+	font-size: 16px;
+	margin:6px 0;
+}
+
+.info h4{
+	white-space:nowrap; 
+	text-overflow:ellipsis;
+	overflow: hidden;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+.icon{
+   float: right;
+   clear: right;
+}
+
+.icon .m-love{
+   position: relative;
+   bottom: -2px;
+   /*color: rgb(254,134,152);*/
+
+}
+
+.player-controller{
+	margin: 30px;
+}
+
+.progress-wrapper{
+	margin: 0px 0 30px 0;
+}
+
+.progress-wrapper progress { 
+	-webkit-appearance: none; 
+	width: 100%; 
+	height: 6px;
+}
+
+.progress-wrapper ::-webkit-progress-inner-element { }
+.progress-wrapper ::-webkit-progress-bar {
+	background: rgb(69,69,69);
+	border-radius: 6px;
+}
+
+.progress-wrapper ::-webkit-progress-value { 
+	background:rgb(205,210,215); 
+	border-radius: 6px;
+}
+
+.controller{
+	display: inline-block;
+}
+.controller li{
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.controller .m-loop{
+	margin-left: 100px;
+}
+
+.controller .m-single{
+	font-size: 21px;
+}
+
+.controller .m-random{
+	position: relative;
+	bottom: -2px;
+}
+
+.controller .play-pause{
+	background:rgb(69,69,69);
+	border-radius: 50%;
+	padding:12px;
+	font-size: 26px;
+}
+
+.controller .m-play{
+	display: none;
+}
+
+.m-nextmenu,.m-next{
+	position: relative;
+	background:rgb(69,69,69);
+	border-radius: 50%;
+	font-size: 18px;
+	padding:10px 10px 12px 12px;
+}
+
+/* .cover{
+	width:100%;
+	height:100%;
+	border: 1px solid red;
+	position: absolute;
+	left:0;
+	top: 0;
+	border-radius: 50%;
+	background: rgba(0,0,0,0.2);
+	
+}*/
+
+.play-pause:hover,.m-next:hover,.m-nextmenu:hover{
+	background:rgba(69,69,69,0.8);
+}
+
+.m-time{
+	float: right;
+	clear: right;
+	/*color: rgb(210,213,214);*/
+	font-size:12px;
+	color: rgba(71,87,107,0.6);
+}

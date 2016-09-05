@@ -21,18 +21,21 @@
 
 <script src="http://7xrxd2.com1.z0.glb.clouddn.com/jquery/jquery-1.12.3.min.js"></script>
 <script>
-$('form').on('submit',function(e){
-    var form = this        //拿到当前的表单,还可以用form=e.currentTarget
-    var phone=form.phone.value   //拿到表单的phone属性的属性值
-    var password=form.password.value  
-    var regex=/^1\d{10}$/
-    var valid=regex.test(phone);
-    if(valid){
-    }else{
-         e.preventDefault()     //劫持form表单的提交，不让form发请求
-        form.phone.style.border="1px solid red";
-    }
-})
+    $('form').on('submit',function(e){
+        var form = this        //拿到当前的表单,还可以用form=e.currentTarget
+        var phone=form.phone.value   //拿到表单的phone属性的属性值
+        var password=form.password.value  
+        var regex=/^1\d{10}$/
+        var valid=regex.test(phone);
+        if(valid){
+            $,post('/',{phone:phone,password:password},function(response){
+                console.log(response);
+            })
+        }else{
+             e.preventDefault()     //劫持form表单的提交，不让form发请求
+            form.phone.style.border="1px solid red";
+        }
+    })
 
 </script>
 
