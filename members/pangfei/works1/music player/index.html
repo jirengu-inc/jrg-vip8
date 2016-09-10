@@ -251,8 +251,9 @@
 
                     $.ajax({
                           url: 'http://api.jirengu.com/fm/getSong.php',
-                          dataType: 'jsonp',   //这里使用了新浪新闻的 jsonp 接口,可以直接看数据， 如： http://platform.sina.com.cn/slide/album_tech?jsoncallback=func&app_key=1271687855&num=3&page=4
-                          jsonp:"jsoncallback",
+                          method:'get',
+                          // dataType: 'jsonp',
+                          // jsonp:"jsoncallback",
                           data: {
                             channel:data
                           }
