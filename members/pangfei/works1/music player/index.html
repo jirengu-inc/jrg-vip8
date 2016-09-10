@@ -234,7 +234,29 @@
 
 
                 var getSongMessage=function(data){
-                    $.get('http://api.jirengu.com/fm/getSong.php',{channel:data},function(song){
+                    // $.get('http://api.jirengu.com/fm/getSong.php',{channel:data},function(song){
+                    //       console.log(song);
+                    //       $song=$.parseJSON(song);
+                    //       songURL=$song.song[0].url;
+                    //       songImg=$song.song[0].picture;
+                    //       songArtist=$song.song[0].artist;
+                    //       songTitle=$song.song[0].title;
+                    //       songId=$song.song[0].sid;
+                    //       $audio.attr('src',songURL);
+                    //       $background.attr('src',songImg);
+                    //       $musicName.text(songTitle);
+                    //       $singer.text(songArtist);
+                    //       console.log(audio);
+                    // });
+
+                    $.ajax({
+                          url: 'http://api.jirengu.com/fm/getSong.php',
+                          dataType: 'jsonp',   //这里使用了新浪新闻的 jsonp 接口,可以直接看数据， 如： http://platform.sina.com.cn/slide/album_tech?jsoncallback=func&app_key=1271687855&num=3&page=4
+                          jsonp:"jsoncallback",
+                          data: {
+                            channel:data
+                          }
+                     }).done(function(song){
                           console.log(song);
                           $song=$.parseJSON(song);
                           songURL=$song.song[0].url;
@@ -247,7 +269,7 @@
                           $musicName.text(songTitle);
                           $singer.text(songArtist);
                           console.log(audio);
-                    });
+                     });
                 }
 
                 !function(){
