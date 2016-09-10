@@ -252,23 +252,24 @@
                     $.ajax({
                           url: 'http://api.jirengu.com/fm/getSong.php',
                           method:'get',
-                          // dataType: 'jsonp',
-                          // jsonp:"jsoncallback",
+                          dataType: 'json',
                           data: {
-                            channel:data
+                            'channel':data
                           }
                      }).done(function(song){
-                          console.log(song);
-                          $song=$.parseJSON(song);
-                          songURL=$song.song[0].url;
-                          songImg=$song.song[0].picture;
-                          songArtist=$song.song[0].artist;
-                          songTitle=$song.song[0].title;
-                          songId=$song.song[0].sid;
+                          console.dir(song);
+                          $song=song.song[0];
+                          console.dir($song);
+                          songURL=$song.url;
+                          songImg=$song.picture;
+                          songArtist=$song.artist;
+                          songTitle=$song.title;
+                          songId=$song.sid;
                           $audio.attr('src',songURL);
                           $background.attr('src',songImg);
                           $musicName.text(songTitle);
                           $singer.text(songArtist);
+                          console.dir(songURL);
                           console.log(audio);
                      });
                 }
