@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>获取api数据</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+
+<button class="get-channel">获取频道</button>
+<button class="get-song">获取歌曲</button>
+<button class="get-song-lrc">获取歌词</button>
+
+<audio autoplay="autoplay" controls="controls">
+       Your browser does not support the <code>audio</code> element.
+       <!-- <source  type="audio/mp3" title="Carly Rae Jepsen、Owl City - Good Time - Good Time"> -->
+</audio>
+
+
+
+<script>
+	 $('.get-channel').on('click',function(){
+	 	$.get('http://api.jirengu.com/fm/getChannels.php',function(response){
+	 		console.log(response);
+	 		var $channel=$.parseJSON(response);
+	 		var channel=$channel.channels;
+	 		var channelNameList=[];
+			var channelIdList=[];
+	 		for(var i=0;i<channel.length-1;i++){
+                     channelNameList[i]= channel[i].name;
+                     channelIdList[i]=channel[i].channel_id;
+            }
+	 		console.dir(channelNameList);
+	 		console.dir(channelIdList);
+	 	})
+	 })
+
+	 $('.get-song').on('click',function(){
+	 	$.get('http://api.jirengu.com/fm/getSong.php',{channel: 'public_tuijian_spring'},function(response){
+	 		console.log(response);
+	 		var $song=$.parseJSON(response);
+	 		var songURL=$song.song[0].url;
+	 		var  myAudio=document.querySelector('audio');
+	 		var $myAudio=$(myAudio);
+	 		$myAudio.attr('src',songURL);
+	 		console.log(myAudio);
+	 	})
+	 })
+
+	$('.get-song-lrc').on('click',function(){
+	 	 $.post('http://api.jirengu.com/fm/getLyric.php',{sid:"758918"})
+			   .done(function(response){
+			    console.log(response);
+  		 });
+	})
+
+</script>
+    
+</body>
+</html>
+
+<!-- {"song":[{"sid":2623086,
+		  "title":"Sunrise",
+		  "picture":"http:\/\/musicdata.baidu.com\/data2\/pic\/a830c6969dd83dafab657f75720d9825\/115558520\/115558520.jpg",
+		  "artist":"Norah Jones",
+		  "url":"http:\/\/yinyueshiting.baidu.com\/data2\/music\/43069195\/2623086194400128.mp3?xcode=4f4e8987985cc1119824035d6041d0a0",
+		  "lrc":"http:\/\/musicdata.baidu.com\/data2\/lrc\/13902851\/13902851.lrc"}]} -->

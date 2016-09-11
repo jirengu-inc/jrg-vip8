@@ -233,22 +233,7 @@
                     current=0;
 
 
-                var getSongMessage=function(data){
-                    // $.get('http://api.jirengu.com/fm/getSong.php',{channel:data},function(song){
-                    //       console.log(song);
-                    //       $song=$.parseJSON(song);
-                    //       songURL=$song.song[0].url;
-                    //       songImg=$song.song[0].picture;
-                    //       songArtist=$song.song[0].artist;
-                    //       songTitle=$song.song[0].title;
-                    //       songId=$song.song[0].sid;
-                    //       $audio.attr('src',songURL);
-                    //       $background.attr('src',songImg);
-                    //       $musicName.text(songTitle);
-                    //       $singer.text(songArtist);
-                    //       console.log(audio);
-                    // });
-
+                var getSongMessage=function(){
                     $.ajax({
                           url: 'http://api.jirengu.com/fm/getSong.php',
                           method:'post',
@@ -330,7 +315,7 @@
                        $(".m-duration").html(minute+':'+mDuration);
                 }
 
-                getSongMessage(channelIdList[0]);
+                getSongMessage();
 
                 var btnClickAnimation=function($element,fonSize){
                         var originalVal=$element.css('font-size');
