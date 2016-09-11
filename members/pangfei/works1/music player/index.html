@@ -25,7 +25,7 @@
         	  <div class="message-controller">
 	    	  	     <div class="info-icon clearfix">
 	    	  	     	<div class="info">	
-                      <h2 class="sing-name"></h2>
+                      <h2 class="sing-name">音乐频道</h2>
                       <h3 class="singer"></h3>
                       <h4 class="collection"></h4>
 	    	  	     	</div>
@@ -59,164 +59,6 @@
 
 
     <script>
-        //   var audio=$('audio').get(0);
-        //   var $audio=$(audio);
-        //   var $musicList=$('source');
-        //   var $next=$('.m-next');
-        //   var $nextmenu=$('.m-nextmenu')
-        //   var current=0;
-        //   var $attr=[];
-        //   var $title=[];
-        //   var title=[];
-        //   var $play=$('.m-play');
-        //   var $pause=$('.m-pause');
-        //   var $background=$('.img-ct>img')
-
-        //   $musicList.each(function(index){
-        //       $attr[index]=$(this).attr('src');
-        //       $title[index]=$(this).attr('title');
-        //   })
-
-
-        //   function go(curIdx){
-        //   	      var title=[];
-        //   	      if(curIdx<=$attr.length-1&&curIdx>=0){
-        //   	      	  current=curIdx;
-        //               $audio.attr('src',$attr[curIdx]);
-        //               title=$title[curIdx].split(' - ');
-        //               $background.eq(curIdx).addClass('show').removeClass('hide').siblings().removeClass('show').addClass('hide')
-        //   	      }
-                  
-        //           if(curIdx>$attr.length-1){
-        //             current=0;
-        //             $audio.attr('src',$attr[0]);
-        //             title=$title[0].split(' - ');
-        //             $background.eq(0).addClass('show').removeClass('hide').siblings().removeClass('show').addClass('hide')
-        //           }
-        //           if(curIdx<0){
-        //             current=$attr.length-1;
-        //             $audio.attr('src',$attr[$attr.length-1]);
-        //             title=$title[$attr.length-1].split(' - ');
-        //             $background.eq($attr.length-1).addClass('show').removeClass('hide').siblings().removeClass('show').addClass('hide')
-        //           }
-
-        //           $('.sing-name').html(title[1]);
-        //           $('.collection').html(title[2]);
-        //           $('.singer').html(title[0]);
-
-        //           // console.log(curIdx+":"+$attr[curIdx]);
-        //           // console.log(title);
-        //           // console.log(title[1])
-        //   }
-
-        //   $play.click(function(){
-        //     if(!audio.src){
-        //         $.get('http://api.jirengu.com/fm/getSong.php',{channel: ''},function(response){
-        //                   console.log(response);
-        //                   var $song=$.parseJSON(response);
-        //                   var songURL=$song.song[0].url;
-        //                   $audio.attr('src',songURL);
-        //                   console.log(audio);
-        //         }); 
-        //       }else{audio.play();}
-          	 
-        //   	 console.log('play')
-        //      $play.css({display:'none'});
-        //      $pause.css({display:'block'});
-        //   })
-
-        //   $pause.click(function(){
-        //   	 audio.pause();
-        //   	 console.log('pause')
-        //      $pause.css({display:'none'});
-        //      $play.css({display:'block'});
-        //   })
-
-        //   $next.click(function(){
-        //        $.get('http://api.jirengu.com/fm/getSong.php',{channel: 'public_tuijian_spring'},function(response){
-        //                 console.log(response);
-        //                 var $song=$.parseJSON(response);
-        //                 var songURL=$song.song[0].url;
-        //                 $audio.attr('src',songURL);
-        //                 console.log(audio);
-        //     });        
-        //   })
-
-        //   $nextmenu.click(function(){
-        //       console.log(current);
-        //       go(current-1);
-        //       console.log(current); 
-        //       $play.trigger('click');            
-        //   })
-
-        //   $('.m-loop').click(function(){
-        //   	  console.log('loop');
-        //   	  $('.m-loop').css({color:'#454545'});
-        //   	  audio.onended=function(){
-	       //  	  	$next.trigger('click'); 
-        //   	  }
-        //   })
-
-        //   $('.m-single').click(function(){
-        //   	   console.log('single');
-        //   	   if(audio.loop===false){
-	       //    	   audio.loop=true;
-	       //         $('.m-single').css({color:'#454545'})
-        //        }else{
-        //        	   audio.loop=false;
-        //        	   $('.m-single').css({color:'#CDD2D7'})
-        //        }
-        //   })
-
-        //   var progress = function() {
-        //   	      var curTime = parseInt(audio.currentTime);
-        //           var minute="00";                  /*设置00防止minute没有值的时候出现undefined*/
-				    //       $('progress').attr({'value':curTime});
-				    //       if(curTime<10){
-	       //      	      curTime='0'+curTime;
-		      //         } 
-        // 				  if(curTime>60){
-        // 				  	  minute = parseInt(curTime/60);
-      		//             curTime= parseInt(curTime%60);
-      		//             if(minute<10){
-      		//             	minute='0'+minute;
-      		//             }
-      		//             if(curTime<10){
-      		//             	curTime='0'+curTime;
-      		//             }
-        // 				  }
-				    //       $(".curTime").html(minute+':'+curTime);
-		      // }
-
-  	     //  var time = function() {
-  	     //  	      var mDuration = parseInt(audio.duration);
-        //           var minute="00";
-  	     //  	      $('progress').attr({'max':mDuration});
-  	      	      
-  	     //  	      if(mDuration<10){
-  		    //         	mDuration='0'+mDuration;
-  		    //         }
-        // 				  if(mDuration>60){
-        // 				  	    minute = parseInt(mDuration/60);
-        // 		            mDuration= parseInt(mDuration%60);
-        // 		            if(minute<10){
-        // 		            	minute='0'+minute;
-        // 		            }
-        // 		            if(mDuration<10){
-        // 		            	mDuration='0'+mDuration;
-        // 		            }
-        // 				  }
-  				  //      $(".m-duration").html(minute+':'+mDuration);
-  		    // }
-
-    		  // //添加监听
-    		  // audio.addEventListener("loadedmetadata",time);
-    		  // audio.addEventListener("timeupdate",progress);
-
-
-        //    console.log($audio[0]);
-
-
            $(function(){
                 var $song,$channel,songURL,songImg,songArtist,songId,songTitle,
                     channelNameList=[],
@@ -233,18 +75,18 @@
                     current=0;
 
 
-                var getSongMessage=function(){
+                var getSongMessage=function(data){
                     $.ajax({
                           url: 'http://api.jirengu.com/fm/getSong.php',
-                          method:'post',
+                          method:'get',
                           dataType: 'json',
                           data: {
-                            'channel':data
+                            'channel':'data.channel_id'
                           }
                      }).done(function(song){
                           console.dir(song);
                           $song=song.song[0];
-                          console.dir($song);
+                          // console.dir(data.name);
                           songURL=$song.url;
                           songImg=$song.picture;
                           songArtist=$song.artist;
@@ -257,21 +99,26 @@
                           console.dir(songURL);
                           console.log(audio);
                      });
+                     
                 }
 
-                !function(){
-                    $.get('http://api.jirengu.com/fm/getChannels.php',function(response){
-                          console.log(response);
-                          $channel=$.parseJSON(response);
-                          for(var i=0;i<$channel.channels.length-1;i++){
-                               channelNameList[i]= $channel.channels[i].name;
-                               channelIdList[i]=$channel.channels[i].channel_id;
-                          }
-
-                    });
-                    // console.dir(channelNameList);
-                    // console.dir(channelIdList);
-                }();
+                function getChannel(){
+                    
+                    $.ajax({
+                          url: 'http://api.jirengu.com/fm/getChannels.php',
+                          method:'get',
+                          dataType: 'json'
+                        
+                     }).done(function(response){
+                          console.dir(response);
+                          $channel=response.channels;
+                          var num=Math.floor(Math.random()*$channel.length);
+                          console.log($channel[num]);
+                          console.log($channel[num].channel_id);
+                          getSongMessage($channel[num]);
+                     });
+                    
+                };
 
 
                 var progress = function() {
@@ -315,7 +162,7 @@
                        $(".m-duration").html(minute+':'+mDuration);
                 }
 
-                getSongMessage();
+                getChannel();
 
                 var btnClickAnimation=function($element,fonSize){
                         var originalVal=$element.css('font-size');
@@ -346,12 +193,11 @@
                 })
 
                 $next.click(function(){
-                    // btnClickAnimation($(this),'40px');
-                    getSongMessage(channelIdList[current]);    
+                    getSongMessage();    
                 })
 
                 $nextmenu.click(function(){
-                    getSongMessage(channelIdList[++current]);           
+                    getChannel();           
                 })
 
                 $('.m-loop').click(function(){

@@ -29,13 +29,16 @@
 	 		var $channel=$.parseJSON(response);
 	 		var channel=$channel.channels;
 	 		var channelNameList=[];
-			var channelIdList=[];
-	 		for(var i=0;i<channel.length-1;i++){
-                     channelNameList[i]= channel[i].name;
-                     channelIdList[i]=channel[i].channel_id;
-            }
-	 		console.dir(channelNameList);
-	 		console.dir(channelIdList);
+	 		var channelIdList=[];
+	 		var num=Math.floor(Math.random()*channel.length);
+			console.log(channel[num]);
+			console.log(channel[num].channel_id);
+	 		// for(var i=0;i<channel.length-1;i++){
+    //                  channelNameList[i]= channel[i].name;
+    //                  channelIdList[i]=channel[i].channel_id;
+    //         }
+	 		// console.dir(channelNameList);
+	 		// console.dir(channelIdList);
 	 	})
 	 })
 
