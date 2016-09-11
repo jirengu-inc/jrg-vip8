@@ -40,7 +40,7 @@
 	 })
 
 	 $('.get-song').on('click',function(){
-	 	$.get('http://api.jirengu.com/fm/getSong.php',{channel: ''},function(response){
+	 	$.get('http://api.jirengu.com/fm/getSong.php',{channel: 'public_shiguang_xinge'},function(response){
 	 		console.log(response);
 	 		var $song=$.parseJSON(response);
 	 		var songURL=$song.song[0].url;
