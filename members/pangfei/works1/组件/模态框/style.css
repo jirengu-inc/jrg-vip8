@@ -1,0 +1,69 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-08-22 18:52:42
+ * @version $Id$
+ */
+
+*{
+	margin:0;
+	padding:0;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+body,html{
+	width:100%;
+	height:100%;
+}
+
+#modal-wrapper{
+    width:100%;
+	height:100%;
+	/*border:1px solid red;*/
+	position: absolute;
+	top:0;
+	display: none;
+}
+
+.modal-cover{
+	/*border:1px solid #ccc;*/
+	position: fixed;
+	background: #000;
+	width:100%;
+	height:100%;
+	opacity: .3;
+}
+
+.modal-dialog{
+	border:1px solid #ccc;
+	width:400px;
+	height: 250px;
+	border-radius:5px;
+	position:absolute;
+	left:50%;
+	top: 50%;
+	margin-top:-125px;
+	margin-left: -200px; 
+	background: #fff;
+}
+
+.modal-content{
+	height:190px;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+}
+
+.footer{
+	text-align: center;
+}
+
+.close{
+	position: absolute;
+	right:4px;
+	top:4px;
+}

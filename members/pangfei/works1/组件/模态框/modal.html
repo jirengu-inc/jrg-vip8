@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>modal模态框</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+	<div id="btn-list"><button id='btn-click'>click</button></div>
+	
+    
+	<div id="modal-wrapper">
+	    <div class="modal-cover"></div>
+	    <div class="modal-dialog">
+	    	 <h2>标题</h2>
+	    	 <a href="javascript:;" id="btn-close" class="close">×</a>
+			 <div class="modal-content">内容</div>
+			 <div class="footer"> 
+			 	<a href="javascript:;" id="btn-cancel" class="cancel">取消</a>
+			 	<a href="javascript" class="confirm">确定</a>
+		 	 </div>
+	    </div>
+	</div>
+
+	<script>
+     	var   btnClick=document.getElementById('btn-click'),
+          	 modalWrapper=document.getElementById('modal-wrapper'),
+          	 btnClose=document.getElementById('btn-close'),
+          	 btnCancel=document.getElementById('btn-cancel'),
+                modalDialog=document.querySelector('.modal-dialog'),
+                collection={
+                    showModal:function(){
+                         modalWrapper.style.display='block';
+                    },
+                    hideModal:function(){
+                         modalWrapper.style.display='none'; 
+                    },
+                    hasClass:function(element,selfClassName){
+                         var regex=new RegExp('\\b'+selfClassName+'\\b');
+                         return !!element.className.match(regex);    
+                    }
+                };
+
+     	btnClick.addEventListener('click',function(e){
+               e.stopPropagation();
+     		collection.showModal();
+     	});
+
+          modalDialog.addEventListener('click',function(e){     //利用事件代理代替下面两个事件监听
+               e.stopPropagation();
+               if(collection.hasClass(e.target,'close')||collection.hasClass(e.target,'cancel')){
+                    collection.hideModal();
+               }
+          })
+
+    //  	btnClose.addEventListener('click',function(e){
+ 			// hideModal();
+    //  	});
+
+    //  	btnCancel.addEventListener('click',function(e){
+    //  		hideModal();
+    //  	});
+
+          document.body.addEventListener('click', function(e){
+              collection.hideModal();
+          });
+	</script>
+    
+</body>
+</html>

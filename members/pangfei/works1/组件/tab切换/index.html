@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>tab切换</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+	<div id="tab-change">
+		<ul id="tab-title" class="clearfix">
+			<li class="title-item1 active">tab1</li>
+			<li class="title-item2">tab2</li>
+			<li class="title-item3">tab3</li>
+		</ul>
+		<ul id="tab-content">
+			<li class="content-item panel">内容1</li>
+			<li class="content-item">内容2</li>
+			<li class="content-item">内容3</li>
+		</ul>
+	</div>	
+    
+
+    <script>
+         var Utils={
+         	hasClass:function(element,selfClassName){         //判断某元素是否有某种样式
+         		var regex=new RegExp('\\b'+selfClassName+'\\b');
+         		var flag=element.className.match(regex);
+         		return  !!flag;
+         	},
+         	addClass:function(element,selfClassName){		//添加样式
+         		if(element.length&&element.length>0){
+         			for(var i=0;i<element.length;i++){
+         				Utils.singleAddClass(element[i],selfClassName);
+         			}
+         		}else{
+         			Utils.singleAddClass(element,selfClassName);
+         		}
+         	},
+         	removeClass:function(element,selfClassName){		//移除样式
+     			if(element.length&&element.length>0){
+     				for(var i=0;i<element.length;i++){
+     					Utils.singleRemoveClass(element[i],selfClassName);
+     				}
+     			}else{
+     				Utils.singleRemoveClass(element,selfClassName);
+     			}
+         	},
+         	singleAddClass:function(element,selfClassName){			
+         		if(Utils.hasClass(element,selfClassName)){
+         			return;
+         		}
+         		element.className+=' '+selfClassName;
+         	},
+         	singleRemoveClass:function(element,selfClassName){
+         		var regex=new RegExp('\\b'+selfClassName+'\\b','g');
+         		element.className=element.className.replace(regex,'');
+         	},
+         	indexOf:function(element){
+         		var parent=element.parentElement,
+         			siblings=parent.children;
+         			for(var i=0,len=siblings.length;i<len;i++){
+         				if(element===siblings[i]){return i;}
+         			}
+         			return -1;
+         			
+         	}
+         }
+
+         var tabTitle=document.getElementById('tab-title');
+
+         tabTitle.addEventListener('click',function(e){
+         	var target=e.target,
+     			tabChildren=tabTitle.children,
+         		index=Utils.indexOf(target),
+         		content=document.querySelectorAll('.content-item');
+     		if(index>-1){
+     			Utils.removeClass(tabChildren,'active');
+     			Utils.addClass(target,'active');
+     			Utils.removeClass(content,'panel');
+     			Utils.addClass(content[index],'panel');
+     		}
+         	
+         })
+
+    </script>
+</body>
+</html>

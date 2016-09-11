@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-08-23 20:19:31
+ * @version $Id$
+ */
+*{
+	margin: 0;
+	padding: 0;
+}
+
+ul{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+#tab-change *{
+	box-sizing:border-box;
+}
+
+#tab-change {
+	margin:50px;
+	border:1px solid #ccc;
+}
+
+#tab-title{
+	border-bottom:1px solid #ccc;
+}
+
+#tab-title li{
+	width: 33.333%;
+	height: 25px;
+	line-height: 25px;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+}
+
+#tab-title li:nth-child(2){
+	border-right:1px solid #ccc;
+	border-left:1px solid #ccc;
+}
+
+#tab-content{
+	/*border:1px solid #ccc;*/
+}
+
+#tab-content li{
+	width:100%;
+	height:150px;
+	display: none;
+	/*border:1px solid #ccc;*/
+}
+
+.active{
+	background: #ddd;
+}
+
+.panel{
+	display: block !important;
+}
