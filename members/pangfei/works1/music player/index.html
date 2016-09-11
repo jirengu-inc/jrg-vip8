@@ -78,7 +78,7 @@
                 var getSongMessage=function(data){
                     $.ajax({
                           url: 'http://api.jirengu.com/fm/getSong.php',
-                          method:'get',
+                          type:'get',
                           dataType: 'json',
                           data: {
                             'channel':'data.channel_id'
@@ -106,7 +106,7 @@
                     
                     $.ajax({
                           url: 'http://api.jirengu.com/fm/getChannels.php',
-                          method:'get',
+                          type:'get',
                           dataType: 'json'
                         
                      }).done(function(response){
