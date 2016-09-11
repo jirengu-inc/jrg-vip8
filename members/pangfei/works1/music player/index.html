@@ -165,14 +165,6 @@
 
                 getChannel();
 
-                var btnClickAnimation=function($element,fonSize){
-                        var originalVal=$element.css('font-size');
-                        console.log(originalVal);
-                        $element.animate({opacity:0.25,'font-size':fonSize},function(){
-                              $element.css({'font-size':originalVal,opacity:1});
-                        });
-                }
-
                 //添加监听
                 audio.addEventListener("loadedmetadata",time);
                 audio.addEventListener("timeupdate",progress); 
