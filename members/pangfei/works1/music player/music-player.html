@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Music player</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="style.css" rel="stylesheet">
+<link rel="shortcut icon" href="">
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <audio autoplay="autoplay">
+       Your browser does not support the <code>audio</code> element.
+    </audio>
+
+    <div id="player-wrapper">
+        <div class="music-player">
+              <div class="img-ct">
+              	<img  alt="" class="show">
+              </div>
+ 
+        	  <div class="message-controller">
+	    	  	     <div class="info-icon clearfix">
+	    	  	     	<div class="info">	
+                      <h2 class="sing-name">音乐频道</h2>
+                      <h3 class="singer"></h3>
+                      <h4 class="collection"></h4>
+	    	  	     	</div>
+	    	  	     	<div class="icon">
+	    	  	     		<span class="iconfont m-share"><a href="javascript:;">&#xe604;</a></span>
+	    	  	     		<span class="iconfont m-collect"><a href="javascript:;">&#xe602;</a></span>
+	    	  	     		<span class="iconfont m-love"><a href="javascript:;">&#xe605;</a></span>
+	    	  	     	</div>
+	    	  	     </div>
+	                 <div class="player-controller">
+	                 	<div class="progress-wrapper">
+	                 	    <div class="m-time">
+	                 	    	<span class="curTime">00:00</span>/<span class="m-duration">00:00</span>
+	                 	    </div>
+	                 		<progress></progress>
+	                 	</div>
+	                 	<ul class="controller clearfix">
+	                 		<li class="iconfont play-pause"><span class="m-play"><a href="javascript:;">&#xe607;</a></span><span class="m-pause"><a href="javascript:;">&#xe606;</a></span></li>
+	                 		<li class="iconfont m-nextmenu"><a href="javascript:;">&#xe60d;</a></li>
+	                 		<li class="iconfont m-next"><div class="cover"></div><a href="javascript:;">&#xe601;</a></li>
+	                 		<li class="iconfont m-loop"><a href="javascript:;">&#xe60c;</a></li>
+	                 		<li class="iconfont m-single"><a href="javascript:;">&#xe609;</a></li>
+	                 		<!-- <li class="iconfont m-random"><a href="javascript:;">&#xe608;</a></li> -->
+	                 	</ul>
+	                 </div>
+	    	  </div>
+        </div>
+	    	  
+    </div>
+
+
+
+    <script>
+           $(function(){
+                var $song,$channel,songURL,songImg,songArtist,songId,songTitle,
+                    channelNameList=[],
+                    channelIdList=[],
+                    audio=$('audio').get(0),
+                    $audio=$(audio),
+                    $next=$('.m-next'),
+                    $nextmenu=$('.m-nextmenu'),
+                    $play=$('.m-play'),
+                    $pause=$('.m-pause'),
+                    $background=$('.img-ct>img'),
+                    $musicName=$('.sing-name'),
+                    $singer=$('.singer'),
+                    current=0;
+
+
+                var getSongMessage=function(data){
+                    $.ajax({
+                          url: 'http://api.jirengu.com/fm/getSong.php',
+                          type:'get',
+                          dataType: 'json',
+                          data: {
+                            'channel':'data.channel_id'
+                          }
+                     }).done(function(song){
+                          console.dir(song);
+                          $song=song.song[0];
+                          // console.dir(data.name);
+                          songURL=$song.url;
+                          songImg=$song.picture;
+                          songArtist=$song.artist;
+                          songTitle=$song.title;
+                          songId=$song.sid;
+                          $audio.attr('src',songURL);
+                          $background.attr('src',songImg);
+                          $musicName.text(songTitle);
+                          $singer.text(songArtist);
+                          console.dir(songURL);
+                          console.log(audio);
+                     });
+                     
+                }
+
+                function getChannel(){
+                    
+                    $.ajax({
+                          url: 'http://api.jirengu.com/fm/getChannels.php',
+                          type:'get',
+                          dataType: 'json'
+                        
+                     }).done(function(response){
+                          console.dir(response);
+                          $channel=response.channels;
+                          var num=Math.floor(Math.random()*$channel.length);
+                          console.log($channel[num]);
+                          console.log($channel[num].channel_id);
+                          getSongMessage($channel[num]);
+                     });
+                    
+                };
+
+
+                var progress = function() {
+                        var curTime = parseInt(audio.currentTime);
+                        var minute="00";                  /*设置00防止minute没有值的时候出现undefined*/
+                        $('progress').attr({'value':curTime});
+                        if(curTime<10){
+                            curTime='0'+curTime;
+                        } 
+                        if(curTime>60){
+                            minute = parseInt(curTime/60);
+                            curTime= parseInt(curTime%60);
+                            if(minute<10){
+                              minute='0'+minute;
+                            }
+                            if(curTime<10){
+                              curTime='0'+curTime;
+                            }
+                        }
+                        $(".curTime").html(minute+':'+curTime);
+                }
+
+                var time = function() {
+                        var mDuration = parseInt(audio.duration);
+                        var minute="00";
+                        $('progress').attr({'max':mDuration});
+                        
+                        if(mDuration<10){
+                          mDuration='0'+mDuration;
+                        }
+                        if(mDuration>60){
+                              minute = parseInt(mDuration/60);
+                              mDuration= parseInt(mDuration%60);
+                              if(minute<10){
+                                minute='0'+minute;
+                              }
+                              if(mDuration<10){
+                                mDuration='0'+mDuration;
+                              }
+                        }
+                       $(".m-duration").html(minute+':'+mDuration);
+                }
+
+                getChannel();
+
+                // var btnClickAnimation=function($element,fonSize){
+                //         var originalVal=$element.css('font-size');
+                //         console.log(originalVal);
+                //         $element.animate({opacity:0.25,'font-size':fonSize},function(){
+                //               $element.css({'font-size':originalVal,opacity:1});
+                //         });
+                // }
+
+                //添加监听
+                audio.addEventListener("loadedmetadata",time);
+                audio.addEventListener("timeupdate",progress); 
+
+
+                $play.click(function(){
+
+                   audio.play();
+                   console.log('play')
+                   $play.css({display:'none'});
+                   $pause.css({display:'block'});
+                })
+
+                $pause.click(function(){
+                   audio.pause();
+                   console.log('pause')
+                   $pause.css({display:'none'});
+                   $play.css({display:'block'});
+                })
+
+                $next.click(function(){
+                    getSongMessage();    
+                })
+
+                $nextmenu.click(function(){
+                    getChannel();           
+                })
+
+                $('.m-loop').click(function(){
+                    console.log('loop');
+                    $('.m-loop').css({color:'#454545'});
+                    audio.onended=function(){
+                      $next.trigger('click'); 
+                    }
+                })
+
+                $('.m-single').click(function(){
+                     console.log('single');
+                     if(audio.loop===false){
+                       audio.loop=true;
+                       $('.m-single').css({color:'#454545'});
+                     }else{
+                         audio.loop=false;
+                         $('.m-single').css({color:'#CDD2D7'});
+                     }
+                })   
+          });
+
+    </script>
+</body>
+</html>
